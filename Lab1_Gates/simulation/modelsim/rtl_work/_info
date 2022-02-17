@@ -1,0 +1,59 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/paok/Documents/Verilog/Lab1_Gates/simulation/modelsim
+vgates
+Z1 !s110 1645035979
+!i10b 1
+!s100 <j?<5IOdQ:o:KY1gZi]jP3
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IUgKY_dXloTZ[S<JB4k5no2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1645017373
+8/home/paok/Documents/Verilog/Lab1_Gates/gates.v
+F/home/paok/Documents/Verilog/Lab1_Gates/gates.v
+!i122 0
+L0 8 16
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1645035979.000000
+!s107 /home/paok/Documents/Verilog/Lab1_Gates/gates.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/paok/Documents/Verilog/Lab1_Gates|/home/paok/Documents/Verilog/Lab1_Gates/gates.v|
+!i113 1
+Z6 o-vlog01compat -work work
+Z7 !s92 -vlog01compat -work work +incdir+/home/paok/Documents/Verilog/Lab1_Gates
+Z8 tCvgOpt 0
+vgates_tb
+R1
+!i10b 1
+!s100 [UjoC;`EMd]d1Clf0gO?Z1
+R2
+IH8JA;LgclfP62N86BVBD@3
+R3
+R0
+w1645021391
+8/home/paok/Documents/Verilog/Lab1_Gates/gates_tb.v
+F/home/paok/Documents/Verilog/Lab1_Gates/gates_tb.v
+!i122 1
+L0 2 32
+R4
+r1
+!s85 0
+31
+R5
+!s107 /home/paok/Documents/Verilog/Lab1_Gates/gates_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/paok/Documents/Verilog/Lab1_Gates|/home/paok/Documents/Verilog/Lab1_Gates/gates_tb.v|
+!i113 1
+R6
+R7
+R8

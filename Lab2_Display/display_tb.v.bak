@@ -1,0 +1,4 @@
+module displat_tb();
+
+reg[3:0] entryNum_reg;
+wire[6:0] display_wire:

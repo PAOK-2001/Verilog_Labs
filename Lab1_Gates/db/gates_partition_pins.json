@@ -1,0 +1,49 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "z_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "z_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "z_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "z_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "z_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "z_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "z_out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "z_out[7]",
+					"strict" : false
+				},
+				{
+					"name" : "a_in",
+					"strict" : false
+				},
+				{
+					"name" : "b_in",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
