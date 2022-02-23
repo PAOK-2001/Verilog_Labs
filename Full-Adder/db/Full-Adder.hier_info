@@ -1,0 +1,8 @@
+|Full_Adder
+bits[0] => Add0.IN2
+bits[1] => Add0.IN1
+carryIn => Add1.IN4
+result << Add1.DB_MAX_OUTPUT_PORT_TYPE
+carryOut << Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+

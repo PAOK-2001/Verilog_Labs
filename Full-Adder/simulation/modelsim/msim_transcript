@@ -1,0 +1,51 @@
+# ERROR: No extended dataflow license exists
+# do Full-Adder_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying /home/paok/intelFPGA_lite/20.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+/home/paok/Documents/Verilog_Labs/Full-Adder {/home/paok/Documents/Verilog_Labs/Full-Adder/Full_Adder.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:42:01 on Feb 18,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/paok/Documents/Verilog_Labs/Full-Adder" /home/paok/Documents/Verilog_Labs/Full-Adder/Full_Adder.v 
+# -- Compiling module Full_Adder
+# 
+# Top level modules:
+# 	Full_Adder
+# End time: 10:42:01 on Feb 18,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+/home/paok/Documents/Verilog_Labs/Full-Adder {/home/paok/Documents/Verilog_Labs/Full-Adder/Full_Adder_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:42:01 on Feb 18,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/paok/Documents/Verilog_Labs/Full-Adder" /home/paok/Documents/Verilog_Labs/Full-Adder/Full_Adder_tb.v 
+# -- Compiling module Full_Adder_tb
+# 
+# Top level modules:
+# 	Full_Adder_tb
+# End time: 10:42:01 on Feb 18,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs="+acc"  Full_Adder_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs=""+acc"" Full_Adder_tb 
+# Start time: 10:42:01 on Feb 18,2022
+# Loading work.Full_Adder_tb
+# Loading work.Full_Adder
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Note: $stop    : /home/paok/Documents/Verilog_Labs/Full-Adder/Full_Adder_tb.v(49)
+#    Time: 160 ps  Iteration: 0  Instance: /Full_Adder_tb
+# Break in Module Full_Adder_tb at /home/paok/Documents/Verilog_Labs/Full-Adder/Full_Adder_tb.v line 49
+# End time: 10:43:47 on Feb 18,2022, Elapsed time: 0:01:46
+# Errors: 0, Warnings: 0

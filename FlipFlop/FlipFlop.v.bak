@@ -1,0 +1,20 @@
+module FlipFlop
+(
+
+	input D, clk, rst,
+	
+	output reg Q
+
+);
+
+always @(posedge clk, rst)
+begin 
+
+	if(~rst)
+		Q <= D;
+	else
+		Q <= 0;
+
+end
+
+endmodule

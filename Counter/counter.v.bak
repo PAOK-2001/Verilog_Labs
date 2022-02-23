@@ -1,0 +1,3 @@
+module counter(
+	input clk, rst, en
+);

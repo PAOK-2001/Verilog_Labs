@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at FlipFlop.v(10): always construct contains both blocking and non-blocking assignments File: C:/Practicas/FlipFlop/FlipFlop.v Line: 10
