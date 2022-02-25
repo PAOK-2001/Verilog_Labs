@@ -1,0 +1,16 @@
+|jk
+clk => q~reg0.CLK
+clc => q.OUTPUTSELECT
+pr => q.OUTPUTSELECT
+J => Mux0.IN4
+K => Mux0.IN5
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+display7Segment[0] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+display7Segment[1] <= <GND>
+display7Segment[2] <= <GND>
+display7Segment[3] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+display7Segment[4] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+display7Segment[5] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+display7Segment[6] <= <VCC>
+
+

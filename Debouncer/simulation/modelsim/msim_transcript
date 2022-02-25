@@ -1,0 +1,54 @@
+# Reading pref.tcl
+# ERROR: No extended dataflow license exists
+# do debouncer_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Practicas/Debouncer {C:/Practicas/Debouncer/debouncer.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:05:16 on Feb 23,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Practicas/Debouncer" C:/Practicas/Debouncer/debouncer.v 
+# -- Compiling module debouncer
+# 
+# Top level modules:
+# 	debouncer
+# End time: 10:05:16 on Feb 23,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/Practicas/Debouncer {C:/Practicas/Debouncer/debouncer_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:05:16 on Feb 23,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Practicas/Debouncer" C:/Practicas/Debouncer/debouncer_tb.v 
+# -- Compiling module debouncer_tb
+# 
+# Top level modules:
+# 	debouncer_tb
+# End time: 10:05:16 on Feb 23,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs="+acc"  debouncer_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs=""+acc"" debouncer_tb 
+# Start time: 10:05:16 on Feb 23,2022
+# Loading work.debouncer_tb
+# Loading work.debouncer
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'uut'.  Expected 5, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /debouncer_tb/uut File: C:/Practicas/Debouncer/debouncer_tb.v Line: 7
+# ** Warning: (vsim-3722) C:/Practicas/Debouncer/debouncer_tb.v(7): [TFMPC] - Missing connection for port 'button_down'.
+# ** Warning: (vsim-3722) C:/Practicas/Debouncer/debouncer_tb.v(7): [TFMPC] - Missing connection for port 'button_up'.
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Note: $stop    : C:/Practicas/Debouncer/debouncer_tb.v(61)
+#    Time: 401290 ps  Iteration: 0  Instance: /debouncer_tb
+# Break in Module debouncer_tb at C:/Practicas/Debouncer/debouncer_tb.v line 61

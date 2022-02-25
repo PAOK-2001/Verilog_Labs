@@ -1,0 +1,261 @@
+|ALU_display
+alu_in1[0] => alu_in1[0].IN1
+alu_in1[1] => alu_in1[1].IN1
+alu_in1[2] => alu_in1[2].IN1
+alu_in1[3] => alu_in1[3].IN1
+alu_in2[0] => alu_in2[0].IN1
+alu_in2[1] => alu_in2[1].IN1
+alu_in2[2] => alu_in2[2].IN1
+alu_in2[3] => alu_in2[3].IN1
+alu_selector[0] => alu_selector[0].IN1
+alu_selector[1] => alu_selector[1].IN1
+alu_switch1 => alu_switch1.IN1
+alu_switch2 => alu_switch2.IN1
+alu_out[0] << ALU:unidad_aritmetica_logica.result
+alu_out[1] << ALU:unidad_aritmetica_logica.result
+alu_out[2] << ALU:unidad_aritmetica_logica.result
+alu_out[3] << ALU:unidad_aritmetica_logica.result
+alu_out[4] << ALU:unidad_aritmetica_logica.result
+alu_out[5] << ALU:unidad_aritmetica_logica.result
+alu_out[6] << ALU:unidad_aritmetica_logica.result
+alu_out[7] << ALU:unidad_aritmetica_logica.result
+in1_units_display[0] << BCD:UNIDADES_ENTRADA1.display7Segment
+in1_units_display[1] << BCD:UNIDADES_ENTRADA1.display7Segment
+in1_units_display[2] << BCD:UNIDADES_ENTRADA1.display7Segment
+in1_units_display[3] << BCD:UNIDADES_ENTRADA1.display7Segment
+in1_units_display[4] << BCD:UNIDADES_ENTRADA1.display7Segment
+in1_units_display[5] << BCD:UNIDADES_ENTRADA1.display7Segment
+in1_units_display[6] << BCD:UNIDADES_ENTRADA1.display7Segment
+in1_decenas_display[0] << BCD:DECENAS_ENTRADA1.display7Segment
+in1_decenas_display[1] << BCD:DECENAS_ENTRADA1.display7Segment
+in1_decenas_display[2] << BCD:DECENAS_ENTRADA1.display7Segment
+in1_decenas_display[3] << BCD:DECENAS_ENTRADA1.display7Segment
+in1_decenas_display[4] << BCD:DECENAS_ENTRADA1.display7Segment
+in1_decenas_display[5] << BCD:DECENAS_ENTRADA1.display7Segment
+in1_decenas_display[6] << BCD:DECENAS_ENTRADA1.display7Segment
+in2_units_display[0] << BCD:UNIDADES_ENTRADA2.display7Segment
+in2_units_display[1] << BCD:UNIDADES_ENTRADA2.display7Segment
+in2_units_display[2] << BCD:UNIDADES_ENTRADA2.display7Segment
+in2_units_display[3] << BCD:UNIDADES_ENTRADA2.display7Segment
+in2_units_display[4] << BCD:UNIDADES_ENTRADA2.display7Segment
+in2_units_display[5] << BCD:UNIDADES_ENTRADA2.display7Segment
+in2_units_display[6] << BCD:UNIDADES_ENTRADA2.display7Segment
+in2_decenas_display[0] << BCD:DECENAS_ENTRADA2.display7Segment
+in2_decenas_display[1] << BCD:DECENAS_ENTRADA2.display7Segment
+in2_decenas_display[2] << BCD:DECENAS_ENTRADA2.display7Segment
+in2_decenas_display[3] << BCD:DECENAS_ENTRADA2.display7Segment
+in2_decenas_display[4] << BCD:DECENAS_ENTRADA2.display7Segment
+in2_decenas_display[5] << BCD:DECENAS_ENTRADA2.display7Segment
+in2_decenas_display[6] << BCD:DECENAS_ENTRADA2.display7Segment
+out_unit_display[0] << BCD:UNIDADES_SALIDA.display7Segment
+out_unit_display[1] << BCD:UNIDADES_SALIDA.display7Segment
+out_unit_display[2] << BCD:UNIDADES_SALIDA.display7Segment
+out_unit_display[3] << BCD:UNIDADES_SALIDA.display7Segment
+out_unit_display[4] << BCD:UNIDADES_SALIDA.display7Segment
+out_unit_display[5] << BCD:UNIDADES_SALIDA.display7Segment
+out_unit_display[6] << BCD:UNIDADES_SALIDA.display7Segment
+out_decenas_display[0] << BCD:DECENAS_SALIDA.display7Segment
+out_decenas_display[1] << BCD:DECENAS_SALIDA.display7Segment
+out_decenas_display[2] << BCD:DECENAS_SALIDA.display7Segment
+out_decenas_display[3] << BCD:DECENAS_SALIDA.display7Segment
+out_decenas_display[4] << BCD:DECENAS_SALIDA.display7Segment
+out_decenas_display[5] << BCD:DECENAS_SALIDA.display7Segment
+out_decenas_display[6] << BCD:DECENAS_SALIDA.display7Segment
+out_centenas_display[0] << BCD:CENTENAS_SALIDA.display7Segment
+out_centenas_display[1] << BCD:CENTENAS_SALIDA.display7Segment
+out_centenas_display[2] << BCD:CENTENAS_SALIDA.display7Segment
+out_centenas_display[3] << BCD:CENTENAS_SALIDA.display7Segment
+out_centenas_display[4] << BCD:CENTENAS_SALIDA.display7Segment
+out_centenas_display[5] << BCD:CENTENAS_SALIDA.display7Segment
+out_centenas_display[6] << BCD:CENTENAS_SALIDA.display7Segment
+
+
+|ALU_display|ALU:unidad_aritmetica_logica
+num1[0] => ShiftLeft0.IN8
+num1[0] => ShiftRight0.IN8
+num1[0] => Add0.IN4
+num1[0] => Add1.IN8
+num1[0] => Mult0.IN3
+num1[0] => Div0.IN3
+num1[1] => ShiftLeft0.IN7
+num1[1] => ShiftRight0.IN7
+num1[1] => Add0.IN3
+num1[1] => Add1.IN7
+num1[1] => Mult0.IN2
+num1[1] => Div0.IN2
+num1[2] => ShiftLeft0.IN6
+num1[2] => ShiftRight0.IN6
+num1[2] => Add0.IN2
+num1[2] => Add1.IN6
+num1[2] => Mult0.IN1
+num1[2] => Div0.IN1
+num1[3] => ShiftLeft0.IN5
+num1[3] => ShiftRight0.IN5
+num1[3] => Add0.IN1
+num1[3] => Add1.IN5
+num1[3] => Mult0.IN0
+num1[3] => Div0.IN0
+num2[0] => ShiftLeft0.IN12
+num2[0] => ShiftRight0.IN12
+num2[0] => Add0.IN8
+num2[0] => Mult0.IN7
+num2[0] => Div0.IN7
+num2[0] => Add1.IN4
+num2[1] => ShiftLeft0.IN11
+num2[1] => ShiftRight0.IN11
+num2[1] => Add0.IN7
+num2[1] => Mult0.IN6
+num2[1] => Div0.IN6
+num2[1] => Add1.IN3
+num2[2] => ShiftLeft0.IN10
+num2[2] => ShiftRight0.IN10
+num2[2] => Add0.IN6
+num2[2] => Mult0.IN5
+num2[2] => Div0.IN5
+num2[2] => Add1.IN2
+num2[3] => ShiftLeft0.IN9
+num2[3] => ShiftRight0.IN9
+num2[3] => Add0.IN5
+num2[3] => Mult0.IN4
+num2[3] => Div0.IN4
+num2[3] => Add1.IN1
+operationSelect[0] => Mux0.IN5
+operationSelect[0] => Mux1.IN5
+operationSelect[0] => Mux2.IN5
+operationSelect[0] => Mux3.IN5
+operationSelect[0] => Mux4.IN5
+operationSelect[0] => Mux5.IN5
+operationSelect[0] => Mux6.IN5
+operationSelect[0] => Mux7.IN5
+operationSelect[1] => Mux0.IN4
+operationSelect[1] => Mux1.IN4
+operationSelect[1] => Mux2.IN4
+operationSelect[1] => Mux3.IN4
+operationSelect[1] => Mux4.IN4
+operationSelect[1] => Mux5.IN4
+operationSelect[1] => Mux6.IN4
+operationSelect[1] => Mux7.IN4
+shiftButton1 => result.OUTPUTSELECT
+shiftButton1 => result.OUTPUTSELECT
+shiftButton1 => result.OUTPUTSELECT
+shiftButton1 => result.OUTPUTSELECT
+shiftButton1 => result.OUTPUTSELECT
+shiftButton1 => result.OUTPUTSELECT
+shiftButton1 => result.OUTPUTSELECT
+shiftButton1 => result.OUTPUTSELECT
+shiftButton2 => result.OUTPUTSELECT
+shiftButton2 => result.OUTPUTSELECT
+shiftButton2 => result.OUTPUTSELECT
+shiftButton2 => result.OUTPUTSELECT
+shiftButton2 => result.OUTPUTSELECT
+shiftButton2 => result.OUTPUTSELECT
+shiftButton2 => result.OUTPUTSELECT
+shiftButton2 => result.OUTPUTSELECT
+result[0] <= result.DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result.DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= result.DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= result.DB_MAX_OUTPUT_PORT_TYPE
+result[4] <= result.DB_MAX_OUTPUT_PORT_TYPE
+result[5] <= result.DB_MAX_OUTPUT_PORT_TYPE
+result[6] <= result.DB_MAX_OUTPUT_PORT_TYPE
+result[7] <= result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_display|BCD:UNIDADES_ENTRADA1
+num[0] => Decoder0.IN3
+num[1] => Decoder0.IN2
+num[2] => Decoder0.IN1
+num[3] => Decoder0.IN0
+display7Segment[0] <= display7Segment.DB_MAX_OUTPUT_PORT_TYPE
+display7Segment[1] <= display7Segment.DB_MAX_OUTPUT_PORT_TYPE
+display7Segment[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+display7Segment[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+display7Segment[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+display7Segment[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+display7Segment[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_display|BCD:DECENAS_ENTRADA1
+num[0] => Decoder0.IN3
+num[1] => Decoder0.IN2
+num[2] => Decoder0.IN1
+num[3] => Decoder0.IN0
+display7Segment[0] <= display7Segment.DB_MAX_OUTPUT_PORT_TYPE
+display7Segment[1] <= display7Segment.DB_MAX_OUTPUT_PORT_TYPE
+display7Segment[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+display7Segment[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+display7Segment[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+display7Segment[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+display7Segment[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_display|BCD:UNIDADES_ENTRADA2
+num[0] => Decoder0.IN3
+num[1] => Decoder0.IN2
+num[2] => Decoder0.IN1
+num[3] => Decoder0.IN0
+display7Segment[0] <= display7Segment.DB_MAX_OUTPUT_PORT_TYPE
+display7Segment[1] <= display7Segment.DB_MAX_OUTPUT_PORT_TYPE
+display7Segment[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+display7Segment[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+display7Segment[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+display7Segment[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+display7Segment[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_display|BCD:DECENAS_ENTRADA2
+num[0] => Decoder0.IN3
+num[1] => Decoder0.IN2
+num[2] => Decoder0.IN1
+num[3] => Decoder0.IN0
+display7Segment[0] <= display7Segment.DB_MAX_OUTPUT_PORT_TYPE
+display7Segment[1] <= display7Segment.DB_MAX_OUTPUT_PORT_TYPE
+display7Segment[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+display7Segment[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+display7Segment[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+display7Segment[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+display7Segment[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_display|BCD:UNIDADES_SALIDA
+num[0] => Decoder0.IN3
+num[1] => Decoder0.IN2
+num[2] => Decoder0.IN1
+num[3] => Decoder0.IN0
+display7Segment[0] <= display7Segment.DB_MAX_OUTPUT_PORT_TYPE
+display7Segment[1] <= display7Segment.DB_MAX_OUTPUT_PORT_TYPE
+display7Segment[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+display7Segment[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+display7Segment[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+display7Segment[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+display7Segment[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_display|BCD:DECENAS_SALIDA
+num[0] => Decoder0.IN3
+num[1] => Decoder0.IN2
+num[2] => Decoder0.IN1
+num[3] => Decoder0.IN0
+display7Segment[0] <= display7Segment.DB_MAX_OUTPUT_PORT_TYPE
+display7Segment[1] <= display7Segment.DB_MAX_OUTPUT_PORT_TYPE
+display7Segment[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+display7Segment[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+display7Segment[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+display7Segment[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+display7Segment[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_display|BCD:CENTENAS_SALIDA
+num[0] => Decoder0.IN3
+num[1] => Decoder0.IN2
+num[2] => Decoder0.IN1
+num[3] => Decoder0.IN0
+display7Segment[0] <= display7Segment.DB_MAX_OUTPUT_PORT_TYPE
+display7Segment[1] <= display7Segment.DB_MAX_OUTPUT_PORT_TYPE
+display7Segment[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+display7Segment[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+display7Segment[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+display7Segment[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+display7Segment[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+

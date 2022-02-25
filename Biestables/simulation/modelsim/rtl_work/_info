@@ -1,0 +1,35 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/paok/Documents/Verilog_Labs/Biestables/simulation/modelsim
+vjk
+!s110 1645799292
+!i10b 1
+!s100 K616WiNLC_dI8cOAjCVQY0
+!s11b Dg1SIo80bB@j0V0VzS_@n1
+IBimgE>NU8iH;Z>ik4PY4i1
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1645799274
+8/home/paok/Documents/Verilog_Labs/Biestables/jk.v
+F/home/paok/Documents/Verilog_Labs/Biestables/jk.v
+!i122 0
+L0 1 38
+OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1645799292.000000
+!s107 /home/paok/Documents/Verilog_Labs/Biestables/jk.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/paok/Documents/Verilog_Labs/Biestables|/home/paok/Documents/Verilog_Labs/Biestables/jk.v|
+!i113 1
+o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+/home/paok/Documents/Verilog_Labs/Biestables
+tCvgOpt 0

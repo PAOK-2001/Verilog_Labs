@@ -1,0 +1,59 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/paok/Documents/Verilog_Labs/clk_divider/simulation/modelsim
+vclk_divider
+Z1 !s110 1645631218
+!i10b 1
+!s100 5WI2nfXC@8gBT`6ObzRDL3
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IZ?RSHWJ;aRR5NE;OMho`O3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1645631126
+8/home/paok/Documents/Verilog_Labs/clk_divider/clk_divider.v
+F/home/paok/Documents/Verilog_Labs/clk_divider/clk_divider.v
+!i122 0
+L0 1 29
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1645631217.000000
+!s107 /home/paok/Documents/Verilog_Labs/clk_divider/clk_divider.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/paok/Documents/Verilog_Labs/clk_divider|/home/paok/Documents/Verilog_Labs/clk_divider/clk_divider.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+/home/paok/Documents/Verilog_Labs/clk_divider
+Z7 tCvgOpt 0
+vclk_divider_tb
+R1
+!i10b 1
+!s100 U0=R6A2>0oglSb1llegDV3
+R2
+I?f1jDOOF430lVQdCShA5K0
+R3
+R0
+w1645631197
+8/home/paok/Documents/Verilog_Labs/clk_divider/clk_divider_tb.v
+F/home/paok/Documents/Verilog_Labs/clk_divider/clk_divider_tb.v
+!i122 1
+L0 1 27
+R4
+r1
+!s85 0
+31
+!s108 1645631218.000000
+!s107 /home/paok/Documents/Verilog_Labs/clk_divider/clk_divider_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/paok/Documents/Verilog_Labs/clk_divider|/home/paok/Documents/Verilog_Labs/clk_divider/clk_divider_tb.v|
+!i113 1
+R5
+R6
+R7

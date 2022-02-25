@@ -1,0 +1,64 @@
+# ERROR: No extended dataflow license exists
+# do clk_divider_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying /home/paok/intelFPGA_lite/20.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+/home/paok/Documents/Verilog_Labs/clk_divider {/home/paok/Documents/Verilog_Labs/clk_divider/clk_divider.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:46:57 on Feb 23,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/paok/Documents/Verilog_Labs/clk_divider" /home/paok/Documents/Verilog_Labs/clk_divider/clk_divider.v 
+# -- Compiling module clk_divider
+# ** Warning: /home/paok/Documents/Verilog_Labs/clk_divider/clk_divider.v(23): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# Top level modules:
+# 	clk_divider
+# End time: 09:46:58 on Feb 23,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 1
+# 
+# vlog -vlog01compat -work work +incdir+/home/paok/Documents/Verilog_Labs/clk_divider {/home/paok/Documents/Verilog_Labs/clk_divider/clk_divider_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:46:58 on Feb 23,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/paok/Documents/Verilog_Labs/clk_divider" /home/paok/Documents/Verilog_Labs/clk_divider/clk_divider_tb.v 
+# -- Compiling module clk_divider_tb
+# 
+# Top level modules:
+# 	clk_divider_tb
+# End time: 09:46:58 on Feb 23,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs="+acc"  clk_divider_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs=""+acc"" clk_divider_tb 
+# Start time: 09:46:58 on Feb 23,2022
+# Loading work.clk_divider_tb
+# Loading work.clk_divider
+# 
+# add wave *
+# Unable to lock WLF file "vsim.wlf". Retrying 1 times, errno 11
+# Unable to lock WLF file "vsim.wlf". Retrying 2 times, errno 11
+# Unable to lock WLF file "vsim.wlf". Retrying 3 times, errno 11
+# Cannot lock WLF file: "vsim.wlf"
+#           errno 11: Resource temporarily unavailable.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: paok  Hostname: fedora  ProcessID: 14842
+#           Attempting to use alternate WLF file "./wlftW0lkUY".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftW0lkUY
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Note: $stop    : /home/paok/Documents/Verilog_Labs/clk_divider/clk_divider_tb.v(25)
+#    Time: 1010 ps  Iteration: 0  Instance: /clk_divider_tb
+# Break in Module clk_divider_tb at /home/paok/Documents/Verilog_Labs/clk_divider/clk_divider_tb.v line 25
+# 
+# stdin: <EOF>
+# End time: 09:48:21 on Feb 23,2022, Elapsed time: 0:01:23
+# Errors: 0, Warnings: 2

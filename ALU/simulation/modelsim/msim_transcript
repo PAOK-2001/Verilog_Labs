@@ -1,0 +1,53 @@
+# ERROR: No extended dataflow license exists
+# do ALU_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying /home/paok/intelFPGA_lite/20.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+/home/paok/Documents/Verilog_Labs/ALU {/home/paok/Documents/Verilog_Labs/ALU/ALU.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 08:40:17 on Feb 24,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/paok/Documents/Verilog_Labs/ALU" /home/paok/Documents/Verilog_Labs/ALU/ALU.v 
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 08:40:17 on Feb 24,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+/home/paok/Documents/Verilog_Labs/ALU {/home/paok/Documents/Verilog_Labs/ALU/ALU_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 08:40:17 on Feb 24,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/paok/Documents/Verilog_Labs/ALU" /home/paok/Documents/Verilog_Labs/ALU/ALU_tb.v 
+# -- Compiling module ALU_tb
+# 
+# Top level modules:
+# 	ALU_tb
+# End time: 08:40:17 on Feb 24,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs="+acc"  ALU_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs=""+acc"" ALU_tb 
+# Start time: 08:40:17 on Feb 24,2022
+# Loading work.ALU_tb
+# Loading work.ALU
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Note: $stop    : /home/paok/Documents/Verilog_Labs/ALU/ALU_tb.v(69)
+#    Time: 70 ps  Iteration: 0  Instance: /ALU_tb
+# Break in Module ALU_tb at /home/paok/Documents/Verilog_Labs/ALU/ALU_tb.v line 69
+# 
+# stdin: <EOF>
+# End time: 08:54:56 on Feb 24,2022, Elapsed time: 0:14:39
+# Errors: 0, Warnings: 0
