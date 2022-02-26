@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Multiplexor
-Fri Feb 25 19:45:41 2022
+Sat Feb 26 15:05:55 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -43,7 +43,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Feb 25 19:45:41 2022       ;
+; Analysis & Synthesis Status        ; Successful - Sat Feb 26 15:05:55 2022       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; Multiplexor                                 ;
 ; Top-level Entity Name              ; Multiplexor                                 ;
@@ -260,12 +260,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Fri Feb 25 19:45:32 2022
+    Info: Processing started: Sat Feb 26 15:05:46 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Multiplexor -c Multiplexor
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file multiplexor.v
-    Info (12023): Found entity 1: Multiplexor File: C:/Practicas/Verilog_Labs/Multiplexor/Multiplexor.v Line: 1
+    Info (12023): Found entity 1: Multiplexor File: C:/Practicas/Verilog_Labs/Multiplexor/Multiplexor.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file multiplexor_tb.v
     Info (12023): Found entity 1: Multiplexor_tb File: C:/Practicas/Verilog_Labs/Multiplexor/Multiplexor_tb.v Line: 1
 Info (12127): Elaborating entity "Multiplexor" for the top level hierarchy
@@ -277,9 +277,9 @@ Info (21057): Implemented 5 device resources after synthesis - the final resourc
     Info (21059): Implemented 1 output pins
     Info (21061): Implemented 1 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4762 megabytes
-    Info: Processing ended: Fri Feb 25 19:45:41 2022
+    Info: Peak virtual memory: 4763 megabytes
+    Info: Processing ended: Sat Feb 26 15:05:55 2022
     Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:22
+    Info: Total CPU time (on all processors): 00:00:23
 
 

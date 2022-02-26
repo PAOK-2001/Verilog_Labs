@@ -1,5 +1,5 @@
 Flow report for Multiplexor
-Fri Feb 25 19:45:59 2022
+Sat Feb 26 15:06:13 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Fri Feb 25 19:45:59 2022       ;
+; Flow Status                        ; Successful - Sat Feb 26 15:06:13 2022       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; Multiplexor                                 ;
 ; Top-level Entity Name              ; Multiplexor                                 ;
@@ -67,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/25/2022 19:45:32 ;
+; Start date & time ; 02/26/2022 15:05:46 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Multiplexor         ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 5311882713318.164583993238056          ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 5311882713318.164590954634500          ; --            ; --          ; --                                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; Multiplexor_tb                    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
@@ -108,12 +108,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 4762 MB             ; 00:00:22                           ;
-; Fitter               ; 00:00:07     ; 1.0                     ; 5772 MB             ; 00:00:10                           ;
+; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 4763 MB             ; 00:00:23                           ;
+; Fitter               ; 00:00:07     ; 1.0                     ; 5768 MB             ; 00:00:10                           ;
 ; Assembler            ; 00:00:04     ; 1.0                     ; 4692 MB             ; 00:00:03                           ;
 ; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 4844 MB             ; 00:00:02                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4643 MB             ; 00:00:01                           ;
-; Total                ; 00:00:23     ; --                      ; --                  ; 00:00:38                           ;
+; Total                ; 00:00:23     ; --                      ; --                  ; 00:00:39                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

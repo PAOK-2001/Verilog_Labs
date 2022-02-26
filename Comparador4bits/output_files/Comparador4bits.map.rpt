@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Comparador4bits
-Fri Feb 25 19:51:50 2022
+Sat Feb 26 15:09:57 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -43,7 +43,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Feb 25 19:51:50 2022       ;
+; Analysis & Synthesis Status        ; Successful - Sat Feb 26 15:09:56 2022       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; Comparador4bits                             ;
 ; Top-level Entity Name              ; Comparador4bits                             ;
@@ -262,12 +262,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Fri Feb 25 19:51:41 2022
+    Info: Processing started: Sat Feb 26 15:09:47 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Comparador4bits -c Comparador4bits
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file comparador4bits.v
-    Info (12023): Found entity 1: Comparador4bits File: C:/Practicas/Verilog_Labs/Comparador4bits/Comparador4bits.v Line: 1
+    Info (12023): Found entity 1: Comparador4bits File: C:/Practicas/Verilog_Labs/Comparador4bits/Comparador4bits.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file comparador4bits_tb.v
     Info (12023): Found entity 1: Comparador4bits_tb File: C:/Practicas/Verilog_Labs/Comparador4bits/Comparador4bits_tb.v Line: 1
 Info (12127): Elaborating entity "Comparador4bits" for the top level hierarchy
@@ -279,9 +279,9 @@ Info (21057): Implemented 18 device resources after synthesis - the final resour
     Info (21059): Implemented 3 output pins
     Info (21061): Implemented 7 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4761 megabytes
-    Info: Processing ended: Fri Feb 25 19:51:50 2022
-    Info: Elapsed time: 00:00:09
+    Info: Peak virtual memory: 4763 megabytes
+    Info: Processing ended: Sat Feb 26 15:09:57 2022
+    Info: Elapsed time: 00:00:10
     Info: Total CPU time (on all processors): 00:00:22
 
 

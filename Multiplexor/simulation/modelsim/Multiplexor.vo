@@ -17,7 +17,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
 
-// DATE "02/25/2022 19:45:59"
+// DATE "02/26/2022 15:06:13"
 
 // 
 // Device: Altera 10M50DAF484C7G Package FBGA484
@@ -38,10 +38,10 @@ input 	seleccion;
 output 	salida;
 
 // Design Ports Information
-// salida	=>  Location: PIN_U7,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// entradas[1]	=>  Location: PIN_U6,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// entradas[0]	=>  Location: PIN_Y2,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// seleccion	=>  Location: PIN_W6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// salida	=>  Location: PIN_A8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// entradas[1]	=>  Location: PIN_C11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// entradas[0]	=>  Location: PIN_C10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// seleccion	=>  Location: PIN_D12,	 I/O Standard: 2.5 V,	 Current Strength: Default
 
 
 wire gnd;
@@ -60,9 +60,9 @@ wire \~QUARTUS_CREATED_UNVM~~busy ;
 wire \~QUARTUS_CREATED_ADC1~~eoc ;
 wire \~QUARTUS_CREATED_ADC2~~eoc ;
 wire \salida~output_o ;
-wire \entradas[0]~input_o ;
 wire \entradas[1]~input_o ;
 wire \seleccion~input_o ;
+wire \entradas[0]~input_o ;
 wire \salida~0_combout ;
 
 
@@ -71,7 +71,7 @@ hard_block auto_generated_inst(
 	.devclrn(devclrn),
 	.devoe(devoe));
 
-// Location: LCCOMB_X44_Y52_N16
+// Location: LCCOMB_X44_Y45_N16
 fiftyfivenm_lcell_comb \~QUARTUS_CREATED_GND~I (
 // Equation(s):
 // \~QUARTUS_CREATED_GND~I_combout  = GND
@@ -88,7 +88,7 @@ defparam \~QUARTUS_CREATED_GND~I .lut_mask = 16'h0000;
 defparam \~QUARTUS_CREATED_GND~I .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: IOOBUF_X16_Y0_N2
+// Location: IOOBUF_X46_Y54_N2
 fiftyfivenm_io_obuf \salida~output (
 	.i(\salida~0_combout ),
 	.oe(vcc),
@@ -101,19 +101,7 @@ defparam \salida~output .bus_hold = "false";
 defparam \salida~output .open_drain_output = "false";
 // synopsys translate_on
 
-// Location: IOIBUF_X16_Y0_N15
-fiftyfivenm_io_ibuf \entradas[0]~input (
-	.i(entradas[0]),
-	.ibar(gnd),
-	.nsleep(vcc),
-	.o(\entradas[0]~input_o ));
-// synopsys translate_off
-defparam \entradas[0]~input .bus_hold = "false";
-defparam \entradas[0]~input .listen_to_nsleep_signal = "false";
-defparam \entradas[0]~input .simulate_z_as = "z";
-// synopsys translate_on
-
-// Location: IOIBUF_X16_Y0_N8
+// Location: IOIBUF_X51_Y54_N22
 fiftyfivenm_io_ibuf \entradas[1]~input (
 	.i(entradas[1]),
 	.ibar(gnd),
@@ -125,7 +113,7 @@ defparam \entradas[1]~input .listen_to_nsleep_signal = "false";
 defparam \entradas[1]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: IOIBUF_X16_Y0_N29
+// Location: IOIBUF_X51_Y54_N1
 fiftyfivenm_io_ibuf \seleccion~input (
 	.i(seleccion),
 	.ibar(gnd),
@@ -137,20 +125,32 @@ defparam \seleccion~input .listen_to_nsleep_signal = "false";
 defparam \seleccion~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: LCCOMB_X17_Y1_N0
+// Location: IOIBUF_X51_Y54_N29
+fiftyfivenm_io_ibuf \entradas[0]~input (
+	.i(entradas[0]),
+	.ibar(gnd),
+	.nsleep(vcc),
+	.o(\entradas[0]~input_o ));
+// synopsys translate_off
+defparam \entradas[0]~input .bus_hold = "false";
+defparam \entradas[0]~input .listen_to_nsleep_signal = "false";
+defparam \entradas[0]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X51_Y53_N24
 fiftyfivenm_lcell_comb \salida~0 (
 // Equation(s):
-// \salida~0_combout  = (\seleccion~input_o  & ((\entradas[1]~input_o ))) # (!\seleccion~input_o  & (\entradas[0]~input_o ))
+// \salida~0_combout  = (\seleccion~input_o  & (\entradas[1]~input_o )) # (!\seleccion~input_o  & ((\entradas[0]~input_o )))
 
-	.dataa(gnd),
-	.datab(\entradas[0]~input_o ),
-	.datac(\entradas[1]~input_o ),
-	.datad(\seleccion~input_o ),
+	.dataa(\entradas[1]~input_o ),
+	.datab(gnd),
+	.datac(\seleccion~input_o ),
+	.datad(\entradas[0]~input_o ),
 	.cin(gnd),
 	.combout(\salida~0_combout ),
 	.cout());
 // synopsys translate_off
-defparam \salida~0 .lut_mask = 16'hF0CC;
+defparam \salida~0 .lut_mask = 16'hAFA0;
 defparam \salida~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 

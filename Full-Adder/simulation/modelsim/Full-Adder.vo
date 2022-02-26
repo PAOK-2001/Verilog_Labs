@@ -17,7 +17,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
 
-// DATE "02/25/2022 19:40:56"
+// DATE "02/26/2022 15:01:01"
 
 // 
 // Device: Altera 10M50DAF484C7G Package FBGA484
@@ -40,11 +40,11 @@ output 	result;
 output 	carryOut;
 
 // Design Ports Information
-// result	=>  Location: PIN_W3,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// carryOut	=>  Location: PIN_U6,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// carryIn	=>  Location: PIN_AA2,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// bits[0]	=>  Location: PIN_AA1,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// bits[1]	=>  Location: PIN_Y5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// result	=>  Location: PIN_A8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// carryOut	=>  Location: PIN_A9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// carryIn	=>  Location: PIN_D12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// bits[0]	=>  Location: PIN_C10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// bits[1]	=>  Location: PIN_C11,	 I/O Standard: 2.5 V,	 Current Strength: Default
 
 
 wire gnd;
@@ -64,8 +64,8 @@ wire \~QUARTUS_CREATED_ADC1~~eoc ;
 wire \~QUARTUS_CREATED_ADC2~~eoc ;
 wire \result~output_o ;
 wire \carryOut~output_o ;
-wire \carryIn~input_o ;
 wire \bits[1]~input_o ;
+wire \carryIn~input_o ;
 wire \bits[0]~input_o ;
 wire \Add1~0_combout ;
 wire \Add1~1_combout ;
@@ -76,7 +76,7 @@ hard_block auto_generated_inst(
 	.devclrn(devclrn),
 	.devoe(devoe));
 
-// Location: LCCOMB_X44_Y52_N16
+// Location: LCCOMB_X44_Y45_N16
 fiftyfivenm_lcell_comb \~QUARTUS_CREATED_GND~I (
 // Equation(s):
 // \~QUARTUS_CREATED_GND~I_combout  = GND
@@ -93,7 +93,7 @@ defparam \~QUARTUS_CREATED_GND~I .lut_mask = 16'h0000;
 defparam \~QUARTUS_CREATED_GND~I .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: IOOBUF_X18_Y0_N9
+// Location: IOOBUF_X46_Y54_N2
 fiftyfivenm_io_obuf \result~output (
 	.i(\Add1~0_combout ),
 	.oe(vcc),
@@ -106,7 +106,7 @@ defparam \result~output .bus_hold = "false";
 defparam \result~output .open_drain_output = "false";
 // synopsys translate_on
 
-// Location: IOOBUF_X16_Y0_N9
+// Location: IOOBUF_X46_Y54_N23
 fiftyfivenm_io_obuf \carryOut~output (
 	.i(\Add1~1_combout ),
 	.oe(vcc),
@@ -119,19 +119,7 @@ defparam \carryOut~output .bus_hold = "false";
 defparam \carryOut~output .open_drain_output = "false";
 // synopsys translate_on
 
-// Location: IOIBUF_X18_Y0_N22
-fiftyfivenm_io_ibuf \carryIn~input (
-	.i(carryIn),
-	.ibar(gnd),
-	.nsleep(vcc),
-	.o(\carryIn~input_o ));
-// synopsys translate_off
-defparam \carryIn~input .bus_hold = "false";
-defparam \carryIn~input .listen_to_nsleep_signal = "false";
-defparam \carryIn~input .simulate_z_as = "z";
-// synopsys translate_on
-
-// Location: IOIBUF_X18_Y0_N1
+// Location: IOIBUF_X51_Y54_N22
 fiftyfivenm_io_ibuf \bits[1]~input (
 	.i(bits[1]),
 	.ibar(gnd),
@@ -143,7 +131,19 @@ defparam \bits[1]~input .listen_to_nsleep_signal = "false";
 defparam \bits[1]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: IOIBUF_X18_Y0_N29
+// Location: IOIBUF_X51_Y54_N1
+fiftyfivenm_io_ibuf \carryIn~input (
+	.i(carryIn),
+	.ibar(gnd),
+	.nsleep(vcc),
+	.o(\carryIn~input_o ));
+// synopsys translate_off
+defparam \carryIn~input .bus_hold = "false";
+defparam \carryIn~input .listen_to_nsleep_signal = "false";
+defparam \carryIn~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X51_Y54_N29
 fiftyfivenm_io_ibuf \bits[0]~input (
 	.i(bits[0]),
 	.ibar(gnd),
@@ -155,37 +155,37 @@ defparam \bits[0]~input .listen_to_nsleep_signal = "false";
 defparam \bits[0]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: LCCOMB_X18_Y1_N0
+// Location: LCCOMB_X51_Y53_N24
 fiftyfivenm_lcell_comb \Add1~0 (
 // Equation(s):
-// \Add1~0_combout  = \carryIn~input_o  $ (\bits[1]~input_o  $ (\bits[0]~input_o ))
+// \Add1~0_combout  = \bits[1]~input_o  $ (\carryIn~input_o  $ (\bits[0]~input_o ))
 
-	.dataa(gnd),
-	.datab(\carryIn~input_o ),
-	.datac(\bits[1]~input_o ),
+	.dataa(\bits[1]~input_o ),
+	.datab(gnd),
+	.datac(\carryIn~input_o ),
 	.datad(\bits[0]~input_o ),
 	.cin(gnd),
 	.combout(\Add1~0_combout ),
 	.cout());
 // synopsys translate_off
-defparam \Add1~0 .lut_mask = 16'hC33C;
+defparam \Add1~0 .lut_mask = 16'hA55A;
 defparam \Add1~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X18_Y1_N18
+// Location: LCCOMB_X51_Y53_N18
 fiftyfivenm_lcell_comb \Add1~1 (
 // Equation(s):
-// \Add1~1_combout  = (\carryIn~input_o  & ((\bits[1]~input_o ) # (\bits[0]~input_o ))) # (!\carryIn~input_o  & (\bits[1]~input_o  & \bits[0]~input_o ))
+// \Add1~1_combout  = (\bits[1]~input_o  & ((\carryIn~input_o ) # (\bits[0]~input_o ))) # (!\bits[1]~input_o  & (\carryIn~input_o  & \bits[0]~input_o ))
 
-	.dataa(gnd),
-	.datab(\carryIn~input_o ),
-	.datac(\bits[1]~input_o ),
+	.dataa(\bits[1]~input_o ),
+	.datab(gnd),
+	.datac(\carryIn~input_o ),
 	.datad(\bits[0]~input_o ),
 	.cin(gnd),
 	.combout(\Add1~1_combout ),
 	.cout());
 // synopsys translate_off
-defparam \Add1~1 .lut_mask = 16'hFCC0;
+defparam \Add1~1 .lut_mask = 16'hFAA0;
 defparam \Add1~1 .sum_lutc_input = "datac";
 // synopsys translate_on
 
