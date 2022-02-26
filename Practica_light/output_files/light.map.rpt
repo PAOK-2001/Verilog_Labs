@@ -1,5 +1,5 @@
 Analysis & Synthesis report for light
-Thu Feb 17 14:03:48 2022
+Sat Feb 26 14:24:19 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -43,7 +43,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Feb 17 14:03:48 2022       ;
+; Analysis & Synthesis Status        ; Successful - Sat Feb 26 14:24:19 2022       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; light                                       ;
 ; Top-level Entity Name              ; light                                       ;
@@ -153,8 +153,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 16          ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -164,13 +164,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                      ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                        ; Library ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------+---------+
-; light.v                          ; yes             ; User Verilog HDL File  ; /home/paok/Documents/Verilog/Practica_light/light.v ;         ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                   ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                     ; Library ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------+---------+
+; light.v                          ; yes             ; User Verilog HDL File  ; C:/Practicas/Verilog_Labs/Practica_light/light.v ;         ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -260,12 +260,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Feb 17 14:03:42 2022
+    Info: Processing started: Sat Feb 26 14:24:10 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off light -c light
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file light.v
-    Info (12023): Found entity 1: light File: /home/paok/Documents/Verilog/Practica_light/light.v Line: 1
+    Info (12023): Found entity 1: light File: C:/Practicas/Verilog_Labs/Practica_light/light.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file light_tb.v
+    Info (12023): Found entity 1: light_tb File: C:/Practicas/Verilog_Labs/Practica_light/light_tb.v Line: 1
 Info (12127): Elaborating entity "light" for the top level hierarchy
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
@@ -275,9 +277,9 @@ Info (21057): Implemented 4 device resources after synthesis - the final resourc
     Info (21059): Implemented 1 output pins
     Info (21061): Implemented 1 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 628 megabytes
-    Info: Processing ended: Thu Feb 17 14:03:48 2022
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:17
+    Info: Peak virtual memory: 4762 megabytes
+    Info: Processing ended: Sat Feb 26 14:24:19 2022
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:22
 
 

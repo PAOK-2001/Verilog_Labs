@@ -1,6 +1,7 @@
 vendor_name = ModelSim
-source_file = 1, /home/paok/Documents/Verilog/Practica_light/light.v
-source_file = 1, /home/paok/Documents/Verilog/Practica_light/db/light.cbx.xml
+source_file = 1, C:/Practicas/Verilog_Labs/Practica_light/light.v
+source_file = 1, C:/Practicas/Verilog_Labs/Practica_light/light_tb.v
+source_file = 1, C:/Practicas/Verilog_Labs/Practica_light/db/light.cbx.xml
 design_name = light
 instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, light, 1
 instance = comp, \f~output , f~output, light, 1

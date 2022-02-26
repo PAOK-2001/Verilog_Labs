@@ -62,7 +62,6 @@ set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_location_assignment PIN_C10 -to x1
 set_location_assignment PIN_C11 -to x2
 set_location_assignment PIN_A8 -to f
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name VERILOG_FILE light.v
 set_global_assignment -name VERILOG_FILE light_tb.v
 set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
@@ -71,3 +70,4 @@ set_global_assignment -name EDA_TEST_BENCH_NAME light_tb -section_id eda_simulat
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id light_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME light_tb -section_id light_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE light_tb.v -section_id light_tb
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
