@@ -1,0 +1,93 @@
+# Copyright (C) 2020  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+
+# Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+# File: C:\Practicas\Verilog_Labs\PinPlanner\PinPlanner.csv
+# Generated on: Fri Feb 25 19:11:41 2022
+
+# Note: The column header names should not be changed if you wish to import this .csv file into the Quartus Prime software.
+
+To,Direction,Location,I/O Bank,VREF Group,Fitter Location,I/O Standard,Reserved,Current Strength,Slew Rate,Differential Pair,Strict Preservation
+KEY0,Input,PIN_B8,7,B7_N0,PIN_B8,2.5 V,,,,,
+KEY1,Input,PIN_A7,7,B7_N0,PIN_A7,2.5 V,,,,,
+LEDR0,Input,PIN_A8,7,B7_N0,PIN_A8,2.5 V,,,,,
+LEDR1,Input,PIN_A9,7,B7_N0,PIN_A9,2.5 V,,,,,
+LEDR2,Input,PIN_A10,7,B7_N0,PIN_A10,2.5 V,,,,,
+LEDR3,Input,PIN_B10,7,B7_N0,PIN_B10,2.5 V,,,,,
+LEDR4,Input,PIN_D13,7,B7_N0,PIN_D13,2.5 V,,,,,
+LEDR5,Input,PIN_C13,7,B7_N0,PIN_C13,2.5 V,,,,,
+LEDR6,Input,PIN_E14,7,B7_N0,PIN_E14,2.5 V,,,,,
+LEDR7,Input,PIN_D14,7,B7_N0,PIN_D14,2.5 V,,,,,
+LEDR8,Input,PIN_A11,7,B7_N0,PIN_A11,2.5 V,,,,,
+LEDR9,Input,PIN_B11,7,B7_N0,PIN_B11,2.5 V,,,,,
+clk,Input,PIN_P11,3,B3_N0,PIN_P11,2.5 V,,,,,
+display_0[7],Input,PIN_D15,7,B7_N0,PIN_D15,2.5 V,,,,,
+display_0[6],Input,PIN_C17,7,B7_N0,PIN_C17,2.5 V,,,,,
+display_0[5],Input,PIN_D17,7,B7_N0,PIN_D17,2.5 V,,,,,
+display_0[4],Input,PIN_E16,7,B7_N0,PIN_E16,2.5 V,,,,,
+display_0[3],Input,PIN_C16,7,B7_N0,PIN_C16,2.5 V,,,,,
+display_0[2],Input,PIN_C15,7,B7_N0,PIN_C15,2.5 V,,,,,
+display_0[1],Input,PIN_E15,7,B7_N0,PIN_E15,2.5 V,,,,,
+display_0[0],Input,PIN_C14,7,B7_N0,PIN_C14,2.5 V,,,,,
+display_1[7],Input,PIN_A16,7,B7_N0,PIN_A16,2.5 V,,,,,
+display_1[6],Input,PIN_B17,7,B7_N0,PIN_B17,2.5 V,,,,,
+display_1[5],Input,PIN_A18,7,B7_N0,PIN_A18,2.5 V,,,,,
+display_1[4],Input,PIN_A17,7,B7_N0,PIN_A17,2.5 V,,,,,
+display_1[3],Input,PIN_B16,7,B7_N0,PIN_B16,2.5 V,,,,,
+display_1[2],Input,PIN_E18,6,B6_N0,PIN_E18,2.5 V,,,,,
+display_1[1],Input,PIN_D18,6,B6_N0,PIN_D18,2.5 V,,,,,
+display_1[0],Input,PIN_C18,7,B7_N0,PIN_C18,2.5 V,,,,,
+display_2[7],Input,PIN_A19,7,B7_N0,PIN_A19,2.5 V,,,,,
+display_2[6],Input,PIN_B22,6,B6_N0,PIN_B22,2.5 V,,,,,
+display_2[5],Input,PIN_C22,6,B6_N0,PIN_C22,2.5 V,,,,,
+display_2[4],Input,PIN_B21,6,B6_N0,PIN_B21,2.5 V,,,,,
+display_2[3],Input,PIN_A21,6,B6_N0,PIN_A21,2.5 V,,,,,
+display_2[2],Input,PIN_B19,7,B7_N0,PIN_B19,2.5 V,,,,,
+display_2[1],Input,PIN_A20,7,B7_N0,PIN_A20,2.5 V,,,,,
+display_2[0],Input,PIN_B20,6,B6_N0,PIN_B20,2.5 V,,,,,
+display_3[7],Input,PIN_D22,6,B6_N0,PIN_D22,2.5 V,,,,,
+display_3[6],Input,PIN_E17,6,B6_N0,PIN_E17,2.5 V,,,,,
+display_3[5],Input,PIN_D19,6,B6_N0,PIN_D19,2.5 V,,,,,
+display_3[4],Input,PIN_C20,6,B6_N0,PIN_C20,2.5 V,,,,,
+display_3[3],Input,PIN_C19,7,B7_N0,PIN_C19,2.5 V,,,,,
+display_3[2],Input,PIN_E21,6,B6_N0,PIN_E21,2.5 V,,,,,
+display_3[1],Input,PIN_E22,6,B6_N0,PIN_E22,2.5 V,,,,,
+display_3[0],Input,PIN_F21,6,B6_N0,PIN_F21,2.5 V,,,,,
+display_4[7],Input,PIN_F17,6,B6_N0,PIN_F17,2.5 V,,,,,
+display_4[6],Input,PIN_F20,6,B6_N0,PIN_F20,2.5 V,,,,,
+display_4[5],Input,PIN_F19,6,B6_N0,PIN_F19,2.5 V,,,,,
+display_4[4],Input,PIN_H19,6,B6_N0,PIN_H19,2.5 V,,,,,
+display_4[3],Input,PIN_J18,6,B6_N0,PIN_J18,2.5 V,,,,,
+display_4[2],Input,PIN_E19,6,B6_N0,PIN_E19,2.5 V,,,,,
+display_4[1],Input,PIN_E20,6,B6_N0,PIN_E20,2.5 V,,,,,
+display_4[0],Input,PIN_F18,6,B6_N0,PIN_F18,2.5 V,,,,,
+display_5[7],Input,PIN_L19,6,B6_N0,PIN_L19,2.5 V,,,,,
+display_5[6],Input,PIN_N20,6,B6_N0,PIN_N20,2.5 V,,,,,
+display_5[5],Input,PIN_N19,6,B6_N0,PIN_N19,2.5 V,,,,,
+display_5[4],Input,PIN_M20,6,B6_N0,PIN_M20,2.5 V,,,,,
+display_5[3],Input,PIN_N18,6,B6_N0,PIN_N18,2.5 V,,,,,
+display_5[2],Input,PIN_L18,6,B6_N0,PIN_L18,2.5 V,,,,,
+display_5[1],Input,PIN_K20,6,B6_N0,PIN_K20,2.5 V,,,,,
+display_5[0],Input,PIN_J20,6,B6_N0,PIN_J20,2.5 V,,,,,
+sw0,Input,PIN_C10,7,B7_N0,PIN_L15,,,,,,
+sw1,Input,PIN_C11,7,B7_N0,PIN_G3,,,,,,
+sw2,Input,PIN_D12,7,B7_N0,PIN_E11,,,,,,
+sw3,Input,PIN_C12,7,B7_N0,PIN_M8,,,,,,
+sw4,Input,PIN_A12,7,B7_N0,PIN_D8,,,,,,
+sw5,Input,PIN_B12,7,B7_N0,PIN_T3,,,,,,
+sw6,Input,PIN_A13,7,B7_N0,PIN_G17,,,,,,
+sw7,Input,PIN_A14,7,B7_N0,PIN_W8,,,,,,
+sw8,Input,PIN_B14,7,B7_N0,PIN_C11,,,,,,
+sw9,Input,PIN_F15,7,B7_N0,PIN_W20,,,,,,

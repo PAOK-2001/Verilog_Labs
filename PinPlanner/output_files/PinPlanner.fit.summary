@@ -1,0 +1,12 @@
+I/O Assignment Analysis Status : Successful - Fri Feb 25 19:12:08 2022
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : PinPlanner
+Top-level Entity Name : PinPlanner
+Family : MAX 10
+Device : 10M50DAF484C7G
+Timing Models : Final
+Total pins : 71 / 360 ( 20 % )
+Total virtual pins : 0
+Total PLLs : 0 / 4 ( 0 % )
+UFM blocks : 0 / 1 ( 0 % )
+ADC blocks : 0 / 2 ( 0 % )
