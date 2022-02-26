@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at jk.v(18): always construct contains both blocking and non-blocking assignments File: C:/Practicas/Biestables/FlipFlop_JK/jk.v Line: 18

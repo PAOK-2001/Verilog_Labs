@@ -1,0 +1,49 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "q",
+					"strict" : false
+				},
+				{
+					"name" : "display7Segment[0]",
+					"strict" : false
+				},
+				{
+					"name" : "display7Segment[3]",
+					"strict" : false
+				},
+				{
+					"name" : "display7Segment[4]",
+					"strict" : false
+				},
+				{
+					"name" : "display7Segment[5]",
+					"strict" : false
+				},
+				{
+					"name" : "clc",
+					"strict" : false
+				},
+				{
+					"name" : "J",
+					"strict" : false
+				},
+				{
+					"name" : "K",
+					"strict" : false
+				},
+				{
+					"name" : "pr",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

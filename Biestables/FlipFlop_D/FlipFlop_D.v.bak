@@ -1,0 +1,16 @@
+module FlipFlop_D(
+
+	input clk, D,
+	input[1:0] SR,
+	output reg q
+
+);
+
+always @(posedge clk)
+begin 
+
+	q <= D
+
+end
+
+endmodule

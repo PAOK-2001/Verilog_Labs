@@ -1,0 +1,8 @@
+|FlipFlop_T
+clk => q~reg0.CLK
+T => q.OUTPUTSELECT
+SR[0] => q.OUTPUTSELECT
+SR[1] => q.OUTPUTSELECT
+q << q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
