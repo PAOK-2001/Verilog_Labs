@@ -15,8 +15,8 @@ input2[2] => LessThan0.IN6
 input2[2] => Equal0.IN5
 input2[3] => LessThan0.IN5
 input2[3] => Equal0.IN4
-output_comparador[0] <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
-output_comparador[1] <= output_comparador.DB_MAX_OUTPUT_PORT_TYPE
-output_comparador[2] <= output_comparador.DB_MAX_OUTPUT_PORT_TYPE
+output_comparador[0] << LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+output_comparador[1] << output_comparador.DB_MAX_OUTPUT_PORT_TYPE
+output_comparador[2] << output_comparador.DB_MAX_OUTPUT_PORT_TYPE
 
 
