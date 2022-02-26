@@ -1,0 +1,57 @@
+# Reading pref.tcl
+# ERROR: No extended dataflow license exists
+# do Comparador4bits_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Practicas/Verilog_Labs/Comparador4bits {C:/Practicas/Verilog_Labs/Comparador4bits/Comparador4bits.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:52:57 on Feb 25,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Practicas/Verilog_Labs/Comparador4bits" C:/Practicas/Verilog_Labs/Comparador4bits/Comparador4bits.v 
+# -- Compiling module Comparador4bits
+# 
+# Top level modules:
+# 	Comparador4bits
+# End time: 19:52:57 on Feb 25,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/Practicas/Verilog_Labs/Comparador4bits {C:/Practicas/Verilog_Labs/Comparador4bits/Comparador4bits_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:52:57 on Feb 25,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Practicas/Verilog_Labs/Comparador4bits" C:/Practicas/Verilog_Labs/Comparador4bits/Comparador4bits_tb.v 
+# -- Compiling module Comparador4bits_tb
+# 
+# Top level modules:
+# 	Comparador4bits_tb
+# End time: 19:52:57 on Feb 25,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs="+acc"  Comparador4bits_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs=""+acc"" Comparador4bits_tb 
+# Start time: 19:52:57 on Feb 25,2022
+# Loading work.Comparador4bits_tb
+# Loading work.Comparador4bits
+# 
+# add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: manue  Hostname: PCGAMER  ProcessID: 30144
+#           Attempting to use alternate WLF file "./wlftkymgcj".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftkymgcj
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Note: $stop    : C:/Practicas/Verilog_Labs/Comparador4bits/Comparador4bits_tb.v(36)
+#    Time: 100 ps  Iteration: 0  Instance: /Comparador4bits_tb
+# Break in Module Comparador4bits_tb at C:/Practicas/Verilog_Labs/Comparador4bits/Comparador4bits_tb.v line 36
+# End time: 19:58:28 on Feb 25,2022, Elapsed time: 0:05:31
+# Errors: 0, Warnings: 2

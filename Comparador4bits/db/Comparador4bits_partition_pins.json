@@ -1,0 +1,53 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "output_comparador[0]",
+					"strict" : false
+				},
+				{
+					"name" : "output_comparador[1]",
+					"strict" : false
+				},
+				{
+					"name" : "output_comparador[2]",
+					"strict" : false
+				},
+				{
+					"name" : "input1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "input1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "input2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "input2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "input1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "input1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "input2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "input2[1]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

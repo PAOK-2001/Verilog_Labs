@@ -8,52 +8,52 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 d/home/paok/Documents/Verilog/Lab1_Gates/simulation/modelsim
+Z0 dC:/Practicas/Verilog_Labs/Lab1_Gates/simulation/modelsim
 vgates
-Z1 !s110 1645035979
+Z1 !s110 1645839403
 !i10b 1
 !s100 <j?<5IOdQ:o:KY1gZi]jP3
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IUgKY_dXloTZ[S<JB4k5no2
+IXf[l6jkFYQRHn=l;kBJ:n1
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1645017373
-8/home/paok/Documents/Verilog/Lab1_Gates/gates.v
-F/home/paok/Documents/Verilog/Lab1_Gates/gates.v
+Z4 w1645834793
+8C:/Practicas/Verilog_Labs/Lab1_Gates/gates.v
+FC:/Practicas/Verilog_Labs/Lab1_Gates/gates.v
 !i122 0
 L0 8 16
-Z4 OV;L;2020.1;71
+Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z5 !s108 1645035979.000000
-!s107 /home/paok/Documents/Verilog/Lab1_Gates/gates.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/paok/Documents/Verilog/Lab1_Gates|/home/paok/Documents/Verilog/Lab1_Gates/gates.v|
+Z6 !s108 1645839403.000000
+!s107 C:/Practicas/Verilog_Labs/Lab1_Gates/gates.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Practicas/Verilog_Labs/Lab1_Gates|C:/Practicas/Verilog_Labs/Lab1_Gates/gates.v|
 !i113 1
-Z6 o-vlog01compat -work work
-Z7 !s92 -vlog01compat -work work +incdir+/home/paok/Documents/Verilog/Lab1_Gates
-Z8 tCvgOpt 0
+Z7 o-vlog01compat -work work
+Z8 !s92 -vlog01compat -work work +incdir+C:/Practicas/Verilog_Labs/Lab1_Gates
+Z9 tCvgOpt 0
 vgates_tb
 R1
 !i10b 1
 !s100 [UjoC;`EMd]d1Clf0gO?Z1
 R2
-IH8JA;LgclfP62N86BVBD@3
+IDmaVZ1PaOhUk3:m;O1^Uc2
 R3
 R0
-w1645021391
-8/home/paok/Documents/Verilog/Lab1_Gates/gates_tb.v
-F/home/paok/Documents/Verilog/Lab1_Gates/gates_tb.v
+R4
+8C:/Practicas/Verilog_Labs/Lab1_Gates/gates_tb.v
+FC:/Practicas/Verilog_Labs/Lab1_Gates/gates_tb.v
 !i122 1
 L0 2 32
-R4
+R5
 r1
 !s85 0
 31
-R5
-!s107 /home/paok/Documents/Verilog/Lab1_Gates/gates_tb.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/paok/Documents/Verilog/Lab1_Gates|/home/paok/Documents/Verilog/Lab1_Gates/gates_tb.v|
-!i113 1
 R6
+!s107 C:/Practicas/Verilog_Labs/Lab1_Gates/gates_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Practicas/Verilog_Labs/Lab1_Gates|C:/Practicas/Verilog_Labs/Lab1_Gates/gates_tb.v|
+!i113 1
 R7
 R8
+R9

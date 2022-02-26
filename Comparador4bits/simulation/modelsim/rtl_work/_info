@@ -1,0 +1,61 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Practicas/Verilog_Labs/Comparador4bits/simulation/modelsim
+vComparador4bits
+Z1 !s110 1645840377
+!i10b 1
+!s100 =BNzA;NZVdIkT3_H:K0TE3
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IAlJm9_40DEI:c<Pl;fRC83
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1645840301
+8C:/Practicas/Verilog_Labs/Comparador4bits/Comparador4bits.v
+FC:/Practicas/Verilog_Labs/Comparador4bits/Comparador4bits.v
+!i122 0
+L0 1 27
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1645840377.000000
+!s107 C:/Practicas/Verilog_Labs/Comparador4bits/Comparador4bits.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Practicas/Verilog_Labs/Comparador4bits|C:/Practicas/Verilog_Labs/Comparador4bits/Comparador4bits.v|
+!i113 1
+Z6 o-vlog01compat -work work
+Z7 !s92 -vlog01compat -work work +incdir+C:/Practicas/Verilog_Labs/Comparador4bits
+Z8 tCvgOpt 0
+n@comparador4bits
+vComparador4bits_tb
+R1
+!i10b 1
+!s100 k:EiUD4:5?P7gzUmGam_h3
+R2
+IXYR>zF1;QEhUVZoni0k:O3
+R3
+R0
+w1645198822
+8C:/Practicas/Verilog_Labs/Comparador4bits/Comparador4bits_tb.v
+FC:/Practicas/Verilog_Labs/Comparador4bits/Comparador4bits_tb.v
+!i122 1
+L0 1 41
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Practicas/Verilog_Labs/Comparador4bits/Comparador4bits_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Practicas/Verilog_Labs/Comparador4bits|C:/Practicas/Verilog_Labs/Comparador4bits/Comparador4bits_tb.v|
+!i113 1
+R6
+R7
+R8
+n@comparador4bits_tb

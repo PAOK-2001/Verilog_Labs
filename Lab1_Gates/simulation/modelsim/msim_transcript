@@ -1,3 +1,5 @@
+# Reading pref.tcl
+# ERROR: No extended dataflow license exists
 # do gates_run_msim_rtl_verilog.do
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
@@ -6,34 +8,34 @@
 # vmap work rtl_work
 # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap work rtl_work 
-# Copying /home/paok/intelFPGA_lite/20.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+/home/paok/Documents/Verilog/Lab1_Gates {/home/paok/Documents/Verilog/Lab1_Gates/gates.v}
+# vlog -vlog01compat -work work +incdir+C:/Practicas/Verilog_Labs/Lab1_Gates {C:/Practicas/Verilog_Labs/Lab1_Gates/gates.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:26:19 on Feb 16,2022
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/paok/Documents/Verilog/Lab1_Gates" /home/paok/Documents/Verilog/Lab1_Gates/gates.v 
+# Start time: 19:36:43 on Feb 25,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Practicas/Verilog_Labs/Lab1_Gates" C:/Practicas/Verilog_Labs/Lab1_Gates/gates.v 
 # -- Compiling module gates
 # 
 # Top level modules:
 # 	gates
-# End time: 12:26:19 on Feb 16,2022, Elapsed time: 0:00:00
+# End time: 19:36:43 on Feb 25,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vlog -vlog01compat -work work +incdir+/home/paok/Documents/Verilog/Lab1_Gates {/home/paok/Documents/Verilog/Lab1_Gates/gates_tb.v}
+# vlog -vlog01compat -work work +incdir+C:/Practicas/Verilog_Labs/Lab1_Gates {C:/Practicas/Verilog_Labs/Lab1_Gates/gates_tb.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:26:19 on Feb 16,2022
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/paok/Documents/Verilog/Lab1_Gates" /home/paok/Documents/Verilog/Lab1_Gates/gates_tb.v 
+# Start time: 19:36:43 on Feb 25,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Practicas/Verilog_Labs/Lab1_Gates" C:/Practicas/Verilog_Labs/Lab1_Gates/gates_tb.v 
 # -- Compiling module gates_tb
 # 
 # Top level modules:
 # 	gates_tb
-# End time: 12:26:19 on Feb 16,2022, Elapsed time: 0:00:00
+# End time: 19:36:43 on Feb 25,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs="+acc"  gates_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs=""+acc"" gates_tb 
-# Start time: 12:26:19 on Feb 16,2022
+# Start time: 19:36:43 on Feb 25,2022
 # Loading work.gates_tb
 # Loading work.gates
 # 
@@ -43,8 +45,8 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# ** Note: $stop    : /home/paok/Documents/Verilog/Lab1_Gates/gates_tb.v(31)
+# ** Note: $stop    : C:/Practicas/Verilog_Labs/Lab1_Gates/gates_tb.v(31)
 #    Time: 80 ps  Iteration: 0  Instance: /gates_tb
-# Break in Module gates_tb at /home/paok/Documents/Verilog/Lab1_Gates/gates_tb.v line 31
-# End time: 12:30:43 on Feb 16,2022, Elapsed time: 0:04:24
+# Break in Module gates_tb at C:/Practicas/Verilog_Labs/Lab1_Gates/gates_tb.v line 31
+# End time: 19:40:07 on Feb 25,2022, Elapsed time: 0:03:24
 # Errors: 0, Warnings: 0

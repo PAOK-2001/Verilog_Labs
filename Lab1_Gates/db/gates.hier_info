@@ -7,13 +7,13 @@ a_in => z_out[2].DATAIN
 b_in => z_out.IN1
 b_in => z_out.IN1
 b_in => z_out.IN1
-z_out[0] << z_out.DB_MAX_OUTPUT_PORT_TYPE
-z_out[1] << z_out.DB_MAX_OUTPUT_PORT_TYPE
-z_out[2] << a_in.DB_MAX_OUTPUT_PORT_TYPE
-z_out[3] << z_out.DB_MAX_OUTPUT_PORT_TYPE
-z_out[4] << z_out.DB_MAX_OUTPUT_PORT_TYPE
-z_out[5] << z_out.DB_MAX_OUTPUT_PORT_TYPE
-z_out[6] << z_out.DB_MAX_OUTPUT_PORT_TYPE
-z_out[7] << a_in.DB_MAX_OUTPUT_PORT_TYPE
+z_out[0] <= z_out.DB_MAX_OUTPUT_PORT_TYPE
+z_out[1] <= z_out.DB_MAX_OUTPUT_PORT_TYPE
+z_out[2] <= a_in.DB_MAX_OUTPUT_PORT_TYPE
+z_out[3] <= z_out.DB_MAX_OUTPUT_PORT_TYPE
+z_out[4] <= z_out.DB_MAX_OUTPUT_PORT_TYPE
+z_out[5] <= z_out.DB_MAX_OUTPUT_PORT_TYPE
+z_out[6] <= z_out.DB_MAX_OUTPUT_PORT_TYPE
+z_out[7] <= a_in.DB_MAX_OUTPUT_PORT_TYPE
 
 

@@ -1,8 +1,8 @@
 vendor_name = ModelSim
-source_file = 1, /home/paok/Documents/Verilog_Labs/Lab1_Gates/gates.v
-source_file = 1, /home/paok/Documents/Verilog_Labs/Lab1_Gates/COMPUERTA_AND.v
-source_file = 1, /home/paok/Documents/Verilog_Labs/Lab1_Gates/gates_tb.v
-source_file = 1, /home/paok/Documents/Verilog_Labs/Lab1_Gates/db/gates.cbx.xml
+source_file = 1, C:/Practicas/Verilog_Labs/Lab1_Gates/gates.v
+source_file = 1, C:/Practicas/Verilog_Labs/Lab1_Gates/COMPUERTA_AND.v
+source_file = 1, C:/Practicas/Verilog_Labs/Lab1_Gates/gates_tb.v
+source_file = 1, C:/Practicas/Verilog_Labs/Lab1_Gates/db/gates.cbx.xml
 design_name = gates
 instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, gates, 1
 instance = comp, \z_out[0]~output , z_out[0]~output, gates, 1

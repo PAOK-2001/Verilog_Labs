@@ -1,7 +1,7 @@
 vendor_name = ModelSim
-source_file = 1, /home/paok/Documents/Verilog_Labs/Multiplexor/Multiplexor.v
-source_file = 1, /home/paok/Documents/Verilog_Labs/Multiplexor/Multiplexor_tb.v
-source_file = 1, /home/paok/Documents/Verilog_Labs/Multiplexor/db/Multiplexor.cbx.xml
+source_file = 1, C:/Practicas/Verilog_Labs/Multiplexor/Multiplexor.v
+source_file = 1, C:/Practicas/Verilog_Labs/Multiplexor/Multiplexor_tb.v
+source_file = 1, C:/Practicas/Verilog_Labs/Multiplexor/db/Multiplexor.cbx.xml
 design_name = Multiplexor
 instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, Multiplexor, 1
 instance = comp, \salida~output , salida~output, Multiplexor, 1

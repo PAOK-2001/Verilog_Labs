@@ -1,0 +1,11 @@
+module comparador4bits(
+
+	input[3:0] input1, input2,
+	
+	output [2:0] output_comparador
+
+);
+
+assign output_comparador[0] = input1 > input2;
+
+endmodule

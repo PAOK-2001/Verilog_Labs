@@ -1,7 +1,7 @@
 vendor_name = ModelSim
-source_file = 1, /home/paok/Documents/Verilog_Labs/Full-Adder/Full_Adder.v
-source_file = 1, /home/paok/Documents/Verilog_Labs/Full-Adder/Full_Adder_tb.v
-source_file = 1, /home/paok/Documents/Verilog_Labs/Full-Adder/db/Full-Adder.cbx.xml
+source_file = 1, C:/Practicas/Verilog_Labs/Full-Adder/Full_Adder.v
+source_file = 1, C:/Practicas/Verilog_Labs/Full-Adder/Full_Adder_tb.v
+source_file = 1, C:/Practicas/Verilog_Labs/Full-Adder/db/Full-Adder.cbx.xml
 design_name = Full_Adder
 instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, Full_Adder, 1
 instance = comp, \result~output , result~output, Full_Adder, 1

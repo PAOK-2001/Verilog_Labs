@@ -1,3 +1,5 @@
+# Reading pref.tcl
+# ERROR: No extended dataflow license exists
 # do Multiplexor_run_msim_rtl_verilog.do
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
@@ -6,34 +8,34 @@
 # vmap work rtl_work
 # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap work rtl_work 
-# Copying /home/paok/intelFPGA_lite/20.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+/home/paok/Documents/Verilog_Labs/Multiplexor {/home/paok/Documents/Verilog_Labs/Multiplexor/Multiplexor.v}
+# vlog -vlog01compat -work work +incdir+C:/Practicas/Verilog_Labs/Multiplexor {C:/Practicas/Verilog_Labs/Multiplexor/Multiplexor.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 10:09:00 on Feb 18,2022
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/paok/Documents/Verilog_Labs/Multiplexor" /home/paok/Documents/Verilog_Labs/Multiplexor/Multiplexor.v 
+# Start time: 19:47:11 on Feb 25,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Practicas/Verilog_Labs/Multiplexor" C:/Practicas/Verilog_Labs/Multiplexor/Multiplexor.v 
 # -- Compiling module Multiplexor
 # 
 # Top level modules:
 # 	Multiplexor
-# End time: 10:09:00 on Feb 18,2022, Elapsed time: 0:00:00
+# End time: 19:47:11 on Feb 25,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vlog -vlog01compat -work work +incdir+/home/paok/Documents/Verilog_Labs/Multiplexor {/home/paok/Documents/Verilog_Labs/Multiplexor/Multiplexor_tb.v}
+# vlog -vlog01compat -work work +incdir+C:/Practicas/Verilog_Labs/Multiplexor {C:/Practicas/Verilog_Labs/Multiplexor/Multiplexor_tb.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 10:09:00 on Feb 18,2022
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/paok/Documents/Verilog_Labs/Multiplexor" /home/paok/Documents/Verilog_Labs/Multiplexor/Multiplexor_tb.v 
+# Start time: 19:47:11 on Feb 25,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Practicas/Verilog_Labs/Multiplexor" C:/Practicas/Verilog_Labs/Multiplexor/Multiplexor_tb.v 
 # -- Compiling module Multiplexor_tb
 # 
 # Top level modules:
 # 	Multiplexor_tb
-# End time: 10:09:00 on Feb 18,2022, Elapsed time: 0:00:00
+# End time: 19:47:11 on Feb 25,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs="+acc"  Multiplexor_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs=""+acc"" Multiplexor_tb 
-# Start time: 10:09:00 on Feb 18,2022
+# Start time: 19:47:11 on Feb 25,2022
 # Loading work.Multiplexor_tb
 # Loading work.Multiplexor
 # 
@@ -43,9 +45,8 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# ** Note: $stop    : /home/paok/Documents/Verilog_Labs/Multiplexor/Multiplexor_tb.v(27)
+# ** Note: $stop    : C:/Practicas/Verilog_Labs/Multiplexor/Multiplexor_tb.v(27)
 #    Time: 80 ps  Iteration: 0  Instance: /Multiplexor_tb
-# Break in Module Multiplexor_tb at /home/paok/Documents/Verilog_Labs/Multiplexor/Multiplexor_tb.v line 27
-# WARNING: No extended dataflow license exists
-# End time: 10:11:11 on Feb 18,2022, Elapsed time: 0:02:11
+# Break in Module Multiplexor_tb at C:/Practicas/Verilog_Labs/Multiplexor/Multiplexor_tb.v line 27
+# End time: 19:47:54 on Feb 25,2022, Elapsed time: 0:00:43
 # Errors: 0, Warnings: 0
