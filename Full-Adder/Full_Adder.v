@@ -9,6 +9,8 @@ module Full_Adder(
 // Detecta el cambio en cualquier variable
 always @*
 begin
- {carryOut, result} = bits[0]+bits[1] +carryIn;
+	// Usamos la concatenacion para representar carryOut y result,
+	// permientiendo un asignacion directa
+	{carryOut, result} = bits[0]+bits[1] +carryIn;
 end 
 endmodule
