@@ -4,23 +4,22 @@ module clk_divider(
 );
 
 reg[31:0]  counter;
-localparam target = 5;
-reg        enable = 0;
+localparam target = 25000000;
 
-always@(posedge clk or posedge rst)
+always@(posedge clk or negedge rst)
 begin
-	if(rst==1'b1)
+	if(rst == 0)
 		counter <= 0;
 	else if(counter == target-1)
 		counter = 0;
 	else
-		counter = counter +32'b1;
+		counter = counter + 32'b1;
 end
 
-always@(*)
+always@(posedge clk or negedge rst)
 begin
-	if(rst == 1'b1)
-		clk_div = 1'b10;
+	if(rst == 0)
+		clk_div = 1'b0;
 	else if(counter == target-1)
 		clk_div = ~clk_div;
 	else

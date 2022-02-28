@@ -1,5 +1,5 @@
 Analysis & Synthesis report for UpDown
-Fri Feb 25 09:39:02 2022
+Mon Feb 28 08:24:40 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -13,12 +13,12 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. User-Specified and Inferred Latches
-  9. General Register Statistics
- 10. Port Connectivity Checks: "debouncer:DEBOUNCE"
- 11. Post-Synthesis Netlist Statistics for Top Partition
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+  8. General Register Statistics
+  9. Port Connectivity Checks: "debouncer:DEBOUNCE"
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
+ 13. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -45,15 +45,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Feb 25 09:39:02 2022       ;
+; Analysis & Synthesis Status        ; Successful - Mon Feb 28 08:24:40 2022       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; UpDown                                      ;
 ; Top-level Entity Name              ; UpDown                                      ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 83                                          ;
-;     Total combinational functions  ; 81                                          ;
-;     Dedicated logic registers      ; 51                                          ;
-; Total registers                    ; 51                                          ;
+; Total logic elements               ; 92                                          ;
+;     Total combinational functions  ; 90                                          ;
+;     Dedicated logic registers      ; 52                                          ;
+; Total registers                    ; 52                                          ;
 ; Total pins                         ; 18                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -155,30 +155,30 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 16          ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 16          ;
+; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.0%      ;
-;     Processors 3-16        ;   0.0%      ;
+;     Processors 3-6         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                 ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                   ; Library ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------------+---------+
-; clk_divider.v                    ; yes             ; User Verilog HDL File  ; /home/paok/Documents/Verilog_Labs/UpDown_Counter/clk_divider.v ;         ;
-; debouncer.v                      ; yes             ; User Verilog HDL File  ; /home/paok/Documents/Verilog_Labs/UpDown_Counter/debouncer.v   ;         ;
-; counter.v                        ; yes             ; User Verilog HDL File  ; /home/paok/Documents/Verilog_Labs/UpDown_Counter/counter.v     ;         ;
-; UpDown.v                         ; yes             ; User Verilog HDL File  ; /home/paok/Documents/Verilog_Labs/UpDown_Counter/UpDown.v      ;         ;
-; BCD.v                            ; yes             ; User Verilog HDL File  ; /home/paok/Documents/Verilog_Labs/UpDown_Counter/BCD.v         ;         ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                         ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                           ; Library ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------+---------+
+; clk_divider.v                    ; yes             ; User Verilog HDL File  ; C:/Practicas/Verilog_Labs/UpDown_Counter/clk_divider.v ;         ;
+; debouncer.v                      ; yes             ; User Verilog HDL File  ; C:/Practicas/Verilog_Labs/UpDown_Counter/debouncer.v   ;         ;
+; counter.v                        ; yes             ; User Verilog HDL File  ; C:/Practicas/Verilog_Labs/UpDown_Counter/counter.v     ;         ;
+; UpDown.v                         ; yes             ; User Verilog HDL File  ; C:/Practicas/Verilog_Labs/UpDown_Counter/UpDown.v      ;         ;
+; BCD.v                            ; yes             ; User Verilog HDL File  ; C:/Practicas/Verilog_Labs/UpDown_Counter/BCD.v         ;         ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -186,20 +186,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 83        ;
+; Estimated Total logic elements              ; 92        ;
 ;                                             ;           ;
-; Total combinational functions               ; 81        ;
+; Total combinational functions               ; 90        ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 26        ;
-;     -- 3 input functions                    ; 8         ;
-;     -- <=2 input functions                  ; 47        ;
+;     -- 4 input functions                    ; 27        ;
+;     -- 3 input functions                    ; 19        ;
+;     -- <=2 input functions                  ; 44        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 36        ;
+;     -- normal mode                          ; 45        ;
 ;     -- arithmetic mode                      ; 45        ;
 ;                                             ;           ;
-; Total registers                             ; 51        ;
-;     -- Dedicated logic registers            ; 51        ;
+; Total registers                             ; 52        ;
+;     -- Dedicated logic registers            ; 52        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 18        ;
@@ -208,8 +208,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clc~input ;
 ; Maximum fan-out                             ; 40        ;
-; Total fan-out                               ; 402       ;
-; Average fan-out                             ; 2.39      ;
+; Total fan-out                               ; 436       ;
+; Average fan-out                             ; 2.45      ;
 +---------------------------------------------+-----------+
 
 
@@ -218,24 +218,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name         ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------+-------------+--------------+
-; |UpDown                    ; 81 (0)              ; 51 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 18   ; 0            ; 0          ; |UpDown                     ; UpDown      ; work         ;
+; |UpDown                    ; 90 (0)              ; 52 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 18   ; 0            ; 0          ; |UpDown                     ; UpDown      ; work         ;
 ;    |BCD:DISPLAY_RESULT|    ; 14 (14)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |UpDown|BCD:DISPLAY_RESULT  ; BCD         ; work         ;
-;    |clk_divider:DIVIDER|   ; 46 (46)             ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |UpDown|clk_divider:DIVIDER ; clk_divider ; work         ;
+;    |clk_divider:DIVIDER|   ; 55 (55)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |UpDown|clk_divider:DIVIDER ; clk_divider ; work         ;
 ;    |counter:COUNT|         ; 7 (7)               ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |UpDown|counter:COUNT       ; counter     ; work         ;
 ;    |debouncer:DEBOUNCE|    ; 14 (14)             ; 12 (12)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |UpDown|debouncer:DEBOUNCE  ; debouncer   ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+----------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                      ;
-+----------------------------------------------------+----------------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal        ; Free of Timing Hazards ;
-+----------------------------------------------------+----------------------------+------------------------+
-; clk_divider:DIVIDER|clk_div                        ; clk_divider:DIVIDER|Equal0 ; yes                    ;
-; Number of user-specified and inferred latches = 1  ;                            ;                        ;
-+----------------------------------------------------+----------------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------+
@@ -243,10 +232,10 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 51    ;
-; Number of registers using Synchronous Clear  ; 16    ;
+; Total registers                              ; 52    ;
+; Number of registers using Synchronous Clear  ; 9     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 32    ;
+; Number of registers using Asynchronous Clear ; 40    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
@@ -269,22 +258,22 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 18                          ;
-; cycloneiii_ff         ; 51                          ;
-;     CLR               ; 32                          ;
-;     SCLR              ; 16                          ;
+; cycloneiii_ff         ; 52                          ;
+;     CLR               ; 40                          ;
+;     SCLR              ; 9                           ;
 ;     plain             ; 3                           ;
-; cycloneiii_lcell_comb ; 82                          ;
+; cycloneiii_lcell_comb ; 91                          ;
 ;     arith             ; 45                          ;
 ;         2 data inputs ; 40                          ;
 ;         3 data inputs ; 5                           ;
-;     normal            ; 37                          ;
+;     normal            ; 46                          ;
 ;         1 data inputs ; 3                           ;
-;         2 data inputs ; 5                           ;
-;         3 data inputs ; 3                           ;
-;         4 data inputs ; 26                          ;
+;         2 data inputs ; 2                           ;
+;         3 data inputs ; 14                          ;
+;         4 data inputs ; 27                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.10                        ;
-; Average LUT depth     ; 2.94                        ;
+; Max LUT depth         ; 4.40                        ;
+; Average LUT depth     ; 2.82                        ;
 +-----------------------+-----------------------------+
 
 
@@ -303,43 +292,44 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Fri Feb 25 09:38:56 2022
+    Info: Processing started: Mon Feb 28 08:24:30 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off UpDown -c UpDown
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
-Warning (10229): Verilog HDL Expression warning at clk_divider.v(23): truncated literal to match 1 bits File: /home/paok/Documents/Verilog_Labs/UpDown_Counter/clk_divider.v Line: 23
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file clk_divider.v
-    Info (12023): Found entity 1: clk_divider File: /home/paok/Documents/Verilog_Labs/UpDown_Counter/clk_divider.v Line: 1
+    Info (12023): Found entity 1: clk_divider File: C:/Practicas/Verilog_Labs/UpDown_Counter/clk_divider.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file debouncer.v
-    Info (12023): Found entity 1: debouncer File: /home/paok/Documents/Verilog_Labs/UpDown_Counter/debouncer.v Line: 1
+    Info (12023): Found entity 1: debouncer File: C:/Practicas/Verilog_Labs/UpDown_Counter/debouncer.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file counter.v
-    Info (12023): Found entity 1: counter File: /home/paok/Documents/Verilog_Labs/UpDown_Counter/counter.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file UpDown.v
-    Info (12023): Found entity 1: UpDown File: /home/paok/Documents/Verilog_Labs/UpDown_Counter/UpDown.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file BCD.v
-    Info (12023): Found entity 1: BCD File: /home/paok/Documents/Verilog_Labs/UpDown_Counter/BCD.v Line: 1
+    Info (12023): Found entity 1: counter File: C:/Practicas/Verilog_Labs/UpDown_Counter/counter.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file updown.v
+    Info (12023): Found entity 1: UpDown File: C:/Practicas/Verilog_Labs/UpDown_Counter/UpDown.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file bcd.v
+    Info (12023): Found entity 1: BCD File: C:/Practicas/Verilog_Labs/UpDown_Counter/BCD.v Line: 1
 Info (12127): Elaborating entity "UpDown" for the top level hierarchy
-Info (12128): Elaborating entity "clk_divider" for hierarchy "clk_divider:DIVIDER" File: /home/paok/Documents/Verilog_Labs/UpDown_Counter/UpDown.v Line: 13
-Warning (10036): Verilog HDL or VHDL warning at clk_divider.v(8): object "enable" assigned a value but never read File: /home/paok/Documents/Verilog_Labs/UpDown_Counter/clk_divider.v Line: 8
-Warning (10240): Verilog HDL Always Construct warning at clk_divider.v(22): inferring latch(es) for variable "clk_div", which holds its previous value in one or more paths through the always construct File: /home/paok/Documents/Verilog_Labs/UpDown_Counter/clk_divider.v Line: 22
-Info (10041): Inferred latch for "clk_div" at clk_divider.v(24) File: /home/paok/Documents/Verilog_Labs/UpDown_Counter/clk_divider.v Line: 24
-Info (12128): Elaborating entity "debouncer" for hierarchy "debouncer:DEBOUNCE" File: /home/paok/Documents/Verilog_Labs/UpDown_Counter/UpDown.v Line: 19
-Info (12128): Elaborating entity "counter" for hierarchy "counter:COUNT" File: /home/paok/Documents/Verilog_Labs/UpDown_Counter/UpDown.v Line: 26
-Warning (10230): Verilog HDL assignment warning at counter.v(12): truncated value with size 32 to match size of target (7) File: /home/paok/Documents/Verilog_Labs/UpDown_Counter/counter.v Line: 12
-Warning (10230): Verilog HDL assignment warning at counter.v(14): truncated value with size 32 to match size of target (7) File: /home/paok/Documents/Verilog_Labs/UpDown_Counter/counter.v Line: 14
-Info (12128): Elaborating entity "BCD" for hierarchy "BCD:DISPLAY_RESULT" File: /home/paok/Documents/Verilog_Labs/UpDown_Counter/UpDown.v Line: 33
+Info (12128): Elaborating entity "clk_divider" for hierarchy "clk_divider:DIVIDER" File: C:/Practicas/Verilog_Labs/UpDown_Counter/UpDown.v Line: 13
+Info (12128): Elaborating entity "debouncer" for hierarchy "debouncer:DEBOUNCE" File: C:/Practicas/Verilog_Labs/UpDown_Counter/UpDown.v Line: 19
+Info (12128): Elaborating entity "counter" for hierarchy "counter:COUNT" File: C:/Practicas/Verilog_Labs/UpDown_Counter/UpDown.v Line: 26
+Info (12128): Elaborating entity "BCD" for hierarchy "BCD:DISPLAY_RESULT" File: C:/Practicas/Verilog_Labs/UpDown_Counter/UpDown.v Line: 33
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file C:/Practicas/Verilog_Labs/UpDown_Counter/output_files/UpDown.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 101 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 110 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 14 output pins
-    Info (21061): Implemented 83 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 691 megabytes
-    Info: Processing ended: Fri Feb 25 09:39:02 2022
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:20
+    Info (21061): Implemented 92 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4807 megabytes
+    Info: Processing ended: Mon Feb 28 08:24:40 2022
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:23
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Practicas/Verilog_Labs/UpDown_Counter/output_files/UpDown.map.smsg.
 
 

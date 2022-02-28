@@ -1,6 +1,6 @@
 module UpDown(
 	input clk, clc, button, countSelect,
-	output[6:0] result,display
+	output[6:0] result, display
 );
 
 wire new_clock;

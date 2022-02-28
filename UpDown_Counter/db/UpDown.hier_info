@@ -3,23 +3,24 @@ clk => clk.IN1
 clc => clc.IN2
 button => button.IN1
 countSelect => countSelect.IN1
-result[0] <= result[0].DB_MAX_OUTPUT_PORT_TYPE
-result[1] <= result[1].DB_MAX_OUTPUT_PORT_TYPE
-result[2] <= result[2].DB_MAX_OUTPUT_PORT_TYPE
-result[3] <= result[3].DB_MAX_OUTPUT_PORT_TYPE
-result[4] <= result[4].DB_MAX_OUTPUT_PORT_TYPE
-result[5] <= result[5].DB_MAX_OUTPUT_PORT_TYPE
-result[6] <= result[6].DB_MAX_OUTPUT_PORT_TYPE
-display[0] <= BCD:DISPLAY_RESULT.display7Segment
-display[1] <= BCD:DISPLAY_RESULT.display7Segment
-display[2] <= BCD:DISPLAY_RESULT.display7Segment
-display[3] <= BCD:DISPLAY_RESULT.display7Segment
-display[4] <= BCD:DISPLAY_RESULT.display7Segment
-display[5] <= BCD:DISPLAY_RESULT.display7Segment
-display[6] <= BCD:DISPLAY_RESULT.display7Segment
+result[0] << result[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] << result[1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] << result[2].DB_MAX_OUTPUT_PORT_TYPE
+result[3] << result[3].DB_MAX_OUTPUT_PORT_TYPE
+result[4] << result[4].DB_MAX_OUTPUT_PORT_TYPE
+result[5] << result[5].DB_MAX_OUTPUT_PORT_TYPE
+result[6] << result[6].DB_MAX_OUTPUT_PORT_TYPE
+display[0] << BCD:DISPLAY_RESULT.display7Segment
+display[1] << BCD:DISPLAY_RESULT.display7Segment
+display[2] << BCD:DISPLAY_RESULT.display7Segment
+display[3] << BCD:DISPLAY_RESULT.display7Segment
+display[4] << BCD:DISPLAY_RESULT.display7Segment
+display[5] << BCD:DISPLAY_RESULT.display7Segment
+display[6] << BCD:DISPLAY_RESULT.display7Segment
 
 
 |UpDown|clk_divider:DIVIDER
+clk => clk_div~reg0.CLK
 clk => counter[0].CLK
 clk => counter[1].CLK
 clk => counter[2].CLK
@@ -84,8 +85,8 @@ rst => counter[28].ACLR
 rst => counter[29].ACLR
 rst => counter[30].ACLR
 rst => counter[31].ACLR
-rst => clk_div$latch.ACLR
-clk_div <= clk_div$latch.DB_MAX_OUTPUT_PORT_TYPE
+rst => clk_div~reg0.ACLR
+clk_div <= clk_div~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |UpDown|debouncer:DEBOUNCE
@@ -115,13 +116,13 @@ pb => count[3]~reg0.CLK
 pb => count[4]~reg0.CLK
 pb => count[5]~reg0.CLK
 pb => count[6]~reg0.CLK
-rst => count.OUTPUTSELECT
-rst => count.OUTPUTSELECT
-rst => count.OUTPUTSELECT
-rst => count.OUTPUTSELECT
-rst => count.OUTPUTSELECT
-rst => count.OUTPUTSELECT
-rst => count.OUTPUTSELECT
+rst => count[0]~reg0.ACLR
+rst => count[1]~reg0.ACLR
+rst => count[2]~reg0.ACLR
+rst => count[3]~reg0.ACLR
+rst => count[4]~reg0.ACLR
+rst => count[5]~reg0.ACLR
+rst => count[6]~reg0.ACLR
 select => count.OUTPUTSELECT
 select => count.OUTPUTSELECT
 select => count.OUTPUTSELECT

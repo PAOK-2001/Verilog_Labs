@@ -68,11 +68,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "button",
+					"name" : "clk",
 					"strict" : false
 				},
 				{
-					"name" : "clk",
+					"name" : "button",
 					"strict" : false
 				}
 			]

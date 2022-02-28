@@ -1,17 +1,17 @@
 module counter(
 	input pb, rst, select,
-	output reg [6:0] count
+	output reg[6:0] count
 );
 
 /* Enfoque 1: */
-always@(negedge pb)
+always@(negedge pb or negedge rst)
 begin 
-	if(rst)
+	if(~rst)
 		count <= 7'b0000000;
 	else if(select == 1)
-		count <= count + 1;
+		count <= count + 7'b1;
 	else if(select == 0)
-		count <= count - 1;
+		count <= count - 7'b1;
 end
 
 
