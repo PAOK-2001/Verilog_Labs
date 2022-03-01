@@ -4,59 +4,59 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "result[0]",
+					"name" : "display_unidades[0]",
 					"strict" : false
 				},
 				{
-					"name" : "result[1]",
+					"name" : "display_unidades[1]",
 					"strict" : false
 				},
 				{
-					"name" : "result[2]",
+					"name" : "display_unidades[2]",
 					"strict" : false
 				},
 				{
-					"name" : "result[3]",
+					"name" : "display_unidades[3]",
 					"strict" : false
 				},
 				{
-					"name" : "result[4]",
+					"name" : "display_unidades[4]",
 					"strict" : false
 				},
 				{
-					"name" : "result[5]",
+					"name" : "display_unidades[5]",
 					"strict" : false
 				},
 				{
-					"name" : "result[6]",
+					"name" : "display_unidades[6]",
 					"strict" : false
 				},
 				{
-					"name" : "display[0]",
+					"name" : "display_decenas[0]",
 					"strict" : false
 				},
 				{
-					"name" : "display[1]",
+					"name" : "display_decenas[1]",
 					"strict" : false
 				},
 				{
-					"name" : "display[2]",
+					"name" : "display_decenas[2]",
 					"strict" : false
 				},
 				{
-					"name" : "display[3]",
+					"name" : "display_decenas[3]",
 					"strict" : false
 				},
 				{
-					"name" : "display[4]",
+					"name" : "display_decenas[4]",
 					"strict" : false
 				},
 				{
-					"name" : "display[5]",
+					"name" : "display_decenas[5]",
 					"strict" : false
 				},
 				{
-					"name" : "display[6]",
+					"name" : "display_decenas[6]",
 					"strict" : false
 				},
 				{

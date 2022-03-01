@@ -1,5 +1,5 @@
-Analysis & Synthesis report for UpDown
-Mon Feb 28 08:24:40 2022
+Analysis & Elaboration report for UpDown
+Tue Mar 01 07:51:50 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -7,18 +7,11 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Synthesis Summary
-  3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Port Connectivity Checks: "debouncer:DEBOUNCE"
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
- 13. Analysis & Synthesis Suppressed Messages
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Analysis & Elaboration Settings
+  5. Analysis & Elaboration Messages
+  6. Analysis & Elaboration Suppressed Messages
 
 
 
@@ -43,34 +36,50 @@ https://fpgasoftware.intel.com/eula.
 
 
 +----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                     ;
+; Analysis & Elaboration Summary                                                   ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Feb 28 08:24:40 2022       ;
+; Analysis & Elaboration Status      ; Successful - Tue Mar 01 07:51:50 2022       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; UpDown                                      ;
-; Top-level Entity Name              ; UpDown                                      ;
+; Top-level Entity Name              ; debouncer                                   ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 92                                          ;
-;     Total combinational functions  ; 90                                          ;
-;     Dedicated logic registers      ; 52                                          ;
-; Total registers                    ; 52                                          ;
-; Total pins                         ; 18                                          ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0                                           ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total PLLs                         ; 0                                           ;
-; UFM blocks                         ; 0                                           ;
-; ADC blocks                         ; 0                                           ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
+; UFM blocks                         ; N/A until Partition Merge                   ;
+; ADC blocks                         ; N/A until Partition Merge                   ;
 +------------------------------------+---------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
 
 
 +------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                              ;
+; Analysis & Elaboration Settings                                                                            ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; 10M50DAF484C7G     ;                    ;
-; Top-level entity name                                            ; UpDown             ; UpDown             ;
+; Top-level entity name                                            ; debouncer          ; UpDown             ;
 ; Family name                                                      ; MAX 10             ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -150,150 +159,14 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 6           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 6           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processors 3-6         ;   0.0%      ;
-+----------------------------+-------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                         ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                           ; Library ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------+---------+
-; clk_divider.v                    ; yes             ; User Verilog HDL File  ; C:/Practicas/Verilog_Labs/UpDown_Counter/clk_divider.v ;         ;
-; debouncer.v                      ; yes             ; User Verilog HDL File  ; C:/Practicas/Verilog_Labs/UpDown_Counter/debouncer.v   ;         ;
-; counter.v                        ; yes             ; User Verilog HDL File  ; C:/Practicas/Verilog_Labs/UpDown_Counter/counter.v     ;         ;
-; UpDown.v                         ; yes             ; User Verilog HDL File  ; C:/Practicas/Verilog_Labs/UpDown_Counter/UpDown.v      ;         ;
-; BCD.v                            ; yes             ; User Verilog HDL File  ; C:/Practicas/Verilog_Labs/UpDown_Counter/BCD.v         ;         ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------+---------+
-
-
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 92        ;
-;                                             ;           ;
-; Total combinational functions               ; 90        ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 27        ;
-;     -- 3 input functions                    ; 19        ;
-;     -- <=2 input functions                  ; 44        ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 45        ;
-;     -- arithmetic mode                      ; 45        ;
-;                                             ;           ;
-; Total registers                             ; 52        ;
-;     -- Dedicated logic registers            ; 52        ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 18        ;
-;                                             ;           ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; clc~input ;
-; Maximum fan-out                             ; 40        ;
-; Total fan-out                               ; 436       ;
-; Average fan-out                             ; 2.45      ;
-+---------------------------------------------+-----------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                        ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name         ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------+-------------+--------------+
-; |UpDown                    ; 90 (0)              ; 52 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 18   ; 0            ; 0          ; |UpDown                     ; UpDown      ; work         ;
-;    |BCD:DISPLAY_RESULT|    ; 14 (14)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |UpDown|BCD:DISPLAY_RESULT  ; BCD         ; work         ;
-;    |clk_divider:DIVIDER|   ; 55 (55)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |UpDown|clk_divider:DIVIDER ; clk_divider ; work         ;
-;    |counter:COUNT|         ; 7 (7)               ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |UpDown|counter:COUNT       ; counter     ; work         ;
-;    |debouncer:DEBOUNCE|    ; 14 (14)             ; 12 (12)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |UpDown|debouncer:DEBOUNCE  ; debouncer   ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------+-------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 52    ;
-; Number of registers using Synchronous Clear  ; 9     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 40    ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "debouncer:DEBOUNCE"                                                                                             ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                                                  ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; button_down ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-; button_up   ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; boundary_port         ; 18                          ;
-; cycloneiii_ff         ; 52                          ;
-;     CLR               ; 40                          ;
-;     SCLR              ; 9                           ;
-;     plain             ; 3                           ;
-; cycloneiii_lcell_comb ; 91                          ;
-;     arith             ; 45                          ;
-;         2 data inputs ; 40                          ;
-;         3 data inputs ; 5                           ;
-;     normal            ; 46                          ;
-;         1 data inputs ; 3                           ;
-;         2 data inputs ; 2                           ;
-;         3 data inputs ; 14                          ;
-;         4 data inputs ; 27                          ;
-;                       ;                             ;
-; Max LUT depth         ; 4.40                        ;
-; Average LUT depth     ; 2.82                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
-
-
-+-------------------------------+
-; Analysis & Synthesis Messages ;
-+-------------------------------+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Synthesis
+Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon Feb 28 08:24:30 2022
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off UpDown -c UpDown
+    Info: Processing started: Tue Mar 01 07:51:39 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off UpDown -c UpDown --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file clk_divider.v
@@ -306,30 +179,18 @@ Info (12021): Found 1 design units, including 1 entities, in source file updown.
     Info (12023): Found entity 1: UpDown File: C:/Practicas/Verilog_Labs/UpDown_Counter/UpDown.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file bcd.v
     Info (12023): Found entity 1: BCD File: C:/Practicas/Verilog_Labs/UpDown_Counter/BCD.v Line: 1
-Info (12127): Elaborating entity "UpDown" for the top level hierarchy
-Info (12128): Elaborating entity "clk_divider" for hierarchy "clk_divider:DIVIDER" File: C:/Practicas/Verilog_Labs/UpDown_Counter/UpDown.v Line: 13
-Info (12128): Elaborating entity "debouncer" for hierarchy "debouncer:DEBOUNCE" File: C:/Practicas/Verilog_Labs/UpDown_Counter/UpDown.v Line: 19
-Info (12128): Elaborating entity "counter" for hierarchy "counter:COUNT" File: C:/Practicas/Verilog_Labs/UpDown_Counter/UpDown.v Line: 26
-Info (12128): Elaborating entity "BCD" for hierarchy "BCD:DISPLAY_RESULT" File: C:/Practicas/Verilog_Labs/UpDown_Counter/UpDown.v Line: 33
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info (286030): Timing-Driven Synthesis is running
+Info (12127): Elaborating entity "debouncer" for the top level hierarchy
 Info (144001): Generated suppressed messages file C:/Practicas/Verilog_Labs/UpDown_Counter/output_files/UpDown.map.smsg
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 110 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 4 input pins
-    Info (21059): Implemented 14 output pins
-    Info (21061): Implemented 92 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4807 megabytes
-    Info: Processing ended: Mon Feb 28 08:24:40 2022
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:23
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4706 megabytes
+    Info: Processing ended: Tue Mar 01 07:51:50 2022
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:27
 
 
-+------------------------------------------+
-; Analysis & Synthesis Suppressed Messages ;
-+------------------------------------------+
++--------------------------------------------+
+; Analysis & Elaboration Suppressed Messages ;
++--------------------------------------------+
 The suppressed messages can be found in C:/Practicas/Verilog_Labs/UpDown_Counter/output_files/UpDown.map.smsg.
 
 

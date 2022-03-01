@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "MAX 10"
 set_global_assignment -name DEVICE 10M50DAF484C7G
-set_global_assignment -name TOP_LEVEL_ENTITY UpDown
+set_global_assignment -name TOP_LEVEL_ENTITY debouncer
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "09:10:46  FEBRUARY 25, 2022"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
@@ -62,15 +62,24 @@ set_location_assignment PIN_B8 -to button
 set_location_assignment PIN_A7 -to clc
 set_location_assignment PIN_P11 -to clk
 set_location_assignment PIN_C10 -to countSelect
-set_location_assignment PIN_C14 -to display[0]
-set_location_assignment PIN_E15 -to display[1]
-set_location_assignment PIN_C15 -to display[2]
-set_location_assignment PIN_C16 -to display[3]
-set_location_assignment PIN_E16 -to display[4]
-set_location_assignment PIN_D17 -to display[5]
-set_location_assignment PIN_C17 -to display[6]
 set_global_assignment -name VERILOG_FILE BCD.v
+set_location_assignment PIN_A8 -to button_state
+set_location_assignment PIN_C18 -to display_decenas[0]
+set_location_assignment PIN_C14 -to display_unidades[0]
+set_location_assignment PIN_E15 -to display_unidades[1]
+set_location_assignment PIN_C15 -to display_unidades[2]
+set_location_assignment PIN_C16 -to display_unidades[3]
+set_location_assignment PIN_E16 -to display_unidades[4]
+set_location_assignment PIN_D17 -to display_unidades[5]
+set_location_assignment PIN_C17 -to display_unidades[6]
+set_location_assignment PIN_D18 -to display_decenas[1]
+set_location_assignment PIN_E18 -to display_decenas[2]
+set_location_assignment PIN_B16 -to display_decenas[3]
+set_location_assignment PIN_A17 -to display_decenas[4]
+set_location_assignment PIN_A18 -to display_decenas[5]
+set_location_assignment PIN_B17 -to display_decenas[6]
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name VERILOG_FILE one_shot.v

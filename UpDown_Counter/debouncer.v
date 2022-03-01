@@ -23,10 +23,10 @@ wire max  = &count;
 always@(posedge clk)
 begin
 	if(idle)
-		count = 0;
+		count = 8'b00000000;
 	else
 		begin
-		count = count + 8'b1;
+		count = count + 8'b00000001;
 		if(max)
 			button_state = ~button_state;
 		end
