@@ -1,4 +1,4 @@
-module semaforo(
+module sema(
 	input clk, rst, counter_green, counter_yellow, counter_red,
 	output reg green, yellow, red
 );
