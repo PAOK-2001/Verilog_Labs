@@ -1,1 +1,3 @@
-Warning (10268): Verilog HDL information at clk_divider.v(9): always construct contains both blocking and non-blocking assignments File: C:/Practicas/Verilog_Labs/UpDown_Counter/clk_divider.v Line: 9
+Warning (10268): Verilog HDL information at clk_divider.v(9): always construct contains both blocking and non-blocking assignments File: /home/paok/Documents/Verilog_Labs/UpDown_Counter/clk_divider.v Line: 9
+Info (10281): Verilog HDL Declaration information at UpDown.v(3): object "display_unidades" differs only in case from object "DISPLAY_UNIDADES" in the same scope File: /home/paok/Documents/Verilog_Labs/UpDown_Counter/UpDown.v Line: 3
+Info (10281): Verilog HDL Declaration information at UpDown.v(4): object "display_decenas" differs only in case from object "DISPLAY_DECENAS" in the same scope File: /home/paok/Documents/Verilog_Labs/UpDown_Counter/UpDown.v Line: 4

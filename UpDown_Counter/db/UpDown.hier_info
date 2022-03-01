@@ -12,8 +12,8 @@ clk => count[7].CLK
 clk => count[8].CLK
 clk => button_sync1.CLK
 clk => button_sync0.CLK
-button_state << button_state~reg0.DB_MAX_OUTPUT_PORT_TYPE
-button_down << button_down.DB_MAX_OUTPUT_PORT_TYPE
-button_up << button_up.DB_MAX_OUTPUT_PORT_TYPE
+button_state <= button_state~reg0.DB_MAX_OUTPUT_PORT_TYPE
+button_down <= button_down.DB_MAX_OUTPUT_PORT_TYPE
+button_up <= button_up.DB_MAX_OUTPUT_PORT_TYPE
 
 
