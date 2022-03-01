@@ -1,14 +1,14 @@
-Fitter Status : Successful - Tue Mar 01 07:44:15 2022
+Fitter Status : Successful - Tue Mar 01 08:19:13 2022
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : UpDown
 Top-level Entity Name : UpDown
 Family : MAX 10
 Device : 10M50DAF484C7G
 Timing Models : Final
-Total logic elements : 166 / 49,760 ( < 1 % )
-    Total combinational functions : 162 / 49,760 ( < 1 % )
-    Dedicated logic registers : 52 / 49,760 ( < 1 % )
-Total registers : 52
+Total logic elements : 147 / 49,760 ( < 1 % )
+    Total combinational functions : 146 / 49,760 ( < 1 % )
+    Dedicated logic registers : 41 / 49,760 ( < 1 % )
+Total registers : 42
 Total pins : 18 / 360 ( 5 % )
 Total virtual pins : 0
 Total memory bits : 0 / 1,677,312 ( 0 % )

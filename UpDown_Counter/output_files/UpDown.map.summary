@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Tue Mar  1 08:13:06 2022
+Analysis & Synthesis Status : Successful - Tue Mar 01 08:19:02 2022
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : UpDown
 Top-level Entity Name : UpDown
 Family : MAX 10
-Total logic elements : 150
-    Total combinational functions : 149
+Total logic elements : 146
+    Total combinational functions : 145
     Dedicated logic registers : 42
 Total registers : 42
 Total pins : 18

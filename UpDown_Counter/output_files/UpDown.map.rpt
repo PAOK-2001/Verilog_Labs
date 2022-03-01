@@ -1,5 +1,5 @@
 Analysis & Synthesis report for UpDown
-Tue Mar  1 08:13:06 2022
+Tue Mar 01 08:19:02 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -47,13 +47,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Mar  1 08:13:06 2022       ;
+; Analysis & Synthesis Status        ; Successful - Tue Mar 01 08:19:02 2022       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; UpDown                                      ;
 ; Top-level Entity Name              ; UpDown                                      ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 150                                         ;
-;     Total combinational functions  ; 149                                         ;
+; Total logic elements               ; 146                                         ;
+;     Total combinational functions  ; 145                                         ;
 ;     Dedicated logic registers      ; 42                                          ;
 ; Total registers                    ; 42                                          ;
 ; Total pins                         ; 18                                          ;
@@ -157,39 +157,38 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 16          ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 16          ;
+; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processors 3-16        ;   0.0%      ;
+;     Processors 2-6         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                           ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                       ; Library ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------+---------+
-; clk_divider.v                    ; yes             ; User Verilog HDL File        ; /home/paok/Documents/Verilog_Labs/UpDown_Counter/clk_divider.v                     ;         ;
-; counter.v                        ; yes             ; User Verilog HDL File        ; /home/paok/Documents/Verilog_Labs/UpDown_Counter/counter.v                         ;         ;
-; UpDown.v                         ; yes             ; User Verilog HDL File        ; /home/paok/Documents/Verilog_Labs/UpDown_Counter/UpDown.v                          ;         ;
-; BCD.v                            ; yes             ; User Verilog HDL File        ; /home/paok/Documents/Verilog_Labs/UpDown_Counter/BCD.v                             ;         ;
-; one_shot.v                       ; yes             ; User Verilog HDL File        ; /home/paok/Documents/Verilog_Labs/UpDown_Counter/one_shot.v                        ;         ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                 ; /home/paok/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
-; abs_divider.inc                  ; yes             ; Megafunction                 ; /home/paok/intelFPGA_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
-; sign_div_unsign.inc              ; yes             ; Megafunction                 ; /home/paok/intelFPGA_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
-; aglobal201.inc                   ; yes             ; Megafunction                 ; /home/paok/intelFPGA_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc      ;         ;
-; db/lpm_divide_bkl.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/paok/Documents/Verilog_Labs/UpDown_Counter/db/lpm_divide_bkl.tdf             ;         ;
-; db/sign_div_unsign_akh.tdf       ; yes             ; Auto-Generated Megafunction  ; /home/paok/Documents/Verilog_Labs/UpDown_Counter/db/sign_div_unsign_akh.tdf        ;         ;
-; db/alt_u_div_uee.tdf             ; yes             ; Auto-Generated Megafunction  ; /home/paok/Documents/Verilog_Labs/UpDown_Counter/db/alt_u_div_uee.tdf              ;         ;
-; db/add_sub_t3c.tdf               ; yes             ; Auto-Generated Megafunction  ; /home/paok/Documents/Verilog_Labs/UpDown_Counter/db/add_sub_t3c.tdf                ;         ;
-; db/add_sub_u3c.tdf               ; yes             ; Auto-Generated Megafunction  ; /home/paok/Documents/Verilog_Labs/UpDown_Counter/db/add_sub_u3c.tdf                ;         ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                   ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                               ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
+; clk_divider.v                    ; yes             ; User Verilog HDL File        ; C:/Practicas/Verilog_Labs/UpDown_Counter/clk_divider.v                     ;         ;
+; counter.v                        ; yes             ; User Verilog HDL File        ; C:/Practicas/Verilog_Labs/UpDown_Counter/counter.v                         ;         ;
+; UpDown.v                         ; yes             ; User Verilog HDL File        ; C:/Practicas/Verilog_Labs/UpDown_Counter/UpDown.v                          ;         ;
+; BCD.v                            ; yes             ; User Verilog HDL File        ; C:/Practicas/Verilog_Labs/UpDown_Counter/BCD.v                             ;         ;
+; one_shot.v                       ; yes             ; User Verilog HDL File        ; C:/Practicas/Verilog_Labs/UpDown_Counter/one_shot.v                        ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
+; aglobal201.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc      ;         ;
+; db/lpm_divide_bkl.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Practicas/Verilog_Labs/UpDown_Counter/db/lpm_divide_bkl.tdf             ;         ;
+; db/sign_div_unsign_akh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Practicas/Verilog_Labs/UpDown_Counter/db/sign_div_unsign_akh.tdf        ;         ;
+; db/alt_u_div_uee.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Practicas/Verilog_Labs/UpDown_Counter/db/alt_u_div_uee.tdf              ;         ;
+; db/add_sub_t3c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Practicas/Verilog_Labs/UpDown_Counter/db/add_sub_t3c.tdf                ;         ;
+; db/add_sub_u3c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Practicas/Verilog_Labs/UpDown_Counter/db/add_sub_u3c.tdf                ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -197,16 +196,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 150       ;
+; Estimated Total logic elements              ; 146       ;
 ;                                             ;           ;
-; Total combinational functions               ; 149       ;
+; Total combinational functions               ; 145       ;
 ; Logic element usage by number of LUT inputs ;           ;
 ;     -- 4 input functions                    ; 40        ;
-;     -- 3 input functions                    ; 41        ;
+;     -- 3 input functions                    ; 37        ;
 ;     -- <=2 input functions                  ; 68        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 97        ;
+;     -- normal mode                          ; 93        ;
 ;     -- arithmetic mode                      ; 52        ;
 ;                                             ;           ;
 ; Total registers                             ; 42        ;
@@ -219,8 +218,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clc~input ;
 ; Maximum fan-out                             ; 40        ;
-; Total fan-out                               ; 565       ;
-; Average fan-out                             ; 2.49      ;
+; Total fan-out                               ; 553       ;
+; Average fan-out                             ; 2.48      ;
 +---------------------------------------------+-----------+
 
 
@@ -229,10 +228,10 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                     ; Entity Name         ; Library Name ;
 +----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |UpDown                                ; 149 (0)             ; 42 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 18   ; 0            ; 0          ; |UpDown                                                                                                 ; UpDown              ; work         ;
+; |UpDown                                ; 145 (0)             ; 42 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 18   ; 0            ; 0          ; |UpDown                                                                                                 ; UpDown              ; work         ;
 ;    |BCD:DISPLAY_DECENAS|               ; 32 (32)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |UpDown|BCD:DISPLAY_DECENAS                                                                             ; BCD                 ; work         ;
 ;    |BCD:DISPLAY_UNIDADES|              ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |UpDown|BCD:DISPLAY_UNIDADES                                                                            ; BCD                 ; work         ;
-;    |clk_divider:DIVIDER|               ; 55 (55)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |UpDown|clk_divider:DIVIDER                                                                             ; clk_divider         ; work         ;
+;    |clk_divider:DIVIDER|               ; 51 (51)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |UpDown|clk_divider:DIVIDER                                                                             ; clk_divider         ; work         ;
 ;    |counter:COUNT|                     ; 7 (7)               ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |UpDown|counter:COUNT                                                                                   ; counter             ; work         ;
 ;    |lpm_divide:Mod0|                   ; 46 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |UpDown|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
 ;       |lpm_divide_bkl:auto_generated|  ; 46 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |UpDown|lpm_divide:Mod0|lpm_divide_bkl:auto_generated                                                   ; lpm_divide_bkl      ; work         ;
@@ -308,15 +307,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; cycloneiii_ff         ; 42                          ;
 ;     CLR               ; 40                          ;
 ;     plain             ; 2                           ;
-; cycloneiii_lcell_comb ; 151                         ;
+; cycloneiii_lcell_comb ; 147                         ;
 ;     arith             ; 52                          ;
 ;         2 data inputs ; 35                          ;
 ;         3 data inputs ; 17                          ;
-;     normal            ; 99                          ;
+;     normal            ; 95                          ;
 ;         0 data inputs ; 4                           ;
 ;         1 data inputs ; 4                           ;
 ;         2 data inputs ; 27                          ;
-;         3 data inputs ; 24                          ;
+;         3 data inputs ; 20                          ;
 ;         4 data inputs ; 40                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 11.50                       ;
@@ -339,66 +338,66 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Mar  1 08:12:59 2022
+    Info: Processing started: Tue Mar 01 08:18:52 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off UpDown -c UpDown
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file clk_divider.v
-    Info (12023): Found entity 1: clk_divider File: /home/paok/Documents/Verilog_Labs/UpDown_Counter/clk_divider.v Line: 1
+    Info (12023): Found entity 1: clk_divider File: C:/Practicas/Verilog_Labs/UpDown_Counter/clk_divider.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file debouncer.v
-    Info (12023): Found entity 1: debouncer File: /home/paok/Documents/Verilog_Labs/UpDown_Counter/debouncer.v Line: 1
+    Info (12023): Found entity 1: debouncer File: C:/Practicas/Verilog_Labs/UpDown_Counter/debouncer.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file counter.v
-    Info (12023): Found entity 1: counter File: /home/paok/Documents/Verilog_Labs/UpDown_Counter/counter.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file UpDown.v
-    Info (12023): Found entity 1: UpDown File: /home/paok/Documents/Verilog_Labs/UpDown_Counter/UpDown.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file BCD.v
-    Info (12023): Found entity 1: BCD File: /home/paok/Documents/Verilog_Labs/UpDown_Counter/BCD.v Line: 1
+    Info (12023): Found entity 1: counter File: C:/Practicas/Verilog_Labs/UpDown_Counter/counter.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file updown.v
+    Info (12023): Found entity 1: UpDown File: C:/Practicas/Verilog_Labs/UpDown_Counter/UpDown.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file bcd.v
+    Info (12023): Found entity 1: BCD File: C:/Practicas/Verilog_Labs/UpDown_Counter/BCD.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file one_shot.v
-    Info (12023): Found entity 1: one_shot File: /home/paok/Documents/Verilog_Labs/UpDown_Counter/one_shot.v Line: 1
+    Info (12023): Found entity 1: one_shot File: C:/Practicas/Verilog_Labs/UpDown_Counter/one_shot.v Line: 1
 Info (12127): Elaborating entity "UpDown" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at UpDown.v(39): truncated value with size 32 to match size of target (7) File: /home/paok/Documents/Verilog_Labs/UpDown_Counter/UpDown.v Line: 39
-Warning (10230): Verilog HDL assignment warning at UpDown.v(41): truncated value with size 32 to match size of target (7) File: /home/paok/Documents/Verilog_Labs/UpDown_Counter/UpDown.v Line: 41
-Info (12128): Elaborating entity "clk_divider" for hierarchy "clk_divider:DIVIDER" File: /home/paok/Documents/Verilog_Labs/UpDown_Counter/UpDown.v Line: 14
-Info (12128): Elaborating entity "one_shot" for hierarchy "one_shot:DEBOUNCE" File: /home/paok/Documents/Verilog_Labs/UpDown_Counter/UpDown.v Line: 29
-Info (12128): Elaborating entity "counter" for hierarchy "counter:COUNT" File: /home/paok/Documents/Verilog_Labs/UpDown_Counter/UpDown.v Line: 36
-Info (12128): Elaborating entity "BCD" for hierarchy "counter:COUNT|BCD:DISPLAY_RESULT" File: /home/paok/Documents/Verilog_Labs/UpDown_Counter/counter.v Line: 24
+Warning (10230): Verilog HDL assignment warning at UpDown.v(39): truncated value with size 32 to match size of target (7) File: C:/Practicas/Verilog_Labs/UpDown_Counter/UpDown.v Line: 39
+Warning (10230): Verilog HDL assignment warning at UpDown.v(41): truncated value with size 32 to match size of target (7) File: C:/Practicas/Verilog_Labs/UpDown_Counter/UpDown.v Line: 41
+Info (12128): Elaborating entity "clk_divider" for hierarchy "clk_divider:DIVIDER" File: C:/Practicas/Verilog_Labs/UpDown_Counter/UpDown.v Line: 14
+Info (12128): Elaborating entity "one_shot" for hierarchy "one_shot:DEBOUNCE" File: C:/Practicas/Verilog_Labs/UpDown_Counter/UpDown.v Line: 29
+Info (12128): Elaborating entity "counter" for hierarchy "counter:COUNT" File: C:/Practicas/Verilog_Labs/UpDown_Counter/UpDown.v Line: 36
+Info (12128): Elaborating entity "BCD" for hierarchy "counter:COUNT|BCD:DISPLAY_RESULT" File: C:/Practicas/Verilog_Labs/UpDown_Counter/counter.v Line: 24
 Info (278001): Inferred 1 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: /home/paok/Documents/Verilog_Labs/UpDown_Counter/UpDown.v Line: 39
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: /home/paok/Documents/Verilog_Labs/UpDown_Counter/UpDown.v Line: 39
-Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: /home/paok/Documents/Verilog_Labs/UpDown_Counter/UpDown.v Line: 39
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: C:/Practicas/Verilog_Labs/UpDown_Counter/UpDown.v Line: 39
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: C:/Practicas/Verilog_Labs/UpDown_Counter/UpDown.v Line: 39
+Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: C:/Practicas/Verilog_Labs/UpDown_Counter/UpDown.v Line: 39
     Info (12134): Parameter "LPM_WIDTHN" = "7"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_bkl.tdf
-    Info (12023): Found entity 1: lpm_divide_bkl File: /home/paok/Documents/Verilog_Labs/UpDown_Counter/db/lpm_divide_bkl.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_bkl File: C:/Practicas/Verilog_Labs/UpDown_Counter/db/lpm_divide_bkl.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_akh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_akh File: /home/paok/Documents/Verilog_Labs/UpDown_Counter/db/sign_div_unsign_akh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_akh File: C:/Practicas/Verilog_Labs/UpDown_Counter/db/sign_div_unsign_akh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_uee.tdf
-    Info (12023): Found entity 1: alt_u_div_uee File: /home/paok/Documents/Verilog_Labs/UpDown_Counter/db/alt_u_div_uee.tdf Line: 27
+    Info (12023): Found entity 1: alt_u_div_uee File: C:/Practicas/Verilog_Labs/UpDown_Counter/db/alt_u_div_uee.tdf Line: 27
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_t3c.tdf
-    Info (12023): Found entity 1: add_sub_t3c File: /home/paok/Documents/Verilog_Labs/UpDown_Counter/db/add_sub_t3c.tdf Line: 23
+    Info (12023): Found entity 1: add_sub_t3c File: C:/Practicas/Verilog_Labs/UpDown_Counter/db/add_sub_t3c.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_u3c.tdf
-    Info (12023): Found entity 1: add_sub_u3c File: /home/paok/Documents/Verilog_Labs/UpDown_Counter/db/add_sub_u3c.tdf Line: 23
+    Info (12023): Found entity 1: add_sub_u3c File: C:/Practicas/Verilog_Labs/UpDown_Counter/db/add_sub_u3c.tdf Line: 23
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
-Info (144001): Generated suppressed messages file /home/paok/Documents/Verilog_Labs/UpDown_Counter/output_files/UpDown.map.smsg
+Info (144001): Generated suppressed messages file C:/Practicas/Verilog_Labs/UpDown_Counter/output_files/UpDown.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 168 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 164 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 14 output pins
-    Info (21061): Implemented 150 logic cells
+    Info (21061): Implemented 146 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 695 megabytes
-    Info: Processing ended: Tue Mar  1 08:13:06 2022
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:19
+    Info: Peak virtual memory: 4788 megabytes
+    Info: Processing ended: Tue Mar 01 08:19:02 2022
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:23
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in /home/paok/Documents/Verilog_Labs/UpDown_Counter/output_files/UpDown.map.smsg.
+The suppressed messages can be found in C:/Practicas/Verilog_Labs/UpDown_Counter/output_files/UpDown.map.smsg.
 
 
