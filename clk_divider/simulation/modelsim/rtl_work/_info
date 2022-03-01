@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 d/home/paok/Documents/Verilog_Labs/clk_divider/simulation/modelsim
 vclk_divider
-Z1 !s110 1645631218
+Z1 !s110 1645805100
 !i10b 1
 !s100 5WI2nfXC@8gBT`6ObzRDL3
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -26,13 +26,13 @@ Z4 OV;L;2020.1;71
 r1
 !s85 0
 31
-!s108 1645631217.000000
+Z5 !s108 1645805100.000000
 !s107 /home/paok/Documents/Verilog_Labs/clk_divider/clk_divider.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/paok/Documents/Verilog_Labs/clk_divider|/home/paok/Documents/Verilog_Labs/clk_divider/clk_divider.v|
 !i113 1
-Z5 o-vlog01compat -work work
-Z6 !s92 -vlog01compat -work work +incdir+/home/paok/Documents/Verilog_Labs/clk_divider
-Z7 tCvgOpt 0
+Z6 o-vlog01compat -work work
+Z7 !s92 -vlog01compat -work work +incdir+/home/paok/Documents/Verilog_Labs/clk_divider
+Z8 tCvgOpt 0
 vclk_divider_tb
 R1
 !i10b 1
@@ -50,10 +50,10 @@ R4
 r1
 !s85 0
 31
-!s108 1645631218.000000
+R5
 !s107 /home/paok/Documents/Verilog_Labs/clk_divider/clk_divider_tb.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/paok/Documents/Verilog_Labs/clk_divider|/home/paok/Documents/Verilog_Labs/clk_divider/clk_divider_tb.v|
 !i113 1
-R5
 R6
 R7
+R8
