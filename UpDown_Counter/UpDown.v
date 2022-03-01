@@ -13,10 +13,19 @@ clk_divider DIVIDER(
 	.clk_div(new_clock)
 );
 
+/*
 debouncer DEBOUNCE(
 	.button(button), 
 	.clk(new_clock),
 	.button_state(debounced_button)
+);
+*/
+
+one_shot DEBOUNCE(
+	.button(button), 
+	.clk(new_clock),
+	.button_state(debounced_button)
+
 );
 
 counter COUNT(

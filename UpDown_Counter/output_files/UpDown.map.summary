@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Tue Mar  1 08:10:08 2022
+Analysis & Synthesis Status : Successful - Tue Mar  1 08:13:06 2022
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : UpDown
-Top-level Entity Name : debouncer
+Top-level Entity Name : UpDown
 Family : MAX 10
-Total logic elements : 18
-    Total combinational functions : 16
-    Dedicated logic registers : 12
-Total registers : 12
-Total pins : 5
+Total logic elements : 150
+    Total combinational functions : 149
+    Dedicated logic registers : 42
+Total registers : 42
+Total pins : 18
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0
