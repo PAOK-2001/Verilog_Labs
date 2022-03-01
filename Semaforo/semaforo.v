@@ -27,16 +27,19 @@ begin
 			begin
 			green = 1;
 			if(counter_green) next_state = WAIT;
+			else next_state = GO;
 			end
 		WAIT:
 			begin
 			yellow = 1;
 			if(counter_yellow) next_state = STOP;
+			else next_state = WAIT;
 			end
 		STOP:
 			begin
 			red = 1;
 			if(counter_red) next_state = GO;
+			else next_state = STOP;
 			end
 	endcase
 end
