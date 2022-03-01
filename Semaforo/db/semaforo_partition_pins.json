@@ -16,6 +16,14 @@
 					"strict" : false
 				},
 				{
+					"name" : "counter_red",
+					"strict" : false
+				},
+				{
+					"name" : "counter_green",
+					"strict" : false
+				},
+				{
 					"name" : "clk",
 					"strict" : false
 				},
@@ -25,14 +33,6 @@
 				},
 				{
 					"name" : "counter_yellow",
-					"strict" : false
-				},
-				{
-					"name" : "counter_red",
-					"strict" : false
-				},
-				{
-					"name" : "counter_green",
 					"strict" : false
 				}
 			]

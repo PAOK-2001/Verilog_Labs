@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Tue Mar  1 09:11:38 2022
+Analysis & Synthesis Status : Successful - Tue Mar 01 09:27:50 2022
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : semaforo
 Top-level Entity Name : semaforo
 Family : MAX 10
-Total logic elements : 6
-    Total combinational functions : 6
+Total logic elements : 3
+    Total combinational functions : 3
     Dedicated logic registers : 3
 Total registers : 3
 Total pins : 8
