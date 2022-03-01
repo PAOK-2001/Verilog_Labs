@@ -1,0 +1,6 @@
+
+State Machine - |semaforo|current_state
+Name current_state.GO current_state.STOP current_state.WAIT 
+current_state.GO 0 0 0 
+current_state.WAIT 1 0 1 
+current_state.STOP 1 1 0 
