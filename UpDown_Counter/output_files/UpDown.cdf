@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(10M50DAF484) Path("C:/Practicas/Verilog_Labs/UpDown_Counter/output_files/") File("UpDown.sof") MfrSpec(OpMask(1));
+		Device PartName(10M50DAF484) Path("/home/paok/Documents/Verilog_Labs/UpDown_Counter/output_files/") File("UpDown.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
