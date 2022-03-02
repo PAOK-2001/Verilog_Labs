@@ -1,5 +1,5 @@
 Flow report for UpDown
-Tue Mar 01 08:19:23 2022
+Tue Mar  1 17:05:24 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,24 +41,24 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Tue Mar 01 08:19:23 2022       ;
+; Flow Status                        ; Successful - Tue Mar  1 17:05:24 2022       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; UpDown                                      ;
 ; Top-level Entity Name              ; UpDown                                      ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 147 / 49,760 ( < 1 % )                      ;
-;     Total combinational functions  ; 146 / 49,760 ( < 1 % )                      ;
-;     Dedicated logic registers      ; 41 / 49,760 ( < 1 % )                       ;
-; Total registers                    ; 42                                          ;
-; Total pins                         ; 18 / 360 ( 5 % )                            ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0 / 1,677,312 ( 0 % )                       ;
-; Embedded Multiplier 9-bit elements ; 0 / 288 ( 0 % )                             ;
-; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
-; UFM blocks                         ; 0 / 1 ( 0 % )                               ;
-; ADC blocks                         ; 0 / 2 ( 0 % )                               ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
+; UFM blocks                         ; N/A until Partition Merge                   ;
+; ADC blocks                         ; N/A until Partition Merge                   ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -67,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/01/2022 08:18:53 ;
+; Start date & time ; 03/01/2022 17:05:19 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; UpDown              ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 5311882713318.164614433228756          ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 80160642984127.164617591907459         ; --            ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
@@ -95,41 +95,29 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                        ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:10     ; 1.0                     ; 4788 MB             ; 00:00:23                           ;
-; Fitter               ; 00:00:10     ; 1.0                     ; 5781 MB             ; 00:00:15                           ;
-; Assembler            ; 00:00:03     ; 1.0                     ; 4689 MB             ; 00:00:03                           ;
-; Timing Analyzer      ; 00:00:03     ; 1.1                     ; 4853 MB             ; 00:00:03                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4644 MB             ; 00:00:01                           ;
-; Total                ; 00:00:27     ; --                      ; --                  ; 00:00:45                           ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                          ;
++------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Elaboration ; 00:00:05     ; 1.0                     ; 869 MB              ; 00:00:16                           ;
+; Total                  ; 00:00:05     ; --                      ; --                  ; 00:00:16                           ;
++------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                    ;
-+----------------------+------------------+------------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
-+----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; PCGAMER          ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; PCGAMER          ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; PCGAMER          ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; PCGAMER          ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; PCGAMER          ; Windows 10 ; 10.0       ; x86_64         ;
-+----------------------+------------------+------------+------------+----------------+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++------------------------+------------------+-------------+-------------+----------------+
+; Module Name            ; Machine Hostname ; OS Name     ; OS Version  ; Processor type ;
++------------------------+------------------+-------------+-------------+----------------+
+; Analysis & Elaboration ; fedora           ; Fedora Core ; Fedora Core ; x86_64         ;
++------------------------+------------------+-------------+-------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
-quartus_map --read_settings_files=on --write_settings_files=off UpDown -c UpDown
-quartus_fit --read_settings_files=off --write_settings_files=off UpDown -c UpDown
-quartus_asm --read_settings_files=off --write_settings_files=off UpDown -c UpDown
-quartus_sta UpDown -c UpDown
-quartus_eda --read_settings_files=off --write_settings_files=off UpDown -c UpDown
+quartus_map --read_settings_files=on --write_settings_files=off UpDown -c UpDown --analysis_and_elaboration
 
 
 

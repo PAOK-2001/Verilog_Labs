@@ -2,16 +2,10 @@ module Password(
 	input clk, rst, confirm,
 	input[3:0] inputData,
 	output reg admitted,
-	output reg[6:0] display1, display2, display3, display4
+	output [6:0] display1, display2, display3, display4
 );
 
-reg [3:0] value;
-wire[6:0] display_value;
-
-BCD DISPLAY_SET(
-	.num(value),
-	.display7Segment(display_value)
-);
+reg [3:0] value1,value2,value3,value4;
 
 parameter	idle = 0,
 				// Estados de registro de contraseña
@@ -46,44 +40,43 @@ begin
 		// Estados de registro de contraseña
 		R1:
 		begin
+			value1      <= inputData;
+			if(~rst) next_state = idle;
 			if(~confirm)
 				begin
 				target[0]  <= inputData;
-				value      <= inputData;
-				display1   <= display_value;
 				next_state <= R2;
 				end
 			else next_state <= R1;
 		end
 		R2:
 		begin
+			value2      <= inputData;
+			if(~rst) next_state = idle;
 			if(~confirm)
 				begin
 				target[1]  <= inputData;
-				value      <= inputData;
-				display2   <= display_value;
 				next_state <= R3;
 				end
 			else next_state <= R2;
 		end
 		R3:
 		begin
+			value3      <= inputData;
 			if(~confirm)
 				begin
 				target[2]  <= inputData;
-				value      <= inputData;
-				display3   <= display_value;
 				next_state <= R4;
 				end
 			else next_state <= R3;
 		end
 		R4:
 		begin
+			value4      <= inputData;
+			if(~rst) next_state = idle;
 			if(~confirm)
 				begin
 				target[3]  <= inputData;
-				value      <= inputData;
-				display4   <= display_value;
 				next_state <= idle;
 				end
 			else next_state <= R4;
@@ -91,4 +84,21 @@ begin
 	endcase
 	
 end
+
+BCD DISPLAY_SET_1(
+	.num(value1),
+	.display7Segment(display1)
+);
+BCD DISPLAY_SET_2(
+	.num(value2),
+	.display7Segment(display2)
+);
+BCD DISPLAY_SET_3(
+	.num(value3),
+	.display7Segment(display3)
+);
+BCD DISPLAY_SET_4(
+	.num(value4),
+	.display7Segment(display4)
+);
 endmodule

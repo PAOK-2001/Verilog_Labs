@@ -17,7 +17,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
 
-// DATE "03/01/2022 08:19:23"
+// DATE "03/01/2022 17:01:12"
 
 // 
 // Device: Altera 10M50DAF484C7G Package FBGA484
@@ -295,9 +295,9 @@ wire \DISPLAY_DECENAS|WideOr1~combout ;
 wire \DISPLAY_DECENAS|WideOr0~3_combout ;
 wire \DISPLAY_DECENAS|WideOr0~13_combout ;
 wire \DISPLAY_DECENAS|WideOr0~12_combout ;
-wire [6:0] \COUNT|count ;
-wire [6:0] \DISPLAY_DECENAS|display7Segment ;
 wire [31:0] \DIVIDER|counter ;
+wire [6:0] \DISPLAY_DECENAS|display7Segment ;
+wire [6:0] \COUNT|count ;
 
 
 hard_block auto_generated_inst(
