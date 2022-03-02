@@ -1,85 +1,94 @@
 module Password(
-
-	input clk, rst,
-	input confirm,
-	input[3:0] enteredPassword,
-	output reg admitted
+	input clk, rst, confirm,
+	input[3:0] inputData,
+	output reg admitted,
+	output reg[6:0] display1, display2, display3, display4
 );
 
-parameter	idle 	      = ,
-				R1          = 
-				k1 	      = ,
-				k2		      = 
-				k3		      =  ,
-				k4		      = ;
+reg [3:0] value;
+wire[6:0] display_value;
+
+BCD DISPLAY_SET(
+	.num(value),
+	.display7Segment(display_value)
+);
+
+parameter	idle = 0,
+				// Estados de registro de contraseña
+				R1   = 1,
+				R2   = 2,
+				R3   = 3,
+				R4   = 4;
+				// Estados de entrada de contraseña
+	
 				
 				
 reg[2:0] current_state, next_state;
-reg[3:0] targetPassword;
+reg[3:0] target[3:0];
 
 always @(posedge clk or negedge rst)
 begin
 	if(~rst)
-		current_state <= idle;
+		current_state = idle;
 	else
-		current_state <= next_state;
+		current_state = next_state;
 end
 
-always @(current_state, enable)
+always @(current_state, confirm)
 begin
 	admitted = 0;
 	case(current_state)
 		idle:
 		begin
-				
-			if(enable[idle] == 1) 
-			begin
-			
-				if(enteredPassword[idle] == password[idle]) next_state = k1;
-				else next_state = idle;
-			
-			end
-			else next_state = idle;
-					
+			if(~confirm) next_state <= R1;
+			else         next_state <= idle;
 		end
-		k1:
+		// Estados de registro de contraseña
+		R1:
 		begin
-				
-			if(enable[k1] == 1) 
-			begin
-			
-				if(enteredPassword[k1] == password[k1]) next_state = k2;
-				else next_state = idle;
-			
-			end
-			else next_state = k1;
-					
+			if(~confirm)
+				begin
+				target[0]  <= inputData;
+				value      <= inputData;
+				display1   <= display_value;
+				next_state <= R2;
+				end
+			else next_state <= R1;
 		end
-		k2:
+		R2:
 		begin
-				
-			if(enable[k2] == 1) 
-			begin
-				if(enteredPassword[k2] == password[k2]) next_state = k3;
-				else next_state = idle;
-			end
-			else next_state = k2;	
+			if(~confirm)
+				begin
+				target[1]  <= inputData;
+				value      <= inputData;
+				display2   <= display_value;
+				next_state <= R3;
+				end
+			else next_state <= R2;
 		end
-		k3:
+		R3:
 		begin
-			if(enable[k3] == 1) 
-			begin
-				if(enteredPassword[k3] == password[k3]) next_state = k4;
-				else next_state = idle;
-			end
-			else next_state = k3;	
+			if(~confirm)
+				begin
+				target[2]  <= inputData;
+				value      <= inputData;
+				display3   <= display_value;
+				next_state <= R4;
+				end
+			else next_state <= R3;
 		end
-		k4:
+		R4:
 		begin
-			admitted = 1;
-			next_state = idle;	
+			if(~confirm)
+				begin
+				target[3]  <= inputData;
+				value      <= inputData;
+				display4   <= display_value;
+				next_state <= idle;
+				end
+			else next_state <= R4;
 		end
 	endcase
+	
 end
-
 endmodule
