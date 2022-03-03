@@ -1,5 +1,5 @@
 Analysis & Synthesis report for semaforo
-Tue Mar 01 09:27:50 2022
+Wed Mar 02 20:21:22 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -14,11 +14,14 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. State Machine - |semaforo|current_state
-  9. General Register Statistics
- 10. Parameter Settings for User Entity Instance: Top-level Entity: |semaforo
- 11. Post-Synthesis Netlist Statistics for Top Partition
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+  9. User-Specified and Inferred Latches
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: Top-level Entity: |semaforo
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
+ 16. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -45,16 +48,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Mar 01 09:27:50 2022       ;
+; Analysis & Synthesis Status        ; Successful - Wed Mar 02 20:21:22 2022       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; semaforo                                    ;
 ; Top-level Entity Name              ; semaforo                                    ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 3                                           ;
-;     Total combinational functions  ; 3                                           ;
-;     Dedicated logic registers      ; 3                                           ;
-; Total registers                    ; 3                                           ;
-; Total pins                         ; 8                                           ;
+; Total logic elements               ; 72                                          ;
+;     Total combinational functions  ; 72                                          ;
+;     Dedicated logic registers      ; 36                                          ;
+; Total registers                    ; 36                                          ;
+; Total pins                         ; 5                                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -163,58 +166,61 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-6         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-6         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                  ; Library ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------+---------+
-; semaforo.v                       ; yes             ; User Verilog HDL File  ; C:/Practicas/Verilog_Labs/Semaforo/semaforo.v ;         ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                   ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                     ; Library ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------+---------+
+; semaforo.v                       ; yes             ; User Verilog HDL File  ; C:/Practicas/Verilog_Labs/Semaforo/semaforo.v    ;         ;
+; clk_divider.v                    ; yes             ; User Verilog HDL File  ; C:/Practicas/Verilog_Labs/Semaforo/clk_divider.v ;         ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------+---------+
 
 
-+----------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                    ;
-+---------------------------------------------+------------------+
-; Resource                                    ; Usage            ;
-+---------------------------------------------+------------------+
-; Estimated Total logic elements              ; 3                ;
-;                                             ;                  ;
-; Total combinational functions               ; 3                ;
-; Logic element usage by number of LUT inputs ;                  ;
-;     -- 4 input functions                    ; 3                ;
-;     -- 3 input functions                    ; 0                ;
-;     -- <=2 input functions                  ; 0                ;
-;                                             ;                  ;
-; Logic elements by mode                      ;                  ;
-;     -- normal mode                          ; 3                ;
-;     -- arithmetic mode                      ; 0                ;
-;                                             ;                  ;
-; Total registers                             ; 3                ;
-;     -- Dedicated logic registers            ; 3                ;
-;     -- I/O registers                        ; 0                ;
-;                                             ;                  ;
-; I/O pins                                    ; 8                ;
-;                                             ;                  ;
-; Embedded Multiplier 9-bit elements          ; 0                ;
-;                                             ;                  ;
-; Maximum fan-out node                        ; current_state.GO ;
-; Maximum fan-out                             ; 3                ;
-; Total fan-out                               ; 32               ;
-; Average fan-out                             ; 1.45             ;
-+---------------------------------------------+------------------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 72        ;
+;                                             ;           ;
+; Total combinational functions               ; 72        ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 20        ;
+;     -- 3 input functions                    ; 17        ;
+;     -- <=2 input functions                  ; 35        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 41        ;
+;     -- arithmetic mode                      ; 31        ;
+;                                             ;           ;
+; Total registers                             ; 36        ;
+;     -- Dedicated logic registers            ; 36        ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 5         ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; rst~input ;
+; Maximum fan-out                             ; 36        ;
+; Total fan-out                               ; 316       ;
+; Average fan-out                             ; 2.68      ;
++---------------------------------------------+-----------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
-; |semaforo                  ; 3 (3)               ; 3 (3)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 8    ; 0            ; 0          ; |semaforo           ; semaforo    ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                              ;
++-----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------+-------------+--------------+
+; Compilation Hierarchy Node  ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name              ; Entity Name ; Library Name ;
++-----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------+-------------+--------------+
+; |semaforo                   ; 72 (17)             ; 36 (3)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 5    ; 0            ; 0          ; |semaforo                        ; semaforo    ; work         ;
+;    |clk_divider:nuevoReloj| ; 55 (55)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |semaforo|clk_divider:nuevoReloj ; clk_divider ; work         ;
++-----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -230,19 +236,42 @@ Encoding Type:  One-Hot
 +--------------------+------------------+--------------------+--------------------+
 
 
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; contador[0]                                        ; Selector1           ; yes                    ;
+; contador[2]                                        ; Selector1           ; yes                    ;
+; contador[3]                                        ; Selector1           ; yes                    ;
+; contador[1]                                        ; Selector1           ; yes                    ;
+; Number of user-specified and inferred latches = 4  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 3     ;
+; Total registers                              ; 36    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 3     ;
+; Number of registers using Asynchronous Clear ; 36    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |semaforo|Selector6        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
 +--------------------------------------------------------------------------+
@@ -262,16 +291,20 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 8                           ;
-; cycloneiii_ff         ; 3                           ;
-;     CLR               ; 3                           ;
-; cycloneiii_lcell_comb ; 4                           ;
-;     normal            ; 4                           ;
-;         1 data inputs ; 1                           ;
-;         4 data inputs ; 3                           ;
+; boundary_port         ; 5                           ;
+; cycloneiii_ff         ; 36                          ;
+;     CLR               ; 36                          ;
+; cycloneiii_lcell_comb ; 73                          ;
+;     arith             ; 31                          ;
+;         2 data inputs ; 31                          ;
+;     normal            ; 42                          ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 3                           ;
+;         3 data inputs ; 17                          ;
+;         4 data inputs ; 20                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 0.83                        ;
+; Max LUT depth         ; 4.40                        ;
+; Average LUT depth     ; 3.19                        ;
 +-----------------------+-----------------------------+
 
 
@@ -290,24 +323,53 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Mar 01 09:27:41 2022
+    Info: Processing started: Wed Mar 02 20:21:12 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off semaforo -c semaforo
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file semaforo.v
     Info (12023): Found entity 1: semaforo File: C:/Practicas/Verilog_Labs/Semaforo/semaforo.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file clk_divider.v
+    Info (12023): Found entity 1: clk_divider File: C:/Practicas/Verilog_Labs/Semaforo/clk_divider.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file counter.v
+    Info (12023): Found entity 1: counter File: C:/Practicas/Verilog_Labs/Semaforo/counter.v Line: 1
 Info (12127): Elaborating entity "semaforo" for the top level hierarchy
+Warning (10235): Verilog HDL Always Construct warning at semaforo.v(41): variable "contador" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Practicas/Verilog_Labs/Semaforo/semaforo.v Line: 41
+Warning (10235): Verilog HDL Always Construct warning at semaforo.v(44): variable "contador" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Practicas/Verilog_Labs/Semaforo/semaforo.v Line: 44
+Warning (10235): Verilog HDL Always Construct warning at semaforo.v(51): variable "contador" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Practicas/Verilog_Labs/Semaforo/semaforo.v Line: 51
+Warning (10235): Verilog HDL Always Construct warning at semaforo.v(54): variable "contador" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Practicas/Verilog_Labs/Semaforo/semaforo.v Line: 54
+Warning (10235): Verilog HDL Always Construct warning at semaforo.v(61): variable "contador" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Practicas/Verilog_Labs/Semaforo/semaforo.v Line: 61
+Warning (10235): Verilog HDL Always Construct warning at semaforo.v(68): variable "contador" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Practicas/Verilog_Labs/Semaforo/semaforo.v Line: 68
+Warning (10240): Verilog HDL Always Construct warning at semaforo.v(32): inferring latch(es) for variable "contador", which holds its previous value in one or more paths through the always construct File: C:/Practicas/Verilog_Labs/Semaforo/semaforo.v Line: 32
+Info (10041): Inferred latch for "contador[0]" at semaforo.v(32) File: C:/Practicas/Verilog_Labs/Semaforo/semaforo.v Line: 32
+Info (10041): Inferred latch for "contador[1]" at semaforo.v(32) File: C:/Practicas/Verilog_Labs/Semaforo/semaforo.v Line: 32
+Info (10041): Inferred latch for "contador[2]" at semaforo.v(32) File: C:/Practicas/Verilog_Labs/Semaforo/semaforo.v Line: 32
+Info (10041): Inferred latch for "contador[3]" at semaforo.v(32) File: C:/Practicas/Verilog_Labs/Semaforo/semaforo.v Line: 32
+Info (12128): Elaborating entity "clk_divider" for hierarchy "clk_divider:nuevoReloj" File: C:/Practicas/Verilog_Labs/Semaforo/semaforo.v Line: 22
+Warning (13012): Latch contador[2] has unsafe behavior File: C:/Practicas/Verilog_Labs/Semaforo/semaforo.v Line: 32
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal contador[2] File: C:/Practicas/Verilog_Labs/Semaforo/semaforo.v Line: 32
+Warning (13012): Latch contador[3] has unsafe behavior File: C:/Practicas/Verilog_Labs/Semaforo/semaforo.v Line: 32
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal contador[3] File: C:/Practicas/Verilog_Labs/Semaforo/semaforo.v Line: 32
+Warning (13012): Latch contador[1] has unsafe behavior File: C:/Practicas/Verilog_Labs/Semaforo/semaforo.v Line: 32
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal contador[1] File: C:/Practicas/Verilog_Labs/Semaforo/semaforo.v Line: 32
 Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file C:/Practicas/Verilog_Labs/Semaforo/output_files/semaforo.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 11 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 5 input pins
+Info (21057): Implemented 77 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
     Info (21059): Implemented 3 output pins
-    Info (21061): Implemented 3 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4783 megabytes
-    Info: Processing ended: Tue Mar 01 09:27:50 2022
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:21
+    Info (21061): Implemented 72 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 14 warnings
+    Info: Peak virtual memory: 4806 megabytes
+    Info: Processing ended: Wed Mar 02 20:21:22 2022
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:23
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Practicas/Verilog_Labs/Semaforo/output_files/semaforo.map.smsg.
 
 
