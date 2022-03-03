@@ -14,10 +14,10 @@ parameter	idle 	      = 0,
 				k4		      = 4;
 						
 reg[2:0] current_state, next_state;
-parameter pwd1 = 4'd2;
-parameter pwd2 = 4'd5;
-parameter pwd3 = 4'd2;
-parameter pwd4 = 4'd2;
+parameter pwd1 = 4'd1;
+parameter pwd2 = 4'd2;
+parameter pwd3 = 4'd3;
+parameter pwd4 = 4'd4;
 
 parameter P = 10;
 parameter A = 11;
@@ -28,6 +28,7 @@ reg[6:0] value2 = 0;
 reg[6:0] value3 = 0; 
 reg[6:0] value4 = 0;
 
+reg[3:0] counter = 0;
 wire clock;
 
 clk_divider DIVIDER(
@@ -59,6 +60,7 @@ begin
 	case(current_state)
 	idle:
 		begin
+			counter = 0;
 			statusIndicator[0] = 1;
 			if(enable[0] == 1) 
 			begin
@@ -122,10 +124,15 @@ begin
 		
 		k4:
 		begin
+			counter = counter + 1;
 			statusIndicator[4] = 1;
 			admitted = 1;
 			value1 = P;
-			next_state = k4;
+			value2 = A;
+			value3 = S;
+			value4 = S;
+			if(counter >= 4'd12) next_state = idle;
+			else next_state = k4;
 		end
 		
 		default:
