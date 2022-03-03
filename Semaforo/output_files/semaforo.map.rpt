@@ -1,5 +1,5 @@
 Analysis & Synthesis report for semaforo
-Wed Mar 02 21:19:46 2022
+Thu Mar  3 08:46:48 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -14,16 +14,12 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. State Machine - |semaforo|current_state
-  9. Registers Removed During Synthesis
- 10. General Register Statistics
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
  11. Parameter Settings for User Entity Instance: Top-level Entity: |semaforo
- 12. Port Connectivity Checks: "counter:contador3"
- 13. Port Connectivity Checks: "counter:contador2"
- 14. Port Connectivity Checks: "counter:contador1"
- 15. Post-Synthesis Netlist Statistics for Top Partition
- 16. Elapsed Time Per Partition
- 17. Analysis & Synthesis Messages
- 18. Analysis & Synthesis Suppressed Messages
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -50,15 +46,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Mar 02 21:19:46 2022       ;
+; Analysis & Synthesis Status        ; Successful - Thu Mar  3 08:46:48 2022       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; semaforo                                    ;
 ; Top-level Entity Name              ; semaforo                                    ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 77                                          ;
-;     Total combinational functions  ; 77                                          ;
-;     Dedicated logic registers      ; 48                                          ;
-; Total registers                    ; 48                                          ;
+; Total logic elements               ; 67                                          ;
+;     Total combinational functions  ; 66                                          ;
+;     Dedicated logic registers      ; 40                                          ;
+; Total registers                    ; 40                                          ;
 ; Total pins                         ; 5                                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -160,27 +156,28 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 6           ;
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 6           ;
+; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-6         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                   ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                     ; Library ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------+---------+
-; semaforo.v                       ; yes             ; User Verilog HDL File  ; C:/Practicas/Verilog_Labs/Semaforo/semaforo.v    ;         ;
-; clk_divider.v                    ; yes             ; User Verilog HDL File  ; C:/Practicas/Verilog_Labs/Semaforo/clk_divider.v ;         ;
-; counter.v                        ; yes             ; User Verilog HDL File  ; C:/Practicas/Verilog_Labs/Semaforo/counter.v     ;         ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                           ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                             ; Library ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------+---------+
+; semaforo.v                       ; yes             ; User Verilog HDL File  ; /home/paok/Documents/Verilog_Labs/Semaforo/semaforo.v    ;         ;
+; clk_divider.v                    ; yes             ; User Verilog HDL File  ; /home/paok/Documents/Verilog_Labs/Semaforo/clk_divider.v ;         ;
+; counter.v                        ; yes             ; User Verilog HDL File  ; /home/paok/Documents/Verilog_Labs/Semaforo/counter.v     ;         ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -188,20 +185,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 77        ;
+; Estimated Total logic elements              ; 67        ;
 ;                                             ;           ;
-; Total combinational functions               ; 77        ;
+; Total combinational functions               ; 66        ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 15        ;
-;     -- 3 input functions                    ; 21        ;
-;     -- <=2 input functions                  ; 41        ;
+;     -- 4 input functions                    ; 17        ;
+;     -- 3 input functions                    ; 14        ;
+;     -- <=2 input functions                  ; 35        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 40        ;
-;     -- arithmetic mode                      ; 37        ;
+;     -- normal mode                          ; 35        ;
+;     -- arithmetic mode                      ; 31        ;
 ;                                             ;           ;
-; Total registers                             ; 48        ;
-;     -- Dedicated logic registers            ; 48        ;
+; Total registers                             ; 40        ;
+;     -- Dedicated logic registers            ; 40        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 5         ;
@@ -209,23 +206,21 @@ https://fpgasoftware.intel.com/eula.
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; rst~input ;
-; Maximum fan-out                             ; 36        ;
-; Total fan-out                               ; 362       ;
-; Average fan-out                             ; 2.68      ;
+; Maximum fan-out                             ; 40        ;
+; Total fan-out                               ; 308       ;
+; Average fan-out                             ; 2.66      ;
 +---------------------------------------------+-----------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                              ;
-+-----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------+-------------+--------------+
-; Compilation Hierarchy Node  ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name              ; Entity Name ; Library Name ;
-+-----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------+-------------+--------------+
-; |semaforo                   ; 77 (10)             ; 48 (3)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 5    ; 0            ; 0          ; |semaforo                        ; semaforo    ; work         ;
-;    |clk_divider:nuevoReloj| ; 55 (55)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |semaforo|clk_divider:nuevoReloj ; clk_divider ; work         ;
-;    |counter:contador1|      ; 4 (4)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |semaforo|counter:contador1      ; counter     ; work         ;
-;    |counter:contador2|      ; 4 (4)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |semaforo|counter:contador2      ; counter     ; work         ;
-;    |counter:contador3|      ; 4 (4)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |semaforo|counter:contador3      ; counter     ; work         ;
-+-----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------+-------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                           ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name            ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------+-------------+--------------+
+; |semaforo                  ; 66 (2)              ; 40 (3)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 5    ; 0            ; 0          ; |semaforo                      ; semaforo    ; work         ;
+;    |clk_divider:newClock|  ; 55 (55)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |semaforo|clk_divider:newClock ; clk_divider ; work         ;
+;    |counter:timeOut|       ; 9 (9)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |semaforo|counter:timeOut      ; counter     ; work         ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -241,31 +236,28 @@ Encoding Type:  One-Hot
 +--------------------+------------------+--------------------+--------------------+
 
 
-+------------------------------------------------------------+
-; Registers Removed During Synthesis                         ;
-+---------------------------------------+--------------------+
-; Register name                         ; Reason for Removal ;
-+---------------------------------------+--------------------+
-; counter:contador3|count[4..6]         ; Lost fanout        ;
-; counter:contador1|count[4..6]         ; Lost fanout        ;
-; counter:contador2|count[4..6]         ; Lost fanout        ;
-; Total Number of Removed Registers = 9 ;                    ;
-+---------------------------------------+--------------------+
-
-
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 48    ;
+; Total registers                              ; 40    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 48    ;
+; Number of registers using Asynchronous Clear ; 39    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 9     ;
+; Number of registers using Clock Enable       ; 4     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
+; 7:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |semaforo|counter:timeOut|count[0] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
 
 
 +--------------------------------------------------------------------------+
@@ -280,57 +272,27 @@ Encoding Type:  One-Hot
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "counter:contador3"                                                                                                                ;
-+---------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
-; Port          ; Type   ; Severity ; Details                                                                                                                  ;
-+---------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
-; count         ; Output ; Warning  ; Output or bidir port (7 bits) is wider than the port expression (4 bits) it drives; bit(s) "count[6..4]" have no fanouts ;
-; display_count ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                 ;
-+---------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "counter:contador2"                                                                                                                ;
-+---------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
-; Port          ; Type   ; Severity ; Details                                                                                                                  ;
-+---------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
-; count         ; Output ; Warning  ; Output or bidir port (7 bits) is wider than the port expression (4 bits) it drives; bit(s) "count[6..4]" have no fanouts ;
-; display_count ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                 ;
-+---------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "counter:contador1"                                                                                                                ;
-+---------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
-; Port          ; Type   ; Severity ; Details                                                                                                                  ;
-+---------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
-; count         ; Output ; Warning  ; Output or bidir port (7 bits) is wider than the port expression (4 bits) it drives; bit(s) "count[6..4]" have no fanouts ;
-; display_count ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                 ;
-+---------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 5                           ;
-; cycloneiii_ff         ; 48                          ;
-;     CLR               ; 39                          ;
-;     ENA CLR           ; 9                           ;
-; cycloneiii_lcell_comb ; 78                          ;
-;     arith             ; 37                          ;
-;         2 data inputs ; 34                          ;
-;         3 data inputs ; 3                           ;
-;     normal            ; 41                          ;
-;         1 data inputs ; 5                           ;
-;         2 data inputs ; 3                           ;
-;         3 data inputs ; 18                          ;
-;         4 data inputs ; 15                          ;
+; cycloneiii_ff         ; 40                          ;
+;     CLR               ; 36                          ;
+;     ENA               ; 1                           ;
+;     ENA CLR           ; 3                           ;
+; cycloneiii_lcell_comb ; 67                          ;
+;     arith             ; 31                          ;
+;         2 data inputs ; 31                          ;
+;     normal            ; 36                          ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 14                          ;
+;         4 data inputs ; 17                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.40                        ;
-; Average LUT depth     ; 2.92                        ;
+; Average LUT depth     ; 3.25                        ;
 +-----------------------+-----------------------------+
 
 
@@ -349,43 +311,37 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Mar 02 21:19:37 2022
+    Info: Processing started: Thu Mar  3 08:46:41 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off semaforo -c semaforo
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
-Warning (10275): Verilog HDL Module Instantiation warning at semaforo.v(36): ignored dangling comma in List of Port Connections File: C:/Practicas/Verilog_Labs/Semaforo/semaforo.v Line: 36
-Warning (10275): Verilog HDL Module Instantiation warning at semaforo.v(45): ignored dangling comma in List of Port Connections File: C:/Practicas/Verilog_Labs/Semaforo/semaforo.v Line: 45
-Warning (10275): Verilog HDL Module Instantiation warning at semaforo.v(54): ignored dangling comma in List of Port Connections File: C:/Practicas/Verilog_Labs/Semaforo/semaforo.v Line: 54
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Warning (10275): Verilog HDL Module Instantiation warning at semaforo.v(19): ignored dangling comma in List of Port Connections File: /home/paok/Documents/Verilog_Labs/Semaforo/semaforo.v Line: 19
 Info (12021): Found 1 design units, including 1 entities, in source file semaforo.v
-    Info (12023): Found entity 1: semaforo File: C:/Practicas/Verilog_Labs/Semaforo/semaforo.v Line: 1
+    Info (12023): Found entity 1: semaforo File: /home/paok/Documents/Verilog_Labs/Semaforo/semaforo.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file clk_divider.v
-    Info (12023): Found entity 1: clk_divider File: C:/Practicas/Verilog_Labs/Semaforo/clk_divider.v Line: 1
+    Info (12023): Found entity 1: clk_divider File: /home/paok/Documents/Verilog_Labs/Semaforo/clk_divider.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file counter.v
-    Info (12023): Found entity 1: counter File: C:/Practicas/Verilog_Labs/Semaforo/counter.v Line: 1
+    Info (12023): Found entity 1: counter File: /home/paok/Documents/Verilog_Labs/Semaforo/counter.v Line: 1
 Info (12127): Elaborating entity "semaforo" for the top level hierarchy
-Info (12128): Elaborating entity "clk_divider" for hierarchy "clk_divider:nuevoReloj" File: C:/Practicas/Verilog_Labs/Semaforo/semaforo.v Line: 27
-Info (12128): Elaborating entity "counter" for hierarchy "counter:contador1" File: C:/Practicas/Verilog_Labs/Semaforo/semaforo.v Line: 36
-Warning (10034): Output port "display_count" at counter.v(5) has no driver File: C:/Practicas/Verilog_Labs/Semaforo/counter.v Line: 5
-Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (10235): Verilog HDL Always Construct warning at semaforo.v(51): variable "maxReached" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/paok/Documents/Verilog_Labs/Semaforo/semaforo.v Line: 51
+Warning (10235): Verilog HDL Always Construct warning at semaforo.v(65): variable "maxReached" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/paok/Documents/Verilog_Labs/Semaforo/semaforo.v Line: 65
+Warning (10235): Verilog HDL Always Construct warning at semaforo.v(79): variable "maxReached" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/paok/Documents/Verilog_Labs/Semaforo/semaforo.v Line: 79
+Info (12128): Elaborating entity "clk_divider" for hierarchy "clk_divider:newClock" File: /home/paok/Documents/Verilog_Labs/Semaforo/semaforo.v Line: 19
+Info (12128): Elaborating entity "counter" for hierarchy "counter:timeOut" File: /home/paok/Documents/Verilog_Labs/Semaforo/semaforo.v Line: 26
+Warning (10230): Verilog HDL assignment warning at counter.v(23): truncated value with size 7 to match size of target (3) File: /home/paok/Documents/Verilog_Labs/Semaforo/counter.v Line: 23
+Warning (10230): Verilog HDL assignment warning at counter.v(36): truncated value with size 7 to match size of target (3) File: /home/paok/Documents/Verilog_Labs/Semaforo/counter.v Line: 36
+Warning (10230): Verilog HDL assignment warning at counter.v(51): truncated value with size 7 to match size of target (3) File: /home/paok/Documents/Verilog_Labs/Semaforo/counter.v Line: 51
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 9 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 82 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 72 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 3 output pins
-    Info (21061): Implemented 77 logic cells
-Info (144001): Generated suppressed messages file C:/Practicas/Verilog_Labs/Semaforo/output_files/semaforo.map.smsg
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4785 megabytes
-    Info: Processing ended: Wed Mar 02 21:19:46 2022
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:22
-
-
-+------------------------------------------+
-; Analysis & Synthesis Suppressed Messages ;
-+------------------------------------------+
-The suppressed messages can be found in C:/Practicas/Verilog_Labs/Semaforo/output_files/semaforo.map.smsg.
+    Info (21061): Implemented 67 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 691 megabytes
+    Info: Processing ended: Thu Mar  3 08:46:48 2022
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:19
 
 

@@ -1,38 +1,56 @@
 module counter(
-	input pb, rst, enable,
-	output reg[6:0] count,
-	output[6:0] display_count
+	input      clk, rst,
+	input[2:0] select,
+	output reg maxReached
 );
 
+reg[2:0] count;
 /* Enfoque 1: */
-always@(negedge pb or negedge rst)
+always@(posedge clk or negedge rst)
 begin 
 	if(!rst)
-		count <= 7'b0000000;
-	else if(enable)
-		count <= count + 7'b0000001;
-
+		count <= 3'b000;
+	else if(select[0] == 1)
+		begin
+		if(count>= 5) 
+			begin
+			count <= 3'b000;
+			maxReached = 1;
+			end
+		else 
+			begin
+			maxReached = 0;
+			count <= count + 7'b0000001;
+			end
+		end
+		
+	else if(select[1] == 1)
+		begin
+		if(count>= 2) 
+		begin
+		count <= 3'b000;
+		maxReached = 1;
+		end
+		else 
+			begin
+			count <= count + 7'b0000001;
+			maxReached = 0;
+			end
+		end
+		
+	else if(select[2] == 1)
+		begin
+		if(count>= 4) 
+		begin
+		count <= 3'b000;
+		maxReached = 1;
+		end
+		else
+			begin
+			maxReached = 0;
+			count <= count + 7'b0000001;
+			end
+		end
 end
 
-
-/* Enfoque 2: Separar parte sequencial a parte logica
-reg [3:0] count_d, count_q
-assign count = count_q;
-// Parte sequencial
-always@(posedge, clk)
-begin 
-	if(rst)
-		count_q <= 4'b0;
-	else if(en)
-		count_q <= count_d;
-end
-// Parte combicional
-always*
-begin
-	if(counter_q < 4'd9)
-		count_d = count_q +4'd1;
-	else
-		count_d = 4'd0;
-end
-*/
 endmodule
