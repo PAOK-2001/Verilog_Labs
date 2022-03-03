@@ -1,6 +1,6 @@
-module Password(
-	input clk, rst,
-	input      [3:0]  enable,
+module Password_button(
+	input             clk, rst,
+	input             pb,
 	input      [3:0]  enteredPassword,
 	output reg        admitted,
 	output     [6:0]  display1,display2,display3,display4,din,
@@ -29,13 +29,22 @@ reg[6:0] value3 = 0;
 reg[6:0] value4 = 0;
 
 reg[3:0] counter = 0;
+
 wire clock;
+wire confirm;
 
 clk_divider DIVIDER(
 	.clk(clk),
 	.rst(rst),
 	.clk_div(clock)
 );
+
+one_shot DEBOUNCER(
+	.button(pb), 
+	.clk(clock),
+	.button_state(confirm)
+);
+
 
 always @(posedge clock or negedge rst)
 begin
@@ -45,7 +54,7 @@ begin
 		current_state <= next_state;
 end
 
-always @(current_state, enable)
+always @(current_state, confirm)
 begin
 	admitted = 0;
 	value1   = 0; 
@@ -62,7 +71,7 @@ begin
 		begin
 			counter = 0;
 			statusIndicator[0] = 1;
-			if(enable[0] == 1) 
+			if(~confirm) 
 			begin
 				if(enteredPassword == pwd1) 
 					begin
@@ -77,7 +86,7 @@ begin
 		begin
 			value1 = pwd1;
 			statusIndicator[1] = 1;
-			if(enable[1] == 1) 
+			if(~confirm) 
 			begin
 				if(enteredPassword == pwd2) 
 				begin
@@ -93,7 +102,7 @@ begin
 			value1 = pwd1;
 			value2 = pwd2;
 			statusIndicator[2] = 1;
-			if(enable[2] == 1) 
+			if(~confirm) 
 			begin
 				if(enteredPassword == pwd3)
 				begin
@@ -111,7 +120,7 @@ begin
 			value3 = pwd3;
 			value4 = enteredPassword;
 			statusIndicator[3] = 1;
-			if(enable[3] == 1) 
+			if(~confirm) 
 			begin
 				if(enteredPassword == pwd4) 
 				begin

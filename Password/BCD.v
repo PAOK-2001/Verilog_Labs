@@ -29,7 +29,7 @@ begin
 	9:
 		display7Segment = 7'b0010000;
 	10:
-		display7Segment = 7'b0011000;
+		display7Segment = 7'b0001100;
 	11:
 		display7Segment = 7'b0001000;
 	default:
