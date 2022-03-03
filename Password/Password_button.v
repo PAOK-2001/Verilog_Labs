@@ -71,7 +71,7 @@ begin
 		begin
 			counter = 0;
 			statusIndicator[0] = 1;
-			if(~confirm) 
+			if(confirm) 
 			begin
 				if(enteredPassword == pwd1) 
 					begin
@@ -86,7 +86,7 @@ begin
 		begin
 			value1 = pwd1;
 			statusIndicator[1] = 1;
-			if(~confirm) 
+			if(confirm) 
 			begin
 				if(enteredPassword == pwd2) 
 				begin
@@ -102,7 +102,7 @@ begin
 			value1 = pwd1;
 			value2 = pwd2;
 			statusIndicator[2] = 1;
-			if(~confirm) 
+			if(confirm) 
 			begin
 				if(enteredPassword == pwd3)
 				begin
@@ -120,7 +120,7 @@ begin
 			value3 = pwd3;
 			value4 = enteredPassword;
 			statusIndicator[3] = 1;
-			if(~confirm) 
+			if(confirm) 
 			begin
 				if(enteredPassword == pwd4) 
 				begin
