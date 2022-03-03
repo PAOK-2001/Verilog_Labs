@@ -28,12 +28,8 @@ begin
 		display7Segment = 7'b0000000;
 	9:
 		display7Segment = 7'b0010000;
-	10:
-		display7Segment = 7'b0011000;
-	11:
-		display7Segment = 7'b0001000;
 	default:
-		display7Segment = 7'b0011000;
+		display7Segment = 7'b1000000;
 	
 	endcase
 
