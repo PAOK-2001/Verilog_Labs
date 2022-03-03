@@ -11,7 +11,12 @@ reg[1:0] current_state, next_state;
 
 wire newClock;
 
-reg[3:0] contador;
+wire[3:0] contadorGreen, contadorYellow, contadorRed;
+
+reg enableGreen, enableYellow, enableRed;
+
+reg resetGreen, resetYellow, resetRed;
+
 
 clk_divider nuevoReloj(
 
@@ -21,51 +26,95 @@ clk_divider nuevoReloj(
 
 );
 
+counter contador1(
+	
+	.pb(newClock), 
+	.rst(resetGreen), 
+	.enable(enableGreen),
+	.count(contadorGreen),
+	
+);
+
+counter contador2(
+	
+	.pb(newClock), 
+	.rst(resetYellow), 
+	.enable(enableYellow),
+	.count(contadorYellow),
+	
+);
+
+counter contador3(
+	
+	.pb(newClock), 
+	.rst(resetRed), 
+	.enable(enableRed),
+	.count(contadorRed),
+	
+);
+
 always@(posedge newClock, negedge rst)
 begin
 	if(!rst)
+	begin
 		current_state <= GO;
+	end
 	else
 		current_state <= next_state;
 end
 
-always@(current_state)
+always@(current_state, contadorGreen, contadorYellow, contadorRed)
 begin
 	green  = 0;
 	yellow = 0;
 	red    = 0;
+	enableGreen = 0;
+	enableYellow = 0;
+	enableRed = 0;
+	resetGreen = 1;
+	resetYellow = 1;
+	resetRed = 1;
 	case(current_state)
 		GO:
 		begin
+			
 			green = 1;
-			if(contador == 5) next_state = WAIT;
+			if(contadorGreen >= 5) 
+			begin 
+				resetGreen = 0;
+				next_state = WAIT;
+			end
 			else 
 			begin
-				contador = contador + 4'b1;
+				enableGreen = 1;
 				next_state = GO;
 			end
 		end
 		WAIT:
 		begin
 			yellow = 1;
-			if(contador == 7) next_state = STOP;
+			if(contadorYellow >= 2)
+			begin 
+				resetYellow = 0;	
+				next_state = STOP;
+			end
 			else
 			begin
-				contador = contador + 4'b1;
+				enableYellow = 1;
 				next_state = WAIT;
 			end
 		end
 		STOP:
 		begin
 			red = 1;
-			if(contador == 11) 
+			if(contadorRed >= 4) 
 			begin 
-				contador = 0;
+				resetRed = 0;
 				next_state = GO;
 			end
 			else 
 			begin
-				contador = contador + 4'b1;
+				enableRed = 1;
 				next_state = STOP;
 			end
 		end

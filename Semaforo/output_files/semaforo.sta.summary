@@ -2,28 +2,28 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1200mV 85C Model Setup 'clk_divider:nuevoReloj|clk_div'
-Slack : -7.586
-TNS   : -21.250
-
-Type  : Slow 1200mV 85C Model Setup 'contador[1]'
-Slack : -7.544
-TNS   : -14.979
-
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -4.448
-TNS   : -66.186
+Slack : -4.510
+TNS   : -66.550
+
+Type  : Slow 1200mV 85C Model Setup 'clk_divider:nuevoReloj|clk_div'
+Slack : -1.674
+TNS   : -19.577
 
 Type  : Slow 1200mV 85C Model Hold 'clk_divider:nuevoReloj|clk_div'
-Slack : 0.378
+Slack : 0.347
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 0.646
+Slack : 0.645
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'contador[1]'
-Slack : 0.978
+Type  : Slow 1200mV 85C Model Recovery 'clk_divider:nuevoReloj|clk_div'
+Slack : -1.895
+TNS   : -18.253
+
+Type  : Slow 1200mV 85C Model Removal 'clk_divider:nuevoReloj|clk_div'
+Slack : 1.503
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
@@ -32,34 +32,30 @@ TNS   : -49.299
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk_divider:nuevoReloj|clk_div'
 Slack : -1.403
-TNS   : -4.209
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'contador[1]'
-Slack : 0.456
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Setup 'contador[1]'
-Slack : -6.959
-TNS   : -13.764
-
-Type  : Slow 1200mV 0C Model Setup 'clk_divider:nuevoReloj|clk_div'
-Slack : -6.853
-TNS   : -19.183
+TNS   : -21.045
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -4.008
-TNS   : -56.962
+Slack : -4.063
+TNS   : -57.211
+
+Type  : Slow 1200mV 0C Model Setup 'clk_divider:nuevoReloj|clk_div'
+Slack : -1.478
+TNS   : -17.379
 
 Type  : Slow 1200mV 0C Model Hold 'clk_divider:nuevoReloj|clk_div'
-Slack : 0.339
+Slack : 0.311
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
 Slack : 0.596
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'contador[1]'
-Slack : 0.837
+Type  : Slow 1200mV 0C Model Recovery 'clk_divider:nuevoReloj|clk_div'
+Slack : -1.686
+TNS   : -16.097
+
+Type  : Slow 1200mV 0C Model Removal 'clk_divider:nuevoReloj|clk_div'
+Slack : 1.388
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
@@ -68,46 +64,38 @@ TNS   : -49.299
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk_divider:nuevoReloj|clk_div'
 Slack : -1.403
-TNS   : -4.209
-
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'contador[1]'
-Slack : 0.458
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Setup 'clk_divider:nuevoReloj|clk_div'
-Slack : -3.160
-TNS   : -8.724
-
-Type  : Fast 1200mV 0C Model Setup 'contador[1]'
-Slack : -3.037
-TNS   : -6.069
+TNS   : -21.045
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -1.472
-TNS   : -9.251
+Slack : -1.476
+TNS   : -9.381
+
+Type  : Fast 1200mV 0C Model Setup 'clk_divider:nuevoReloj|clk_div'
+Slack : -0.465
+TNS   : -2.855
 
 Type  : Fast 1200mV 0C Model Hold 'clk_divider:nuevoReloj|clk_div'
-Slack : 0.166
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'contador[1]'
-Slack : 0.213
+Slack : 0.151
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
 Slack : 0.249
 TNS   : 0.000
 
+Type  : Fast 1200mV 0C Model Recovery 'clk_divider:nuevoReloj|clk_div'
+Slack : -0.286
+TNS   : -3.195
+
+Type  : Fast 1200mV 0C Model Removal 'clk_divider:nuevoReloj|clk_div'
+Slack : 0.636
+TNS   : 0.000
+
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -37.114
+TNS   : -37.122
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk_divider:nuevoReloj|clk_div'
 Slack : -1.000
-TNS   : -3.000
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'contador[1]'
-Slack : 0.431
-TNS   : 0.000
+TNS   : -15.000
 
 ------------------------------------------------------------

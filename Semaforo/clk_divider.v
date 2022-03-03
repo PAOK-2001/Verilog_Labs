@@ -8,7 +8,7 @@ localparam target = 25000000;
 
 always@(posedge clk or negedge rst)
 begin
-	if(rst == 0)
+	if(!rst)
 		counter <= 0;
 	else if(counter == target-1)
 		counter = 0;
@@ -18,7 +18,7 @@ end
 
 always@(posedge clk or negedge rst)
 begin
-	if(rst == 0)
+	if(!rst)
 		clk_div = 1'b0;
 	else if(counter == target-1)
 		clk_div = ~clk_div;

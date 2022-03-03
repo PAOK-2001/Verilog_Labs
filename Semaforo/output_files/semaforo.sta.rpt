@@ -1,5 +1,5 @@
 Timing Analyzer report for semaforo
-Wed Mar 02 20:21:41 2022
+Wed Mar 02 21:20:05 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -38,15 +38,17 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  30. Signal Integrity Metrics (Fast 1200mv 0c Model)
  31. Setup Transfers
  32. Hold Transfers
- 33. Report TCCS
- 34. Report RSKM
- 35. Unconstrained Paths Summary
- 36. Clock Status Summary
- 37. Unconstrained Input Ports
- 38. Unconstrained Output Ports
+ 33. Recovery Transfers
+ 34. Removal Transfers
+ 35. Report TCCS
+ 36. Report RSKM
+ 37. Unconstrained Paths Summary
+ 38. Clock Status Summary
  39. Unconstrained Input Ports
  40. Unconstrained Output Ports
- 41. Timing Analyzer Messages
+ 41. Unconstrained Input Ports
+ 42. Unconstrained Output Ports
+ 43. Timing Analyzer Messages
 
 
 
@@ -92,14 +94,13 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
-; Average used               ; 1.05        ;
+; Average used               ; 1.04        ;
 ; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.1%      ;
-;     Processor 3            ;   1.0%      ;
-;     Processors 4-6         ;   1.0%      ;
+;     Processor 2            ;   0.8%      ;
+;     Processors 3-6         ;   0.8%      ;
 +----------------------------+-------------+
 
 
@@ -110,7 +111,6 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------------------------+
 ; clk                            ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk }                            ;
 ; clk_divider:nuevoReloj|clk_div ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk_divider:nuevoReloj|clk_div } ;
-; contador[1]                    ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { contador[1] }                    ;
 +--------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------------------------+
 
 
@@ -119,9 +119,8 @@ https://fpgasoftware.intel.com/eula.
 +------------+-----------------+--------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                     ; Note ;
 +------------+-----------------+--------------------------------+------+
-; 62.16 MHz  ; 62.16 MHz       ; contador[1]                    ;      ;
-; 183.55 MHz ; 183.55 MHz      ; clk                            ;      ;
-; 244.5 MHz  ; 244.5 MHz       ; clk_divider:nuevoReloj|clk_div ;      ;
+; 181.49 MHz ; 181.49 MHz      ; clk                            ;      ;
+; 233.54 MHz ; 233.54 MHz      ; clk_divider:nuevoReloj|clk_div ;      ;
 +------------+-----------------+--------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -131,9 +130,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------------+--------+---------------+
 ; Clock                          ; Slack  ; End Point TNS ;
 +--------------------------------+--------+---------------+
-; clk_divider:nuevoReloj|clk_div ; -7.586 ; -21.250       ;
-; contador[1]                    ; -7.544 ; -14.979       ;
-; clk                            ; -4.448 ; -66.186       ;
+; clk                            ; -4.510 ; -66.550       ;
+; clk_divider:nuevoReloj|clk_div ; -1.674 ; -19.577       ;
 +--------------------------------+--------+---------------+
 
 
@@ -142,22 +140,27 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------------+-------+---------------+
 ; Clock                          ; Slack ; End Point TNS ;
 +--------------------------------+-------+---------------+
-; clk_divider:nuevoReloj|clk_div ; 0.378 ; 0.000         ;
-; clk                            ; 0.646 ; 0.000         ;
-; contador[1]                    ; 0.978 ; 0.000         ;
+; clk_divider:nuevoReloj|clk_div ; 0.347 ; 0.000         ;
+; clk                            ; 0.645 ; 0.000         ;
 +--------------------------------+-------+---------------+
 
 
-------------------------------------------
-; Slow 1200mV 85C Model Recovery Summary ;
-------------------------------------------
-No paths to report.
++---------------------------------------------------------+
+; Slow 1200mV 85C Model Recovery Summary                  ;
++--------------------------------+--------+---------------+
+; Clock                          ; Slack  ; End Point TNS ;
++--------------------------------+--------+---------------+
+; clk_divider:nuevoReloj|clk_div ; -1.895 ; -18.253       ;
++--------------------------------+--------+---------------+
 
 
------------------------------------------
-; Slow 1200mV 85C Model Removal Summary ;
------------------------------------------
-No paths to report.
++--------------------------------------------------------+
+; Slow 1200mV 85C Model Removal Summary                  ;
++--------------------------------+-------+---------------+
+; Clock                          ; Slack ; End Point TNS ;
++--------------------------------+-------+---------------+
+; clk_divider:nuevoReloj|clk_div ; 1.503 ; 0.000         ;
++--------------------------------+-------+---------------+
 
 
 +---------------------------------------------------------+
@@ -166,8 +169,7 @@ No paths to report.
 ; Clock                          ; Slack  ; End Point TNS ;
 +--------------------------------+--------+---------------+
 ; clk                            ; -3.000 ; -49.299       ;
-; clk_divider:nuevoReloj|clk_div ; -1.403 ; -4.209        ;
-; contador[1]                    ; 0.456  ; 0.000         ;
+; clk_divider:nuevoReloj|clk_div ; -1.403 ; -21.045       ;
 +--------------------------------+--------+---------------+
 
 
@@ -182,9 +184,8 @@ No synchronizer chains to report.
 +------------+-----------------+--------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                     ; Note ;
 +------------+-----------------+--------------------------------+------+
-; 67.03 MHz  ; 67.03 MHz       ; contador[1]                    ;      ;
-; 199.68 MHz ; 199.68 MHz      ; clk                            ;      ;
-; 266.6 MHz  ; 266.6 MHz       ; clk_divider:nuevoReloj|clk_div ;      ;
+; 197.51 MHz ; 197.51 MHz      ; clk                            ;      ;
+; 255.23 MHz ; 255.23 MHz      ; clk_divider:nuevoReloj|clk_div ;      ;
 +------------+-----------------+--------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -194,9 +195,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------------+--------+---------------+
 ; Clock                          ; Slack  ; End Point TNS ;
 +--------------------------------+--------+---------------+
-; contador[1]                    ; -6.959 ; -13.764       ;
-; clk_divider:nuevoReloj|clk_div ; -6.853 ; -19.183       ;
-; clk                            ; -4.008 ; -56.962       ;
+; clk                            ; -4.063 ; -57.211       ;
+; clk_divider:nuevoReloj|clk_div ; -1.478 ; -17.379       ;
 +--------------------------------+--------+---------------+
 
 
@@ -205,22 +205,27 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------------+-------+---------------+
 ; Clock                          ; Slack ; End Point TNS ;
 +--------------------------------+-------+---------------+
-; clk_divider:nuevoReloj|clk_div ; 0.339 ; 0.000         ;
+; clk_divider:nuevoReloj|clk_div ; 0.311 ; 0.000         ;
 ; clk                            ; 0.596 ; 0.000         ;
-; contador[1]                    ; 0.837 ; 0.000         ;
 +--------------------------------+-------+---------------+
 
 
------------------------------------------
-; Slow 1200mV 0C Model Recovery Summary ;
------------------------------------------
-No paths to report.
++---------------------------------------------------------+
+; Slow 1200mV 0C Model Recovery Summary                   ;
++--------------------------------+--------+---------------+
+; Clock                          ; Slack  ; End Point TNS ;
++--------------------------------+--------+---------------+
+; clk_divider:nuevoReloj|clk_div ; -1.686 ; -16.097       ;
++--------------------------------+--------+---------------+
 
 
-----------------------------------------
-; Slow 1200mV 0C Model Removal Summary ;
-----------------------------------------
-No paths to report.
++--------------------------------------------------------+
+; Slow 1200mV 0C Model Removal Summary                   ;
++--------------------------------+-------+---------------+
+; Clock                          ; Slack ; End Point TNS ;
++--------------------------------+-------+---------------+
+; clk_divider:nuevoReloj|clk_div ; 1.388 ; 0.000         ;
++--------------------------------+-------+---------------+
 
 
 +---------------------------------------------------------+
@@ -229,8 +234,7 @@ No paths to report.
 ; Clock                          ; Slack  ; End Point TNS ;
 +--------------------------------+--------+---------------+
 ; clk                            ; -3.000 ; -49.299       ;
-; clk_divider:nuevoReloj|clk_div ; -1.403 ; -4.209        ;
-; contador[1]                    ; 0.458  ; 0.000         ;
+; clk_divider:nuevoReloj|clk_div ; -1.403 ; -21.045       ;
 +--------------------------------+--------+---------------+
 
 
@@ -245,9 +249,8 @@ No synchronizer chains to report.
 +--------------------------------+--------+---------------+
 ; Clock                          ; Slack  ; End Point TNS ;
 +--------------------------------+--------+---------------+
-; clk_divider:nuevoReloj|clk_div ; -3.160 ; -8.724        ;
-; contador[1]                    ; -3.037 ; -6.069        ;
-; clk                            ; -1.472 ; -9.251        ;
+; clk                            ; -1.476 ; -9.381        ;
+; clk_divider:nuevoReloj|clk_div ; -0.465 ; -2.855        ;
 +--------------------------------+--------+---------------+
 
 
@@ -256,22 +259,27 @@ No synchronizer chains to report.
 +--------------------------------+-------+---------------+
 ; Clock                          ; Slack ; End Point TNS ;
 +--------------------------------+-------+---------------+
-; clk_divider:nuevoReloj|clk_div ; 0.166 ; 0.000         ;
-; contador[1]                    ; 0.213 ; 0.000         ;
+; clk_divider:nuevoReloj|clk_div ; 0.151 ; 0.000         ;
 ; clk                            ; 0.249 ; 0.000         ;
 +--------------------------------+-------+---------------+
 
 
------------------------------------------
-; Fast 1200mV 0C Model Recovery Summary ;
------------------------------------------
-No paths to report.
++---------------------------------------------------------+
+; Fast 1200mV 0C Model Recovery Summary                   ;
++--------------------------------+--------+---------------+
+; Clock                          ; Slack  ; End Point TNS ;
++--------------------------------+--------+---------------+
+; clk_divider:nuevoReloj|clk_div ; -0.286 ; -3.195        ;
++--------------------------------+--------+---------------+
 
 
-----------------------------------------
-; Fast 1200mV 0C Model Removal Summary ;
-----------------------------------------
-No paths to report.
++--------------------------------------------------------+
+; Fast 1200mV 0C Model Removal Summary                   ;
++--------------------------------+-------+---------------+
+; Clock                          ; Slack ; End Point TNS ;
++--------------------------------+-------+---------------+
+; clk_divider:nuevoReloj|clk_div ; 0.636 ; 0.000         ;
++--------------------------------+-------+---------------+
 
 
 +---------------------------------------------------------+
@@ -279,9 +287,8 @@ No paths to report.
 +--------------------------------+--------+---------------+
 ; Clock                          ; Slack  ; End Point TNS ;
 +--------------------------------+--------+---------------+
-; clk                            ; -3.000 ; -37.114       ;
-; clk_divider:nuevoReloj|clk_div ; -1.000 ; -3.000        ;
-; contador[1]                    ; 0.431  ; 0.000         ;
+; clk                            ; -3.000 ; -37.122       ;
+; clk_divider:nuevoReloj|clk_div ; -1.000 ; -15.000       ;
 +--------------------------------+--------+---------------+
 
 
@@ -291,20 +298,18 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+-----------------------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                                           ;
-+---------------------------------+----------+-------+----------+---------+---------------------+
-; Clock                           ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
-+---------------------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack                ; -7.586   ; 0.166 ; N/A      ; N/A     ; -3.000              ;
-;  clk                            ; -4.448   ; 0.249 ; N/A      ; N/A     ; -3.000              ;
-;  clk_divider:nuevoReloj|clk_div ; -7.586   ; 0.166 ; N/A      ; N/A     ; -1.403              ;
-;  contador[1]                    ; -7.544   ; 0.213 ; N/A      ; N/A     ; 0.431               ;
-; Design-wide TNS                 ; -102.415 ; 0.0   ; 0.0      ; 0.0     ; -53.508             ;
-;  clk                            ; -66.186  ; 0.000 ; N/A      ; N/A     ; -49.299             ;
-;  clk_divider:nuevoReloj|clk_div ; -21.250  ; 0.000 ; N/A      ; N/A     ; -4.209              ;
-;  contador[1]                    ; -14.979  ; 0.000 ; N/A      ; N/A     ; 0.000               ;
-+---------------------------------+----------+-------+----------+---------+---------------------+
++----------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                          ;
++---------------------------------+---------+-------+----------+---------+---------------------+
+; Clock                           ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++---------------------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack                ; -4.510  ; 0.151 ; -1.895   ; 0.636   ; -3.000              ;
+;  clk                            ; -4.510  ; 0.249 ; N/A      ; N/A     ; -3.000              ;
+;  clk_divider:nuevoReloj|clk_div ; -1.674  ; 0.151 ; -1.895   ; 0.636   ; -1.403              ;
+; Design-wide TNS                 ; -86.127 ; 0.0   ; -18.253  ; 0.0     ; -70.344             ;
+;  clk                            ; -66.550 ; 0.000 ; N/A      ; N/A     ; -49.299             ;
+;  clk_divider:nuevoReloj|clk_div ; -19.577 ; 0.000 ; -18.253  ; 0.000   ; -21.045             ;
++---------------------------------+---------+-------+----------+---------+---------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -379,10 +384,7 @@ No synchronizer chains to report.
 +--------------------------------+--------------------------------+----------+----------+----------+----------+
 ; clk                            ; clk                            ; 944      ; 0        ; 0        ; 0        ;
 ; clk_divider:nuevoReloj|clk_div ; clk                            ; 1        ; 1        ; 0        ; 0        ;
-; clk_divider:nuevoReloj|clk_div ; clk_divider:nuevoReloj|clk_div ; 17       ; 0        ; 0        ; 0        ;
-; contador[1]                    ; clk_divider:nuevoReloj|clk_div ; 39       ; 39       ; 0        ; 0        ;
-; clk_divider:nuevoReloj|clk_div ; contador[1]                    ; 16       ; 0        ; 16       ; 0        ;
-; contador[1]                    ; contador[1]                    ; 54       ; 54       ; 54       ; 54       ;
+; clk_divider:nuevoReloj|clk_div ; clk_divider:nuevoReloj|clk_div ; 6        ; 18       ; 12       ; 66       ;
 +--------------------------------+--------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -394,10 +396,27 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +--------------------------------+--------------------------------+----------+----------+----------+----------+
 ; clk                            ; clk                            ; 944      ; 0        ; 0        ; 0        ;
 ; clk_divider:nuevoReloj|clk_div ; clk                            ; 1        ; 1        ; 0        ; 0        ;
-; clk_divider:nuevoReloj|clk_div ; clk_divider:nuevoReloj|clk_div ; 17       ; 0        ; 0        ; 0        ;
-; contador[1]                    ; clk_divider:nuevoReloj|clk_div ; 39       ; 39       ; 0        ; 0        ;
-; clk_divider:nuevoReloj|clk_div ; contador[1]                    ; 16       ; 0        ; 16       ; 0        ;
-; contador[1]                    ; contador[1]                    ; 54       ; 54       ; 54       ; 54       ;
+; clk_divider:nuevoReloj|clk_div ; clk_divider:nuevoReloj|clk_div ; 6        ; 18       ; 12       ; 66       ;
++--------------------------------+--------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Recovery Transfers                                                                                          ;
++--------------------------------+--------------------------------+----------+----------+----------+----------+
+; From Clock                     ; To Clock                       ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++--------------------------------+--------------------------------+----------+----------+----------+----------+
+; clk_divider:nuevoReloj|clk_div ; clk_divider:nuevoReloj|clk_div ; 0        ; 0        ; 12       ; 36       ;
++--------------------------------+--------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Removal Transfers                                                                                           ;
++--------------------------------+--------------------------------+----------+----------+----------+----------+
+; From Clock                     ; To Clock                       ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++--------------------------------+--------------------------------+----------+----------+----------+----------+
+; clk_divider:nuevoReloj|clk_div ; clk_divider:nuevoReloj|clk_div ; 0        ; 0        ; 12       ; 36       ;
 +--------------------------------+--------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -435,7 +454,6 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +--------------------------------+--------------------------------+------+-------------+
 ; clk                            ; clk                            ; Base ; Constrained ;
 ; clk_divider:nuevoReloj|clk_div ; clk_divider:nuevoReloj|clk_div ; Base ; Constrained ;
-; contador[1]                    ; contador[1]                    ; Base ; Constrained ;
 +--------------------------------+--------------------------------+------+-------------+
 
 
@@ -485,126 +503,107 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Mar 02 20:21:39 2022
+    Info: Processing started: Wed Mar 02 21:20:02 2022
 Info: Command: quartus_sta semaforo -c semaforo
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
-Warning (335093): The Timing Analyzer is analyzing 3 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'semaforo.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
-    Info (332105): create_clock -period 1.000 -name clk clk
     Info (332105): create_clock -period 1.000 -name clk_divider:nuevoReloj|clk_div clk_divider:nuevoReloj|clk_div
-    Info (332105): create_clock -period 1.000 -name contador[1] contador[1]
-Warning (332125): Found combinational loop of 10 nodes File: C:/Practicas/Verilog_Labs/Semaforo/semaforo.v Line: 37
-    Warning (332126): Node "Selector4~0|combout"
-    Warning (332126): Node "Selector1~0|dataa"
-    Warning (332126): Node "Selector1~0|combout"
-    Warning (332126): Node "contador[0]~0|datab"
-    Warning (332126): Node "contador[0]~0|combout"
-    Warning (332126): Node "Selector4~0|dataa"
-    Warning (332126): Node "Selector5~0|dataa"
-    Warning (332126): Node "Selector5~0|combout"
-    Warning (332126): Node "Selector1~0|datab"
-    Warning (332126): Node "contador[0]~0|datad"
-Warning (332191): Clock target contador[1] of clock contador[1] is fed by another target of the same clock.
-Warning (332191): Clock target contador[1] of clock contador[1] is fed by another target of the same clock.
-Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
-    Info (332098): From: Selector4~0|datad  to: Selector5~0|combout
-    Info (332098): From: Selector5~0|datad  to: contador[0]~0|combout
+    Info (332105): create_clock -period 1.000 -name clk clk
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -7.586
+Info (332146): Worst-case setup slack is -4.510
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -7.586             -21.250 clk_divider:nuevoReloj|clk_div 
-    Info (332119):    -7.544             -14.979 contador[1] 
-    Info (332119):    -4.448             -66.186 clk 
-Info (332146): Worst-case hold slack is 0.378
+    Info (332119):    -4.510             -66.550 clk 
+    Info (332119):    -1.674             -19.577 clk_divider:nuevoReloj|clk_div 
+Info (332146): Worst-case hold slack is 0.347
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.378               0.000 clk_divider:nuevoReloj|clk_div 
-    Info (332119):     0.646               0.000 clk 
-    Info (332119):     0.978               0.000 contador[1] 
-Info (332140): No Recovery paths to report
-Info (332140): No Removal paths to report
+    Info (332119):     0.347               0.000 clk_divider:nuevoReloj|clk_div 
+    Info (332119):     0.645               0.000 clk 
+Info (332146): Worst-case recovery slack is -1.895
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.895             -18.253 clk_divider:nuevoReloj|clk_div 
+Info (332146): Worst-case removal slack is 1.503
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     1.503               0.000 clk_divider:nuevoReloj|clk_div 
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):    -3.000             -49.299 clk 
-    Info (332119):    -1.403              -4.209 clk_divider:nuevoReloj|clk_div 
-    Info (332119):     0.456               0.000 contador[1] 
+    Info (332119):    -1.403             -21.045 clk_divider:nuevoReloj|clk_div 
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Warning (332191): Clock target contador[1] of clock contador[1] is fed by another target of the same clock.
-Warning (332191): Clock target contador[1] of clock contador[1] is fed by another target of the same clock.
-Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
-    Info (332098): From: Selector4~0|datad  to: Selector5~0|combout
-    Info (332098): From: Selector5~0|datad  to: contador[0]~0|combout
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -6.959
+Info (332146): Worst-case setup slack is -4.063
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -6.959             -13.764 contador[1] 
-    Info (332119):    -6.853             -19.183 clk_divider:nuevoReloj|clk_div 
-    Info (332119):    -4.008             -56.962 clk 
-Info (332146): Worst-case hold slack is 0.339
+    Info (332119):    -4.063             -57.211 clk 
+    Info (332119):    -1.478             -17.379 clk_divider:nuevoReloj|clk_div 
+Info (332146): Worst-case hold slack is 0.311
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.339               0.000 clk_divider:nuevoReloj|clk_div 
+    Info (332119):     0.311               0.000 clk_divider:nuevoReloj|clk_div 
     Info (332119):     0.596               0.000 clk 
-    Info (332119):     0.837               0.000 contador[1] 
-Info (332140): No Recovery paths to report
-Info (332140): No Removal paths to report
+Info (332146): Worst-case recovery slack is -1.686
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.686             -16.097 clk_divider:nuevoReloj|clk_div 
+Info (332146): Worst-case removal slack is 1.388
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     1.388               0.000 clk_divider:nuevoReloj|clk_div 
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):    -3.000             -49.299 clk 
-    Info (332119):    -1.403              -4.209 clk_divider:nuevoReloj|clk_div 
-    Info (332119):     0.458               0.000 contador[1] 
+    Info (332119):    -1.403             -21.045 clk_divider:nuevoReloj|clk_div 
 Info: Analyzing Fast 1200mV 0C Model
-Warning (332191): Clock target contador[1] of clock contador[1] is fed by another target of the same clock.
-Warning (332191): Clock target contador[1] of clock contador[1] is fed by another target of the same clock.
-Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
-    Info (332098): From: Selector4~0|datad  to: Selector5~0|combout
-    Info (332098): From: Selector5~0|datad  to: contador[0]~0|combout
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -3.160
+Info (332146): Worst-case setup slack is -1.476
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.160              -8.724 clk_divider:nuevoReloj|clk_div 
-    Info (332119):    -3.037              -6.069 contador[1] 
-    Info (332119):    -1.472              -9.251 clk 
-Info (332146): Worst-case hold slack is 0.166
+    Info (332119):    -1.476              -9.381 clk 
+    Info (332119):    -0.465              -2.855 clk_divider:nuevoReloj|clk_div 
+Info (332146): Worst-case hold slack is 0.151
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.166               0.000 clk_divider:nuevoReloj|clk_div 
-    Info (332119):     0.213               0.000 contador[1] 
+    Info (332119):     0.151               0.000 clk_divider:nuevoReloj|clk_div 
     Info (332119):     0.249               0.000 clk 
-Info (332140): No Recovery paths to report
-Info (332140): No Removal paths to report
+Info (332146): Worst-case recovery slack is -0.286
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.286              -3.195 clk_divider:nuevoReloj|clk_div 
+Info (332146): Worst-case removal slack is 0.636
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.636               0.000 clk_divider:nuevoReloj|clk_div 
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -37.114 clk 
-    Info (332119):    -1.000              -3.000 clk_divider:nuevoReloj|clk_div 
-    Info (332119):     0.431               0.000 contador[1] 
+    Info (332119):    -3.000             -37.122 clk 
+    Info (332119):    -1.000             -15.000 clk_divider:nuevoReloj|clk_div 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
-Info: Quartus Prime Timing Analyzer was successful. 0 errors, 23 warnings
-    Info: Peak virtual memory: 4846 megabytes
-    Info: Processing ended: Wed Mar 02 20:21:41 2022
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:03
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4845 megabytes
+    Info: Processing ended: Wed Mar 02 21:20:05 2022
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
 
 

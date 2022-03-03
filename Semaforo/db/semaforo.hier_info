@@ -1,9 +1,9 @@
 |semaforo
 clk => clk.IN1
 rst => rst.IN1
-green <= green.DB_MAX_OUTPUT_PORT_TYPE
-yellow <= yellow.DB_MAX_OUTPUT_PORT_TYPE
-red <= red.DB_MAX_OUTPUT_PORT_TYPE
+green << green.DB_MAX_OUTPUT_PORT_TYPE
+yellow << yellow.DB_MAX_OUTPUT_PORT_TYPE
+red << red.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |semaforo|clk_divider:nuevoReloj
@@ -74,5 +74,119 @@ rst => counter[30].ACLR
 rst => counter[31].ACLR
 rst => clk_div~reg0.ACLR
 clk_div <= clk_div~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|semaforo|counter:contador1
+pb => count[0]~reg0.CLK
+pb => count[1]~reg0.CLK
+pb => count[2]~reg0.CLK
+pb => count[3]~reg0.CLK
+pb => count[4]~reg0.CLK
+pb => count[5]~reg0.CLK
+pb => count[6]~reg0.CLK
+rst => count[0]~reg0.ACLR
+rst => count[1]~reg0.ACLR
+rst => count[2]~reg0.ACLR
+rst => count[3]~reg0.ACLR
+rst => count[4]~reg0.ACLR
+rst => count[5]~reg0.ACLR
+rst => count[6]~reg0.ACLR
+enable => count[0]~reg0.ENA
+enable => count[6]~reg0.ENA
+enable => count[5]~reg0.ENA
+enable => count[4]~reg0.ENA
+enable => count[3]~reg0.ENA
+enable => count[2]~reg0.ENA
+enable => count[1]~reg0.ENA
+count[0] <= count[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[1] <= count[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[2] <= count[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[3] <= count[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[4] <= count[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[5] <= count[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[6] <= count[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+display_count[0] <= <GND>
+display_count[1] <= <GND>
+display_count[2] <= <GND>
+display_count[3] <= <GND>
+display_count[4] <= <GND>
+display_count[5] <= <GND>
+display_count[6] <= <GND>
+
+
+|semaforo|counter:contador2
+pb => count[0]~reg0.CLK
+pb => count[1]~reg0.CLK
+pb => count[2]~reg0.CLK
+pb => count[3]~reg0.CLK
+pb => count[4]~reg0.CLK
+pb => count[5]~reg0.CLK
+pb => count[6]~reg0.CLK
+rst => count[0]~reg0.ACLR
+rst => count[1]~reg0.ACLR
+rst => count[2]~reg0.ACLR
+rst => count[3]~reg0.ACLR
+rst => count[4]~reg0.ACLR
+rst => count[5]~reg0.ACLR
+rst => count[6]~reg0.ACLR
+enable => count[0]~reg0.ENA
+enable => count[6]~reg0.ENA
+enable => count[5]~reg0.ENA
+enable => count[4]~reg0.ENA
+enable => count[3]~reg0.ENA
+enable => count[2]~reg0.ENA
+enable => count[1]~reg0.ENA
+count[0] <= count[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[1] <= count[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[2] <= count[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[3] <= count[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[4] <= count[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[5] <= count[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[6] <= count[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+display_count[0] <= <GND>
+display_count[1] <= <GND>
+display_count[2] <= <GND>
+display_count[3] <= <GND>
+display_count[4] <= <GND>
+display_count[5] <= <GND>
+display_count[6] <= <GND>
+
+
+|semaforo|counter:contador3
+pb => count[0]~reg0.CLK
+pb => count[1]~reg0.CLK
+pb => count[2]~reg0.CLK
+pb => count[3]~reg0.CLK
+pb => count[4]~reg0.CLK
+pb => count[5]~reg0.CLK
+pb => count[6]~reg0.CLK
+rst => count[0]~reg0.ACLR
+rst => count[1]~reg0.ACLR
+rst => count[2]~reg0.ACLR
+rst => count[3]~reg0.ACLR
+rst => count[4]~reg0.ACLR
+rst => count[5]~reg0.ACLR
+rst => count[6]~reg0.ACLR
+enable => count[0]~reg0.ENA
+enable => count[6]~reg0.ENA
+enable => count[5]~reg0.ENA
+enable => count[4]~reg0.ENA
+enable => count[3]~reg0.ENA
+enable => count[2]~reg0.ENA
+enable => count[1]~reg0.ENA
+count[0] <= count[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[1] <= count[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[2] <= count[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[3] <= count[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[4] <= count[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[5] <= count[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[6] <= count[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+display_count[0] <= <GND>
+display_count[1] <= <GND>
+display_count[2] <= <GND>
+display_count[3] <= <GND>
+display_count[4] <= <GND>
+display_count[5] <= <GND>
+display_count[6] <= <GND>
 
 
