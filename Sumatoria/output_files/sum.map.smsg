@@ -1,0 +1,6 @@
+Warning (10268): Verilog HDL information at clk_divider.v(9): always construct contains both blocking and non-blocking assignments File: /home/paok/Documents/Verilog_Labs/Sumatoria/clk_divider.v Line: 9
+Warning (10268): Verilog HDL information at sum.v(42): always construct contains both blocking and non-blocking assignments File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
+Info (10281): Verilog HDL Declaration information at sum.v(2): object "start" differs only in case from object "START" in the same scope File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 2
+Info (10281): Verilog HDL Declaration information at sum.v(11): object "units" differs only in case from object "UNITS" in the same scope File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 11
+Info (10281): Verilog HDL Declaration information at sum.v(11): object "decenas" differs only in case from object "DECENAS" in the same scope File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 11
+Info (10281): Verilog HDL Declaration information at sum.v(11): object "centenas" differs only in case from object "CENTENAS" in the same scope File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 11

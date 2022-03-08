@@ -1,0 +1,65 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "accumulator[0]",
+					"strict" : false
+				},
+				{
+					"name" : "accumulator[1]",
+					"strict" : false
+				},
+				{
+					"name" : "accumulator[2]",
+					"strict" : false
+				},
+				{
+					"name" : "accumulator[3]",
+					"strict" : false
+				},
+				{
+					"name" : "accumulator[4]",
+					"strict" : false
+				},
+				{
+					"name" : "accumulator[5]",
+					"strict" : false
+				},
+				{
+					"name" : "accumulator[6]",
+					"strict" : false
+				},
+				{
+					"name" : "accumulator[7]",
+					"strict" : false
+				},
+				{
+					"name" : "accumulator[8]",
+					"strict" : false
+				},
+				{
+					"name" : "accumulator[9]",
+					"strict" : false
+				},
+				{
+					"name" : "accumulator[10]",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
+					"strict" : false
+				},
+				{
+					"name" : "start",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
