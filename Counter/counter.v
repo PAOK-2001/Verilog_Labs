@@ -7,9 +7,9 @@ module counter(
 always@(posedge clk)
 begin 
 	if(rst)
-		count <= 4'b0000;
+		count <= 4'b0000; // Iniciar el valor del contador en 0
 	else if(en)
-		count <= count + 1;
+		count <= count + 1; // Si el contador esta habilidado, cada tik aumentarlo uno
 end
 
 
