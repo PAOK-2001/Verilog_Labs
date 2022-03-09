@@ -1,20 +1,37 @@
-/* LAB 2
-
-Display de 7 segmentos*/
-
 module display(
-
-	input[3:0] entryNum,
-	output[6:0] displaySegment
-
+	input      [6:0] num,
+	output reg [6:0] display7Segment
 );
 
-assign displaySegment[0] = ~((~entryNum[2] & ~entryNum[0]) | (~entryNum[3] & entryNum[1]) | (~entryNum[3] & entryNum[2] & entryNum[0]) | (entryNum[3] & ~entryNum[2] & ~entryNum[1]) | (entryNum[3] & ~entryNum[0]) | (entryNum[2] & entryNum[1]));
-assign displaySegment[1] = ~((~entryNum[3] & ~entryNum[1] & ~entryNum[0]) | (~entryNum[3] & entryNum[1] & entryNum[0]) | (~entryNum[2] & ~entryNum[0]) | (entryNum[3] & ~entryNum[1] & entryNum[0]) | (~entryNum[3] & ~entryNum[2]));							
-assign displaySegment[2] = ~((~entryNum[3] & entryNum[2]) | (entryNum[3] & ~entryNum[2]) | (~entryNum[1] & entryNum[0]) | (~entryNum[3] & ~entryNum[1]) | (~entryNum[3] & entryNum[0]));				
-assign displaySegment[3] = ~((entryNum[2] & ~entryNum[1] & entryNum[0]) | (~entryNum[3] & ~entryNum[2] & ~entryNum[0]) | (~entryNum[2] & entryNum[1] & entryNum[0]) | (entryNum[2] & entryNum[1] & ~entryNum[0]) | (entryNum[3] & ~entryNum[1]));
-assign displaySegment[4] = ~((~entryNum[2] & ~entryNum[0]) | (entryNum[1] & ~entryNum[0]) | (entryNum[3] & entryNum[1]) | (entryNum[3] & entryNum[2]));
-assign displaySegment[5] = ~((~entryNum[1] & ~entryNum[0]) | (~entryNum[3] & entryNum[2] & ~entryNum[1]) | (entryNum[2] & ~entryNum[0]) | (entryNum[3] & ~entryNum[2]) | (entryNum[3] & entryNum[1]));
-assign displaySegment[6] = ~((~entryNum[2] & entryNum[1]) | (entryNum[2] & ~entryNum[1]) | (entryNum[3]) | (entryNum[1] & ~entryNum[0]));
+// Asignacion de bits en displays segun el numero pasado
+always@(num)
+begin
+	casex(num)
+	
+	0:
+		display7Segment = 7'b1000000;
+	1:
+		display7Segment = 7'b1111001;
+	2:
+		display7Segment = 7'b0100100;
+	3:
+		display7Segment = 7'b0110000;
+	4:
+		display7Segment = 7'b0011001;
+	5:
+		display7Segment = 7'b0010010;
+	6:
+		display7Segment = 7'b0000010;
+	7:
+		display7Segment = 7'b1111000;
+	8:
+		display7Segment = 7'b0000000;
+	9:
+		display7Segment = 7'b0010000;
+	default:
+		display7Segment = 7'b1000000;
+	
+	endcase
 
+end
 endmodule

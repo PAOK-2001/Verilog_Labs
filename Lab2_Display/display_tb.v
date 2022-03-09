@@ -4,8 +4,8 @@ reg[3:0] entryNum_reg;
 wire[6:0] display_wire;
 
 display test(
-	.entryNum(entryNum_reg),
-	.displaySegment(display_wire)
+	.num(entryNum_reg),
+	.display7Segment(display_wire)
 );
 
 initial begin

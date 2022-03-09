@@ -1,4 +1,3 @@
-# Reading pref.tcl
 # ERROR: No extended dataflow license exists
 # do display_run_msim_rtl_verilog.do
 # if {[file exists rtl_work]} {
@@ -8,36 +7,38 @@
 # vmap work rtl_work
 # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap work rtl_work 
-# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Copying /home/paok/intelFPGA_lite/20.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+C:/Practicas/Lab2_Display {C:/Practicas/Lab2_Display/display.v}
+# vlog -vlog01compat -work work +incdir+/home/paok/Documents/Verilog_Labs/Lab2_Display {/home/paok/Documents/Verilog_Labs/Lab2_Display/display.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 08:42:49 on Feb 18,2022
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Practicas/Lab2_Display" C:/Practicas/Lab2_Display/display.v 
+# Start time: 17:15:13 on Mar 09,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/paok/Documents/Verilog_Labs/Lab2_Display" /home/paok/Documents/Verilog_Labs/Lab2_Display/display.v 
 # -- Compiling module display
 # 
 # Top level modules:
 # 	display
-# End time: 08:42:49 on Feb 18,2022, Elapsed time: 0:00:00
+# End time: 17:15:13 on Mar 09,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vlog -vlog01compat -work work +incdir+C:/Practicas/Lab2_Display {C:/Practicas/Lab2_Display/display_tb.v}
+# vlog -vlog01compat -work work +incdir+/home/paok/Documents/Verilog_Labs/Lab2_Display {/home/paok/Documents/Verilog_Labs/Lab2_Display/display_tb.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 08:42:50 on Feb 18,2022
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Practicas/Lab2_Display" C:/Practicas/Lab2_Display/display_tb.v 
+# Start time: 17:15:13 on Mar 09,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/paok/Documents/Verilog_Labs/Lab2_Display" /home/paok/Documents/Verilog_Labs/Lab2_Display/display_tb.v 
 # -- Compiling module display_tb
 # 
 # Top level modules:
 # 	display_tb
-# End time: 08:42:50 on Feb 18,2022, Elapsed time: 0:00:00
+# End time: 17:15:13 on Mar 09,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs="+acc"  display_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs=""+acc"" display_tb 
-# Start time: 08:42:50 on Feb 18,2022
+# Start time: 17:15:13 on Mar 09,2022
 # Loading work.display_tb
 # Loading work.display
+# ** Warning: (vsim-3015) [PCDPC] - Port size (7) does not match connection size (4) for port 'num'. The port definition is at: /home/paok/Documents/Verilog_Labs/Lab2_Display/display.v(2).
+#    Time: 0 ps  Iteration: 0  Instance: /display_tb/test File: /home/paok/Documents/Verilog_Labs/Lab2_Display/display_tb.v Line: 6
 # 
 # add wave *
 # view structure
@@ -45,6 +46,8 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# ** Note: $stop    : C:/Practicas/Lab2_Display/display_tb.v(44)
+# ** Note: $stop    : /home/paok/Documents/Verilog_Labs/Lab2_Display/display_tb.v(44)
 #    Time: 320 ps  Iteration: 0  Instance: /display_tb
-# Break in Module display_tb at C:/Practicas/Lab2_Display/display_tb.v line 44
+# Break in Module display_tb at /home/paok/Documents/Verilog_Labs/Lab2_Display/display_tb.v line 44
+# End time: 17:19:13 on Mar 09,2022, Elapsed time: 0:04:00
+# Errors: 0, Warnings: 1
