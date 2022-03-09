@@ -4,47 +4,23 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "accumulator[0]",
+					"name" : "status_indicator[0]",
 					"strict" : false
 				},
 				{
-					"name" : "accumulator[1]",
+					"name" : "status_indicator[1]",
 					"strict" : false
 				},
 				{
-					"name" : "accumulator[2]",
+					"name" : "display_units[1]",
 					"strict" : false
 				},
 				{
-					"name" : "accumulator[3]",
+					"name" : "display_units[4]",
 					"strict" : false
 				},
 				{
-					"name" : "accumulator[4]",
-					"strict" : false
-				},
-				{
-					"name" : "accumulator[5]",
-					"strict" : false
-				},
-				{
-					"name" : "accumulator[6]",
-					"strict" : false
-				},
-				{
-					"name" : "accumulator[7]",
-					"strict" : false
-				},
-				{
-					"name" : "accumulator[8]",
-					"strict" : false
-				},
-				{
-					"name" : "accumulator[9]",
-					"strict" : false
-				},
-				{
-					"name" : "accumulator[10]",
+					"name" : "display_units[6]",
 					"strict" : false
 				},
 				{

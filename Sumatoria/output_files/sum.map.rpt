@@ -1,5 +1,5 @@
 Analysis & Synthesis report for sum
-Tue Mar  8 08:55:59 2022
+Tue Mar  8 19:49:35 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -16,10 +16,10 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   8. State Machine - |sum|current_state
   9. User-Specified and Inferred Latches
  10. Registers Removed During Synthesis
- 11. Removed Registers Triggering Further Register Optimizations
- 12. General Register Statistics
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
  13. Parameter Settings for User Entity Instance: Top-level Entity: |sum
- 14. Port Connectivity Checks: "BCD:CENTENAS"
+ 14. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
  15. Port Connectivity Checks: "BCD:DECENAS"
  16. Port Connectivity Checks: "BCD:UNITS"
  17. Port Connectivity Checks: "counter:COUNT"
@@ -53,16 +53,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Mar  8 08:55:59 2022       ;
+; Analysis & Synthesis Status        ; Successful - Tue Mar  8 19:49:35 2022       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; sum                                         ;
 ; Top-level Entity Name              ; sum                                         ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 76                                          ;
-;     Total combinational functions  ; 76                                          ;
-;     Dedicated logic registers      ; 35                                          ;
-; Total registers                    ; 35                                          ;
-; Total pins                         ; 43                                          ;
+; Total logic elements               ; 79                                          ;
+;     Total combinational functions  ; 79                                          ;
+;     Dedicated logic registers      ; 49                                          ;
+; Total registers                    ; 49                                          ;
+; Total pins                         ; 32                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -171,21 +171,29 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processors 3-16        ;   0.0%      ;
+;     Processors 2-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                            ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                              ; Library ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------+---------+
-; clk_divider.v                    ; yes             ; User Verilog HDL File  ; /home/paok/Documents/Verilog_Labs/Sumatoria/clk_divider.v ;         ;
-; BCD.v                            ; yes             ; User Verilog HDL File  ; /home/paok/Documents/Verilog_Labs/Sumatoria/BCD.v         ;         ;
-; sum.v                            ; yes             ; User Verilog HDL File  ; /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v         ;         ;
-; counter.v                        ; yes             ; User Verilog HDL File  ; /home/paok/Documents/Verilog_Labs/Sumatoria/counter.v     ;         ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                           ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                       ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------+---------+
+; clk_divider.v                    ; yes             ; User Verilog HDL File        ; /home/paok/Documents/Verilog_Labs/Sumatoria/clk_divider.v                          ;         ;
+; BCD.v                            ; yes             ; User Verilog HDL File        ; /home/paok/Documents/Verilog_Labs/Sumatoria/BCD.v                                  ;         ;
+; sum.v                            ; yes             ; User Verilog HDL File        ; /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v                                  ;         ;
+; counter.v                        ; yes             ; User Verilog HDL File        ; /home/paok/Documents/Verilog_Labs/Sumatoria/counter.v                              ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; /home/paok/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; /home/paok/intelFPGA_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; /home/paok/intelFPGA_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
+; aglobal201.inc                   ; yes             ; Megafunction                 ; /home/paok/intelFPGA_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc      ;         ;
+; db/lpm_divide_mll.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/paok/Documents/Verilog_Labs/Sumatoria/db/lpm_divide_mll.tdf                  ;         ;
+; db/sign_div_unsign_llh.tdf       ; yes             ; Auto-Generated Megafunction  ; /home/paok/Documents/Verilog_Labs/Sumatoria/db/sign_div_unsign_llh.tdf             ;         ;
+; db/alt_u_div_khe.tdf             ; yes             ; Auto-Generated Megafunction  ; /home/paok/Documents/Verilog_Labs/Sumatoria/db/alt_u_div_khe.tdf                   ;         ;
+; db/add_sub_t3c.tdf               ; yes             ; Auto-Generated Megafunction  ; /home/paok/Documents/Verilog_Labs/Sumatoria/db/add_sub_t3c.tdf                     ;         ;
+; db/add_sub_u3c.tdf               ; yes             ; Auto-Generated Megafunction  ; /home/paok/Documents/Verilog_Labs/Sumatoria/db/add_sub_u3c.tdf                     ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -193,30 +201,30 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 76        ;
+; Estimated Total logic elements              ; 79        ;
 ;                                             ;           ;
-; Total combinational functions               ; 76        ;
+; Total combinational functions               ; 79        ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 10        ;
-;     -- 3 input functions                    ; 21        ;
-;     -- <=2 input functions                  ; 45        ;
+;     -- 4 input functions                    ; 15        ;
+;     -- 3 input functions                    ; 18        ;
+;     -- <=2 input functions                  ; 46        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 45        ;
-;     -- arithmetic mode                      ; 31        ;
+;     -- normal mode                          ; 38        ;
+;     -- arithmetic mode                      ; 41        ;
 ;                                             ;           ;
-; Total registers                             ; 35        ;
-;     -- Dedicated logic registers            ; 35        ;
+; Total registers                             ; 49        ;
+;     -- Dedicated logic registers            ; 49        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 43        ;
+; I/O pins                                    ; 32        ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; rst~input ;
-; Maximum fan-out                             ; 35        ;
-; Total fan-out                               ; 350       ;
-; Average fan-out                             ; 1.78      ;
+; Maximum fan-out                             ; 49        ;
+; Total fan-out                               ; 410       ;
+; Average fan-out                             ; 2.14      ;
 +---------------------------------------------+-----------+
 
 
@@ -225,8 +233,9 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name        ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------+-------------+--------------+
-; |sum                       ; 76 (25)             ; 35 (2)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 43   ; 0            ; 0          ; |sum                       ; sum         ; work         ;
-;    |clk_divider:New_Clock| ; 51 (51)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |sum|clk_divider:New_Clock ; clk_divider ; work         ;
+; |sum                       ; 79 (7)              ; 49 (4)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 32   ; 0            ; 0          ; |sum                       ; sum         ; work         ;
+;    |clk_divider:New_Clock| ; 55 (55)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |sum|clk_divider:New_Clock ; clk_divider ; work         ;
+;    |counter:COUNT|         ; 17 (17)             ; 12 (12)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |sum|counter:COUNT         ; counter     ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -244,51 +253,29 @@ Encoding Type:  One-Hot
 +-------------------------+--------------------+-------------------------+---------------------+--------------------+
 
 
-+----------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                ;
-+-----------------------------------------------------+---------------------+------------------------+
-; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
-+-----------------------------------------------------+---------------------+------------------------+
-; accumulator[0]$latch                                ; Selector13          ; yes                    ;
-; accumulator[1]$latch                                ; Selector13          ; yes                    ;
-; accumulator[2]$latch                                ; Selector13          ; yes                    ;
-; accumulator[3]$latch                                ; Selector13          ; yes                    ;
-; accumulator[4]$latch                                ; Selector13          ; yes                    ;
-; accumulator[5]$latch                                ; Selector13          ; yes                    ;
-; accumulator[6]$latch                                ; Selector13          ; yes                    ;
-; accumulator[7]$latch                                ; Selector13          ; yes                    ;
-; accumulator[8]$latch                                ; Selector13          ; yes                    ;
-; accumulator[9]$latch                                ; Selector13          ; yes                    ;
-; accumulator[10]$latch                               ; Selector13          ; yes                    ;
-; Number of user-specified and inferred latches = 11  ;                     ;                        ;
-+-----------------------------------------------------+---------------------+------------------------+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; accumulator[0]                                     ; accumulator         ; yes                    ;
+; accumulator[2]                                     ; accumulator         ; yes                    ;
+; hardReset                                          ; accumulator         ; yes                    ;
+; Number of user-specified and inferred latches = 3  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+---------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                              ;
-+----------------------------------------+----------------------------------------+
-; Register name                          ; Reason for Removal                     ;
-+----------------------------------------+----------------------------------------+
-; counter:COUNT|count[6]                 ; Lost fanout                            ;
-; counter:COUNT|count[0..5]              ; Stuck at GND due to stuck port data_in ;
-; current_state~4                        ; Lost fanout                            ;
-; current_state~5                        ; Lost fanout                            ;
-; current_state~6                        ; Lost fanout                            ;
-; current_state.IDLE                     ; Lost fanout                            ;
-; current_state.DONE                     ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 12 ;                                        ;
-+----------------------------------------+----------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                 ;
-+------------------------+---------------------------+------------------------------------------------------------------------+
-; Register name          ; Reason for Removal        ; Registers Removed due to This Register                                 ;
-+------------------------+---------------------------+------------------------------------------------------------------------+
-; counter:COUNT|count[5] ; Stuck at GND              ; counter:COUNT|count[4], counter:COUNT|count[2], counter:COUNT|count[1] ;
-;                        ; due to stuck port data_in ;                                                                        ;
-+------------------------+---------------------------+------------------------------------------------------------------------+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; current_state~4                       ; Lost fanout        ;
+; current_state~5                       ; Lost fanout        ;
+; current_state~6                       ; Lost fanout        ;
+; Total Number of Removed Registers = 3 ;                    ;
++---------------------------------------+--------------------+
 
 
 +------------------------------------------------------+
@@ -296,14 +283,23 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 35    ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 49    ;
+; Number of registers using Synchronous Clear  ; 11    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 35    ;
+; Number of registers using Asynchronous Clear ; 49    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 11    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
+; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |sum|counter:COUNT|counterMax ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
 
 
 +---------------------------------------------------------------------+
@@ -319,42 +315,55 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------+
-; Port Connectivity Checks: "BCD:CENTENAS"     ;
-+------------+-------+----------+--------------+
-; Port       ; Type  ; Severity ; Details      ;
-+------------+-------+----------+--------------+
-; num[10..7] ; Input ; Info     ; Stuck at GND ;
-+------------+-------+----------+--------------+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 11             ; Untyped                ;
+; LPM_WIDTHD             ; 4              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_mll ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------+
-; Port Connectivity Checks: "BCD:DECENAS"      ;
-+------------+-------+----------+--------------+
-; Port       ; Type  ; Severity ; Details      ;
-+------------+-------+----------+--------------+
-; num[10..4] ; Input ; Info     ; Stuck at GND ;
-+------------+-------+----------+--------------+
++---------------------------------------------+
+; Port Connectivity Checks: "BCD:DECENAS"     ;
++-----------+-------+----------+--------------+
+; Port      ; Type  ; Severity ; Details      ;
++-----------+-------+----------+--------------+
+; num[5..4] ; Input ; Info     ; Stuck at GND ;
++-----------+-------+----------+--------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "BCD:UNITS"                                                                                                                                   ;
-+------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                                       ;
-+------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; num  ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (11 bits) it drives.  Extra input bit(s) "num[10..1]" will be connected to GND. ;
-+------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------+
++---------------------------------------------+
+; Port Connectivity Checks: "BCD:UNITS"       ;
++-----------+-------+----------+--------------+
+; Port      ; Type  ; Severity ; Details      ;
++-----------+-------+----------+--------------+
+; num[5..4] ; Input ; Info     ; Stuck at GND ;
++-----------+-------+----------+--------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "counter:COUNT"                                                                                                                ;
-+-----------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
-; Port      ; Type   ; Severity ; Details                                                                                                                  ;
-+-----------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
-; hardReset ; Input  ; Info     ; Stuck at VCC                                                                                                             ;
-; enable    ; Input  ; Info     ; Stuck at VCC                                                                                                             ;
-; count     ; Output ; Warning  ; Output or bidir port (7 bits) is wider than the port expression (6 bits) it drives; bit(s) "count[6..6]" have no fanouts ;
-+-----------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "counter:COUNT"                                                                                                                                 ;
++--------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                                                                                      ;
++--------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; count  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; target ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++--------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -362,21 +371,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 43                          ;
-; cycloneiii_ff         ; 35                          ;
-;     CLR               ; 35                          ;
-; cycloneiii_lcell_comb ; 78                          ;
-;     arith             ; 31                          ;
-;         2 data inputs ; 31                          ;
-;     normal            ; 47                          ;
+; boundary_port         ; 32                          ;
+; cycloneiii_ff         ; 49                          ;
+;     CLR               ; 38                          ;
+;     ENA CLR SCLR      ; 11                          ;
+; cycloneiii_lcell_comb ; 82                          ;
+;     arith             ; 41                          ;
+;         2 data inputs ; 41                          ;
+;     normal            ; 41                          ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 2                           ;
-;         2 data inputs ; 12                          ;
-;         3 data inputs ; 21                          ;
-;         4 data inputs ; 10                          ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 3                           ;
+;         3 data inputs ; 18                          ;
+;         4 data inputs ; 15                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.30                        ;
-; Average LUT depth     ; 2.68                        ;
+; Max LUT depth         ; 4.40                        ;
+; Average LUT depth     ; 2.90                        ;
 +-----------------------+-----------------------------+
 
 
@@ -395,7 +405,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Mar  8 08:55:53 2022
+    Info: Processing started: Tue Mar  8 19:49:29 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off sum -c sum
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -409,155 +419,96 @@ Info (12021): Found 1 design units, including 1 entities, in source file counter
     Info (12023): Found entity 1: counter File: /home/paok/Documents/Verilog_Labs/Sumatoria/counter.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sum_tb.v
     Info (12023): Found entity 1: sum_tb File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum_tb.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at sum.v(74): created implicit net for "unit" File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 74
 Info (12127): Elaborating entity "sum" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at sum.v(11): object "units" assigned a value but never read File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 11
-Warning (10235): Verilog HDL Always Construct warning at sum.v(55): variable "iterations" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 55
-Warning (10235): Verilog HDL Always Construct warning at sum.v(55): variable "data" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 55
-Warning (10235): Verilog HDL Always Construct warning at sum.v(56): variable "accumulator" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 56
-Warning (10235): Verilog HDL Always Construct warning at sum.v(56): variable "iterations" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 56
-Warning (10235): Verilog HDL Always Construct warning at sum.v(64): variable "accumulator" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 64
-Warning (10230): Verilog HDL assignment warning at sum.v(64): truncated value with size 32 to match size of target (11) File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 64
-Warning (10235): Verilog HDL Always Construct warning at sum.v(65): variable "accumulator" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 65
-Warning (10230): Verilog HDL assignment warning at sum.v(65): truncated value with size 32 to match size of target (11) File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 65
-Warning (10235): Verilog HDL Always Construct warning at sum.v(66): variable "accumulator" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 66
-Warning (10230): Verilog HDL assignment warning at sum.v(66): truncated value with size 32 to match size of target (11) File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 66
-Warning (10240): Verilog HDL Always Construct warning at sum.v(42): inferring latch(es) for variable "hardReset", which holds its previous value in one or more paths through the always construct File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Warning (10240): Verilog HDL Always Construct warning at sum.v(42): inferring latch(es) for variable "accumulator", which holds its previous value in one or more paths through the always construct File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Warning (10240): Verilog HDL Always Construct warning at sum.v(42): inferring latch(es) for variable "counterEnable", which holds its previous value in one or more paths through the always construct File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Warning (10240): Verilog HDL Always Construct warning at sum.v(42): inferring latch(es) for variable "status_indicator", which holds its previous value in one or more paths through the always construct File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Warning (10240): Verilog HDL Always Construct warning at sum.v(42): inferring latch(es) for variable "decenas", which holds its previous value in one or more paths through the always construct File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Warning (10240): Verilog HDL Always Construct warning at sum.v(42): inferring latch(es) for variable "centenas", which holds its previous value in one or more paths through the always construct File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Info (10041): Inferred latch for "centenas[0]" at sum.v(42) File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Info (10041): Inferred latch for "centenas[1]" at sum.v(42) File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Info (10041): Inferred latch for "centenas[2]" at sum.v(42) File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Info (10041): Inferred latch for "centenas[3]" at sum.v(42) File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Info (10041): Inferred latch for "centenas[4]" at sum.v(42) File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Info (10041): Inferred latch for "centenas[5]" at sum.v(42) File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Info (10041): Inferred latch for "centenas[6]" at sum.v(42) File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Info (10041): Inferred latch for "centenas[7]" at sum.v(42) File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Info (10041): Inferred latch for "centenas[8]" at sum.v(42) File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Info (10041): Inferred latch for "centenas[9]" at sum.v(42) File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Info (10041): Inferred latch for "centenas[10]" at sum.v(42) File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Info (10041): Inferred latch for "decenas[0]" at sum.v(42) File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Info (10041): Inferred latch for "decenas[1]" at sum.v(42) File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Info (10041): Inferred latch for "decenas[2]" at sum.v(42) File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Info (10041): Inferred latch for "decenas[3]" at sum.v(42) File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Info (10041): Inferred latch for "decenas[4]" at sum.v(42) File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Info (10041): Inferred latch for "decenas[5]" at sum.v(42) File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Info (10041): Inferred latch for "decenas[6]" at sum.v(42) File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Info (10041): Inferred latch for "decenas[7]" at sum.v(42) File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Info (10041): Inferred latch for "decenas[8]" at sum.v(42) File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Info (10041): Inferred latch for "decenas[9]" at sum.v(42) File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Info (10041): Inferred latch for "decenas[10]" at sum.v(42) File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Info (10041): Inferred latch for "status_indicator[0]" at sum.v(42) File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Info (10041): Inferred latch for "status_indicator[1]" at sum.v(42) File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Info (10041): Inferred latch for "counterEnable" at sum.v(42) File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Info (10041): Inferred latch for "accumulator[0]" at sum.v(42) File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Info (10041): Inferred latch for "accumulator[1]" at sum.v(42) File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Info (10041): Inferred latch for "accumulator[2]" at sum.v(42) File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Info (10041): Inferred latch for "accumulator[3]" at sum.v(42) File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Info (10041): Inferred latch for "accumulator[4]" at sum.v(42) File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Info (10041): Inferred latch for "accumulator[5]" at sum.v(42) File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Info (10041): Inferred latch for "accumulator[6]" at sum.v(42) File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Info (10041): Inferred latch for "accumulator[7]" at sum.v(42) File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Info (10041): Inferred latch for "accumulator[8]" at sum.v(42) File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Info (10041): Inferred latch for "accumulator[9]" at sum.v(42) File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Info (10041): Inferred latch for "accumulator[10]" at sum.v(42) File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Info (10041): Inferred latch for "hardReset" at sum.v(42) File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Info (12128): Elaborating entity "clk_divider" for hierarchy "clk_divider:New_Clock" File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 27
-Info (12128): Elaborating entity "counter" for hierarchy "counter:COUNT" File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 35
-Info (12128): Elaborating entity "BCD" for hierarchy "BCD:UNITS" File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 76
-Warning (14025): LATCH primitive "decenas[3]" is permanently disabled File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Warning (14025): LATCH primitive "decenas[2]" is permanently disabled File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Warning (14025): LATCH primitive "decenas[1]" is permanently disabled File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Warning (14025): LATCH primitive "decenas[0]" is permanently disabled File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Warning (14025): LATCH primitive "centenas[6]" is permanently disabled File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Warning (14025): LATCH primitive "centenas[5]" is permanently disabled File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Warning (14025): LATCH primitive "centenas[4]" is permanently disabled File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Warning (14025): LATCH primitive "centenas[3]" is permanently disabled File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Warning (14025): LATCH primitive "centenas[2]" is permanently disabled File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Warning (14025): LATCH primitive "centenas[1]" is permanently disabled File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Warning (14025): LATCH primitive "centenas[0]" is permanently disabled File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Warning (14025): LATCH primitive "decenas[3]" is permanently disabled File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Warning (14025): LATCH primitive "decenas[2]" is permanently disabled File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Warning (14025): LATCH primitive "decenas[1]" is permanently disabled File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Warning (14025): LATCH primitive "decenas[0]" is permanently disabled File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Warning (14025): LATCH primitive "centenas[6]" is permanently disabled File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Warning (14025): LATCH primitive "centenas[5]" is permanently disabled File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Warning (14025): LATCH primitive "centenas[4]" is permanently disabled File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Warning (14025): LATCH primitive "centenas[3]" is permanently disabled File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Warning (14025): LATCH primitive "centenas[2]" is permanently disabled File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Warning (14025): LATCH primitive "centenas[1]" is permanently disabled File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Warning (14025): LATCH primitive "centenas[0]" is permanently disabled File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Warning (13012): Latch accumulator[0]$latch has unsafe behavior File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.COMPUTING File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 17
-Warning (13012): Latch accumulator[1]$latch has unsafe behavior File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.COMPUTING File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 17
-Warning (13012): Latch accumulator[2]$latch has unsafe behavior File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.COMPUTING File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 17
-Warning (13012): Latch accumulator[3]$latch has unsafe behavior File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.COMPUTING File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 17
-Warning (13012): Latch accumulator[4]$latch has unsafe behavior File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.COMPUTING File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 17
-Warning (13012): Latch accumulator[5]$latch has unsafe behavior File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.COMPUTING File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 17
-Warning (13012): Latch accumulator[6]$latch has unsafe behavior File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.COMPUTING File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 17
-Warning (13012): Latch accumulator[7]$latch has unsafe behavior File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.COMPUTING File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 17
-Warning (13012): Latch accumulator[8]$latch has unsafe behavior File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.COMPUTING File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 17
-Warning (13012): Latch accumulator[9]$latch has unsafe behavior File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.COMPUTING File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 17
-Warning (13012): Latch accumulator[10]$latch has unsafe behavior File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.COMPUTING File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 17
+Warning (10036): Verilog HDL or VHDL warning at sum.v(12): object "target" assigned a value but never read File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 12
+Warning (10235): Verilog HDL Always Construct warning at sum.v(77): variable "start" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 77
+Warning (10235): Verilog HDL Always Construct warning at sum.v(94): variable "counterMax" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 94
+Warning (10235): Verilog HDL Always Construct warning at sum.v(107): variable "start" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 107
+Warning (10235): Verilog HDL Always Construct warning at sum.v(115): variable "accumulator" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 115
+Warning (10230): Verilog HDL assignment warning at sum.v(115): truncated value with size 32 to match size of target (6) File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 115
+Warning (10235): Verilog HDL Always Construct warning at sum.v(116): variable "accumulator" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 116
+Warning (10230): Verilog HDL assignment warning at sum.v(116): truncated value with size 32 to match size of target (6) File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 116
+Warning (10235): Verilog HDL Always Construct warning at sum.v(117): variable "accumulator" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 117
+Warning (10230): Verilog HDL assignment warning at sum.v(117): truncated value with size 32 to match size of target (6) File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 117
+Warning (10240): Verilog HDL Always Construct warning at sum.v(64): inferring latch(es) for variable "hardReset", which holds its previous value in one or more paths through the always construct File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 64
+Warning (10240): Verilog HDL Always Construct warning at sum.v(64): inferring latch(es) for variable "accumulator", which holds its previous value in one or more paths through the always construct File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 64
+Info (10041): Inferred latch for "accumulator[0]" at sum.v(64) File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 64
+Info (10041): Inferred latch for "accumulator[1]" at sum.v(64) File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 64
+Info (10041): Inferred latch for "accumulator[2]" at sum.v(64) File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 64
+Info (10041): Inferred latch for "accumulator[3]" at sum.v(64) File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 64
+Info (10041): Inferred latch for "accumulator[4]" at sum.v(64) File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 64
+Info (10041): Inferred latch for "accumulator[5]" at sum.v(64) File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 64
+Info (10041): Inferred latch for "accumulator[6]" at sum.v(64) File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 64
+Info (10041): Inferred latch for "accumulator[7]" at sum.v(64) File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 64
+Info (10041): Inferred latch for "accumulator[8]" at sum.v(64) File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 64
+Info (10041): Inferred latch for "accumulator[9]" at sum.v(64) File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 64
+Info (10041): Inferred latch for "accumulator[10]" at sum.v(64) File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 64
+Info (10041): Inferred latch for "hardReset" at sum.v(64) File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 64
+Info (12128): Elaborating entity "clk_divider" for hierarchy "clk_divider:New_Clock" File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 30
+Info (12128): Elaborating entity "counter" for hierarchy "counter:COUNT" File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 39
+Warning (10230): Verilog HDL assignment warning at counter.v(22): truncated value with size 32 to match size of target (11) File: /home/paok/Documents/Verilog_Labs/Sumatoria/counter.v Line: 22
+Info (12128): Elaborating entity "BCD" for hierarchy "BCD:UNITS" File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 45
+Info (278001): Inferred 1 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 115
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 115
+Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 115
+    Info (12134): Parameter "LPM_WIDTHN" = "11"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_mll.tdf
+    Info (12023): Found entity 1: lpm_divide_mll File: /home/paok/Documents/Verilog_Labs/Sumatoria/db/lpm_divide_mll.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_llh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_llh File: /home/paok/Documents/Verilog_Labs/Sumatoria/db/sign_div_unsign_llh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_khe.tdf
+    Info (12023): Found entity 1: alt_u_div_khe File: /home/paok/Documents/Verilog_Labs/Sumatoria/db/alt_u_div_khe.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_t3c.tdf
+    Info (12023): Found entity 1: add_sub_t3c File: /home/paok/Documents/Verilog_Labs/Sumatoria/db/add_sub_t3c.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_u3c.tdf
+    Info (12023): Found entity 1: add_sub_u3c File: /home/paok/Documents/Verilog_Labs/Sumatoria/db/add_sub_u3c.tdf Line: 23
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "accumulator[2]" merged with LATCH primitive "accumulator[0]" File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 64
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "status_indicator[0]" is stuck at VCC File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-    Warning (13410): Pin "status_indicator[1]" is stuck at VCC File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 42
-    Warning (13410): Pin "display_units[0]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 6
-    Warning (13410): Pin "display_units[1]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 6
-    Warning (13410): Pin "display_units[2]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 6
-    Warning (13410): Pin "display_units[3]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 6
-    Warning (13410): Pin "display_units[4]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 6
-    Warning (13410): Pin "display_units[5]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 6
-    Warning (13410): Pin "display_units[6]" is stuck at VCC File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 6
-    Warning (13410): Pin "display_decenas[0]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 6
-    Warning (13410): Pin "display_decenas[1]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 6
-    Warning (13410): Pin "display_decenas[2]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 6
-    Warning (13410): Pin "display_decenas[3]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 6
-    Warning (13410): Pin "display_decenas[4]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 6
-    Warning (13410): Pin "display_decenas[5]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 6
-    Warning (13410): Pin "display_decenas[6]" is stuck at VCC File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 6
-    Warning (13410): Pin "display_centenas[0]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 8
-    Warning (13410): Pin "display_centenas[1]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 8
-    Warning (13410): Pin "display_centenas[2]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 8
-    Warning (13410): Pin "display_centenas[3]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 8
-    Warning (13410): Pin "display_centenas[4]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 8
-    Warning (13410): Pin "display_centenas[5]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 8
-    Warning (13410): Pin "display_centenas[6]" is stuck at VCC File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 8
+    Warning (13410): Pin "display_units[0]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 5
+    Warning (13410): Pin "display_units[2]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 5
+    Warning (13410): Pin "display_units[3]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 5
+    Warning (13410): Pin "display_units[5]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 5
+    Warning (13410): Pin "display_decenas[0]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 5
+    Warning (13410): Pin "display_decenas[1]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 5
+    Warning (13410): Pin "display_decenas[2]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 5
+    Warning (13410): Pin "display_decenas[3]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 5
+    Warning (13410): Pin "display_decenas[4]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 5
+    Warning (13410): Pin "display_decenas[5]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 5
+    Warning (13410): Pin "display_decenas[6]" is stuck at VCC File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 5
+    Warning (13410): Pin "display_centenas[0]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 7
+    Warning (13410): Pin "display_centenas[1]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 7
+    Warning (13410): Pin "display_centenas[2]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 7
+    Warning (13410): Pin "display_centenas[3]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 7
+    Warning (13410): Pin "display_centenas[4]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 7
+    Warning (13410): Pin "display_centenas[5]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 7
+    Warning (13410): Pin "display_centenas[6]" is stuck at VCC File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 7
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 5 registers lost all their fanouts during netlist optimizations.
+Info (17049): 3 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file /home/paok/Documents/Verilog_Labs/Sumatoria/output_files/sum.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 6 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "data[5]" File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 3
-    Warning (15610): No output dependent on input pin "data[4]" File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 3
-    Warning (15610): No output dependent on input pin "data[3]" File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 3
-    Warning (15610): No output dependent on input pin "data[2]" File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 3
-    Warning (15610): No output dependent on input pin "data[1]" File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 3
     Warning (15610): No output dependent on input pin "data[0]" File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 3
-Info (21057): Implemented 119 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "data[1]" File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 3
+    Warning (15610): No output dependent on input pin "data[2]" File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 3
+    Warning (15610): No output dependent on input pin "data[3]" File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 3
+    Warning (15610): No output dependent on input pin "data[4]" File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 3
+    Warning (15610): No output dependent on input pin "data[5]" File: /home/paok/Documents/Verilog_Labs/Sumatoria/sum.v Line: 3
+Info (21057): Implemented 111 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 9 input pins
-    Info (21059): Implemented 34 output pins
-    Info (21061): Implemented 76 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 95 warnings
-    Info: Peak virtual memory: 692 megabytes
-    Info: Processing ended: Tue Mar  8 08:55:59 2022
+    Info (21059): Implemented 23 output pins
+    Info (21061): Implemented 79 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 41 warnings
+    Info: Peak virtual memory: 695 megabytes
+    Info: Processing ended: Tue Mar  8 19:49:35 2022
     Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:20
+    Info: Total CPU time (on all processors): 00:00:17
 
 
 +------------------------------------------+

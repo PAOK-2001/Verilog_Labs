@@ -4,7 +4,7 @@ module clk_divider(
 );
 
 reg[31:0]  counter;
-localparam target = 10000000;
+localparam target = 25000000;
 
 always@(posedge clk or negedge rst)
 begin

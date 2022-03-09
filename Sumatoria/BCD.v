@@ -1,5 +1,5 @@
 module BCD(
-	input      [10:0] num,
+	input      [5:0] num,
 	output reg [6:0] display7Segment
 );
 
@@ -29,7 +29,7 @@ begin
 	9:
 		display7Segment = 7'b0010000;
 	default:
-		display7Segment = 7'b0011000;
+		display7Segment = 7'b1111110;
 	
 	endcase
 
