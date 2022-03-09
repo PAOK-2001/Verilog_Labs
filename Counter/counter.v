@@ -1,6 +1,6 @@
 module counter(
 	input            clk, rst, en,
-	output reg [3:0] count
+	output reg [6:0] count
 );
 
 /* Enfoque 1: */
