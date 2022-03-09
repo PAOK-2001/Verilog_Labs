@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at OG_ALU.v(296): always construct contains both blocking and non-blocking assignments File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/OG_ALU.v Line: 296

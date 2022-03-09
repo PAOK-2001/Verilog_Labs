@@ -1,4 +1,4 @@
-module gumnut( 
+module ALU_Gumnut( 
 	 input clk_i,
 	 input rst_i,
 	 // Instruction memory bus
@@ -15,22 +15,11 @@ module gumnut(
 	 output  [7:0] data_adr_o,
 	 output  [7:0] data_dat_o,
 	 input   [7:0] data_dat_i,
-	 // I/O port bus
-	 output        port_cyc_o,
-	 output        port_stb_o,
-	 output        port_we_o,
-	 input         port_ack_i,
-	 output  [7:0] port_adr_o,
-	 output  [7:0] port_dat_o,
-	 input   [7:0] port_dat_i,
 	 // Interrupts
 	 input         int_req,
 	 output        int_ack );
 	 
-	 
-
 parameter debug = 1'b0;
-
 localparam [2:0] alu_fn_add  = 3'b000;
 localparam [2:0] alu_fn_addc = 3'b001;
 localparam [2:0] alu_fn_sub  = 3'b010;
@@ -50,25 +39,55 @@ localparam [1:0] mem_fn_stm = 2'b01;
 localparam [1:0] mem_fn_inp = 2'b10;
 localparam [1:0] mem_fn_out = 2'b11;
 
-localparam [1:0] branch_fn_bz  = 2'b00;
-localparam [1:0] branch_fn_bnz = 2'b01;
-localparam [1:0] branch_fn_bc  = 2'b10;
-localparam [1:0] branch_fn_bnc = 2'b11;
+reg [17:0] IR;
 
-localparam [0:0] jump_fn_jmp = 1'b0;
-localparam [0:0] jump_fn_jsb = 1'b1;
+wire [ 2: 0] IR_alu_reg_fn;
+wire [16:14] IR_alu_immed_fn;
+wire [ 1: 0] IR_shift_fn;
+wire [15:14] IR_mem_fn;
+wire [11:10] IR_branch_fn;
+wire [12:12] IR_jump_fn;
+wire [10: 8] IR_misc_fn;
 
-localparam [2:0] misc_fn_ret  	  = 3'b000;
-localparam [2:0] misc_fn_reti 	  = 3'b001;
-localparam [2:0] misc_fn_enai 	  = 3'b010;
-localparam [2:0] misc_fn_disi 	  = 3'b011;
-localparam [2:0] misc_fn_wait 	  = 3'b100;
-localparam [2:0] misc_fn_stby 	  = 3'b101;
-localparam [2:0] misc_fn_undef_6 = 3'b110;
-localparam [2:0] misc_fn_undef_7 = 3'b111;
+wire [13:11] IR_rd;
+wire [10: 8] IR_rs;
+wire [ 7: 5] IR_r2;
+wire [ 7: 0] IR_immed;
+wire [ 7: 5] IR_count;
+wire [ 7: 0] IR_offset;
+wire [ 7: 0] IR_disp;
+wire [11: 0] IR_addr;
+
+wire IR_decode_alu_immed;
+wire IR_decode_mem;
+wire IR_decode_shift;
+wire IR_decode_alu_reg;
+wire IR_decode_jump;
+wire IR_decode_branch;
+wire IR_decode_misc;
+
+reg [3:0] GPR_r2_addr;
+reg [7:0] GPR_write_data;
+reg [7:0] GPR [0:7];
+
+reg [7:0] GPR_rs;
+reg [7:0] GPR_r2;
+
+reg [2:0] ALU_fn;
+reg [7:0] ALU_right_operand;
+reg [8:0] ALU_tmp_result;
+reg [7:0] ALU_shift_result;
+
+reg  [7:0] ALU_result;
+wire ALU_Z;
+reg  ALU_C;
+reg  [7:0] ALU_out;
+
+reg cc_Z;
+reg cc_C;
 
 // Logic to assign operation given the first four bits of the instruction	 
-always @*  // ALU
+  always @*  // ALU
     if (IR_decode_alu_reg || IR_decode_alu_immed || IR_decode_mem) begin
       if (IR_decode_alu_reg) begin 
         ALU_fn = IR_alu_reg_fn;
@@ -103,5 +122,34 @@ always @*  // ALU
       ALU_result = ALU_tmp_result[7:0];
       ALU_C = ALU_tmp_result[8];
     end
-	 
-	 
+    else begin
+      case (IR_shift_fn)
+        shift_fn_shl:
+	  begin
+            ALU_tmp_result = GPR_rs << IR_count;
+            ALU_shift_result = ALU_tmp_result[7:0];
+            ALU_C = ALU_tmp_result[8];
+	  end
+        shift_fn_shr:
+	  begin
+            ALU_tmp_result = {GPR_rs, 1'b0} >> IR_count;
+            ALU_shift_result = ALU_tmp_result[8:1];
+            ALU_C = ALU_tmp_result[0];
+	  end
+        shift_fn_rol:
+	  begin
+            ALU_shift_result = (GPR_rs << IR_count) | (GPR_rs >> (8 - IR_count));
+            ALU_C = ALU_shift_result[0];
+	  end
+        shift_fn_ror:
+	  begin
+            ALU_shift_result = (GPR_rs >> IR_count) | (GPR_rs << (8 - IR_count));
+            ALU_C = ALU_shift_result[7];
+	  end
+      endcase
+      ALU_result = ALU_shift_result;      
+    end
+
+  //assign ALU_Z = ALU_result == 0;
+endmodule
+

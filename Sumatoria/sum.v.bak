@@ -1,6 +1,0 @@
-module sum(
-	input        clk, rst, start,
-	input  [5:0] data,
-	output [6:0] display_units, display_decenas, display_centenas
-
-);
