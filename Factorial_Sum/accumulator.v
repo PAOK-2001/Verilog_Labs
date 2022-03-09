@@ -10,14 +10,23 @@ always@(posedge clk)
 begin
 	if(enable)
 		begin
-			if(count <= target)
+			if(count < target)
 				begin
 					maxReached  = 0;
 					count       = count +1;
 					accumulated = accumulated + count;
 				end
-			else maxReached = 1;
+			else 
+			begin
+				maxReached  = 1;
+			end
 		end
+	else
+	begin
+		count       = 0;
+		maxReached  = 0;
+		accumulated = 0;
+	end
 end
 
 endmodule

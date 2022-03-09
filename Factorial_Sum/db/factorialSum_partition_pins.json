@@ -1,0 +1,137 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "statusLed[0]",
+					"strict" : false
+				},
+				{
+					"name" : "statusLed[1]",
+					"strict" : false
+				},
+				{
+					"name" : "disp_unit[0]",
+					"strict" : false
+				},
+				{
+					"name" : "disp_unit[1]",
+					"strict" : false
+				},
+				{
+					"name" : "disp_unit[2]",
+					"strict" : false
+				},
+				{
+					"name" : "disp_unit[3]",
+					"strict" : false
+				},
+				{
+					"name" : "disp_unit[4]",
+					"strict" : false
+				},
+				{
+					"name" : "disp_unit[5]",
+					"strict" : false
+				},
+				{
+					"name" : "disp_unit[6]",
+					"strict" : false
+				},
+				{
+					"name" : "disp_tens[0]",
+					"strict" : false
+				},
+				{
+					"name" : "disp_tens[1]",
+					"strict" : false
+				},
+				{
+					"name" : "disp_tens[2]",
+					"strict" : false
+				},
+				{
+					"name" : "disp_tens[3]",
+					"strict" : false
+				},
+				{
+					"name" : "disp_tens[4]",
+					"strict" : false
+				},
+				{
+					"name" : "disp_tens[5]",
+					"strict" : false
+				},
+				{
+					"name" : "disp_tens[6]",
+					"strict" : false
+				},
+				{
+					"name" : "disp_hundreth[0]",
+					"strict" : false
+				},
+				{
+					"name" : "disp_hundreth[1]",
+					"strict" : false
+				},
+				{
+					"name" : "disp_hundreth[2]",
+					"strict" : false
+				},
+				{
+					"name" : "disp_hundreth[3]",
+					"strict" : false
+				},
+				{
+					"name" : "disp_hundreth[4]",
+					"strict" : false
+				},
+				{
+					"name" : "disp_hundreth[5]",
+					"strict" : false
+				},
+				{
+					"name" : "disp_hundreth[6]",
+					"strict" : false
+				},
+				{
+					"name" : "start",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "num[5]",
+					"strict" : false
+				},
+				{
+					"name" : "num[4]",
+					"strict" : false
+				},
+				{
+					"name" : "num[3]",
+					"strict" : false
+				},
+				{
+					"name" : "num[2]",
+					"strict" : false
+				},
+				{
+					"name" : "num[1]",
+					"strict" : false
+				},
+				{
+					"name" : "num[0]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
