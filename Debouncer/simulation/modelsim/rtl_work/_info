@@ -8,51 +8,51 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Practicas/Debouncer/simulation/modelsim
+Z0 d/home/paok/Documents/Verilog_Labs/Debouncer/simulation/modelsim
 vdebouncer
-Z1 !s110 1645632316
+Z1 !s110 1646869721
 !i10b 1
-!s100 Ln[c`i?88KNbB9?z2JaLM0
+!s100 6Z^ToYMjHKE=KFW7zRh[G1
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IncGBGLeh7iAOE295b=Y4]3
+IANk1PgLgTfCijNgB]e4@C3
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1645632287
-8C:/Practicas/Debouncer/debouncer.v
-FC:/Practicas/Debouncer/debouncer.v
+w1646868693
+8/home/paok/Documents/Verilog_Labs/Debouncer/debouncer.v
+F/home/paok/Documents/Verilog_Labs/Debouncer/debouncer.v
 !i122 0
-L0 1 38
+L0 1 14
 Z4 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z5 !s108 1645632316.000000
-!s107 C:/Practicas/Debouncer/debouncer.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Practicas/Debouncer|C:/Practicas/Debouncer/debouncer.v|
+Z5 !s108 1646869721.000000
+!s107 /home/paok/Documents/Verilog_Labs/Debouncer/debouncer.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/paok/Documents/Verilog_Labs/Debouncer|/home/paok/Documents/Verilog_Labs/Debouncer/debouncer.v|
 !i113 1
 Z6 o-vlog01compat -work work
-Z7 !s92 -vlog01compat -work work +incdir+C:/Practicas/Debouncer
+Z7 !s92 -vlog01compat -work work +incdir+/home/paok/Documents/Verilog_Labs/Debouncer
 Z8 tCvgOpt 0
 vdebouncer_tb
 R1
 !i10b 1
-!s100 zV=Nl8L8QIE1N5GZ[WE=U1
+!s100 eLMQlAlT_]Dm^<EUoGEBo1
 R2
-IAD8z1hX6IPX73=miPfhE23
+IMnAcQR:E`APR>P1Q0NEd63
 R3
 R0
-w1645631997
-8C:/Practicas/Debouncer/debouncer_tb.v
-FC:/Practicas/Debouncer/debouncer_tb.v
+w1646869668
+8/home/paok/Documents/Verilog_Labs/Debouncer/debouncer_tb.v
+F/home/paok/Documents/Verilog_Labs/Debouncer/debouncer_tb.v
 !i122 1
-L0 1 63
+L0 1 59
 R4
 r1
 !s85 0
 31
 R5
-!s107 C:/Practicas/Debouncer/debouncer_tb.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Practicas/Debouncer|C:/Practicas/Debouncer/debouncer_tb.v|
+!s107 /home/paok/Documents/Verilog_Labs/Debouncer/debouncer_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/paok/Documents/Verilog_Labs/Debouncer|/home/paok/Documents/Verilog_Labs/Debouncer/debouncer_tb.v|
 !i113 1
 R6
 R7

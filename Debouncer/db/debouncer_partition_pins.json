@@ -8,19 +8,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "button_down",
-					"strict" : false
-				},
-				{
-					"name" : "button_up",
+					"name" : "button",
 					"strict" : false
 				},
 				{
 					"name" : "clk",
-					"strict" : false
-				},
-				{
-					"name" : "button",
 					"strict" : false
 				}
 			]

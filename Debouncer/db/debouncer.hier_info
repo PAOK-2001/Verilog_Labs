@@ -1,19 +1,8 @@
 |debouncer
-button => button_sync0.DATAIN
-clk => button_state~reg0.CLK
-clk => count[0].CLK
-clk => count[1].CLK
-clk => count[2].CLK
-clk => count[3].CLK
-clk => count[4].CLK
-clk => count[5].CLK
-clk => count[6].CLK
-clk => count[7].CLK
-clk => count[8].CLK
-clk => button_sync1.CLK
-clk => button_sync0.CLK
-button_state << button_state~reg0.DB_MAX_OUTPUT_PORT_TYPE
-button_down << button_down.DB_MAX_OUTPUT_PORT_TYPE
-button_up << button_up.DB_MAX_OUTPUT_PORT_TYPE
+button => button_state.IN1
+button => FlipFlop1.DATAIN
+clk => FlipFlop2.CLK
+clk => FlipFlop1.CLK
+button_state << button_state.DB_MAX_OUTPUT_PORT_TYPE
 
 
