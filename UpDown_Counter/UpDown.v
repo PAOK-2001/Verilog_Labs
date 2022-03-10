@@ -29,7 +29,7 @@ one_shot DEBOUNCE(
 );
 
 counter COUNT(
-	.pb(debounced_button),
+	.pb(new_clock),
 	.rst(clc),
 	.select(countSelect),
 	.count(result)

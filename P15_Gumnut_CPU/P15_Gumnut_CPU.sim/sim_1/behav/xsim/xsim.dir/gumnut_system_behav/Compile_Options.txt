@@ -1,0 +1,1 @@
+-wto "75f235eb76194243917aec1f355a5541" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "unisims_ver" -L "unimacro_ver" -L "secureip" --snapshot "gumnut_system_behav" "xil_defaultlib.gumnut_system" "xil_defaultlib.glbl" -log "elaborate.log" 

@@ -1,0 +1,10 @@
+0.6
+2018.3
+Dec  7 2018
+00:33:28
+D:/ProySisEmb/P15_Gumnut_CPU/P15_Gumnut_CPU.sim/sim_1/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,
+D:/ProySisEmb/P15_Gumnut_CPU/data_mem.v,1190909838,verilog,,D:/ProySisEmb/P15_Gumnut_CPU/gumnut-rtl.v,,data_mem,,,,,,,,
+D:/ProySisEmb/P15_Gumnut_CPU/gumnut-rtl.v,1190918062,verilog,,D:/ProySisEmb/P15_Gumnut_CPU/gumnut_with_mem.v,,gumnut,,,,,,,,
+D:/ProySisEmb/P15_Gumnut_CPU/gumnut_system.v,1190910610,verilog,,,,gumnut_system,,,,,,,,
+D:/ProySisEmb/P15_Gumnut_CPU/gumnut_with_mem.v,1190910380,verilog,,D:/ProySisEmb/P15_Gumnut_CPU/inst_mem.v,,gumnut_with_mem,,,,,,,,
+D:/ProySisEmb/P15_Gumnut_CPU/inst_mem.v,1190909354,verilog,,D:/ProySisEmb/P15_Gumnut_CPU/gumnut_system.v,,inst_mem,,,,,,,,

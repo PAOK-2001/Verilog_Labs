@@ -1,0 +1,20 @@
+; output stream of numbers from 0 to 9 to port 15
+
+out_port:	equ	15
+
+		text
+		org	0		; reset
+		jmp	begin
+
+		org	1		; interrupt service
+		reti
+
+		org	16
+begin:		enai
+		add	r1, r0, 0	; value := 0
+loop:		out	r1, out_port	; output value to port 15
+		add	r1, r1, 1	; increment
+		sub	r0, r1, 10	;   and loop until value = 10
+		bnz	loop
+stop:		disi
+		stby

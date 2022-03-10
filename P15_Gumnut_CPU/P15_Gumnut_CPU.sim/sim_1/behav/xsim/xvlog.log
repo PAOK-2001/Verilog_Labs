@@ -1,0 +1,12 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ProySisEmb/P15_Gumnut_CPU/data_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ProySisEmb/P15_Gumnut_CPU/gumnut-rtl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gumnut
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ProySisEmb/P15_Gumnut_CPU/gumnut_with_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gumnut_with_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ProySisEmb/P15_Gumnut_CPU/inst_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module inst_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ProySisEmb/P15_Gumnut_CPU/gumnut_system.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gumnut_system
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ProySisEmb/P15_Gumnut_CPU/P15_Gumnut_CPU.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

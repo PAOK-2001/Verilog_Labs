@@ -1,0 +1,4 @@
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+WARNING: File gasm_text.dat referenced on D:/ProySisEmb/P15_Gumnut_CPU/inst_mem.v at line 10 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File gasm_data.dat referenced on D:/ProySisEmb/P15_Gumnut_CPU/data_mem.v at line 14 cannot be opened for reading. Please ensure that this file is available in the current working directory.

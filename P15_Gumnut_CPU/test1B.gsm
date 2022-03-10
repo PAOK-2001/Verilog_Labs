@@ -1,0 +1,28 @@
+; Decrement count in memory until it reaches 0
+
+	text
+	org	0		; reset
+	jmp	begin
+
+	org	1		; interrupt service
+	ldm	r7, (r2)	; decrement count (address in r2)
+	sub	r7, r7, 1
+	stm	r7, (r2)
+	reti
+
+	org	16
+begin:	disi
+	add	r2, r0, count	; r2 := address of count
+	add	r1, r0, 10	; count := 10
+	stm	r1, (r2)
+	enai
+
+loop:  	ldm	r1, (r2)	; while count /= 0 loop
+	add	r1, r1, r0
+	bnz	loop
+stop:	disi
+	stby
+
+	data
+	org	16
+count:	bss	1

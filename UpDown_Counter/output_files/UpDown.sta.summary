@@ -3,23 +3,15 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -4.501
-TNS   : -63.719
-
-Type  : Slow 1200mV 85C Model Setup 'button'
-Slack : -1.162
-TNS   : -5.899
+Slack : -4.823
+TNS   : -68.179
 
 Type  : Slow 1200mV 85C Model Setup 'clk_divider:DIVIDER|clk_div'
-Slack : -0.884
-TNS   : -0.884
+Slack : -1.162
+TNS   : -5.935
 
 Type  : Slow 1200mV 85C Model Hold 'clk_divider:DIVIDER|clk_div'
-Slack : -0.011
-TNS   : -0.011
-
-Type  : Slow 1200mV 85C Model Hold 'button'
-Slack : 0.427
+Slack : 0.451
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
@@ -30,84 +22,56 @@ Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
 Slack : -3.000
 TNS   : -49.299
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'button'
-Slack : -3.000
-TNS   : -12.821
-
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk_divider:DIVIDER|clk_div'
 Slack : -1.403
-TNS   : -2.806
+TNS   : -9.821
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -4.120
-TNS   : -54.564
-
-Type  : Slow 1200mV 0C Model Setup 'button'
-Slack : -0.958
-TNS   : -4.718
+Slack : -4.416
+TNS   : -59.149
 
 Type  : Slow 1200mV 0C Model Setup 'clk_divider:DIVIDER|clk_div'
-Slack : -0.741
-TNS   : -0.741
+Slack : -0.959
+TNS   : -4.757
 
 Type  : Slow 1200mV 0C Model Hold 'clk_divider:DIVIDER|clk_div'
-Slack : 0.021
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'button'
-Slack : 0.395
+Slack : 0.414
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : 0.597
+Slack : 0.596
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
 TNS   : -49.299
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'button'
-Slack : -3.000
-TNS   : -12.821
-
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk_divider:DIVIDER|clk_div'
 Slack : -1.403
-TNS   : -2.806
+TNS   : -9.821
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -1.438
-TNS   : -8.014
+Slack : -1.556
+TNS   : -10.005
 
 Type  : Fast 1200mV 0C Model Setup 'clk_divider:DIVIDER|clk_div'
-Slack : 0.098
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Setup 'button'
 Slack : 0.141
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clk_divider:DIVIDER|clk_div'
-Slack : -0.068
-TNS   : -0.068
-
-Type  : Fast 1200mV 0C Model Hold 'button'
-Slack : 0.170
+Slack : 0.182
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : 0.250
+Slack : 0.249
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -37.135
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'button'
-Slack : -3.000
-TNS   : -10.826
+TNS   : -37.133
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk_divider:DIVIDER|clk_div'
 Slack : -1.000
-TNS   : -2.000
+TNS   : -7.000
 
 ------------------------------------------------------------

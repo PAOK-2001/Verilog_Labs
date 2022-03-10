@@ -1,5 +1,5 @@
 Flow report for semaforo
-Thu Mar  3 08:46:59 2022
+Tue Mar 08 08:41:45 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,24 +41,24 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu Mar  3 08:46:59 2022       ;
+; Flow Status                        ; Successful - Tue Mar 08 08:41:45 2022       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; semaforo                                    ;
 ; Top-level Entity Name              ; semaforo                                    ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 70 / 49,760 ( < 1 % )                       ;
-;     Total combinational functions  ; 67 / 49,760 ( < 1 % )                       ;
-;     Dedicated logic registers      ; 40 / 49,760 ( < 1 % )                       ;
+; Total logic elements               ; 67                                          ;
+;     Total combinational functions  ; 66                                          ;
+;     Dedicated logic registers      ; 40                                          ;
 ; Total registers                    ; 40                                          ;
-; Total pins                         ; 5 / 360 ( 1 % )                             ;
+; Total pins                         ; 5                                           ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0 / 1,677,312 ( 0 % )                       ;
-; Embedded Multiplier 9-bit elements ; 0 / 288 ( 0 % )                             ;
-; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
-; UFM blocks                         ; 0 / 1 ( 0 % )                               ;
-; ADC blocks                         ; 0 / 2 ( 0 % )                               ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -67,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/03/2022 08:46:42 ;
+; Start date & time ; 03/08/2022 08:41:37 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; semaforo            ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 80160642984127.164631880220638         ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 5311882713318.164675049631508          ; --            ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
@@ -102,36 +102,24 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:07     ; 1.0                     ; 691 MB              ; 00:00:19                           ;
-; Fitter               ; 00:00:06     ; 1.1                     ; 2269 MB             ; 00:00:14                           ;
-; Assembler            ; 00:00:02     ; 1.0                     ; 565 MB              ; 00:00:02                           ;
-; Timing Analyzer      ; 00:00:01     ; 1.1                     ; 875 MB              ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 805 MB              ; 00:00:00                           ;
-; Total                ; 00:00:16     ; --                      ; --                  ; 00:00:36                           ;
+; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 4783 MB             ; 00:00:21                           ;
+; Total                ; 00:00:09     ; --                      ; --                  ; 00:00:21                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+--------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                      ;
-+----------------------+------------------+-------------+-------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name     ; OS Version  ; Processor type ;
-+----------------------+------------------+-------------+-------------+----------------+
-; Analysis & Synthesis ; fedora           ; Fedora Core ; Fedora Core ; x86_64         ;
-; Fitter               ; fedora           ; Fedora Core ; Fedora Core ; x86_64         ;
-; Assembler            ; fedora           ; Fedora Core ; Fedora Core ; x86_64         ;
-; Timing Analyzer      ; fedora           ; Fedora Core ; Fedora Core ; x86_64         ;
-; EDA Netlist Writer   ; fedora           ; Fedora Core ; Fedora Core ; x86_64         ;
-+----------------------+------------------+-------------+-------------+----------------+
++------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                    ;
++----------------------+------------------+------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++----------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis ; PCGAMER          ; Windows 10 ; 10.0       ; x86_64         ;
++----------------------+------------------+------------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off semaforo -c semaforo
-quartus_fit --read_settings_files=off --write_settings_files=off semaforo -c semaforo
-quartus_asm --read_settings_files=off --write_settings_files=off semaforo -c semaforo
-quartus_sta semaforo -c semaforo
-quartus_eda --read_settings_files=off --write_settings_files=off semaforo -c semaforo
 
 
 

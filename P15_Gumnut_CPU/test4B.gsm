@@ -1,0 +1,45 @@
+; Test input/output and interrupt servicing.
+; On each interrupt, read from in_port to buffer in memory.
+; Main program copies data from buffer to out_port as data arrives.
+; Variable buf_ptr points to last input item in buffer.
+; Register r2 points to last output item in buffer.
+
+in_port:	equ	0
+out_port:	equ	15
+
+		text
+		org	0		; reset
+		jmp	begin
+
+; Interrupt service routine
+
+		org	1
+		inp	r7, in_port
+		ldm	r6, buf_ptr	; buf_ptr++
+		add	r6, r6, 1
+		stm	r6, buf_ptr
+		stm	r7, (r6)	; buf(buf_prt) := input data
+		reti
+
+; Main program
+
+		org	16
+begin:		stm	r0, buf_ptr	; buf_ptr := 0
+		add	r2, r0, 0	; out_ptr := 0
+		enai
+
+loop:		ldm	r3, buf_ptr	; while buf_ptr = out_ptr loop
+		sub	r3, r3, r2
+		bz	loop
+
+		add	r2, r2, 1	; out_ptr++
+		ldm	r3, (r2)	; output buf(out_ptr)
+    		out	r3, out_port
+		jmp	loop
+
+; Data memory
+
+		data
+		org	0
+buf_ptr:	byte	0
+buf:		bss	255

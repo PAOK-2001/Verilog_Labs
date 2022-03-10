@@ -1,0 +1,21 @@
+; Counts from 10 downto 1, storing successive values to memory.
+
+	text
+	org	0		; reset
+	jmp	begin
+
+	org	1		; interrupt service
+	reti
+
+	org	16
+begin:	enai
+	add	r1, r0, 10	; initialize count to 10
+loop:	stm	r1, 0
+	sub	r1, r1, 1	; decrement count
+	bnz	loop
+stop:	disi
+	stby
+
+	data
+	org	0
+count:	bss	1

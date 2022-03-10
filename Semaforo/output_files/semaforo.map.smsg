@@ -1,2 +1,2 @@
-Warning (10268): Verilog HDL information at clk_divider.v(9): always construct contains both blocking and non-blocking assignments File: /home/paok/Documents/Verilog_Labs/Semaforo/clk_divider.v Line: 9
-Warning (10268): Verilog HDL information at counter.v(9): always construct contains both blocking and non-blocking assignments File: /home/paok/Documents/Verilog_Labs/Semaforo/counter.v Line: 9
+Warning (10268): Verilog HDL information at clk_divider.v(9): always construct contains both blocking and non-blocking assignments File: C:/Practicas/Verilog_Labs/Semaforo/clk_divider.v Line: 9
+Warning (10268): Verilog HDL information at counter.v(9): always construct contains both blocking and non-blocking assignments File: C:/Practicas/Verilog_Labs/Semaforo/counter.v Line: 9

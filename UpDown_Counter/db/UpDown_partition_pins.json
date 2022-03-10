@@ -68,10 +68,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "button",
-					"strict" : false
-				},
-				{
 					"name" : "clk",
 					"strict" : false
 				}

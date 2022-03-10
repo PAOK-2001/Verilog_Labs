@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../data_mem.v" \
+"../../../../gumnut-rtl.v" \
+"../../../../gumnut_with_mem.v" \
+"../../../../inst_mem.v" \
+"../../../../gumnut_system.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
