@@ -1,25 +1,14 @@
 module CAM #(parameter dataSize = 5, addressSize = 5)(
-	input                          clk, enable, rst,
-	input      [dataSize   -1 : 0] targetData, 
-	output reg [addressSize-1 : 0] address_out,
+	input                           clk, wrt, search,
+	input      [dataSize   -1 : 0]  targetData,
+	input      [addressSize -1 : 0] adress,
+	output reg [addressSize-1 : 0]  address_out,
 	output reg found,
-	output [6:0] dispU, dispT
+	output [6:0] dispU, dispT, dispData
 );
 
 reg [dataSize - 1:0]    CAM_1 [0:2**addressSize-1];
 reg [addressSize-1 : 0] searchedAddress;
-
-always@*
-begin
-	CAM_1[0] = 5;
-	CAM_1[1] = 6;
-	CAM_1[2] = 2;
-	CAM_1[3] = 3;
-	CAM_1[4] = 1;
-	CAM_1[5] = 0;
-	
-	
-end
 
 wire [addressSize-1 : 0] units; 
 wire [addressSize-1 : 0] tens;  
@@ -37,16 +26,20 @@ BCD TEN(
 	.display7Segment(dispT)
 );
 
+BCD DATA(
+	.num(targetData),
+	.display7Segment(dispData)
+);
+
 always@(posedge clk)
 begin
-	if(~rst)
-	begin	
-		searchedAddress = 0;
-		found = 0;
-		address_out = 0;
+	if(~wrt)
+	begin
+		CAM_1[adress] <= targetData;
+		address_out   = adress;
 	end
 	
-	else if(enable && ~found)
+	else if(~search && ~found)
 	begin
 		if(CAM_1[searchedAddress] == targetData)
 		begin
@@ -60,6 +53,11 @@ begin
 			address_out     = 0;
 			found           = 0;
 		end
+	end
+	
+	else begin
+		searchedAddress = 0;
+		found = 0;
 	end
 
 end

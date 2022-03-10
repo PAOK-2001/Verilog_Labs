@@ -80,7 +80,31 @@
 					"strict" : false
 				},
 				{
-					"name" : "rst",
+					"name" : "dispData[0]",
+					"strict" : false
+				},
+				{
+					"name" : "dispData[1]",
+					"strict" : false
+				},
+				{
+					"name" : "dispData[2]",
+					"strict" : false
+				},
+				{
+					"name" : "dispData[3]",
+					"strict" : false
+				},
+				{
+					"name" : "dispData[4]",
+					"strict" : false
+				},
+				{
+					"name" : "dispData[5]",
+					"strict" : false
+				},
+				{
+					"name" : "dispData[6]",
 					"strict" : false
 				},
 				{
@@ -88,15 +112,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "targetData[3]",
-					"strict" : false
-				},
-				{
 					"name" : "targetData[1]",
-					"strict" : false
-				},
-				{
-					"name" : "targetData[4]",
 					"strict" : false
 				},
 				{
@@ -104,11 +120,43 @@
 					"strict" : false
 				},
 				{
+					"name" : "targetData[3]",
+					"strict" : false
+				},
+				{
+					"name" : "targetData[4]",
+					"strict" : false
+				},
+				{
+					"name" : "adress[0]",
+					"strict" : false
+				},
+				{
+					"name" : "wrt",
+					"strict" : false
+				},
+				{
 					"name" : "clk",
 					"strict" : false
 				},
 				{
-					"name" : "enable",
+					"name" : "search",
+					"strict" : false
+				},
+				{
+					"name" : "adress[1]",
+					"strict" : false
+				},
+				{
+					"name" : "adress[2]",
+					"strict" : false
+				},
+				{
+					"name" : "adress[3]",
+					"strict" : false
+				},
+				{
+					"name" : "adress[4]",
 					"strict" : false
 				}
 			]
