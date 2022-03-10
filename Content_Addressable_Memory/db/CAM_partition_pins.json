@@ -1,0 +1,165 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "address_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "address_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "address_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "address_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "address_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "found",
+					"strict" : false
+				},
+				{
+					"name" : "dispU[0]",
+					"strict" : false
+				},
+				{
+					"name" : "dispU[1]",
+					"strict" : false
+				},
+				{
+					"name" : "dispU[2]",
+					"strict" : false
+				},
+				{
+					"name" : "dispU[3]",
+					"strict" : false
+				},
+				{
+					"name" : "dispU[4]",
+					"strict" : false
+				},
+				{
+					"name" : "dispU[5]",
+					"strict" : false
+				},
+				{
+					"name" : "dispU[6]",
+					"strict" : false
+				},
+				{
+					"name" : "dispT[0]",
+					"strict" : false
+				},
+				{
+					"name" : "dispT[2]",
+					"strict" : false
+				},
+				{
+					"name" : "dispT[3]",
+					"strict" : false
+				},
+				{
+					"name" : "dispT[4]",
+					"strict" : false
+				},
+				{
+					"name" : "dispT[5]",
+					"strict" : false
+				},
+				{
+					"name" : "dispT[6]",
+					"strict" : false
+				},
+				{
+					"name" : "dispData[0]",
+					"strict" : false
+				},
+				{
+					"name" : "dispData[1]",
+					"strict" : false
+				},
+				{
+					"name" : "dispData[2]",
+					"strict" : false
+				},
+				{
+					"name" : "dispData[3]",
+					"strict" : false
+				},
+				{
+					"name" : "dispData[4]",
+					"strict" : false
+				},
+				{
+					"name" : "dispData[5]",
+					"strict" : false
+				},
+				{
+					"name" : "dispData[6]",
+					"strict" : false
+				},
+				{
+					"name" : "targetData[0]",
+					"strict" : false
+				},
+				{
+					"name" : "targetData[1]",
+					"strict" : false
+				},
+				{
+					"name" : "targetData[2]",
+					"strict" : false
+				},
+				{
+					"name" : "targetData[3]",
+					"strict" : false
+				},
+				{
+					"name" : "targetData[4]",
+					"strict" : false
+				},
+				{
+					"name" : "adress[0]",
+					"strict" : false
+				},
+				{
+					"name" : "wrt",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "search",
+					"strict" : false
+				},
+				{
+					"name" : "adress[1]",
+					"strict" : false
+				},
+				{
+					"name" : "adress[2]",
+					"strict" : false
+				},
+				{
+					"name" : "adress[3]",
+					"strict" : false
+				},
+				{
+					"name" : "adress[4]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

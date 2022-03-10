@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Wed Mar  9 10:13:29 2022
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : CAM
+Top-level Entity Name : CAM
+Family : MAX 10
+Total logic elements : 105
+    Total combinational functions : 90
+    Dedicated logic registers : 27
+Total registers : 27
+Total pins : 41
+Total virtual pins : 0
+Total memory bits : 160
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0

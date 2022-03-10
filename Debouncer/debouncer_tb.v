@@ -13,23 +13,23 @@ debouncer uut (
  initial begin
  
 	clk_reg = 0;
-	forever #10 clk_reg = ~clk_reg;
+	forever #25 clk_reg = ~clk_reg;
 	
 end
 	
 initial begin
+	button_reg = 1;
+	#10;
+	button_reg=1;
+	#7;
 	button_reg = 0;
 	#10;
 	button_reg=1;
-	#20;
+	#20; 
 	button_reg = 0;
-	#10;
+	#15;
 	button_reg=1;
-	#30; 
-	button_reg = 0;
-	#10;
-	button_reg=1;
-	#40;
+	#30;
 	button_reg = 0;
 	#10;
 	button_reg=1;
@@ -37,11 +37,11 @@ initial begin
 	button_reg = 0;
 	#10;
 	button_reg=1; 
-	#1000; 
+	#100; 
 	button_reg = 0;
 	#10;
 	button_reg=1;
-	#20;
+	#70;
 	button_reg = 0;
 	#10;
 	button_reg=1;
@@ -49,15 +49,11 @@ initial begin
 	button_reg = 0;
 	#10;
 	button_reg=1;
-	#40;
-	button_reg = 0; 
-	#100000
-	button_reg = 1; 
-	#100000
-	button_reg = 0; 
-	#100000
-	button_reg = 1; 
-	#100000
+	#30; 
+	button_reg = 0;
+	#10;
+	button_reg=1;
+	#40;		
 	$stop;
 end       
 endmodule

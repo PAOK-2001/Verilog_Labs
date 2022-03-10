@@ -1,5 +1,5 @@
-Analysis & Synthesis report for counter
-Tue Feb 22 08:41:14 2022
+Analysis & Elaboration report for counter
+Wed Mar  9 16:47:18 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -7,10 +7,10 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Synthesis Summary
-  3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Analysis & Elaboration Settings
+  5. Analysis & Elaboration Messages
 
 
 
@@ -35,9 +35,9 @@ https://fpgasoftware.intel.com/eula.
 
 
 +----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                     ;
+; Analysis & Elaboration Summary                                                   ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Tue Feb 22 08:41:14 2022           ;
+; Analysis & Elaboration Status      ; Successful - Wed Mar  9 16:47:18 2022       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; counter                                     ;
 ; Top-level Entity Name              ; counter                                     ;
@@ -56,8 +56,24 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------+---------------------------------------------+
 
 
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
 +------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                              ;
+; Analysis & Elaboration Settings                                                                            ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
@@ -142,42 +158,26 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 16          ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
-
-
-+-------------------------------+
-; Analysis & Synthesis Messages ;
-+-------------------------------+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Synthesis
+Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Feb 22 08:41:08 2022
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off counter -c counter
+    Info: Processing started: Wed Mar  9 16:47:13 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off counter -c counter --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file counter.v
     Info (12023): Found entity 1: counter File: /home/paok/Documents/Verilog_Labs/Counter/counter.v Line: 1
-Error (10773): Verilog HDL error at counter.v(4): declaring module ports or function arguments with unpacked array types requires SystemVerilog extensions File: /home/paok/Documents/Verilog_Labs/Counter/counter.v Line: 4
-Error (10048): Verilog HDL error at counter.v(10): values cannot be assigned directly to all or part of array "count" - assignments must be made to individual elements only File: /home/paok/Documents/Verilog_Labs/Counter/counter.v Line: 10
-Error (10048): Verilog HDL error at counter.v(12): values cannot be assigned directly to all or part of array "count" - assignments must be made to individual elements only File: /home/paok/Documents/Verilog_Labs/Counter/counter.v Line: 12
-Error (10686): SystemVerilog error at counter.v(12): count has an aggregate value File: /home/paok/Documents/Verilog_Labs/Counter/counter.v Line: 12
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 4 errors, 1 warning
-    Error: Peak virtual memory: 552 megabytes
-    Error: Processing ended: Tue Feb 22 08:41:14 2022
-    Error: Elapsed time: 00:00:06
-    Error: Total CPU time (on all processors): 00:00:18
+Info (12021): Found 1 design units, including 1 entities, in source file counter_tb.v
+    Info (12023): Found entity 1: counter_tb File: /home/paok/Documents/Verilog_Labs/Counter/counter_tb.v Line: 1
+Info (12127): Elaborating entity "counter" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at counter.v(12): truncated value with size 32 to match size of target (7) File: /home/paok/Documents/Verilog_Labs/Counter/counter.v Line: 12
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 869 megabytes
+    Info: Processing ended: Wed Mar  9 16:47:18 2022
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:17
 
 

@@ -1,0 +1,6 @@
+
+State Machine - |factorialSum|current_state
+Name current_state.idle current_state.done current_state.compute 
+current_state.idle 0 0 0 
+current_state.compute 1 0 1 
+current_state.done 1 1 0 
