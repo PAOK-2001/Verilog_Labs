@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Mon Mar  7 07:49:46 2022
+Analysis & Synthesis Status : Successful - Wed Mar  9 22:58:24 2022
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : ALU_Gumnut
 Top-level Entity Name : ALU_Gumnut
 Family : MAX 10
-Total logic elements : 0
-    Total combinational functions : 0
+Total logic elements : 63
+    Total combinational functions : 63
     Dedicated logic registers : 0
 Total registers : 0
-Total pins : 65
+Total pins : 50
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

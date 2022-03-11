@@ -2,7 +2,164 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : []
+			"pins" : [
+				{
+					"name" : "ALU_result[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_result[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_result[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_result[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_result[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_result[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_result[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_result[7]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_shift_result[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_shift_result[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_shift_result[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_shift_result[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_shift_result[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_shift_result[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_shift_result[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_shift_result[7]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[16]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[17]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[15]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[14]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[1]",
+					"strict" : false
+				},
+				{
+					"name" : "GPR_r2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "GPR_rs[0]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[2]",
+					"strict" : false
+				},
+				{
+					"name" : "GPR_r2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "GPR_rs[1]",
+					"strict" : false
+				},
+				{
+					"name" : "GPR_r2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "GPR_rs[2]",
+					"strict" : false
+				},
+				{
+					"name" : "GPR_r2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "GPR_rs[3]",
+					"strict" : false
+				},
+				{
+					"name" : "GPR_r2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "GPR_rs[4]",
+					"strict" : false
+				},
+				{
+					"name" : "GPR_r2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "GPR_rs[5]",
+					"strict" : false
+				},
+				{
+					"name" : "GPR_r2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "GPR_rs[6]",
+					"strict" : false
+				},
+				{
+					"name" : "GPR_r2[7]",
+					"strict" : false
+				},
+				{
+					"name" : "GPR_rs[7]",
+					"strict" : false
+				}
+			]
 		}
 	]
 }

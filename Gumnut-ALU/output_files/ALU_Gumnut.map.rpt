@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ALU_Gumnut
-Mon Mar  7 07:49:46 2022
+Wed Mar  9 22:58:24 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -13,12 +13,12 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: Top-level Entity: |ALU_Gumnut
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
- 13. Analysis & Synthesis Suppressed Messages
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Post-Synthesis Netlist Statistics for Top Partition
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -45,16 +45,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Mar  7 07:49:46 2022       ;
+; Analysis & Synthesis Status        ; Successful - Wed Mar  9 22:58:24 2022       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; ALU_Gumnut                                  ;
 ; Top-level Entity Name              ; ALU_Gumnut                                  ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 0                                           ;
-;     Total combinational functions  ; 0                                           ;
+; Total logic elements               ; 63                                          ;
+;     Total combinational functions  ; 63                                          ;
 ;     Dedicated logic registers      ; 0                                           ;
 ; Total registers                    ; 0                                           ;
-; Total pins                         ; 65                                          ;
+; Total pins                         ; 50                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -175,35 +175,36 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+------------------------+-----------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-;                                             ;       ;
-; Total combinational functions               ; 0     ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 0     ;
-;     -- <=2 input functions                  ; 0     ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 0     ;
-;     -- arithmetic mode                      ; 0     ;
-;                                             ;       ;
-; Total registers                             ; 0     ;
-;     -- Dedicated logic registers            ; 0     ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 65    ;
-;                                             ;       ;
-; Embedded Multiplier 9-bit elements          ; 0     ;
-;                                             ;       ;
-; Maximum fan-out node                        ; clk_i ;
-; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 65    ;
-; Average fan-out                             ; 0.50  ;
-+---------------------------------------------+-------+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++---------------------------------------------+----------+
+; Resource                                    ; Usage    ;
++---------------------------------------------+----------+
+; Estimated Total logic elements              ; 63       ;
+;                                             ;          ;
+; Total combinational functions               ; 63       ;
+; Logic element usage by number of LUT inputs ;          ;
+;     -- 4 input functions                    ; 22       ;
+;     -- 3 input functions                    ; 31       ;
+;     -- <=2 input functions                  ; 10       ;
+;                                             ;          ;
+; Logic elements by mode                      ;          ;
+;     -- normal mode                          ; 55       ;
+;     -- arithmetic mode                      ; 8        ;
+;                                             ;          ;
+; Total registers                             ; 0        ;
+;     -- Dedicated logic registers            ; 0        ;
+;     -- I/O registers                        ; 0        ;
+;                                             ;          ;
+; I/O pins                                    ; 50       ;
+;                                             ;          ;
+; Embedded Multiplier 9-bit elements          ; 0        ;
+;                                             ;          ;
+; Maximum fan-out node                        ; Equal1~0 ;
+; Maximum fan-out                             ; 20       ;
+; Total fan-out                               ; 267      ;
+; Average fan-out                             ; 1.64     ;
++---------------------------------------------+----------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -211,9 +212,27 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
-; |ALU_Gumnut                ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 65   ; 0            ; 0          ; |ALU_Gumnut         ; ALU_Gumnut  ; work         ;
+; |ALU_Gumnut                ; 63 (63)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 50   ; 0            ; 0          ; |ALU_Gumnut         ; ALU_Gumnut  ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; ALU_shift_result[0]$latch                          ; always0             ; yes                    ;
+; ALU_shift_result[1]$latch                          ; always0             ; yes                    ;
+; ALU_shift_result[2]$latch                          ; always0             ; yes                    ;
+; ALU_shift_result[3]$latch                          ; always0             ; yes                    ;
+; ALU_shift_result[4]$latch                          ; always0             ; yes                    ;
+; ALU_shift_result[5]$latch                          ; always0             ; yes                    ;
+; ALU_shift_result[6]$latch                          ; always0             ; yes                    ;
+; ALU_shift_result[7]$latch                          ; always0             ; yes                    ;
+; Number of user-specified and inferred latches = 8  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------+
@@ -231,14 +250,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |ALU_Gumnut ;
-+----------------+-------+---------------------------------------------------+
-; Parameter Name ; Value ; Type                                              ;
-+----------------+-------+---------------------------------------------------+
-; debug          ; 0     ; Unsigned Binary                                   ;
-+----------------+-------+---------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |ALU_Gumnut|ALU_fn         ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; No         ; |ALU_Gumnut|Add0           ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |ALU_Gumnut|Add0           ;
+; 9:1                ; 8 bits    ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; No         ; |ALU_Gumnut|ALU_result     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
 +-----------------------------------------------------+
@@ -246,13 +267,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 65                          ;
-; cycloneiii_lcell_comb ; 1                           ;
-;     normal            ; 1                           ;
-;         0 data inputs ; 1                           ;
+; boundary_port         ; 50                          ;
+; cycloneiii_lcell_comb ; 63                          ;
+;     arith             ; 8                           ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 7                           ;
+;     normal            ; 55                          ;
+;         2 data inputs ; 9                           ;
+;         3 data inputs ; 24                          ;
+;         4 data inputs ; 22                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 0.00                        ;
-; Average LUT depth     ; 0.00                        ;
+; Max LUT depth         ; 6.70                        ;
+; Average LUT depth     ; 4.85                        ;
 +-----------------------+-----------------------------+
 
 
@@ -271,126 +297,65 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon Mar  7 07:49:41 2022
+    Info: Processing started: Wed Mar  9 22:58:17 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU_Gumnut -c ALU_Gumnut
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file OG_ALU.v
-    Info (12023): Found entity 1: gumnut File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/OG_ALU.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ALU_Gumnut.v
     Info (12023): Found entity 1: ALU_Gumnut File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 1
 Info (12127): Elaborating entity "ALU_Gumnut" for the top level hierarchy
-Warning (10858): Verilog HDL warning at ALU_Gumnut.v(44): object IR_alu_reg_fn used but never assigned File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 44
-Warning (10858): Verilog HDL warning at ALU_Gumnut.v(45): object IR_alu_immed_fn used but never assigned File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 45
-Warning (10858): Verilog HDL warning at ALU_Gumnut.v(46): object IR_shift_fn used but never assigned File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 46
-Warning (10858): Verilog HDL warning at ALU_Gumnut.v(55): object IR_immed used but never assigned File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 55
-Warning (10858): Verilog HDL warning at ALU_Gumnut.v(56): object IR_count used but never assigned File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 56
-Warning (10858): Verilog HDL warning at ALU_Gumnut.v(57): object IR_offset used but never assigned File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 57
-Warning (10858): Verilog HDL warning at ALU_Gumnut.v(61): object IR_decode_alu_immed used but never assigned File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 61
-Warning (10858): Verilog HDL warning at ALU_Gumnut.v(62): object IR_decode_mem used but never assigned File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 62
-Warning (10858): Verilog HDL warning at ALU_Gumnut.v(64): object IR_decode_alu_reg used but never assigned File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 64
-Warning (10858): Verilog HDL warning at ALU_Gumnut.v(73): object GPR_rs used but never assigned File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 73
-Warning (10858): Verilog HDL warning at ALU_Gumnut.v(74): object GPR_r2 used but never assigned File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 74
-Warning (10036): Verilog HDL or VHDL warning at ALU_Gumnut.v(81): object "ALU_result" assigned a value but never read File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 81
-Warning (10036): Verilog HDL or VHDL warning at ALU_Gumnut.v(83): object "ALU_C" assigned a value but never read File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 83
-Warning (10858): Verilog HDL warning at ALU_Gumnut.v(87): object cc_C used but never assigned File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 87
-Warning (10240): Verilog HDL Always Construct warning at ALU_Gumnut.v(93): inferring latch(es) for variable "ALU_fn", which holds its previous value in one or more paths through the always construct File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 93
-Warning (10240): Verilog HDL Always Construct warning at ALU_Gumnut.v(93): inferring latch(es) for variable "ALU_right_operand", which holds its previous value in one or more paths through the always construct File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 93
-Warning (10240): Verilog HDL Always Construct warning at ALU_Gumnut.v(93): inferring latch(es) for variable "ALU_tmp_result", which holds its previous value in one or more paths through the always construct File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 93
-Warning (10240): Verilog HDL Always Construct warning at ALU_Gumnut.v(93): inferring latch(es) for variable "ALU_shift_result", which holds its previous value in one or more paths through the always construct File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 93
-Warning (10034): Output port "inst_adr_o" at ALU_Gumnut.v(8) has no driver File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 8
-Warning (10034): Output port "data_adr_o" at ALU_Gumnut.v(15) has no driver File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 15
-Warning (10034): Output port "data_dat_o" at ALU_Gumnut.v(16) has no driver File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 16
-Warning (10034): Output port "inst_cyc_o" at ALU_Gumnut.v(5) has no driver File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 5
-Warning (10034): Output port "inst_stb_o" at ALU_Gumnut.v(6) has no driver File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 6
-Warning (10034): Output port "data_cyc_o" at ALU_Gumnut.v(11) has no driver File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 11
-Warning (10034): Output port "data_stb_o" at ALU_Gumnut.v(12) has no driver File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 12
-Warning (10034): Output port "data_we_o" at ALU_Gumnut.v(13) has no driver File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 13
-Warning (10034): Output port "int_ack" at ALU_Gumnut.v(20) has no driver File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 20
-Warning (12158): Entity "ALU_Gumnut" contains only dangling pins
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "inst_cyc_o" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 5
-    Warning (13410): Pin "inst_stb_o" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 6
-    Warning (13410): Pin "inst_adr_o[0]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 8
-    Warning (13410): Pin "inst_adr_o[1]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 8
-    Warning (13410): Pin "inst_adr_o[2]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 8
-    Warning (13410): Pin "inst_adr_o[3]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 8
-    Warning (13410): Pin "inst_adr_o[4]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 8
-    Warning (13410): Pin "inst_adr_o[5]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 8
-    Warning (13410): Pin "inst_adr_o[6]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 8
-    Warning (13410): Pin "inst_adr_o[7]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 8
-    Warning (13410): Pin "inst_adr_o[8]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 8
-    Warning (13410): Pin "inst_adr_o[9]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 8
-    Warning (13410): Pin "inst_adr_o[10]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 8
-    Warning (13410): Pin "inst_adr_o[11]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 8
-    Warning (13410): Pin "data_cyc_o" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 11
-    Warning (13410): Pin "data_stb_o" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 12
-    Warning (13410): Pin "data_we_o" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 13
-    Warning (13410): Pin "data_adr_o[0]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 15
-    Warning (13410): Pin "data_adr_o[1]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 15
-    Warning (13410): Pin "data_adr_o[2]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 15
-    Warning (13410): Pin "data_adr_o[3]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 15
-    Warning (13410): Pin "data_adr_o[4]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 15
-    Warning (13410): Pin "data_adr_o[5]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 15
-    Warning (13410): Pin "data_adr_o[6]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 15
-    Warning (13410): Pin "data_adr_o[7]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 15
-    Warning (13410): Pin "data_dat_o[0]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 16
-    Warning (13410): Pin "data_dat_o[1]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 16
-    Warning (13410): Pin "data_dat_o[2]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 16
-    Warning (13410): Pin "data_dat_o[3]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 16
-    Warning (13410): Pin "data_dat_o[4]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 16
-    Warning (13410): Pin "data_dat_o[5]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 16
-    Warning (13410): Pin "data_dat_o[6]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 16
-    Warning (13410): Pin "data_dat_o[7]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 16
-    Warning (13410): Pin "int_ack" is stuck at GND File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 20
-Info (144001): Generated suppressed messages file /home/paok/Documents/Verilog_Labs/Gumnut-ALU/output_files/ALU_Gumnut.map.smsg
+Warning (10036): Verilog HDL or VHDL warning at ALU_Gumnut.v(33): object "IR_mem_fn" assigned a value but never read File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 33
+Warning (10036): Verilog HDL or VHDL warning at ALU_Gumnut.v(34): object "IR_branch_fn" assigned a value but never read File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 34
+Warning (10036): Verilog HDL or VHDL warning at ALU_Gumnut.v(35): object "IR_jump_fn" assigned a value but never read File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 35
+Warning (10036): Verilog HDL or VHDL warning at ALU_Gumnut.v(36): object "IR_misc_fn" assigned a value but never read File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 36
+Warning (10858): Verilog HDL warning at ALU_Gumnut.v(41): object IR_immed used but never assigned File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 41
+Warning (10858): Verilog HDL warning at ALU_Gumnut.v(42): object IR_count used but never assigned File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 42
+Warning (10858): Verilog HDL warning at ALU_Gumnut.v(43): object IR_offset used but never assigned File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 43
+Warning (10036): Verilog HDL or VHDL warning at ALU_Gumnut.v(49): object "IR_decode_shift" assigned a value but never read File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 49
+Warning (10036): Verilog HDL or VHDL warning at ALU_Gumnut.v(51): object "IR_decode_jump" assigned a value but never read File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 51
+Warning (10036): Verilog HDL or VHDL warning at ALU_Gumnut.v(52): object "IR_decode_branch" assigned a value but never read File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 52
+Warning (10036): Verilog HDL or VHDL warning at ALU_Gumnut.v(53): object "IR_decode_misc" assigned a value but never read File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 53
+Warning (10036): Verilog HDL or VHDL warning at ALU_Gumnut.v(61): object "ALU_C" assigned a value but never read File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 61
+Warning (10858): Verilog HDL warning at ALU_Gumnut.v(65): object cc_C used but never assigned File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 65
+Warning (10240): Verilog HDL Always Construct warning at ALU_Gumnut.v(85): inferring latch(es) for variable "ALU_fn", which holds its previous value in one or more paths through the always construct File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 85
+Warning (10240): Verilog HDL Always Construct warning at ALU_Gumnut.v(85): inferring latch(es) for variable "ALU_right_operand", which holds its previous value in one or more paths through the always construct File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 85
+Warning (10240): Verilog HDL Always Construct warning at ALU_Gumnut.v(85): inferring latch(es) for variable "ALU_tmp_result", which holds its previous value in one or more paths through the always construct File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 85
+Warning (10240): Verilog HDL Always Construct warning at ALU_Gumnut.v(85): inferring latch(es) for variable "ALU_shift_result", which holds its previous value in one or more paths through the always construct File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 85
+Warning (10030): Net "IR_immed" at ALU_Gumnut.v(41) has no driver or initial value, using a default initial value '0' File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 41
+Warning (10030): Net "IR_count" at ALU_Gumnut.v(42) has no driver or initial value, using a default initial value '0' File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 42
+Warning (10030): Net "IR_offset" at ALU_Gumnut.v(43) has no driver or initial value, using a default initial value '0' File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 43
+Warning (10030): Net "cc_C" at ALU_Gumnut.v(65) has no driver or initial value, using a default initial value '0' File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 65
+Info (10041): Inferred latch for "ALU_shift_result[0]" at ALU_Gumnut.v(120) File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 120
+Info (10041): Inferred latch for "ALU_shift_result[1]" at ALU_Gumnut.v(120) File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 120
+Info (10041): Inferred latch for "ALU_shift_result[2]" at ALU_Gumnut.v(120) File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 120
+Info (10041): Inferred latch for "ALU_shift_result[3]" at ALU_Gumnut.v(120) File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 120
+Info (10041): Inferred latch for "ALU_shift_result[4]" at ALU_Gumnut.v(120) File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 120
+Info (10041): Inferred latch for "ALU_shift_result[5]" at ALU_Gumnut.v(120) File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 120
+Info (10041): Inferred latch for "ALU_shift_result[6]" at ALU_Gumnut.v(120) File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 120
+Info (10041): Inferred latch for "ALU_shift_result[7]" at ALU_Gumnut.v(120) File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 120
+Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 31 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clk_i" File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 2
-    Warning (15610): No output dependent on input pin "rst_i" File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 3
-    Warning (15610): No output dependent on input pin "inst_ack_i" File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 7
-    Warning (15610): No output dependent on input pin "inst_dat_i[0]" File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 9
-    Warning (15610): No output dependent on input pin "inst_dat_i[1]" File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 9
-    Warning (15610): No output dependent on input pin "inst_dat_i[2]" File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 9
-    Warning (15610): No output dependent on input pin "inst_dat_i[3]" File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 9
-    Warning (15610): No output dependent on input pin "inst_dat_i[4]" File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 9
-    Warning (15610): No output dependent on input pin "inst_dat_i[5]" File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 9
-    Warning (15610): No output dependent on input pin "inst_dat_i[6]" File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 9
-    Warning (15610): No output dependent on input pin "inst_dat_i[7]" File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 9
-    Warning (15610): No output dependent on input pin "inst_dat_i[8]" File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 9
-    Warning (15610): No output dependent on input pin "inst_dat_i[9]" File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 9
-    Warning (15610): No output dependent on input pin "inst_dat_i[10]" File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 9
-    Warning (15610): No output dependent on input pin "inst_dat_i[11]" File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 9
-    Warning (15610): No output dependent on input pin "inst_dat_i[12]" File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 9
-    Warning (15610): No output dependent on input pin "inst_dat_i[13]" File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 9
-    Warning (15610): No output dependent on input pin "inst_dat_i[14]" File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 9
-    Warning (15610): No output dependent on input pin "inst_dat_i[15]" File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 9
-    Warning (15610): No output dependent on input pin "inst_dat_i[16]" File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 9
-    Warning (15610): No output dependent on input pin "inst_dat_i[17]" File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 9
-    Warning (15610): No output dependent on input pin "data_ack_i" File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 14
-    Warning (15610): No output dependent on input pin "data_dat_i[0]" File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 17
-    Warning (15610): No output dependent on input pin "data_dat_i[1]" File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 17
-    Warning (15610): No output dependent on input pin "data_dat_i[2]" File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 17
-    Warning (15610): No output dependent on input pin "data_dat_i[3]" File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 17
-    Warning (15610): No output dependent on input pin "data_dat_i[4]" File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 17
-    Warning (15610): No output dependent on input pin "data_dat_i[5]" File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 17
-    Warning (15610): No output dependent on input pin "data_dat_i[6]" File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 17
-    Warning (15610): No output dependent on input pin "data_dat_i[7]" File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 17
-    Warning (15610): No output dependent on input pin "int_req" File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 19
-Info (21057): Implemented 65 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 31 input pins
-    Info (21059): Implemented 34 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 96 warnings
-    Info: Peak virtual memory: 570 megabytes
-    Info: Processing ended: Mon Mar  7 07:49:46 2022
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:17
-
-
-+------------------------------------------+
-; Analysis & Synthesis Suppressed Messages ;
-+------------------------------------------+
-The suppressed messages can be found in /home/paok/Documents/Verilog_Labs/Gumnut-ALU/output_files/ALU_Gumnut.map.smsg.
+Warning (21074): Design contains 11 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "IR[3]" File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 4
+    Warning (15610): No output dependent on input pin "IR[4]" File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 4
+    Warning (15610): No output dependent on input pin "IR[5]" File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 4
+    Warning (15610): No output dependent on input pin "IR[6]" File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 4
+    Warning (15610): No output dependent on input pin "IR[7]" File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 4
+    Warning (15610): No output dependent on input pin "IR[8]" File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 4
+    Warning (15610): No output dependent on input pin "IR[9]" File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 4
+    Warning (15610): No output dependent on input pin "IR[10]" File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 4
+    Warning (15610): No output dependent on input pin "IR[11]" File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 4
+    Warning (15610): No output dependent on input pin "IR[12]" File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 4
+    Warning (15610): No output dependent on input pin "IR[13]" File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 4
+Info (21057): Implemented 113 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 34 input pins
+    Info (21059): Implemented 16 output pins
+    Info (21061): Implemented 63 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 34 warnings
+    Info: Peak virtual memory: 628 megabytes
+    Info: Processing ended: Wed Mar  9 22:58:24 2022
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:19
 
 

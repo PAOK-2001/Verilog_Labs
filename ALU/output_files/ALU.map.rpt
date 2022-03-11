@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ALU
-Thu Mar 10 21:34:00 2022
+Thu Mar 10 23:37:50 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -53,7 +53,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Mar 10 21:34:00 2022       ;
+; Analysis & Synthesis Status        ; Successful - Thu Mar 10 23:37:50 2022       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; ALU                                         ;
 ; Top-level Entity Name              ; ALU_display                                 ;
@@ -163,8 +163,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 6           ;
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -174,38 +174,38 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                   ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                               ; Library ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
-; ALU.v                            ; yes             ; User Verilog HDL File        ; C:/Practicas/Verilog_Labs/ALU/ALU.v                                        ;         ;
-; BCD.v                            ; yes             ; User Verilog HDL File        ; C:/Practicas/Verilog_Labs/ALU/BCD.v                                        ;         ;
-; ALU_display.v                    ; yes             ; User Verilog HDL File        ; C:/Practicas/Verilog_Labs/ALU/ALU_display.v                                ;         ;
-; lpm_mult.tdf                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mult.tdf        ;         ;
-; aglobal201.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc      ;         ;
-; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_add_sub.inc     ;         ;
-; multcore.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/multcore.inc        ;         ;
-; bypassff.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/bypassff.inc        ;         ;
-; altshift.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altshift.inc        ;         ;
-; db/mult_9js.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Practicas/Verilog_Labs/ALU/db/mult_9js.tdf                              ;         ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
-; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
-; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
-; db/lpm_divide_5sl.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Practicas/Verilog_Labs/ALU/db/lpm_divide_5sl.tdf                        ;         ;
-; db/sign_div_unsign_7kh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Practicas/Verilog_Labs/ALU/db/sign_div_unsign_7kh.tdf                   ;         ;
-; db/alt_u_div_oee.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Practicas/Verilog_Labs/ALU/db/alt_u_div_oee.tdf                         ;         ;
-; db/add_sub_t3c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Practicas/Verilog_Labs/ALU/db/add_sub_t3c.tdf                           ;         ;
-; db/add_sub_u3c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Practicas/Verilog_Labs/ALU/db/add_sub_u3c.tdf                           ;         ;
-; db/lpm_divide_8kl.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Practicas/Verilog_Labs/ALU/db/lpm_divide_8kl.tdf                        ;         ;
-; db/lpm_divide_ckl.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Practicas/Verilog_Labs/ALU/db/lpm_divide_ckl.tdf                        ;         ;
-; db/sign_div_unsign_bkh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Practicas/Verilog_Labs/ALU/db/sign_div_unsign_bkh.tdf                   ;         ;
-; db/alt_u_div_0fe.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Practicas/Verilog_Labs/ALU/db/alt_u_div_0fe.tdf                         ;         ;
-; db/lpm_divide_9sl.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Practicas/Verilog_Labs/ALU/db/lpm_divide_9sl.tdf                        ;         ;
-; db/lpm_divide_csl.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Practicas/Verilog_Labs/ALU/db/lpm_divide_csl.tdf                        ;         ;
-; db/sign_div_unsign_ekh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Practicas/Verilog_Labs/ALU/db/sign_div_unsign_ekh.tdf                   ;         ;
-; db/alt_u_div_6fe.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Practicas/Verilog_Labs/ALU/db/alt_u_div_6fe.tdf                         ;         ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                           ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                       ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------+---------+
+; ALU.v                            ; yes             ; User Verilog HDL File        ; /home/paok/Documents/Verilog_Labs/ALU/ALU.v                                        ;         ;
+; BCD.v                            ; yes             ; User Verilog HDL File        ; /home/paok/Documents/Verilog_Labs/ALU/BCD.v                                        ;         ;
+; ALU_display.v                    ; yes             ; User Verilog HDL File        ; /home/paok/Documents/Verilog_Labs/ALU/ALU_display.v                                ;         ;
+; lpm_mult.tdf                     ; yes             ; Megafunction                 ; /home/paok/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_mult.tdf        ;         ;
+; aglobal201.inc                   ; yes             ; Megafunction                 ; /home/paok/intelFPGA_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc      ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; /home/paok/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_add_sub.inc     ;         ;
+; multcore.inc                     ; yes             ; Megafunction                 ; /home/paok/intelFPGA_lite/20.1/quartus/libraries/megafunctions/multcore.inc        ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                 ; /home/paok/intelFPGA_lite/20.1/quartus/libraries/megafunctions/bypassff.inc        ;         ;
+; altshift.inc                     ; yes             ; Megafunction                 ; /home/paok/intelFPGA_lite/20.1/quartus/libraries/megafunctions/altshift.inc        ;         ;
+; db/mult_9js.tdf                  ; yes             ; Auto-Generated Megafunction  ; /home/paok/Documents/Verilog_Labs/ALU/db/mult_9js.tdf                              ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; /home/paok/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; /home/paok/intelFPGA_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; /home/paok/intelFPGA_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
+; db/lpm_divide_5sl.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/paok/Documents/Verilog_Labs/ALU/db/lpm_divide_5sl.tdf                        ;         ;
+; db/sign_div_unsign_7kh.tdf       ; yes             ; Auto-Generated Megafunction  ; /home/paok/Documents/Verilog_Labs/ALU/db/sign_div_unsign_7kh.tdf                   ;         ;
+; db/alt_u_div_oee.tdf             ; yes             ; Auto-Generated Megafunction  ; /home/paok/Documents/Verilog_Labs/ALU/db/alt_u_div_oee.tdf                         ;         ;
+; db/add_sub_t3c.tdf               ; yes             ; Auto-Generated Megafunction  ; /home/paok/Documents/Verilog_Labs/ALU/db/add_sub_t3c.tdf                           ;         ;
+; db/add_sub_u3c.tdf               ; yes             ; Auto-Generated Megafunction  ; /home/paok/Documents/Verilog_Labs/ALU/db/add_sub_u3c.tdf                           ;         ;
+; db/lpm_divide_8kl.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/paok/Documents/Verilog_Labs/ALU/db/lpm_divide_8kl.tdf                        ;         ;
+; db/lpm_divide_ckl.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/paok/Documents/Verilog_Labs/ALU/db/lpm_divide_ckl.tdf                        ;         ;
+; db/sign_div_unsign_bkh.tdf       ; yes             ; Auto-Generated Megafunction  ; /home/paok/Documents/Verilog_Labs/ALU/db/sign_div_unsign_bkh.tdf                   ;         ;
+; db/alt_u_div_0fe.tdf             ; yes             ; Auto-Generated Megafunction  ; /home/paok/Documents/Verilog_Labs/ALU/db/alt_u_div_0fe.tdf                         ;         ;
+; db/lpm_divide_9sl.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/paok/Documents/Verilog_Labs/ALU/db/lpm_divide_9sl.tdf                        ;         ;
+; db/lpm_divide_csl.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/paok/Documents/Verilog_Labs/ALU/db/lpm_divide_csl.tdf                        ;         ;
+; db/sign_div_unsign_ekh.tdf       ; yes             ; Auto-Generated Megafunction  ; /home/paok/Documents/Verilog_Labs/ALU/db/sign_div_unsign_ekh.tdf                   ;         ;
+; db/alt_u_div_6fe.tdf             ; yes             ; Auto-Generated Megafunction  ; /home/paok/Documents/Verilog_Labs/ALU/db/alt_u_div_6fe.tdf                         ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------+---------+
 
 
 +----------------------------------------------------------------+
@@ -308,9 +308,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
-; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; No         ; |ALU_display|ALU:unidad_aritmetica_logica|result[5] ;
-; 11:1               ; 2 bits    ; 14 LEs        ; 10 LEs               ; 4 LEs                  ; No         ; |ALU_display|ALU:unidad_aritmetica_logica|result[2] ;
-; 12:1               ; 2 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |ALU_display|ALU:unidad_aritmetica_logica|result[0] ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; No         ; |ALU_display|ALU:unidad_aritmetica_logica|result[6] ;
+; 11:1               ; 2 bits    ; 14 LEs        ; 10 LEs               ; 4 LEs                  ; No         ; |ALU_display|ALU:unidad_aritmetica_logica|result[3] ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |ALU_display|ALU:unidad_aritmetica_logica|result[1] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
 
 
@@ -558,7 +558,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -568,39 +568,39 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Mar 10 21:33:37 2022
+    Info: Processing started: Thu Mar 10 23:37:44 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file alu.v
-    Info (12023): Found entity 1: ALU File: C:/Practicas/Verilog_Labs/ALU/ALU.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file alu_tb.v
-    Info (12023): Found entity 1: ALU_tb File: C:/Practicas/Verilog_Labs/ALU/ALU_tb.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file bcd.v
-    Info (12023): Found entity 1: BCD File: C:/Practicas/Verilog_Labs/ALU/BCD.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file alu_display.v
-    Info (12023): Found entity 1: ALU_display File: C:/Practicas/Verilog_Labs/ALU/ALU_display.v Line: 1
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file ALU.v
+    Info (12023): Found entity 1: ALU File: /home/paok/Documents/Verilog_Labs/ALU/ALU.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file ALU_tb.v
+    Info (12023): Found entity 1: ALU_tb File: /home/paok/Documents/Verilog_Labs/ALU/ALU_tb.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file BCD.v
+    Info (12023): Found entity 1: BCD File: /home/paok/Documents/Verilog_Labs/ALU/BCD.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file ALU_display.v
+    Info (12023): Found entity 1: ALU_display File: /home/paok/Documents/Verilog_Labs/ALU/ALU_display.v Line: 1
 Info (12127): Elaborating entity "ALU_display" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at ALU_display.v(30): truncated value with size 32 to match size of target (4) File: C:/Practicas/Verilog_Labs/ALU/ALU_display.v Line: 30
-Warning (10230): Verilog HDL assignment warning at ALU_display.v(31): truncated value with size 32 to match size of target (4) File: C:/Practicas/Verilog_Labs/ALU/ALU_display.v Line: 31
-Warning (10230): Verilog HDL assignment warning at ALU_display.v(33): truncated value with size 32 to match size of target (4) File: C:/Practicas/Verilog_Labs/ALU/ALU_display.v Line: 33
-Warning (10230): Verilog HDL assignment warning at ALU_display.v(34): truncated value with size 32 to match size of target (4) File: C:/Practicas/Verilog_Labs/ALU/ALU_display.v Line: 34
-Warning (10230): Verilog HDL assignment warning at ALU_display.v(36): truncated value with size 32 to match size of target (4) File: C:/Practicas/Verilog_Labs/ALU/ALU_display.v Line: 36
-Warning (10230): Verilog HDL assignment warning at ALU_display.v(37): truncated value with size 32 to match size of target (4) File: C:/Practicas/Verilog_Labs/ALU/ALU_display.v Line: 37
-Warning (10230): Verilog HDL assignment warning at ALU_display.v(38): truncated value with size 32 to match size of target (4) File: C:/Practicas/Verilog_Labs/ALU/ALU_display.v Line: 38
-Info (12128): Elaborating entity "ALU" for hierarchy "ALU:unidad_aritmetica_logica" File: C:/Practicas/Verilog_Labs/ALU/ALU_display.v Line: 28
-Info (12128): Elaborating entity "BCD" for hierarchy "BCD:UNIDADES_ENTRADA1" File: C:/Practicas/Verilog_Labs/ALU/ALU_display.v Line: 46
+Warning (10230): Verilog HDL assignment warning at ALU_display.v(30): truncated value with size 32 to match size of target (4) File: /home/paok/Documents/Verilog_Labs/ALU/ALU_display.v Line: 30
+Warning (10230): Verilog HDL assignment warning at ALU_display.v(31): truncated value with size 32 to match size of target (4) File: /home/paok/Documents/Verilog_Labs/ALU/ALU_display.v Line: 31
+Warning (10230): Verilog HDL assignment warning at ALU_display.v(33): truncated value with size 32 to match size of target (4) File: /home/paok/Documents/Verilog_Labs/ALU/ALU_display.v Line: 33
+Warning (10230): Verilog HDL assignment warning at ALU_display.v(34): truncated value with size 32 to match size of target (4) File: /home/paok/Documents/Verilog_Labs/ALU/ALU_display.v Line: 34
+Warning (10230): Verilog HDL assignment warning at ALU_display.v(36): truncated value with size 32 to match size of target (4) File: /home/paok/Documents/Verilog_Labs/ALU/ALU_display.v Line: 36
+Warning (10230): Verilog HDL assignment warning at ALU_display.v(37): truncated value with size 32 to match size of target (4) File: /home/paok/Documents/Verilog_Labs/ALU/ALU_display.v Line: 37
+Warning (10230): Verilog HDL assignment warning at ALU_display.v(38): truncated value with size 32 to match size of target (4) File: /home/paok/Documents/Verilog_Labs/ALU/ALU_display.v Line: 38
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:unidad_aritmetica_logica" File: /home/paok/Documents/Verilog_Labs/ALU/ALU_display.v Line: 28
+Info (12128): Elaborating entity "BCD" for hierarchy "BCD:UNIDADES_ENTRADA1" File: /home/paok/Documents/Verilog_Labs/ALU/ALU_display.v Line: 46
 Info (278001): Inferred 8 megafunctions from design logic
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "ALU:unidad_aritmetica_logica|Mult0" File: C:/Practicas/Verilog_Labs/ALU/ALU.v Line: 30
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ALU:unidad_aritmetica_logica|Div0" File: C:/Practicas/Verilog_Labs/ALU/ALU.v Line: 33
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: C:/Practicas/Verilog_Labs/ALU/ALU_display.v Line: 30
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod1" File: C:/Practicas/Verilog_Labs/ALU/ALU_display.v Line: 33
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod2" File: C:/Practicas/Verilog_Labs/ALU/ALU_display.v Line: 36
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div2" File: C:/Practicas/Verilog_Labs/ALU/ALU_display.v Line: 37
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod3" File: C:/Practicas/Verilog_Labs/ALU/ALU_display.v Line: 37
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div3" File: C:/Practicas/Verilog_Labs/ALU/ALU_display.v Line: 38
-Info (12130): Elaborated megafunction instantiation "ALU:unidad_aritmetica_logica|lpm_mult:Mult0" File: C:/Practicas/Verilog_Labs/ALU/ALU.v Line: 30
-Info (12133): Instantiated megafunction "ALU:unidad_aritmetica_logica|lpm_mult:Mult0" with the following parameter: File: C:/Practicas/Verilog_Labs/ALU/ALU.v Line: 30
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "ALU:unidad_aritmetica_logica|Mult0" File: /home/paok/Documents/Verilog_Labs/ALU/ALU.v Line: 30
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ALU:unidad_aritmetica_logica|Div0" File: /home/paok/Documents/Verilog_Labs/ALU/ALU.v Line: 33
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: /home/paok/Documents/Verilog_Labs/ALU/ALU_display.v Line: 30
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod1" File: /home/paok/Documents/Verilog_Labs/ALU/ALU_display.v Line: 33
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod2" File: /home/paok/Documents/Verilog_Labs/ALU/ALU_display.v Line: 36
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div2" File: /home/paok/Documents/Verilog_Labs/ALU/ALU_display.v Line: 37
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod3" File: /home/paok/Documents/Verilog_Labs/ALU/ALU_display.v Line: 37
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div3" File: /home/paok/Documents/Verilog_Labs/ALU/ALU_display.v Line: 38
+Info (12130): Elaborated megafunction instantiation "ALU:unidad_aritmetica_logica|lpm_mult:Mult0" File: /home/paok/Documents/Verilog_Labs/ALU/ALU.v Line: 30
+Info (12133): Instantiated megafunction "ALU:unidad_aritmetica_logica|lpm_mult:Mult0" with the following parameter: File: /home/paok/Documents/Verilog_Labs/ALU/ALU.v Line: 30
     Info (12134): Parameter "LPM_WIDTHA" = "4"
     Info (12134): Parameter "LPM_WIDTHB" = "4"
     Info (12134): Parameter "LPM_WIDTHP" = "8"
@@ -611,81 +611,81 @@ Info (12133): Instantiated megafunction "ALU:unidad_aritmetica_logica|lpm_mult:M
     Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
     Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_9js.tdf
-    Info (12023): Found entity 1: mult_9js File: C:/Practicas/Verilog_Labs/ALU/db/mult_9js.tdf Line: 29
-Info (12130): Elaborated megafunction instantiation "ALU:unidad_aritmetica_logica|lpm_divide:Div0" File: C:/Practicas/Verilog_Labs/ALU/ALU.v Line: 33
-Info (12133): Instantiated megafunction "ALU:unidad_aritmetica_logica|lpm_divide:Div0" with the following parameter: File: C:/Practicas/Verilog_Labs/ALU/ALU.v Line: 33
+    Info (12023): Found entity 1: mult_9js File: /home/paok/Documents/Verilog_Labs/ALU/db/mult_9js.tdf Line: 29
+Info (12130): Elaborated megafunction instantiation "ALU:unidad_aritmetica_logica|lpm_divide:Div0" File: /home/paok/Documents/Verilog_Labs/ALU/ALU.v Line: 33
+Info (12133): Instantiated megafunction "ALU:unidad_aritmetica_logica|lpm_divide:Div0" with the following parameter: File: /home/paok/Documents/Verilog_Labs/ALU/ALU.v Line: 33
     Info (12134): Parameter "LPM_WIDTHN" = "4"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_5sl.tdf
-    Info (12023): Found entity 1: lpm_divide_5sl File: C:/Practicas/Verilog_Labs/ALU/db/lpm_divide_5sl.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_5sl File: /home/paok/Documents/Verilog_Labs/ALU/db/lpm_divide_5sl.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_7kh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_7kh File: C:/Practicas/Verilog_Labs/ALU/db/sign_div_unsign_7kh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_7kh File: /home/paok/Documents/Verilog_Labs/ALU/db/sign_div_unsign_7kh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_oee.tdf
-    Info (12023): Found entity 1: alt_u_div_oee File: C:/Practicas/Verilog_Labs/ALU/db/alt_u_div_oee.tdf Line: 27
+    Info (12023): Found entity 1: alt_u_div_oee File: /home/paok/Documents/Verilog_Labs/ALU/db/alt_u_div_oee.tdf Line: 27
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_t3c.tdf
-    Info (12023): Found entity 1: add_sub_t3c File: C:/Practicas/Verilog_Labs/ALU/db/add_sub_t3c.tdf Line: 23
+    Info (12023): Found entity 1: add_sub_t3c File: /home/paok/Documents/Verilog_Labs/ALU/db/add_sub_t3c.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_u3c.tdf
-    Info (12023): Found entity 1: add_sub_u3c File: C:/Practicas/Verilog_Labs/ALU/db/add_sub_u3c.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: C:/Practicas/Verilog_Labs/ALU/ALU_display.v Line: 30
-Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: C:/Practicas/Verilog_Labs/ALU/ALU_display.v Line: 30
+    Info (12023): Found entity 1: add_sub_u3c File: /home/paok/Documents/Verilog_Labs/ALU/db/add_sub_u3c.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: /home/paok/Documents/Verilog_Labs/ALU/ALU_display.v Line: 30
+Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: /home/paok/Documents/Verilog_Labs/ALU/ALU_display.v Line: 30
     Info (12134): Parameter "LPM_WIDTHN" = "4"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_8kl.tdf
-    Info (12023): Found entity 1: lpm_divide_8kl File: C:/Practicas/Verilog_Labs/ALU/db/lpm_divide_8kl.tdf Line: 25
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod2" File: C:/Practicas/Verilog_Labs/ALU/ALU_display.v Line: 36
-Info (12133): Instantiated megafunction "lpm_divide:Mod2" with the following parameter: File: C:/Practicas/Verilog_Labs/ALU/ALU_display.v Line: 36
+    Info (12023): Found entity 1: lpm_divide_8kl File: /home/paok/Documents/Verilog_Labs/ALU/db/lpm_divide_8kl.tdf Line: 25
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod2" File: /home/paok/Documents/Verilog_Labs/ALU/ALU_display.v Line: 36
+Info (12133): Instantiated megafunction "lpm_divide:Mod2" with the following parameter: File: /home/paok/Documents/Verilog_Labs/ALU/ALU_display.v Line: 36
     Info (12134): Parameter "LPM_WIDTHN" = "8"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_ckl.tdf
-    Info (12023): Found entity 1: lpm_divide_ckl File: C:/Practicas/Verilog_Labs/ALU/db/lpm_divide_ckl.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_ckl File: /home/paok/Documents/Verilog_Labs/ALU/db/lpm_divide_ckl.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_bkh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_bkh File: C:/Practicas/Verilog_Labs/ALU/db/sign_div_unsign_bkh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_bkh File: /home/paok/Documents/Verilog_Labs/ALU/db/sign_div_unsign_bkh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_0fe.tdf
-    Info (12023): Found entity 1: alt_u_div_0fe File: C:/Practicas/Verilog_Labs/ALU/db/alt_u_div_0fe.tdf Line: 27
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Div2" File: C:/Practicas/Verilog_Labs/ALU/ALU_display.v Line: 37
-Info (12133): Instantiated megafunction "lpm_divide:Div2" with the following parameter: File: C:/Practicas/Verilog_Labs/ALU/ALU_display.v Line: 37
+    Info (12023): Found entity 1: alt_u_div_0fe File: /home/paok/Documents/Verilog_Labs/ALU/db/alt_u_div_0fe.tdf Line: 27
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Div2" File: /home/paok/Documents/Verilog_Labs/ALU/ALU_display.v Line: 37
+Info (12133): Instantiated megafunction "lpm_divide:Div2" with the following parameter: File: /home/paok/Documents/Verilog_Labs/ALU/ALU_display.v Line: 37
     Info (12134): Parameter "LPM_WIDTHN" = "8"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_9sl.tdf
-    Info (12023): Found entity 1: lpm_divide_9sl File: C:/Practicas/Verilog_Labs/ALU/db/lpm_divide_9sl.tdf Line: 25
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Div3" File: C:/Practicas/Verilog_Labs/ALU/ALU_display.v Line: 38
-Info (12133): Instantiated megafunction "lpm_divide:Div3" with the following parameter: File: C:/Practicas/Verilog_Labs/ALU/ALU_display.v Line: 38
+    Info (12023): Found entity 1: lpm_divide_9sl File: /home/paok/Documents/Verilog_Labs/ALU/db/lpm_divide_9sl.tdf Line: 25
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Div3" File: /home/paok/Documents/Verilog_Labs/ALU/ALU_display.v Line: 38
+Info (12133): Instantiated megafunction "lpm_divide:Div3" with the following parameter: File: /home/paok/Documents/Verilog_Labs/ALU/ALU_display.v Line: 38
     Info (12134): Parameter "LPM_WIDTHN" = "8"
     Info (12134): Parameter "LPM_WIDTHD" = "7"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_csl.tdf
-    Info (12023): Found entity 1: lpm_divide_csl File: C:/Practicas/Verilog_Labs/ALU/db/lpm_divide_csl.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_csl File: /home/paok/Documents/Verilog_Labs/ALU/db/lpm_divide_csl.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_ekh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_ekh File: C:/Practicas/Verilog_Labs/ALU/db/sign_div_unsign_ekh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_ekh File: /home/paok/Documents/Verilog_Labs/ALU/db/sign_div_unsign_ekh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_6fe.tdf
-    Info (12023): Found entity 1: alt_u_div_6fe File: C:/Practicas/Verilog_Labs/ALU/db/alt_u_div_6fe.tdf Line: 27
+    Info (12023): Found entity 1: alt_u_div_6fe File: /home/paok/Documents/Verilog_Labs/ALU/db/alt_u_div_6fe.tdf Line: 27
 Warning (14284): Synthesized away the following node(s):
     Warning (14285): Synthesized away the following LCELL buffer node(s):
-        Warning (14320): Synthesized away node "ALU:unidad_aritmetica_logica|lpm_mult:Mult0|mult_9js:auto_generated|le5a[4]" File: C:/Practicas/Verilog_Labs/ALU/db/mult_9js.tdf Line: 43
+        Warning (14320): Synthesized away node "ALU:unidad_aritmetica_logica|lpm_mult:Mult0|mult_9js:auto_generated|le5a[4]" File: /home/paok/Documents/Verilog_Labs/ALU/db/mult_9js.tdf Line: 43
 Info (13014): Ignored 48 buffer(s)
     Info (13016): Ignored 4 CARRY_SUM buffer(s)
     Info (13019): Ignored 44 SOFT buffer(s)
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "in1_decenas_display[1]" is stuck at GND File: C:/Practicas/Verilog_Labs/ALU/ALU_display.v Line: 10
-    Warning (13410): Pin "in1_decenas_display[2]" is stuck at GND File: C:/Practicas/Verilog_Labs/ALU/ALU_display.v Line: 10
-    Warning (13410): Pin "in1_decenas_display[6]" is stuck at VCC File: C:/Practicas/Verilog_Labs/ALU/ALU_display.v Line: 10
-    Warning (13410): Pin "in2_decenas_display[1]" is stuck at GND File: C:/Practicas/Verilog_Labs/ALU/ALU_display.v Line: 13
-    Warning (13410): Pin "in2_decenas_display[2]" is stuck at GND File: C:/Practicas/Verilog_Labs/ALU/ALU_display.v Line: 13
-    Warning (13410): Pin "in2_decenas_display[6]" is stuck at VCC File: C:/Practicas/Verilog_Labs/ALU/ALU_display.v Line: 13
-    Warning (13410): Pin "out_centenas_display[1]" is stuck at GND File: C:/Practicas/Verilog_Labs/ALU/ALU_display.v Line: 18
+    Warning (13410): Pin "in1_decenas_display[1]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/ALU/ALU_display.v Line: 10
+    Warning (13410): Pin "in1_decenas_display[2]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/ALU/ALU_display.v Line: 10
+    Warning (13410): Pin "in1_decenas_display[6]" is stuck at VCC File: /home/paok/Documents/Verilog_Labs/ALU/ALU_display.v Line: 10
+    Warning (13410): Pin "in2_decenas_display[1]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/ALU/ALU_display.v Line: 13
+    Warning (13410): Pin "in2_decenas_display[2]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/ALU/ALU_display.v Line: 13
+    Warning (13410): Pin "in2_decenas_display[6]" is stuck at VCC File: /home/paok/Documents/Verilog_Labs/ALU/ALU_display.v Line: 13
+    Warning (13410): Pin "out_centenas_display[1]" is stuck at GND File: /home/paok/Documents/Verilog_Labs/ALU/ALU_display.v Line: 18
 Info (286030): Timing-Driven Synthesis is running
 Info (17016): Found the following redundant logic cells in design
-    Info (17048): Logic cell "lpm_divide:Mod3|lpm_divide_ckl:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_0fe:divider|add_sub_7_result_int[0]~0" File: C:/Practicas/Verilog_Labs/ALU/db/alt_u_div_0fe.tdf Line: 62
-    Info (17048): Logic cell "lpm_divide:Mod3|lpm_divide_ckl:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_0fe:divider|add_sub_6_result_int[0]~10" File: C:/Practicas/Verilog_Labs/ALU/db/alt_u_div_0fe.tdf Line: 57
+    Info (17048): Logic cell "lpm_divide:Mod3|lpm_divide_ckl:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_0fe:divider|add_sub_7_result_int[0]~0" File: /home/paok/Documents/Verilog_Labs/ALU/db/alt_u_div_0fe.tdf Line: 62
+    Info (17048): Logic cell "lpm_divide:Mod3|lpm_divide_ckl:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_0fe:divider|add_sub_6_result_int[0]~10" File: /home/paok/Documents/Verilog_Labs/ALU/db/alt_u_div_0fe.tdf Line: 57
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Info (21057): Implemented 400 device resources after synthesis - the final resource count might be different
@@ -693,9 +693,9 @@ Info (21057): Implemented 400 device resources after synthesis - the final resou
     Info (21059): Implemented 57 output pins
     Info (21061): Implemented 331 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 19 warnings
-    Info: Peak virtual memory: 4774 megabytes
-    Info: Processing ended: Thu Mar 10 21:34:00 2022
-    Info: Elapsed time: 00:00:23
-    Info: Total CPU time (on all processors): 00:00:55
+    Info: Peak virtual memory: 637 megabytes
+    Info: Processing ended: Thu Mar 10 23:37:50 2022
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:19
 
 

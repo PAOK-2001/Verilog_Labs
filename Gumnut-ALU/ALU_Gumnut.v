@@ -1,25 +1,13 @@
 module ALU_Gumnut( 
-	 input clk_i,
-	 input rst_i,
-	 // Instruction memory bus
-	 output        inst_cyc_o,
-	 output        inst_stb_o,
-	 input         inst_ack_i,
-	 output [11:0] inst_adr_o,
-	 input  [17:0] inst_dat_i,
-	 // Data memory bus
-	 output        data_cyc_o,
-	 output        data_stb_o,
-	 output        data_we_o,
-	 input         data_ack_i,
-	 output  [7:0] data_adr_o,
-	 output  [7:0] data_dat_o,
-	 input   [7:0] data_dat_i,
-	 // Interrupts
-	 input         int_req,
-	 output        int_ack );
+	 input       [7:0]  GPR_rs,
+	 input       [7:0]  GPR_r2,
+	 input       [17:0] IR,
+	 output reg  [7:0]  ALU_result,
+	 output reg  [7:0]  ALU_shift_result
+
 	 
-parameter debug = 1'b0;
+	 );
+	 
 localparam [2:0] alu_fn_add  = 3'b000;
 localparam [2:0] alu_fn_addc = 3'b001;
 localparam [2:0] alu_fn_sub  = 3'b010;
@@ -38,8 +26,6 @@ localparam [1:0] mem_fn_ldm = 2'b00;
 localparam [1:0] mem_fn_stm = 2'b01;
 localparam [1:0] mem_fn_inp = 2'b10;
 localparam [1:0] mem_fn_out = 2'b11;
-
-reg [17:0] IR;
 
 wire [ 2: 0] IR_alu_reg_fn;
 wire [16:14] IR_alu_immed_fn;
@@ -66,25 +52,33 @@ wire IR_decode_jump;
 wire IR_decode_branch;
 wire IR_decode_misc;
 
-reg [3:0] GPR_r2_addr;
-reg [7:0] GPR_write_data;
-reg [7:0] GPR [0:7];
-
-reg [7:0] GPR_rs;
-reg [7:0] GPR_r2;
 
 reg [2:0] ALU_fn;
 reg [7:0] ALU_right_operand;
 reg [8:0] ALU_tmp_result;
-reg [7:0] ALU_shift_result;
 
-reg  [7:0] ALU_result;
 wire ALU_Z;
 reg  ALU_C;
 reg  [7:0] ALU_out;
 
 reg cc_Z;
 reg cc_C;
+
+assign IR_decode_alu_immed = IR[17]    == 1'b0;    // operacion INMEDIATA
+assign IR_decode_mem       = IR[17:16] == 2'b10;   // operacion de memoria
+assign IR_decode_shift     = IR[17:15] == 3'b110;  // operacion de shfiting
+assign IR_decode_alu_reg   = IR[17:14] == 4'b1110; // operacion de ALU_reg
+assign IR_decode_jump      = IR[17:13] == 5'b11110;
+assign IR_decode_branch    = IR[17:12] == 6'b111110;
+assign IR_decode_misc      = IR[17:11] == 7'b1111110;
+
+assign IR_alu_reg_fn   = IR[2:0];
+assign IR_alu_immed_fn = IR[16:14];
+assign IR_shift_fn     = IR[1:0];
+assign IR_mem_fn       = IR[15:14];
+assign IR_branch_fn    = IR[11:10];
+assign IR_jump_fn      = IR[12:12];
+assign IR_misc_fn      = IR[10:8];
 
 // Logic to assign operation given the first four bits of the instruction	 
   always @*  // ALU
