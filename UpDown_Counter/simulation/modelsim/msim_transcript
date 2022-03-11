@@ -1,0 +1,97 @@
+# Reading pref.tcl
+# ERROR: No extended dataflow license exists
+# do UpDown_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Practicas/Verilog_Labs/UpDown_Counter {C:/Practicas/Verilog_Labs/UpDown_Counter/clk_divider.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:32:22 on Mar 10,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Practicas/Verilog_Labs/UpDown_Counter" C:/Practicas/Verilog_Labs/UpDown_Counter/clk_divider.v 
+# -- Compiling module clk_divider
+# 
+# Top level modules:
+# 	clk_divider
+# End time: 23:32:22 on Mar 10,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Practicas/Verilog_Labs/UpDown_Counter {C:/Practicas/Verilog_Labs/UpDown_Counter/counter.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:32:22 on Mar 10,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Practicas/Verilog_Labs/UpDown_Counter" C:/Practicas/Verilog_Labs/UpDown_Counter/counter.v 
+# -- Compiling module counter
+# 
+# Top level modules:
+# 	counter
+# End time: 23:32:22 on Mar 10,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Practicas/Verilog_Labs/UpDown_Counter {C:/Practicas/Verilog_Labs/UpDown_Counter/UpDown.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:32:22 on Mar 10,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Practicas/Verilog_Labs/UpDown_Counter" C:/Practicas/Verilog_Labs/UpDown_Counter/UpDown.v 
+# -- Compiling module UpDown
+# 
+# Top level modules:
+# 	UpDown
+# End time: 23:32:22 on Mar 10,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Practicas/Verilog_Labs/UpDown_Counter {C:/Practicas/Verilog_Labs/UpDown_Counter/BCD.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:32:22 on Mar 10,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Practicas/Verilog_Labs/UpDown_Counter" C:/Practicas/Verilog_Labs/UpDown_Counter/BCD.v 
+# -- Compiling module BCD
+# 
+# Top level modules:
+# 	BCD
+# End time: 23:32:22 on Mar 10,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Practicas/Verilog_Labs/UpDown_Counter {C:/Practicas/Verilog_Labs/UpDown_Counter/one_shot.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:32:22 on Mar 10,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Practicas/Verilog_Labs/UpDown_Counter" C:/Practicas/Verilog_Labs/UpDown_Counter/one_shot.v 
+# -- Compiling module one_shot
+# 
+# Top level modules:
+# 	one_shot
+# End time: 23:32:22 on Mar 10,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/Practicas/Verilog_Labs/UpDown_Counter {C:/Practicas/Verilog_Labs/UpDown_Counter/UpDown_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:32:22 on Mar 10,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Practicas/Verilog_Labs/UpDown_Counter" C:/Practicas/Verilog_Labs/UpDown_Counter/UpDown_tb.v 
+# -- Compiling module UpDown_tb
+# 
+# Top level modules:
+# 	UpDown_tb
+# End time: 23:32:22 on Mar 10,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs="+acc"  UpDown_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs=""+acc"" UpDown_tb 
+# Start time: 23:32:23 on Mar 10,2022
+# Loading work.UpDown_tb
+# Loading work.UpDown
+# Loading work.clk_divider
+# Loading work.one_shot
+# Loading work.counter
+# Loading work.BCD
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'COUNT'.  Expected 5, found 4.
+#    Time: 0 ps  Iteration: 0  Instance: /UpDown_tb/UUT/COUNT File: C:/Practicas/Verilog_Labs/UpDown_Counter/UpDown.v Line: 31
+# ** Warning: (vsim-3722) C:/Practicas/Verilog_Labs/UpDown_Counter/UpDown.v(31): [TFMPC] - Missing connection for port 'display_count'.
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Note: $stop    : C:/Practicas/Verilog_Labs/UpDown_Counter/UpDown_tb.v(81)
+#    Time: 400 ps  Iteration: 0  Instance: /UpDown_tb
+# Break in Module UpDown_tb at C:/Practicas/Verilog_Labs/UpDown_Counter/UpDown_tb.v line 81

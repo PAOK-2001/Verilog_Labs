@@ -1,0 +1,158 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Practicas/Verilog_Labs/UpDown_Counter/simulation/modelsim
+vBCD
+Z1 !s110 1646976742
+!i10b 1
+!s100 ?En=W9eV6?leXh`[3YbK_1
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IGeo499fE[oY0nIjUP2TU92
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1646270035
+8C:/Practicas/Verilog_Labs/UpDown_Counter/BCD.v
+FC:/Practicas/Verilog_Labs/UpDown_Counter/BCD.v
+!i122 3
+L0 1 37
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1646976742.000000
+!s107 C:/Practicas/Verilog_Labs/UpDown_Counter/BCD.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Practicas/Verilog_Labs/UpDown_Counter|C:/Practicas/Verilog_Labs/UpDown_Counter/BCD.v|
+!i113 1
+Z7 o-vlog01compat -work work
+Z8 !s92 -vlog01compat -work work +incdir+C:/Practicas/Verilog_Labs/UpDown_Counter
+Z9 tCvgOpt 0
+n@b@c@d
+vclk_divider
+R1
+!i10b 1
+!s100 91iV3?`zlk8Um]Z018BEk3
+R2
+IS<`3]b6kcN;PHcf8AonSH0
+R3
+R0
+R4
+8C:/Practicas/Verilog_Labs/UpDown_Counter/clk_divider.v
+FC:/Practicas/Verilog_Labs/UpDown_Counter/clk_divider.v
+!i122 0
+L0 1 28
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Practicas/Verilog_Labs/UpDown_Counter/clk_divider.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Practicas/Verilog_Labs/UpDown_Counter|C:/Practicas/Verilog_Labs/UpDown_Counter/clk_divider.v|
+!i113 1
+R7
+R8
+R9
+vcounter
+R1
+!i10b 1
+!s100 V]MCQj[8G<g`dBHU]jDo51
+R2
+IFJgX_n:oCzn8on::fUZ`^3
+R3
+R0
+R4
+8C:/Practicas/Verilog_Labs/UpDown_Counter/counter.v
+FC:/Practicas/Verilog_Labs/UpDown_Counter/counter.v
+!i122 1
+L0 1 46
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Practicas/Verilog_Labs/UpDown_Counter/counter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Practicas/Verilog_Labs/UpDown_Counter|C:/Practicas/Verilog_Labs/UpDown_Counter/counter.v|
+!i113 1
+R7
+R8
+R9
+vone_shot
+R1
+!i10b 1
+!s100 I5f6`?U6FhC1RH65f2:AP1
+R2
+IK=889GZHM]SocQ7f4P85^0
+R3
+R0
+R4
+8C:/Practicas/Verilog_Labs/UpDown_Counter/one_shot.v
+FC:/Practicas/Verilog_Labs/UpDown_Counter/one_shot.v
+!i122 4
+L0 1 14
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Practicas/Verilog_Labs/UpDown_Counter/one_shot.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Practicas/Verilog_Labs/UpDown_Counter|C:/Practicas/Verilog_Labs/UpDown_Counter/one_shot.v|
+!i113 1
+R7
+R8
+R9
+vUpDown
+R1
+!i10b 1
+!s100 <n;>n=ijfY=F_gTgh8CRD2
+R2
+I3RHQKPP4Cd2;i_aFYnDIQ3
+R3
+R0
+w1646886779
+8C:/Practicas/Verilog_Labs/UpDown_Counter/UpDown.v
+FC:/Practicas/Verilog_Labs/UpDown_Counter/UpDown.v
+!i122 2
+L0 1 53
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Practicas/Verilog_Labs/UpDown_Counter/UpDown.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Practicas/Verilog_Labs/UpDown_Counter|C:/Practicas/Verilog_Labs/UpDown_Counter/UpDown.v|
+!i113 1
+R7
+R8
+R9
+n@up@down
+vUpDown_tb
+R1
+!i10b 1
+!s100 <Jgf3>3igFe8C12kVEDJ]3
+R2
+I4c6G1UJJC@4zY@93gJW9S0
+R3
+R0
+w1646976434
+8C:/Practicas/Verilog_Labs/UpDown_Counter/UpDown_tb.v
+FC:/Practicas/Verilog_Labs/UpDown_Counter/UpDown_tb.v
+!i122 5
+L0 1 87
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Practicas/Verilog_Labs/UpDown_Counter/UpDown_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Practicas/Verilog_Labs/UpDown_Counter|C:/Practicas/Verilog_Labs/UpDown_Counter/UpDown_tb.v|
+!i113 1
+R7
+R8
+R9
+n@up@down_tb
