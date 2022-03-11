@@ -1,7 +1,6 @@
 |UpDown
 clk => clk.IN1
 clc => clc.IN2
-button => ~NO_FANOUT~
 countSelect => countSelect.IN1
 display_unidades[0] <= BCD:DISPLAY_UNIDADES.display7Segment
 display_unidades[1] <= BCD:DISPLAY_UNIDADES.display7Segment

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for UpDown
-Wed Mar 09 22:37:16 2022
+Thu Mar 10 20:51:19 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -47,7 +47,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Mar 09 22:37:16 2022       ;
+; Analysis & Synthesis Status        ; Successful - Thu Mar 10 20:51:19 2022       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; UpDown                                      ;
 ; Top-level Entity Name              ; UpDown                                      ;
@@ -56,7 +56,7 @@ https://fpgasoftware.intel.com/eula.
 ;     Total combinational functions  ; 147                                         ;
 ;     Dedicated logic registers      ; 40                                          ;
 ; Total registers                    ; 40                                          ;
-; Total pins                         ; 18                                          ;
+; Total pins                         ; 17                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -211,14 +211,14 @@ https://fpgasoftware.intel.com/eula.
 ;     -- Dedicated logic registers            ; 40        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 18        ;
+; I/O pins                                    ; 17        ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clc~input ;
 ; Maximum fan-out                             ; 40        ;
-; Total fan-out                               ; 558       ;
-; Average fan-out                             ; 2.50      ;
+; Total fan-out                               ; 557       ;
+; Average fan-out                             ; 2.52      ;
 +---------------------------------------------+-----------+
 
 
@@ -227,7 +227,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                     ; Entity Name         ; Library Name ;
 +----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |UpDown                                ; 147 (0)             ; 40 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 18   ; 0            ; 0          ; |UpDown                                                                                                 ; UpDown              ; work         ;
+; |UpDown                                ; 147 (0)             ; 40 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 17   ; 0            ; 0          ; |UpDown                                                                                                 ; UpDown              ; work         ;
 ;    |BCD:DISPLAY_DECENAS|               ; 32 (32)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |UpDown|BCD:DISPLAY_DECENAS                                                                             ; BCD                 ; work         ;
 ;    |BCD:DISPLAY_UNIDADES|              ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |UpDown|BCD:DISPLAY_UNIDADES                                                                            ; BCD                 ; work         ;
 ;    |clk_divider:DIVIDER|               ; 55 (55)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |UpDown|clk_divider:DIVIDER                                                                             ; clk_divider         ; work         ;
@@ -301,7 +301,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 18                          ;
+; boundary_port         ; 17                          ;
 ; cycloneiii_ff         ; 40                          ;
 ;     CLR               ; 40                          ;
 ; cycloneiii_lcell_comb ; 149                         ;
@@ -325,7 +325,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -335,7 +335,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Mar 09 22:37:08 2022
+    Info: Processing started: Thu Mar 10 20:50:57 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off UpDown -c UpDown
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -352,15 +352,15 @@ Info (12021): Found 1 design units, including 1 entities, in source file bcd.v
 Info (12021): Found 1 design units, including 1 entities, in source file one_shot.v
     Info (12023): Found entity 1: one_shot File: C:/Practicas/Verilog_Labs/UpDown_Counter_withClock/one_shot.v Line: 1
 Info (12127): Elaborating entity "UpDown" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at UpDown.v(41): truncated value with size 32 to match size of target (7) File: C:/Practicas/Verilog_Labs/UpDown_Counter_withClock/UpDown.v Line: 41
-Warning (10230): Verilog HDL assignment warning at UpDown.v(43): truncated value with size 32 to match size of target (7) File: C:/Practicas/Verilog_Labs/UpDown_Counter_withClock/UpDown.v Line: 43
+Warning (10230): Verilog HDL assignment warning at UpDown.v(24): truncated value with size 32 to match size of target (7) File: C:/Practicas/Verilog_Labs/UpDown_Counter_withClock/UpDown.v Line: 24
+Warning (10230): Verilog HDL assignment warning at UpDown.v(26): truncated value with size 32 to match size of target (7) File: C:/Practicas/Verilog_Labs/UpDown_Counter_withClock/UpDown.v Line: 26
 Info (12128): Elaborating entity "clk_divider" for hierarchy "clk_divider:DIVIDER" File: C:/Practicas/Verilog_Labs/UpDown_Counter_withClock/UpDown.v Line: 14
-Info (12128): Elaborating entity "counter" for hierarchy "counter:COUNT" File: C:/Practicas/Verilog_Labs/UpDown_Counter_withClock/UpDown.v Line: 38
+Info (12128): Elaborating entity "counter" for hierarchy "counter:COUNT" File: C:/Practicas/Verilog_Labs/UpDown_Counter_withClock/UpDown.v Line: 21
 Info (12128): Elaborating entity "BCD" for hierarchy "counter:COUNT|BCD:DISPLAY_RESULT" File: C:/Practicas/Verilog_Labs/UpDown_Counter_withClock/counter.v Line: 24
 Info (278001): Inferred 1 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: C:/Practicas/Verilog_Labs/UpDown_Counter_withClock/UpDown.v Line: 41
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: C:/Practicas/Verilog_Labs/UpDown_Counter_withClock/UpDown.v Line: 41
-Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: C:/Practicas/Verilog_Labs/UpDown_Counter_withClock/UpDown.v Line: 41
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: C:/Practicas/Verilog_Labs/UpDown_Counter_withClock/UpDown.v Line: 24
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: C:/Practicas/Verilog_Labs/UpDown_Counter_withClock/UpDown.v Line: 24
+Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: C:/Practicas/Verilog_Labs/UpDown_Counter_withClock/UpDown.v Line: 24
     Info (12134): Parameter "LPM_WIDTHN" = "7"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -380,17 +380,15 @@ Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/Practicas/Verilog_Labs/UpDown_Counter_withClock/output_files/UpDown.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "button" File: C:/Practicas/Verilog_Labs/UpDown_Counter_withClock/UpDown.v Line: 2
-Info (21057): Implemented 165 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 4 input pins
+Info (21057): Implemented 164 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
     Info (21059): Implemented 14 output pins
     Info (21061): Implemented 147 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4788 megabytes
-    Info: Processing ended: Wed Mar 09 22:37:16 2022
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:20
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4786 megabytes
+    Info: Processing ended: Thu Mar 10 20:51:19 2022
+    Info: Elapsed time: 00:00:22
+    Info: Total CPU time (on all processors): 00:00:54
 
 
 +------------------------------------------+
