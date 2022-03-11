@@ -2,12 +2,18 @@ module counter(
 	input            clk, rst, en,
 	output reg [6:0] count
 );
+wire slow;
+clk_divider DIV(
+	.clk(clk),
+	.rst(rst),
+	.clk_div(slow)
+);
 
 /* Enfoque 1: */
-always@(posedge clk)
+always@(posedge slow or negedge rst)
 begin 
-	if(rst)
-		count <= 4'b0000; // Iniciar el valor del contador en 0
+	if(~rst)
+		count <= 0; // Iniciar el valor del contador en 0
 	else if(en)
 		count <= count + 1; // Si el contador esta habilidado, cada tik aumentarlo uno
 end

@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 d/home/paok/Documents/Verilog_Labs/Counter/simulation/modelsim
 vcounter
-Z1 !s110 1646866074
+Z1 !s110 1646944931
 !i10b 1
 !s100 ?z;1Koba6Q`J>8P1YTK]J0
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -26,7 +26,7 @@ Z4 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z5 !s108 1646866074.000000
+Z5 !s108 1646944931.000000
 !s107 /home/paok/Documents/Verilog_Labs/Counter/counter.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/paok/Documents/Verilog_Labs/Counter|/home/paok/Documents/Verilog_Labs/Counter/counter.v|
 !i113 1

@@ -67,4 +67,15 @@ set_global_assignment -name EDA_TEST_BENCH_NAME counter_tb -section_id eda_simul
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id counter_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME counter_tb -section_id counter_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE counter_tb.v -section_id counter_tb
+set_global_assignment -name VERILOG_FILE div.v
+set_location_assignment PIN_P11 -to clk
+set_location_assignment PIN_A8 -to count[0]
+set_location_assignment PIN_A9 -to count[1]
+set_location_assignment PIN_A10 -to count[2]
+set_location_assignment PIN_B10 -to count[3]
+set_location_assignment PIN_D13 -to count[4]
+set_location_assignment PIN_C13 -to count[5]
+set_location_assignment PIN_E14 -to count[6]
+set_location_assignment PIN_C10 -to en
+set_location_assignment PIN_A7 -to rst
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

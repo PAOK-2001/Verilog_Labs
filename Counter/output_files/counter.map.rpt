@@ -1,5 +1,5 @@
-Analysis & Elaboration report for counter
-Wed Mar  9 16:47:18 2022
+Analysis & Synthesis report for counter
+Thu Mar 10 21:45:05 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -7,10 +7,16 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Analysis & Elaboration Settings
-  5. Analysis & Elaboration Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Post-Synthesis Netlist Statistics for Top Partition
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -35,45 +41,29 @@ https://fpgasoftware.intel.com/eula.
 
 
 +----------------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                                   ;
+; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Wed Mar  9 16:47:18 2022       ;
+; Analysis & Synthesis Status        ; Successful - Thu Mar 10 21:45:05 2022       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; counter                                     ;
 ; Top-level Entity Name              ; counter                                     ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
-; UFM blocks                         ; N/A until Partition Merge                   ;
-; ADC blocks                         ; N/A until Partition Merge                   ;
+; Total logic elements               ; 62                                          ;
+;     Total combinational functions  ; 62                                          ;
+;     Dedicated logic registers      ; 40                                          ;
+; Total registers                    ; 40                                          ;
+; Total pins                         ; 10                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 16          ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
-
-
 +------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                            ;
+; Analysis & Synthesis Settings                                                                              ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
@@ -158,25 +148,153 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------+--------------------+--------------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 16          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-16        ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                      ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                        ; Library ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------+---------+
+; counter.v                        ; yes             ; User Verilog HDL File  ; /home/paok/Documents/Verilog_Labs/Counter/counter.v ;         ;
+; div.v                            ; yes             ; User Verilog HDL File  ; /home/paok/Documents/Verilog_Labs/Counter/div.v     ;         ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 62        ;
+;                                             ;           ;
+; Total combinational functions               ; 62        ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 10        ;
+;     -- 3 input functions                    ; 14        ;
+;     -- <=2 input functions                  ; 38        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 26        ;
+;     -- arithmetic mode                      ; 36        ;
+;                                             ;           ;
+; Total registers                             ; 40        ;
+;     -- Dedicated logic registers            ; 40        ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 10        ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; rst~input ;
+; Maximum fan-out                             ; 40        ;
+; Total fan-out                               ; 299       ;
+; Average fan-out                             ; 2.45      ;
++---------------------------------------------+-----------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                     ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name      ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------+-------------+--------------+
+; |counter                   ; 62 (7)              ; 40 (7)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 10   ; 0            ; 0          ; |counter                 ; counter     ; work         ;
+;    |clk_divider:DIV|       ; 55 (55)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |counter|clk_divider:DIV ; clk_divider ; work         ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 40    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 40    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 6     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 10                          ;
+; cycloneiii_ff         ; 40                          ;
+;     CLR               ; 34                          ;
+;     ENA CLR           ; 6                           ;
+; cycloneiii_lcell_comb ; 62                          ;
+;     arith             ; 36                          ;
+;         2 data inputs ; 35                          ;
+;         3 data inputs ; 1                           ;
+;     normal            ; 26                          ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 13                          ;
+;         4 data inputs ; 10                          ;
+;                       ;                             ;
+; Max LUT depth         ; 4.40                        ;
+; Average LUT depth     ; 3.11                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
+Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Mar  9 16:47:13 2022
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off counter -c counter --analysis_and_elaboration
+    Info: Processing started: Thu Mar 10 21:45:00 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off counter -c counter
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file counter.v
     Info (12023): Found entity 1: counter File: /home/paok/Documents/Verilog_Labs/Counter/counter.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file counter_tb.v
     Info (12023): Found entity 1: counter_tb File: /home/paok/Documents/Verilog_Labs/Counter/counter_tb.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file div.v
+    Info (12023): Found entity 1: clk_divider File: /home/paok/Documents/Verilog_Labs/Counter/div.v Line: 1
 Info (12127): Elaborating entity "counter" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at counter.v(12): truncated value with size 32 to match size of target (7) File: /home/paok/Documents/Verilog_Labs/Counter/counter.v Line: 12
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 869 megabytes
-    Info: Processing ended: Wed Mar  9 16:47:18 2022
+Warning (10230): Verilog HDL assignment warning at counter.v(18): truncated value with size 32 to match size of target (7) File: /home/paok/Documents/Verilog_Labs/Counter/counter.v Line: 18
+Info (12128): Elaborating entity "clk_divider" for hierarchy "clk_divider:DIV" File: /home/paok/Documents/Verilog_Labs/Counter/counter.v Line: 10
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 72 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 7 output pins
+    Info (21061): Implemented 62 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 692 megabytes
+    Info: Processing ended: Thu Mar 10 21:45:05 2022
     Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:17
 

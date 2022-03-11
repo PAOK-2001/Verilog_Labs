@@ -20,15 +20,27 @@
 					"strict" : false
 				},
 				{
+					"name" : "count[4]",
+					"strict" : false
+				},
+				{
+					"name" : "count[5]",
+					"strict" : false
+				},
+				{
+					"name" : "count[6]",
+					"strict" : false
+				},
+				{
+					"name" : "en",
+					"strict" : false
+				},
+				{
 					"name" : "rst",
 					"strict" : false
 				},
 				{
 					"name" : "clk",
-					"strict" : false
-				},
-				{
-					"name" : "en",
 					"strict" : false
 				}
 			]
