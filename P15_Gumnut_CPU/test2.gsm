@@ -1,0 +1,18 @@
+; test add and subtract with carry
+
+	text
+	org	0		; reset
+	jmp	begin
+
+	org	1		; interrupt service
+	reti
+
+	org	16
+begin:	disi
+	addc r1, r0, 127	; r1 = 127, C = 0
+	addc r2, r1, 128	; r2 = 255, C = 0
+	addc r3, r2, 1		; r3 = 0, C = 1
+	subc r4, r3, 1		; r4 = 254, C = 1
+	subc r5, r4, 128	; r5 = 125, C = 0
+	subc r6, r5, 125	; r6 = 0, C = 0
+stop:	stby

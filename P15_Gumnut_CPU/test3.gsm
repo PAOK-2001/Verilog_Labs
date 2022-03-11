@@ -1,0 +1,47 @@
+; test arithmetic/logical and shift instructions
+
+	text
+	org	0		; reset
+	jmp	begin
+
+	org	1		; interrupt service
+	reti
+
+	org	16
+begin:	disi
+
+	add r1, r0, 1		; r1 = 00000001
+	add r2, r0, 4		; r2 = 00000100
+	add r3, r0, 16		; r3 = 00010000
+	add r4, r0, 64		; r4 = 01000000
+	add r5, r0, r0		; r5 = 00000000
+ 	or  r5, r5, r1		; r5 = 00000001
+ 	or  r5, r5, r2		; r5 = 00000101
+ 	or  r5, r5, r3		; r5 = 00010101
+ 	or  r5, r5, r4		; r5 = 01010101
+
+ 	shl r1, r1, 1		; r1 = 00000010
+ 	shl r2, r2, 1		; r2 = 00001000
+ 	shl r3, r3, 1		; r3 = 00100000
+	shl r4, r4, 1		; r4 = 10000000
+	or  r5, r5, r1		; r5 = 01010111
+	or  r5, r5, r2		; r5 = 01011111
+	or  r5, r5, r3		; r5 = 01111111
+	or  r5, r5, r4		; r5 = 11111111
+
+	ror r1, r1, 1		; r1 = 00000001
+	ror r2, r2, 1		; r2 = 00000100
+	ror r3, r3, 1		; r3 = 00010000
+	ror r4, r4, 1		; r4 = 01000000
+	xor r6, r5, r1		; r6 = 11111110
+ 	xor r6, r6, r2		; r6 = 11111010
+ 	xor r6, r6, r3		; r6 = 11101010
+ 	xor r6, r6, r4		; r6 = 10101010
+
+	mask r7, r5, r6		; r7 = 01010101
+	xor r7, r7, r1		; r7 = 01010100
+ 	xor r7, r7, r2		; r7 = 01010000
+ 	xor r7, r7, r3		; r7 = 01000000
+ 	xor r7, r7, r4		; r7 = 00000000
+
+stop:	stby
