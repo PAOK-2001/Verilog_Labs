@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 dC:/Practicas/Verilog_Labs/ALU/simulation/modelsim
 vALU
-Z1 !s110 1646963444
+Z1 !s110 1646969740
 !i10b 1
 !s100 OYM[BRYMA@o0mkz8SgnRe0
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -26,7 +26,7 @@ Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1646963444.000000
+Z6 !s108 1646969740.000000
 !s107 C:/Practicas/Verilog_Labs/ALU/ALU.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Practicas/Verilog_Labs/ALU|C:/Practicas/Verilog_Labs/ALU/ALU.v|
 !i113 1
@@ -35,23 +35,23 @@ Z8 !s92 -vlog01compat -work work +incdir+C:/Practicas/Verilog_Labs/ALU
 Z9 tCvgOpt 0
 n@a@l@u
 vALU_display
-R1
+Z10 !s110 1646969741
 !i10b 1
-!s100 fg]iY`@`2n?G:B3m4[f8Z2
+!s100 oQ@S133hSFN4g[W@czmUL0
 R2
-I@CE=MUl^SC8KW2kI01Ngl2
+IA=Q>A[MgZgmZH`=4hiIG=2
 R3
 R0
-R4
+w1646969613
 8C:/Practicas/Verilog_Labs/ALU/ALU_display.v
 FC:/Practicas/Verilog_Labs/ALU/ALU_display.v
 !i122 2
-L0 1 88
+L0 1 89
 R5
 r1
 !s85 0
 31
-R6
+Z11 !s108 1646969741.000000
 !s107 C:/Practicas/Verilog_Labs/ALU/ALU_display.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Practicas/Verilog_Labs/ALU|C:/Practicas/Verilog_Labs/ALU/ALU_display.v|
 !i113 1
@@ -60,23 +60,23 @@ R8
 R9
 n@a@l@u_display
 vALU_tb
-!s110 1646963445
+R10
 !i10b 1
-!s100 Ul:AeBMNB@zZ2oRKO]mlg3
+!s100 <]RG8`4PKgj3HVRNimYi80
 R2
-I?U?7=<G_5o8H:D2hCPji63
+I_<1on`?SX;FOmc;Sa[DK62
 R3
 R0
-R4
+w1646969615
 8C:/Practicas/Verilog_Labs/ALU/ALU_tb.v
 FC:/Practicas/Verilog_Labs/ALU/ALU_tb.v
 !i122 3
-L0 1 72
+L0 1 94
 R5
 r1
 !s85 0
 31
-R6
+R11
 !s107 C:/Practicas/Verilog_Labs/ALU/ALU_tb.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Practicas/Verilog_Labs/ALU|C:/Practicas/Verilog_Labs/ALU/ALU_tb.v|
 !i113 1

@@ -3,20 +3,20 @@ clk => clk.IN1
 clc => clc.IN2
 button => button.IN1
 countSelect => countSelect.IN1
-display_unidades[0] << BCD:DISPLAY_UNIDADES.display7Segment
-display_unidades[1] << BCD:DISPLAY_UNIDADES.display7Segment
-display_unidades[2] << BCD:DISPLAY_UNIDADES.display7Segment
-display_unidades[3] << BCD:DISPLAY_UNIDADES.display7Segment
-display_unidades[4] << BCD:DISPLAY_UNIDADES.display7Segment
-display_unidades[5] << BCD:DISPLAY_UNIDADES.display7Segment
-display_unidades[6] << BCD:DISPLAY_UNIDADES.display7Segment
-display_decenas[0] << BCD:DISPLAY_DECENAS.display7Segment
-display_decenas[1] << BCD:DISPLAY_DECENAS.display7Segment
-display_decenas[2] << BCD:DISPLAY_DECENAS.display7Segment
-display_decenas[3] << BCD:DISPLAY_DECENAS.display7Segment
-display_decenas[4] << BCD:DISPLAY_DECENAS.display7Segment
-display_decenas[5] << BCD:DISPLAY_DECENAS.display7Segment
-display_decenas[6] << BCD:DISPLAY_DECENAS.display7Segment
+display_unidades[0] <= BCD:DISPLAY_UNIDADES.display7Segment
+display_unidades[1] <= BCD:DISPLAY_UNIDADES.display7Segment
+display_unidades[2] <= BCD:DISPLAY_UNIDADES.display7Segment
+display_unidades[3] <= BCD:DISPLAY_UNIDADES.display7Segment
+display_unidades[4] <= BCD:DISPLAY_UNIDADES.display7Segment
+display_unidades[5] <= BCD:DISPLAY_UNIDADES.display7Segment
+display_unidades[6] <= BCD:DISPLAY_UNIDADES.display7Segment
+display_decenas[0] <= BCD:DISPLAY_DECENAS.display7Segment
+display_decenas[1] <= BCD:DISPLAY_DECENAS.display7Segment
+display_decenas[2] <= BCD:DISPLAY_DECENAS.display7Segment
+display_decenas[3] <= BCD:DISPLAY_DECENAS.display7Segment
+display_decenas[4] <= BCD:DISPLAY_DECENAS.display7Segment
+display_decenas[5] <= BCD:DISPLAY_DECENAS.display7Segment
+display_decenas[6] <= BCD:DISPLAY_DECENAS.display7Segment
 
 
 |UpDown|clk_divider:DIVIDER

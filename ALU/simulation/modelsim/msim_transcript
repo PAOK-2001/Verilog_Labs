@@ -13,51 +13,53 @@
 # 
 # vlog -vlog01compat -work work +incdir+C:/Practicas/Verilog_Labs/ALU {C:/Practicas/Verilog_Labs/ALU/ALU.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:50:44 on Mar 10,2022
+# Start time: 21:35:40 on Mar 10,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Practicas/Verilog_Labs/ALU" C:/Practicas/Verilog_Labs/ALU/ALU.v 
 # -- Compiling module ALU
 # 
 # Top level modules:
 # 	ALU
-# End time: 19:50:44 on Mar 10,2022, Elapsed time: 0:00:00
+# End time: 21:35:40 on Mar 10,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Practicas/Verilog_Labs/ALU {C:/Practicas/Verilog_Labs/ALU/BCD.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:50:44 on Mar 10,2022
+# Start time: 21:35:40 on Mar 10,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Practicas/Verilog_Labs/ALU" C:/Practicas/Verilog_Labs/ALU/BCD.v 
 # -- Compiling module BCD
 # 
 # Top level modules:
 # 	BCD
-# End time: 19:50:44 on Mar 10,2022, Elapsed time: 0:00:00
+# End time: 21:35:40 on Mar 10,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Practicas/Verilog_Labs/ALU {C:/Practicas/Verilog_Labs/ALU/ALU_display.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:50:44 on Mar 10,2022
+# Start time: 21:35:41 on Mar 10,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Practicas/Verilog_Labs/ALU" C:/Practicas/Verilog_Labs/ALU/ALU_display.v 
 # -- Compiling module ALU_display
 # 
 # Top level modules:
 # 	ALU_display
-# End time: 19:50:44 on Mar 10,2022, Elapsed time: 0:00:00
+# End time: 21:35:41 on Mar 10,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -vlog01compat -work work +incdir+C:/Practicas/Verilog_Labs/ALU {C:/Practicas/Verilog_Labs/ALU/ALU_tb.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:50:44 on Mar 10,2022
+# Start time: 21:35:41 on Mar 10,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Practicas/Verilog_Labs/ALU" C:/Practicas/Verilog_Labs/ALU/ALU_tb.v 
 # -- Compiling module ALU_tb
 # 
 # Top level modules:
 # 	ALU_tb
-# End time: 19:50:45 on Mar 10,2022, Elapsed time: 0:00:01
+# End time: 21:35:41 on Mar 10,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs="+acc"  ALU_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs=""+acc"" ALU_tb 
-# Start time: 19:50:45 on Mar 10,2022
+# Start time: 21:35:41 on Mar 10,2022
 # Loading work.ALU_tb
+# Loading work.ALU_display
 # Loading work.ALU
+# Loading work.BCD
 # 
 # add wave *
 # view structure
@@ -65,8 +67,8 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# ** Note: $stop    : C:/Practicas/Verilog_Labs/ALU/ALU_tb.v(69)
+# ** Note: $stop    : C:/Practicas/Verilog_Labs/ALU/ALU_tb.v(91)
 #    Time: 70 ps  Iteration: 0  Instance: /ALU_tb
-# Break in Module ALU_tb at C:/Practicas/Verilog_Labs/ALU/ALU_tb.v line 69
-# End time: 20:54:18 on Mar 10,2022, Elapsed time: 1:03:33
+# Break in Module ALU_tb at C:/Practicas/Verilog_Labs/ALU/ALU_tb.v line 91
+# End time: 22:15:07 on Mar 10,2022, Elapsed time: 0:39:26
 # Errors: 0, Warnings: 0

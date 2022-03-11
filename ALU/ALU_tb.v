@@ -1,70 +1,92 @@
 module ALU_tb();
 
-reg  [3:0] num1_reg, num2_reg;
-reg  [1:0] operationSelect_reg;
-reg  shiftButton1_reg, shiftButton2_reg;
-wire [7:0] result_wire;
+	reg   [3:0] alu_in1, alu_in2;
+	reg   [1:0] alu_selector;
+	reg         alu_switch1, alu_switch2;
+	
+	wire  [7:0] alu_out;
+	
+	wire  [6:0] in1_units_display,
+					in1_decenas_display,
+						  
+					in2_units_display,
+					in2_decenas_display,
+						  
+					out_unit_display,
+					out_decenas_display,
+					out_centenas_display;
 
 
-ALU uut(
+ALU_display uut(
 
-	.num1(num1_reg),
-	.num2(num2_reg),
-	.operationSelect(operationSelect_reg),
-	.shiftButton1(shiftButton1_reg), 
-	.shiftButton2(shiftButton2_reg),
-	.result(result_wire)
+	.alu_in1(alu_in1), 
+	.alu_in2(alu_in2),
+	.alu_selector(alu_selector),
+	.alu_switch1(alu_switch1),
+	.alu_switch2(alu_switch2),
+	
+	.alu_out(alu_out),
+	
+	.in1_units_display(in1_units_display),
+	.in1_decenas_display(in1_decenas_display),
+						  
+	.in2_units_display(in2_units_display),
+	.in2_decenas_display(in2_decenas_display),
+						  
+	.out_unit_display(out_unit_display),
+	.out_decenas_display(out_decenas_display),
+	.out_centenas_display(out_centenas_display)	
 
 );
 
 initial begin
-	num1_reg = 4'b1010;
-	num2_reg = 4'b0101;
-	shiftButton1_reg = 0;
-	shiftButton2_reg = 0;
-	operationSelect_reg = 2'b00;
+	alu_in1 = 4'b1010;
+	alu_in2 = 4'b0101;
+	alu_switch1 = 0;
+	alu_switch2 = 0;
+	alu_selector = 2'b00;
 	#10
 	
-	num1_reg = 4'b1010;
-	num2_reg = 4'b0101;
-	shiftButton1_reg = 0;
-	shiftButton2_reg = 0;
-	operationSelect_reg = 2'b01;
+	alu_in1 = 4'b1010;
+	alu_in2 = 4'b0101;
+	alu_switch1 = 0;
+	alu_switch2 = 0;
+	alu_selector = 2'b01;
 	#10
 	
-	num1_reg = 4'b1010;
-	num2_reg = 4'b0101;
-	shiftButton1_reg = 0;
-	shiftButton2_reg = 0;
-	operationSelect_reg = 2'b10;
+	alu_in1 = 4'b1010;
+	alu_in2 = 4'b0101;
+	alu_switch1 = 0;
+	alu_switch2 = 0;
+	alu_selector = 2'b10;
 	#10
 	
-	num1_reg = 4'b1010;
-	num2_reg = 4'b0101;
-	shiftButton1_reg = 0;
-	shiftButton2_reg = 0;
-	operationSelect_reg = 2'b11;
+	alu_in1 = 4'b1010;
+	alu_in2 = 4'b0101;
+	alu_switch1 = 0;
+	alu_switch2 = 0;
+	alu_selector = 2'b11;
 	#10
 	
-	num1_reg = 4'b1010;
-	num2_reg = 4'b0101;
-	shiftButton1_reg = 1;
-	shiftButton2_reg = 0;
-	operationSelect_reg = 2'b10;
+	alu_in1 = 4'b1010;
+	alu_in2 = 4'b0101;
+	alu_switch1 = 1;
+	alu_switch2 = 0;
+	alu_selector = 2'b01;
 	#10
 	
-	num1_reg = 4'b1010;
-	num2_reg = 4'b0101;
-	shiftButton1_reg = 0;
-	shiftButton2_reg = 1;
-	operationSelect_reg = 2'b01;
+	alu_in1 = 4'b1010;
+	alu_in2 = 4'b0101;
+	alu_switch1 = 0;
+	alu_switch2 = 1;
+	alu_selector = 2'b01;
 	#10
 	
-	num1_reg = 4'b1010;
-	num2_reg = 4'b0101;
-	shiftButton1_reg = 1;
-	shiftButton2_reg = 1;
-	operationSelect_reg = 2'b11;
+	alu_in1 = 4'b1010;
+	alu_in2 = 4'b0101;
+	alu_switch1 = 1;
+	alu_switch2 = 1;
+	alu_selector = 2'b01;
 	#10
 	$stop;
 end

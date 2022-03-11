@@ -3,6 +3,7 @@ module ALU_display(
 	input   [3:0] alu_in1, alu_in2,
 	input   [1:0] alu_selector,
 	input         alu_switch1, alu_switch2,
+	
 	output  [7:0] alu_out,
 	
 	output  [6:0] in1_units_display,
