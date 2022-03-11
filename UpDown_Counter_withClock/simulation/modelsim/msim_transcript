@@ -1,0 +1,54 @@
+# Reading pref.tcl
+# ERROR: No extended dataflow license exists
+# do UpDown_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Practicas/Verilog_Labs/UpDown_Counter_withClock {C:/Practicas/Verilog_Labs/UpDown_Counter_withClock/clk_divider.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:41:51 on Mar 10,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Practicas/Verilog_Labs/UpDown_Counter_withClock" C:/Practicas/Verilog_Labs/UpDown_Counter_withClock/clk_divider.v 
+# -- Compiling module clk_divider
+# 
+# Top level modules:
+# 	clk_divider
+# End time: 23:41:51 on Mar 10,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Practicas/Verilog_Labs/UpDown_Counter_withClock {C:/Practicas/Verilog_Labs/UpDown_Counter_withClock/counter.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:41:51 on Mar 10,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Practicas/Verilog_Labs/UpDown_Counter_withClock" C:/Practicas/Verilog_Labs/UpDown_Counter_withClock/counter.v 
+# -- Compiling module counter
+# 
+# Top level modules:
+# 	counter
+# End time: 23:41:51 on Mar 10,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Practicas/Verilog_Labs/UpDown_Counter_withClock {C:/Practicas/Verilog_Labs/UpDown_Counter_withClock/UpDown.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:41:51 on Mar 10,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Practicas/Verilog_Labs/UpDown_Counter_withClock" C:/Practicas/Verilog_Labs/UpDown_Counter_withClock/UpDown.v 
+# -- Compiling module UpDown
+# 
+# Top level modules:
+# 	UpDown
+# End time: 23:41:51 on Mar 10,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Practicas/Verilog_Labs/UpDown_Counter_withClock {C:/Practicas/Verilog_Labs/UpDown_Counter_withClock/BCD.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:41:51 on Mar 10,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Practicas/Verilog_Labs/UpDown_Counter_withClock" C:/Practicas/Verilog_Labs/UpDown_Counter_withClock/BCD.v 
+# -- Compiling module BCD
+# 
+# Top level modules:
+# 	BCD
+# End time: 23:41:52 on Mar 10,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 

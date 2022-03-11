@@ -3,15 +3,15 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -4.585
-TNS   : -66.647
+Slack : -4.499
+TNS   : -66.420
 
 Type  : Slow 1200mV 85C Model Setup 'clk_divider:DIVIDER|clk_div'
 Slack : -1.162
 TNS   : -5.899
 
 Type  : Slow 1200mV 85C Model Hold 'clk_divider:DIVIDER|clk_div'
-Slack : 0.460
+Slack : 0.435
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
@@ -27,15 +27,15 @@ Slack : -1.403
 TNS   : -9.821
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -4.152
-TNS   : -57.320
+Slack : -4.073
+TNS   : -57.125
 
 Type  : Slow 1200mV 0C Model Setup 'clk_divider:DIVIDER|clk_div'
 Slack : -0.958
 TNS   : -4.718
 
 Type  : Slow 1200mV 0C Model Hold 'clk_divider:DIVIDER|clk_div'
-Slack : 0.421
+Slack : 0.400
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
@@ -51,15 +51,15 @@ Slack : -1.403
 TNS   : -9.821
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -1.528
-TNS   : -9.408
+Slack : -1.477
+TNS   : -9.109
 
 Type  : Fast 1200mV 0C Model Setup 'clk_divider:DIVIDER|clk_div'
 Slack : 0.141
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clk_divider:DIVIDER|clk_div'
-Slack : 0.185
+Slack : 0.174
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clk'

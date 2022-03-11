@@ -95,3 +95,5 @@
 # ** Note: $stop    : C:/Practicas/Verilog_Labs/UpDown_Counter/UpDown_tb.v(81)
 #    Time: 400 ps  Iteration: 0  Instance: /UpDown_tb
 # Break in Module UpDown_tb at C:/Practicas/Verilog_Labs/UpDown_Counter/UpDown_tb.v line 81
+# End time: 23:33:45 on Mar 10,2022, Elapsed time: 0:01:22
+# Errors: 0, Warnings: 2
