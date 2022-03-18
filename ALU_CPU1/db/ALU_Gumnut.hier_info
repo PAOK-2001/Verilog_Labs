@@ -159,21 +159,21 @@ IR[17] => ALU_right_operand.OUTPUTSELECT
 IR[17] => ALU_right_operand.OUTPUTSELECT
 IR[17] => Equal0.IN0
 IR[17] => Equal1.IN0
-ALU_result[0] << ALU_result.DB_MAX_OUTPUT_PORT_TYPE
-ALU_result[1] << ALU_result.DB_MAX_OUTPUT_PORT_TYPE
-ALU_result[2] << ALU_result.DB_MAX_OUTPUT_PORT_TYPE
-ALU_result[3] << ALU_result.DB_MAX_OUTPUT_PORT_TYPE
-ALU_result[4] << ALU_result.DB_MAX_OUTPUT_PORT_TYPE
-ALU_result[5] << ALU_result.DB_MAX_OUTPUT_PORT_TYPE
-ALU_result[6] << ALU_result.DB_MAX_OUTPUT_PORT_TYPE
-ALU_result[7] << ALU_result.DB_MAX_OUTPUT_PORT_TYPE
-ALU_shift_result[0] << ALU_shift_result[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
-ALU_shift_result[1] << ALU_shift_result[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
-ALU_shift_result[2] << ALU_shift_result[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
-ALU_shift_result[3] << ALU_shift_result[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
-ALU_shift_result[4] << ALU_shift_result[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
-ALU_shift_result[5] << ALU_shift_result[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
-ALU_shift_result[6] << ALU_shift_result[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
-ALU_shift_result[7] << ALU_shift_result[7]$latch.DB_MAX_OUTPUT_PORT_TYPE
+ALU_result[0] <= ALU_result.DB_MAX_OUTPUT_PORT_TYPE
+ALU_result[1] <= ALU_result.DB_MAX_OUTPUT_PORT_TYPE
+ALU_result[2] <= ALU_result.DB_MAX_OUTPUT_PORT_TYPE
+ALU_result[3] <= ALU_result.DB_MAX_OUTPUT_PORT_TYPE
+ALU_result[4] <= ALU_result.DB_MAX_OUTPUT_PORT_TYPE
+ALU_result[5] <= ALU_result.DB_MAX_OUTPUT_PORT_TYPE
+ALU_result[6] <= ALU_result.DB_MAX_OUTPUT_PORT_TYPE
+ALU_result[7] <= ALU_result.DB_MAX_OUTPUT_PORT_TYPE
+ALU_shift_result[0] <= ALU_shift_result[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+ALU_shift_result[1] <= ALU_shift_result[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+ALU_shift_result[2] <= ALU_shift_result[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+ALU_shift_result[3] <= ALU_shift_result[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+ALU_shift_result[4] <= ALU_shift_result[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+ALU_shift_result[5] <= ALU_shift_result[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+ALU_shift_result[6] <= ALU_shift_result[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+ALU_shift_result[7] <= ALU_shift_result[7]$latch.DB_MAX_OUTPUT_PORT_TYPE
 
 
