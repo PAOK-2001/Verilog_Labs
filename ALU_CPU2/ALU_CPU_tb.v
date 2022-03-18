@@ -39,7 +39,7 @@ initial begin
 	
 	rst_i = 0;
 	inst_ack_i = 1;
-	IR = 18'b111000011001101000;
+	IR = 18'b111000000010001100;
 	int_req = 1;
 	int_en = 1;
 	data_ack_i = 1;
