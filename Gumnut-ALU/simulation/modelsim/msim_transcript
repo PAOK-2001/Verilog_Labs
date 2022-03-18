@@ -12,34 +12,31 @@
 # 
 # vlog -vlog01compat -work work +incdir+/home/paok/Documents/Verilog_Labs/Gumnut-ALU {/home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 08:04:11 on Mar 14,2022
+# Start time: 22:43:37 on Mar 17,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/paok/Documents/Verilog_Labs/Gumnut-ALU" /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v 
 # -- Compiling module ALU_Gumnut
 # 
 # Top level modules:
 # 	ALU_Gumnut
-# End time: 08:04:11 on Mar 14,2022, Elapsed time: 0:00:00
+# End time: 22:43:37 on Mar 17,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -vlog01compat -work work +incdir+/home/paok/Documents/Verilog_Labs/Gumnut-ALU {/home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut_tb.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 08:04:11 on Mar 14,2022
+# Start time: 22:43:37 on Mar 17,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/paok/Documents/Verilog_Labs/Gumnut-ALU" /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut_tb.v 
 # -- Compiling module ALU_Gumnut_tb
 # 
 # Top level modules:
 # 	ALU_Gumnut_tb
-# End time: 08:04:11 on Mar 14,2022, Elapsed time: 0:00:00
+# End time: 22:43:37 on Mar 17,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs="+acc"  ALU_Gumnut_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs=""+acc"" ALU_Gumnut_tb 
-# Start time: 08:04:11 on Mar 14,2022
+# Start time: 22:43:37 on Mar 17,2022
 # Loading work.ALU_Gumnut_tb
 # Loading work.ALU_Gumnut
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'UUT'.  Expected 5, found 4.
-#    Time: 0 ps  Iteration: 0  Instance: /ALU_Gumnut_tb/UUT File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut_tb.v Line: 9
-# ** Warning: (vsim-3722) /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut_tb.v(9): [TFMPC] - Missing connection for port 'ALU_shift_result'.
 # 
 # add wave *
 # view structure
@@ -47,8 +44,8 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# ** Note: $stop    : /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut_tb.v(64)
-#    Time: 200 ps  Iteration: 0  Instance: /ALU_Gumnut_tb
-# Break in Module ALU_Gumnut_tb at /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut_tb.v line 64
-# End time: 08:06:39 on Mar 14,2022, Elapsed time: 0:02:28
-# Errors: 0, Warnings: 2
+# ** Note: $stop    : /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut_tb.v(55)
+#    Time: 175 ps  Iteration: 0  Instance: /ALU_Gumnut_tb
+# Break in Module ALU_Gumnut_tb at /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut_tb.v line 55
+# End time: 22:43:46 on Mar 17,2022, Elapsed time: 0:00:09
+# Errors: 0, Warnings: 0

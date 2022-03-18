@@ -1,0 +1,7 @@
+module fsm_gumnut(
+	// Instruction Register
+
+);
+
+
+endmodule

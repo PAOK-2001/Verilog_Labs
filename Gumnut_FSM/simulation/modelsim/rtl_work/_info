@@ -1,0 +1,59 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/paok/Documents/Verilog_Labs/Gumnut_FSM/simulation/modelsim
+vfsm_gumnut
+Z1 !s110 1647576872
+!i10b 1
+!s100 0RCbYAZWjG_EZmBMD1HS33
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I:DVZ57kFB5nX4F7DmK86g3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1647573303
+8/home/paok/Documents/Verilog_Labs/Gumnut_FSM/fsm_gumnut.v
+F/home/paok/Documents/Verilog_Labs/Gumnut_FSM/fsm_gumnut.v
+!i122 0
+L0 1 178
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1647576872.000000
+!s107 /home/paok/Documents/Verilog_Labs/Gumnut_FSM/fsm_gumnut.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/paok/Documents/Verilog_Labs/Gumnut_FSM|/home/paok/Documents/Verilog_Labs/Gumnut_FSM/fsm_gumnut.v|
+!i113 1
+Z6 o-vlog01compat -work work
+Z7 !s92 -vlog01compat -work work +incdir+/home/paok/Documents/Verilog_Labs/Gumnut_FSM
+Z8 tCvgOpt 0
+vfsm_gumnut_tb
+R1
+!i10b 1
+!s100 Aem:Rd0GCdjUIoRfbX^D30
+R2
+ITG:8FGZmk[>53hjEGk58I3
+R3
+R0
+w1647576827
+8/home/paok/Documents/Verilog_Labs/Gumnut_FSM/fsm_gumnut_tb.v
+F/home/paok/Documents/Verilog_Labs/Gumnut_FSM/fsm_gumnut_tb.v
+!i122 1
+L0 1 62
+R4
+r1
+!s85 0
+31
+R5
+!s107 /home/paok/Documents/Verilog_Labs/Gumnut_FSM/fsm_gumnut_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/paok/Documents/Verilog_Labs/Gumnut_FSM|/home/paok/Documents/Verilog_Labs/Gumnut_FSM/fsm_gumnut_tb.v|
+!i113 1
+R6
+R7
+R8

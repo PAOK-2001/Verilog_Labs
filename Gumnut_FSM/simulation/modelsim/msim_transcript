@@ -1,0 +1,51 @@
+# ERROR: No extended dataflow license exists
+# do fsm_gumnut_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying /home/paok/intelFPGA_lite/20.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+/home/paok/Documents/Verilog_Labs/Gumnut_FSM {/home/paok/Documents/Verilog_Labs/Gumnut_FSM/fsm_gumnut.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:14:32 on Mar 17,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/paok/Documents/Verilog_Labs/Gumnut_FSM" /home/paok/Documents/Verilog_Labs/Gumnut_FSM/fsm_gumnut.v 
+# -- Compiling module fsm_gumnut
+# 
+# Top level modules:
+# 	fsm_gumnut
+# End time: 22:14:32 on Mar 17,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+/home/paok/Documents/Verilog_Labs/Gumnut_FSM {/home/paok/Documents/Verilog_Labs/Gumnut_FSM/fsm_gumnut_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:14:32 on Mar 17,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/paok/Documents/Verilog_Labs/Gumnut_FSM" /home/paok/Documents/Verilog_Labs/Gumnut_FSM/fsm_gumnut_tb.v 
+# -- Compiling module fsm_gumnut_tb
+# 
+# Top level modules:
+# 	fsm_gumnut_tb
+# End time: 22:14:32 on Mar 17,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs="+acc"  fsm_gumnut_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs=""+acc"" fsm_gumnut_tb 
+# Start time: 22:14:32 on Mar 17,2022
+# Loading work.fsm_gumnut_tb
+# Loading work.fsm_gumnut
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Note: $stop    : /home/paok/Documents/Verilog_Labs/Gumnut_FSM/fsm_gumnut_tb.v(58)
+#    Time: 290 ps  Iteration: 0  Instance: /fsm_gumnut_tb
+# Break in Module fsm_gumnut_tb at /home/paok/Documents/Verilog_Labs/Gumnut_FSM/fsm_gumnut_tb.v line 58
+# End time: 22:15:51 on Mar 17,2022, Elapsed time: 0:01:19
+# Errors: 0, Warnings: 0

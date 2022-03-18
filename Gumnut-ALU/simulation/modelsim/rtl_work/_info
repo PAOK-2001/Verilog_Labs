@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 d/home/paok/Documents/Verilog_Labs/Gumnut-ALU/simulation/modelsim
 vALU_Gumnut
-Z1 !s110 1647266651
+Z1 !s110 1647578617
 !i10b 1
 !s100 LgGMlTg<I3P@d>ZhVOEAP0
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -26,7 +26,7 @@ Z4 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z5 !s108 1647266651.000000
+Z5 !s108 1647578617.000000
 !s107 /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/paok/Documents/Verilog_Labs/Gumnut-ALU|/home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v|
 !i113 1
@@ -37,16 +37,16 @@ n@a@l@u_@gumnut
 vALU_Gumnut_tb
 R1
 !i10b 1
-!s100 QgV4DWacnfb3G43=:;cDW3
+!s100 cJgFg1kg3RJ^Tj2CoRdTT2
 R2
-IK?UIDNA>gO02_iH9:0izf2
+I4OdCc0DIcNeJlIm>;6HTF0
 R3
 R0
-w1647130960
+w1647578591
 8/home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut_tb.v
 F/home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut_tb.v
 !i122 1
-L0 1 67
+L0 1 58
 R4
 r1
 !s85 0
