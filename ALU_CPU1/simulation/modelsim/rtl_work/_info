@@ -1,0 +1,61 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/paok/Documents/Verilog_Labs/Gumnut-ALU/simulation/modelsim
+vALU_Gumnut
+Z1 !s110 1647266651
+!i10b 1
+!s100 LgGMlTg<I3P@d>ZhVOEAP0
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IHGUI8ko7Wd_H01H?MG2fo0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1647129571
+8/home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v
+F/home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v
+!i122 0
+L0 1 154
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1647266651.000000
+!s107 /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/paok/Documents/Verilog_Labs/Gumnut-ALU|/home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v|
+!i113 1
+Z6 o-vlog01compat -work work
+Z7 !s92 -vlog01compat -work work +incdir+/home/paok/Documents/Verilog_Labs/Gumnut-ALU
+Z8 tCvgOpt 0
+n@a@l@u_@gumnut
+vALU_Gumnut_tb
+R1
+!i10b 1
+!s100 QgV4DWacnfb3G43=:;cDW3
+R2
+IK?UIDNA>gO02_iH9:0izf2
+R3
+R0
+w1647130960
+8/home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut_tb.v
+F/home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut_tb.v
+!i122 1
+L0 1 67
+R4
+r1
+!s85 0
+31
+R5
+!s107 /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/paok/Documents/Verilog_Labs/Gumnut-ALU|/home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut_tb.v|
+!i113 1
+R6
+R7
+R8
+n@a@l@u_@gumnut_tb

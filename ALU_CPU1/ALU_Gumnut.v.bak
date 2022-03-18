@@ -1,0 +1,28 @@
+module gumnut( 
+	 input clk_i,
+	 input rst_i,
+	 // Instruction memory bus
+	 output        inst_cyc_o,
+	 output        inst_stb_o,
+	 input         inst_ack_i,
+	 output [11:0] inst_adr_o,
+	 input  [17:0] inst_dat_i,
+	 // Data memory bus
+	 output        data_cyc_o,
+	 output        data_stb_o,
+	 output        data_we_o,
+	 input         data_ack_i,
+	 output  [7:0] data_adr_o,
+	 output  [7:0] data_dat_o,
+	 input   [7:0] data_dat_i,
+	 // I/O port bus
+	 output        port_cyc_o,
+	 output        port_stb_o,
+	 output        port_we_o,
+	 input         port_ack_i,
+	 output  [7:0] port_adr_o,
+	 output  [7:0] port_dat_o,
+	 input   [7:0] port_dat_i,
+	 // Interrupts
+	 input         int_req,
+	 output        int_ack );
