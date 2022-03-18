@@ -68,6 +68,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "GPR_rs[0]",
+					"strict" : false
+				},
+				{
 					"name" : "IR[16]",
 					"strict" : false
 				},
@@ -84,15 +88,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "IR[1]",
-					"strict" : false
-				},
-				{
 					"name" : "GPR_r2[0]",
-					"strict" : false
-				},
-				{
-					"name" : "GPR_rs[0]",
 					"strict" : false
 				},
 				{
@@ -101,6 +97,10 @@
 				},
 				{
 					"name" : "IR[2]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[1]",
 					"strict" : false
 				},
 				{
@@ -124,11 +124,19 @@
 					"strict" : false
 				},
 				{
+					"name" : "IR[3]",
+					"strict" : false
+				},
+				{
 					"name" : "GPR_rs[3]",
 					"strict" : false
 				},
 				{
 					"name" : "GPR_r2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[4]",
 					"strict" : false
 				},
 				{
@@ -140,6 +148,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "IR[5]",
+					"strict" : false
+				},
+				{
 					"name" : "GPR_rs[5]",
 					"strict" : false
 				},
@@ -148,11 +160,19 @@
 					"strict" : false
 				},
 				{
+					"name" : "IR[6]",
+					"strict" : false
+				},
+				{
 					"name" : "GPR_rs[6]",
 					"strict" : false
 				},
 				{
 					"name" : "GPR_r2[7]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[7]",
 					"strict" : false
 				},
 				{

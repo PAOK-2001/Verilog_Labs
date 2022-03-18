@@ -79,6 +79,8 @@ assign IR_mem_fn       = IR[15:14];
 assign IR_branch_fn    = IR[11:10];
 assign IR_jump_fn      = IR[12:12];
 assign IR_misc_fn      = IR[10:8];
+assign IR_immed  = IR[7:0];
+
 
 // Logic to assign operation given the first four bits of the instruction	 
   always @*  // ALU
@@ -143,6 +145,10 @@ assign IR_misc_fn      = IR[10:8];
       endcase
       ALU_result = ALU_shift_result;      
     end
+	 
+	always@* begin
+		cc_C <= ALU_C;
+	end
 
   //assign ALU_Z = ALU_result == 0;
 endmodule

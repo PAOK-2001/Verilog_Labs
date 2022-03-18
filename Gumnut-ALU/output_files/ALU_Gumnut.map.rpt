@@ -1,5 +1,5 @@
-Analysis & Synthesis report for ALU_Gumnut
-Wed Mar  9 22:58:24 2022
+Analysis & Elaboration report for ALU_Gumnut
+Mon Mar 14 08:04:08 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -7,18 +7,10 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Synthesis Summary
-  3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. User-Specified and Inferred Latches
-  9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Post-Synthesis Netlist Statistics for Top Partition
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Analysis & Elaboration Settings
+  5. Analysis & Elaboration Messages
 
 
 
@@ -43,29 +35,45 @@ https://fpgasoftware.intel.com/eula.
 
 
 +----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                     ;
+; Analysis & Elaboration Summary                                                   ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Mar  9 22:58:24 2022       ;
+; Analysis & Elaboration Status      ; Successful - Mon Mar 14 08:04:08 2022       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; ALU_Gumnut                                  ;
 ; Top-level Entity Name              ; ALU_Gumnut                                  ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 63                                          ;
-;     Total combinational functions  ; 63                                          ;
-;     Dedicated logic registers      ; 0                                           ;
-; Total registers                    ; 0                                           ;
-; Total pins                         ; 50                                          ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0                                           ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total PLLs                         ; 0                                           ;
-; UFM blocks                         ; 0                                           ;
-; ADC blocks                         ; 0                                           ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
+; UFM blocks                         ; N/A until Partition Merge                   ;
+; ADC blocks                         ; N/A until Partition Merge                   ;
 +------------------------------------+---------------------------------------------+
 
 
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
 +------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                              ;
+; Analysis & Elaboration Settings                                                                            ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
@@ -150,212 +158,49 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 16          ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                            ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                              ; Library ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------+---------+
-; ALU_Gumnut.v                     ; yes             ; User Verilog HDL File  ; /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v ;         ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------+---------+
-
-
-+--------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary            ;
-+---------------------------------------------+----------+
-; Resource                                    ; Usage    ;
-+---------------------------------------------+----------+
-; Estimated Total logic elements              ; 63       ;
-;                                             ;          ;
-; Total combinational functions               ; 63       ;
-; Logic element usage by number of LUT inputs ;          ;
-;     -- 4 input functions                    ; 22       ;
-;     -- 3 input functions                    ; 31       ;
-;     -- <=2 input functions                  ; 10       ;
-;                                             ;          ;
-; Logic elements by mode                      ;          ;
-;     -- normal mode                          ; 55       ;
-;     -- arithmetic mode                      ; 8        ;
-;                                             ;          ;
-; Total registers                             ; 0        ;
-;     -- Dedicated logic registers            ; 0        ;
-;     -- I/O registers                        ; 0        ;
-;                                             ;          ;
-; I/O pins                                    ; 50       ;
-;                                             ;          ;
-; Embedded Multiplier 9-bit elements          ; 0        ;
-;                                             ;          ;
-; Maximum fan-out node                        ; Equal1~0 ;
-; Maximum fan-out                             ; 20       ;
-; Total fan-out                               ; 267      ;
-; Average fan-out                             ; 1.64     ;
-+---------------------------------------------+----------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
-; |ALU_Gumnut                ; 63 (63)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 50   ; 0            ; 0          ; |ALU_Gumnut         ; ALU_Gumnut  ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+---------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                               ;
-+----------------------------------------------------+---------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
-+----------------------------------------------------+---------------------+------------------------+
-; ALU_shift_result[0]$latch                          ; always0             ; yes                    ;
-; ALU_shift_result[1]$latch                          ; always0             ; yes                    ;
-; ALU_shift_result[2]$latch                          ; always0             ; yes                    ;
-; ALU_shift_result[3]$latch                          ; always0             ; yes                    ;
-; ALU_shift_result[4]$latch                          ; always0             ; yes                    ;
-; ALU_shift_result[5]$latch                          ; always0             ; yes                    ;
-; ALU_shift_result[6]$latch                          ; always0             ; yes                    ;
-; ALU_shift_result[7]$latch                          ; always0             ; yes                    ;
-; Number of user-specified and inferred latches = 8  ;                     ;                        ;
-+----------------------------------------------------+---------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |ALU_Gumnut|ALU_fn         ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; No         ; |ALU_Gumnut|Add0           ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |ALU_Gumnut|Add0           ;
-; 9:1                ; 8 bits    ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; No         ; |ALU_Gumnut|ALU_result     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; boundary_port         ; 50                          ;
-; cycloneiii_lcell_comb ; 63                          ;
-;     arith             ; 8                           ;
-;         2 data inputs ; 1                           ;
-;         3 data inputs ; 7                           ;
-;     normal            ; 55                          ;
-;         2 data inputs ; 9                           ;
-;         3 data inputs ; 24                          ;
-;         4 data inputs ; 22                          ;
-;                       ;                             ;
-; Max LUT depth         ; 6.70                        ;
-; Average LUT depth     ; 4.85                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
-
-
-+-------------------------------+
-; Analysis & Synthesis Messages ;
-+-------------------------------+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Synthesis
+Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Mar  9 22:58:17 2022
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU_Gumnut -c ALU_Gumnut
+    Info: Processing started: Mon Mar 14 08:04:03 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU_Gumnut -c ALU_Gumnut --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file ALU_Gumnut.v
     Info (12023): Found entity 1: ALU_Gumnut File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file ALU_Gumnut_tb.v
+    Info (12023): Found entity 1: ALU_Gumnut_tb File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut_tb.v Line: 1
 Info (12127): Elaborating entity "ALU_Gumnut" for the top level hierarchy
 Warning (10036): Verilog HDL or VHDL warning at ALU_Gumnut.v(33): object "IR_mem_fn" assigned a value but never read File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 33
 Warning (10036): Verilog HDL or VHDL warning at ALU_Gumnut.v(34): object "IR_branch_fn" assigned a value but never read File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 34
 Warning (10036): Verilog HDL or VHDL warning at ALU_Gumnut.v(35): object "IR_jump_fn" assigned a value but never read File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 35
 Warning (10036): Verilog HDL or VHDL warning at ALU_Gumnut.v(36): object "IR_misc_fn" assigned a value but never read File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 36
-Warning (10858): Verilog HDL warning at ALU_Gumnut.v(41): object IR_immed used but never assigned File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 41
 Warning (10858): Verilog HDL warning at ALU_Gumnut.v(42): object IR_count used but never assigned File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 42
 Warning (10858): Verilog HDL warning at ALU_Gumnut.v(43): object IR_offset used but never assigned File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 43
 Warning (10036): Verilog HDL or VHDL warning at ALU_Gumnut.v(49): object "IR_decode_shift" assigned a value but never read File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 49
 Warning (10036): Verilog HDL or VHDL warning at ALU_Gumnut.v(51): object "IR_decode_jump" assigned a value but never read File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 51
 Warning (10036): Verilog HDL or VHDL warning at ALU_Gumnut.v(52): object "IR_decode_branch" assigned a value but never read File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 52
 Warning (10036): Verilog HDL or VHDL warning at ALU_Gumnut.v(53): object "IR_decode_misc" assigned a value but never read File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 53
-Warning (10036): Verilog HDL or VHDL warning at ALU_Gumnut.v(61): object "ALU_C" assigned a value but never read File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 61
-Warning (10858): Verilog HDL warning at ALU_Gumnut.v(65): object cc_C used but never assigned File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 65
-Warning (10240): Verilog HDL Always Construct warning at ALU_Gumnut.v(85): inferring latch(es) for variable "ALU_fn", which holds its previous value in one or more paths through the always construct File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 85
-Warning (10240): Verilog HDL Always Construct warning at ALU_Gumnut.v(85): inferring latch(es) for variable "ALU_right_operand", which holds its previous value in one or more paths through the always construct File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 85
-Warning (10240): Verilog HDL Always Construct warning at ALU_Gumnut.v(85): inferring latch(es) for variable "ALU_tmp_result", which holds its previous value in one or more paths through the always construct File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 85
-Warning (10240): Verilog HDL Always Construct warning at ALU_Gumnut.v(85): inferring latch(es) for variable "ALU_shift_result", which holds its previous value in one or more paths through the always construct File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 85
-Warning (10030): Net "IR_immed" at ALU_Gumnut.v(41) has no driver or initial value, using a default initial value '0' File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 41
+Warning (10240): Verilog HDL Always Construct warning at ALU_Gumnut.v(87): inferring latch(es) for variable "ALU_fn", which holds its previous value in one or more paths through the always construct File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 87
+Warning (10240): Verilog HDL Always Construct warning at ALU_Gumnut.v(87): inferring latch(es) for variable "ALU_right_operand", which holds its previous value in one or more paths through the always construct File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 87
+Warning (10240): Verilog HDL Always Construct warning at ALU_Gumnut.v(87): inferring latch(es) for variable "ALU_tmp_result", which holds its previous value in one or more paths through the always construct File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 87
+Warning (10240): Verilog HDL Always Construct warning at ALU_Gumnut.v(87): inferring latch(es) for variable "ALU_shift_result", which holds its previous value in one or more paths through the always construct File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 87
 Warning (10030): Net "IR_count" at ALU_Gumnut.v(42) has no driver or initial value, using a default initial value '0' File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 42
 Warning (10030): Net "IR_offset" at ALU_Gumnut.v(43) has no driver or initial value, using a default initial value '0' File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 43
-Warning (10030): Net "cc_C" at ALU_Gumnut.v(65) has no driver or initial value, using a default initial value '0' File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 65
-Info (10041): Inferred latch for "ALU_shift_result[0]" at ALU_Gumnut.v(120) File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 120
-Info (10041): Inferred latch for "ALU_shift_result[1]" at ALU_Gumnut.v(120) File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 120
-Info (10041): Inferred latch for "ALU_shift_result[2]" at ALU_Gumnut.v(120) File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 120
-Info (10041): Inferred latch for "ALU_shift_result[3]" at ALU_Gumnut.v(120) File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 120
-Info (10041): Inferred latch for "ALU_shift_result[4]" at ALU_Gumnut.v(120) File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 120
-Info (10041): Inferred latch for "ALU_shift_result[5]" at ALU_Gumnut.v(120) File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 120
-Info (10041): Inferred latch for "ALU_shift_result[6]" at ALU_Gumnut.v(120) File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 120
-Info (10041): Inferred latch for "ALU_shift_result[7]" at ALU_Gumnut.v(120) File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 120
-Info (286030): Timing-Driven Synthesis is running
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 11 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "IR[3]" File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 4
-    Warning (15610): No output dependent on input pin "IR[4]" File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 4
-    Warning (15610): No output dependent on input pin "IR[5]" File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 4
-    Warning (15610): No output dependent on input pin "IR[6]" File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 4
-    Warning (15610): No output dependent on input pin "IR[7]" File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 4
-    Warning (15610): No output dependent on input pin "IR[8]" File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 4
-    Warning (15610): No output dependent on input pin "IR[9]" File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 4
-    Warning (15610): No output dependent on input pin "IR[10]" File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 4
-    Warning (15610): No output dependent on input pin "IR[11]" File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 4
-    Warning (15610): No output dependent on input pin "IR[12]" File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 4
-    Warning (15610): No output dependent on input pin "IR[13]" File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 4
-Info (21057): Implemented 113 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 34 input pins
-    Info (21059): Implemented 16 output pins
-    Info (21061): Implemented 63 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 34 warnings
-    Info: Peak virtual memory: 628 megabytes
-    Info: Processing ended: Wed Mar  9 22:58:24 2022
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:19
+Info (10041): Inferred latch for "ALU_shift_result[0]" at ALU_Gumnut.v(122) File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 122
+Info (10041): Inferred latch for "ALU_shift_result[1]" at ALU_Gumnut.v(122) File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 122
+Info (10041): Inferred latch for "ALU_shift_result[2]" at ALU_Gumnut.v(122) File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 122
+Info (10041): Inferred latch for "ALU_shift_result[3]" at ALU_Gumnut.v(122) File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 122
+Info (10041): Inferred latch for "ALU_shift_result[4]" at ALU_Gumnut.v(122) File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 122
+Info (10041): Inferred latch for "ALU_shift_result[5]" at ALU_Gumnut.v(122) File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 122
+Info (10041): Inferred latch for "ALU_shift_result[6]" at ALU_Gumnut.v(122) File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 122
+Info (10041): Inferred latch for "ALU_shift_result[7]" at ALU_Gumnut.v(122) File: /home/paok/Documents/Verilog_Labs/Gumnut-ALU/ALU_Gumnut.v Line: 122
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 17 warnings
+    Info: Peak virtual memory: 870 megabytes
+    Info: Processing ended: Mon Mar 14 08:04:08 2022
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:18
 
 

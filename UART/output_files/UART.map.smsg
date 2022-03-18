@@ -1,1 +1,1 @@
-Info (10281): Verilog HDL Declaration information at UART.v(26): object "c" differs only in case from object "C" in the same scope File: /home/paok/Documents/Verilog_Labs/UART/UART.v Line: 26
+Info (10281): Verilog HDL Declaration information at UART.v(28): object "c" differs only in case from object "C" in the same scope File: /home/paok/Documents/Verilog_Labs/UART/UART.v Line: 28

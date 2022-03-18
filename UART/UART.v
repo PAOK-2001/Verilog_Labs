@@ -1,5 +1,5 @@
 module UART(
-	input       clk, Paco, fsm_en,       // clock
+	input       clk, fsm_en,       // clock
 	input       i_Rx_Serial,      // Received data 
 	input       i_Tx_DV,          // Status input
 	
@@ -16,17 +16,19 @@ module UART(
 );
 
 
+wire new_clock;
 wire newer_clock;
 
 wire[7:0] receivedValue;
 wire[7:0] sendValue;
 
-clockdiv #(8,4) cd_2(Paco, newer_clock);
+clockdiv #(3124999,1562500) cd (clk, new_clock);
+clockdiv #(8,4) cd_2(new_clock, newer_clock);
 
 downCounter c (newer_clock, fsm_en, sendValue);
 
-uart_rx#(1)r(Paco, fsm_en, i_Rx_Serial, o_Rx_DV, receivedValue);
-uart_tx#(1)t(Paco, i_Tx_DV, sendValue ,fsm_en, o_Tx_Active, o_Tx_Serial, o_Tx_Done);
+uart_rx#(1)r(new_clock, fsm_en, i_Rx_Serial, o_Rx_DV, receivedValue);
+uart_tx#(1)t(new_clock, i_Tx_DV, 69 ,fsm_en, o_Tx_Active, o_Tx_Serial, o_Tx_Done);
 
 BCD A(receivedValue[3:0], dispIn1);
 BCD B(receivedValue[7:4], dispIn2);
@@ -265,7 +267,7 @@ module uart_rx
   reg [7:0]     r_Clock_Count = 0;
   reg [2:0]     r_Bit_Index   = 0; //8 bits total
   reg [7:0]     r_Rx_Byte     = 0;
-  reg           r_Rx_DV       = 1;
+  reg           r_Rx_DV       = 0;
   reg [2:0]     r_SM_Main     = 0;
    
   // Purpose: Double-register the incoming data.
@@ -375,7 +377,7 @@ module uart_rx
         s_CLEANUP :
           begin
             r_SM_Main <= s_IDLE;
-            r_Rx_DV   <= 1'b1;
+            r_Rx_DV   <= 1'b0;
           end
          
          

@@ -4,6 +4,10 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "o_Rx_DV",
+					"strict" : false
+				},
+				{
 					"name" : "o_Tx_Serial",
 					"strict" : false
 				},
@@ -132,11 +136,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "Paco",
+					"name" : "i_Tx_DV",
 					"strict" : false
 				},
 				{
-					"name" : "i_Tx_DV",
+					"name" : "clk",
 					"strict" : false
 				},
 				{
