@@ -10,7 +10,8 @@ reg data_ack_i;
 reg port_ack_i;
 wire [2:0] state_out, next_state_out;
 
-ALU_CPU dut (
+ALU_CPU test(
+
 	.clk_i(clk_i),
 	.rst_i(rst_i),
 	.inst_ack_i(inst_ack_i),
@@ -21,11 +22,14 @@ ALU_CPU dut (
 	.port_ack_i(port_ack_i),
 	.state_out(state_out),
 	.next_state_out(next_state_out)
+	
 );
 
 initial begin 
-clk_i = 0;
-forever #10 clk_i = ~clk_i;
+
+	clk_i = 0;
+	forever #10 clk_i = ~clk_i;
+	
 end
 
 initial begin 
