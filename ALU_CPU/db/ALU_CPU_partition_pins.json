@@ -1,0 +1,85 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "state_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "state_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "state_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "next_state_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "next_state_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "next_state_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[16]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[17]",
+					"strict" : false
+				},
+				{
+					"name" : "data_ack_i",
+					"strict" : false
+				},
+				{
+					"name" : "IR[14]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[11]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[12]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[13]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[15]",
+					"strict" : false
+				},
+				{
+					"name" : "int_req",
+					"strict" : false
+				},
+				{
+					"name" : "int_en",
+					"strict" : false
+				},
+				{
+					"name" : "inst_ack_i",
+					"strict" : false
+				},
+				{
+					"name" : "clk_i",
+					"strict" : false
+				},
+				{
+					"name" : "rst_i",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

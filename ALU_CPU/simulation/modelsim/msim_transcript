@@ -1,0 +1,50 @@
+# Reading pref.tcl
+# ERROR: No extended dataflow license exists
+# do ALU_CPU_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Practicas/Verilog_Labs/ALU_CPU {C:/Practicas/Verilog_Labs/ALU_CPU/ALU_CPU.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:58:27 on Mar 17,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Practicas/Verilog_Labs/ALU_CPU" C:/Practicas/Verilog_Labs/ALU_CPU/ALU_CPU.v 
+# -- Compiling module ALU_CPU
+# 
+# Top level modules:
+# 	ALU_CPU
+# End time: 20:58:27 on Mar 17,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/Practicas/Verilog_Labs/ALU_CPU {C:/Practicas/Verilog_Labs/ALU_CPU/ALU_CPU_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:58:27 on Mar 17,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Practicas/Verilog_Labs/ALU_CPU" C:/Practicas/Verilog_Labs/ALU_CPU/ALU_CPU_tb.v 
+# -- Compiling module ALU_CPU_tb
+# 
+# Top level modules:
+# 	ALU_CPU_tb
+# End time: 20:58:27 on Mar 17,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs="+acc"  ALU_CPU_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs=""+acc"" ALU_CPU_tb 
+# Start time: 20:58:27 on Mar 17,2022
+# Loading work.ALU_CPU_tb
+# Loading work.ALU_CPU
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Note: $stop    : C:/Practicas/Verilog_Labs/ALU_CPU/ALU_CPU_tb.v(45)
+#    Time: 105 ps  Iteration: 0  Instance: /ALU_CPU_tb
+# Break in Module ALU_CPU_tb at C:/Practicas/Verilog_Labs/ALU_CPU/ALU_CPU_tb.v line 45

@@ -1,0 +1,9 @@
+
+State Machine - |ALU_CPU|state
+Name state.int_state state.write_back_state state.mem_state state.execute_state state.decode_state state.fetch_state 
+state.fetch_state 0 0 0 0 0 0 
+state.decode_state 0 0 0 0 1 1 
+state.execute_state 0 0 0 1 0 1 
+state.mem_state 0 0 1 0 0 1 
+state.write_back_state 0 1 0 0 0 1 
+state.int_state 1 0 0 0 0 1 
